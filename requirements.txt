@@ -1,0 +1,13 @@
+flask 
+sklearn
+pymongo
+numpy
+scipy
+geopy
+nltk
+spacy
+pyenchant
+BeautifulSoup4
+gensim
+unidecode
+sumy

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AI Research Helper</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- VENDOR CSS -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    {#	<link rel="stylesheet" href="/static/assets/vendor/bootstrap/css/bootstrap.min.css">#}
+    <link rel="stylesheet" href="/static/assets/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/assets/vendor/linearicons/style.css">
+    <link rel="stylesheet" href="/static/assets/vendor/chartist/css/chartist-custom.css">
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="/static/assets/css/main.css">
+    <link rel="stylesheet" href="/static/assets/css/design.css">
+    <!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
+    <link rel="stylesheet" href="/static/assets/css/demo.css">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+    <!-- ICONS -->
+    <link rel="apple-touch-icon" sizes="76x76" href="/static/assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/static/assets/img/favicon.png">
+    <!--<link rel="stylesheet" href="../assets/css/design.css">-->
+
+    <!-- CORE CSS FRAMEWORK - START -->
+    <link href="/static/assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="/static/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/static/assets/plugins/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+{##}
+    <link href="/static/assets/plugins/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" type="text/css"/>
+{#    <!-- CORE CSS FRAMEWORK - END -->#}
+{##}
+{#    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START -->#}
+{#    <link href="/static/assets/plugins/morris-chart/css/morris.css" rel="stylesheet" type="text/css" media="screen"/>#}
+{#    <link href="/static/assets/plugins/jquery-ui/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css"#}
+{#          media="screen"/>#}
+{#    <link href="/static/assets/plugins/rickshaw-chart/css/graph.css" rel="stylesheet" type="text/css" media="screen"/>#}
+{#    <link href="/static/assets/plugins/rickshaw-chart/css/detail.css" rel="stylesheet" type="text/css" media="screen"/>#}
+{#    <link href="/static/assets/plugins/rickshaw-chart/css/legend.css" rel="stylesheet" type="text/css" media="screen"/>#}
+{#    <link href="/static/assets/plugins/rickshaw-chart/css/extensions.css" rel="stylesheet" type="text/css"#}
+{#          media="screen"/>#}
+{#    <link href="/static/assets/plugins/rickshaw-chart/css/rickshaw.min.css" rel="stylesheet" type="text/css"#}
+{#          media="screen"/>#}
+{#    <link href="/static/assets/plugins/rickshaw-chart/css/lines.css" rel="stylesheet" type="text/css" media="screen"/>#}
+{#    <link href="/static/assets/plugins/jvectormap/jquery-jvectormap-2.0.1.css" rel="stylesheet" type="text/css"#}
+{#          media="screen"/>#}
+{#    <link href="/static/assets/plugins/icheck/skins/minimal/white.css" rel="stylesheet" type="text/css" media="screen"/>#}
+
+
+    <meta charset="UTF-8">
+    <title>Generate summaries</title>
+    <style type="text/css">
+        body {
+            font-family: "sans-serif";
+            font-size: 14;
+        }
+
+        .dropbtn {
+            background-color: #939393;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #696969;
+        }
+
+        #container1 {
+            display: none;
+        }
+
+        .file {
+            visibility: hidden;
+            position: absolute;
+        }
+
+        [hidden] {
+            display: none !important;
+        }
+
+
+    </style>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+    </script>
+
+    <script type="text/javascript">
+    $(function () {
+        $.ajax({
+            url: "/get_models",
+            type: "GET",
+            success: function (status_json) {
+                var dropdown = document.getElementById("model");
+                for (var key in status_json) {
+                    var option = document.createElement("option");
+                    option.value = status_json[key][0]+ ",  "+status_json[key][1] ;
+                    option.innerHTML = status_json[key][0] +",   "+ status_json[key][2];
+                    dropdown.appendChild(option);
+                }
+            },
+            dataType: "json"
+        })
+    })
+
+    $(document).on('click', '.browse', function () {
+      var file = $(this).parent().parent().parent().find('.file');
+      file.trigger('click');
+    });
+    $(document).on('change', '.file', function () {
+        $(this).parent().find('.form-control').val($(this).val().replace(/C:\\fakepath\\/i, ''));
+    });
+    $(document).on('click', '#submit', function () {
+        console.log("getting in click function");
+        var form = $('#summary_data')[0];
+        console.log(form);
+        var fd = new FormData(form);
+        console.log(fd);
+        console.log("getting in click function");
+        $.ajax({
+            url: '/create_summary',
+            data: fd,
+            type: 'POST',
+            contentType: false,
+            cache: false,
+            processData: false,
+            async: false,
+            success: function (response) {
+                console.log(response);
+                console.log("getting response");
+
+                window.location = '/SummariesStatus';
+
+            },
+            error: function (error) {
+                alert("Not a zip File!")
+                console.log(error);
+                console.log("got error");
+            }
+        });
+    });
+
+    </script>
+</head>
+<body>
+<div id="wrapper">
+
+    {% include "navbar.html" %}
+    {% include "sidebar.html" %}
+
+
+    <div class="main">
+        <!-- MAIN CONTENT -->
+        <div class="main-content">
+            <div id="overview">
+                <form method="post" enctype="multipart/form-data" id="summary_data">
+                    <label class="form-horizontal"> Please select a model from the dropdown for testing your
+                        files </label>
+                    <br>
+                    <div class="dropdown">
+                        <select class="btn btn-primary dropdown-toggle" name="model" id="model">
+                          <span class="caret"></span>
+                            <!--div class = "dropdown-content">
+                              <option value="volvo">Volvo</option>
+                              <option value="saab">Saab</option>
+                              <option value="opel">Opel</option>
+                              <option value="audi">Audi</option>
+                            </div-->
+                        </select>
+                    </div>
+                    <br><br>
+                    <label class="form-horizontal"> Please upload zip file (containing txts) for testing </label>
+                    <br>
+
+
+                    <input type="file" name="file" class="btn btn-primary">
+                    <!--<div class="form-group">-->
+                    <!--<div class="fileinput fileinput-new" data-provides="fileinput">-->
+                    <!--<span class="btn btn-default btn-file"><span>Choose file</span><input type="file"/></span>-->
+                    <!--&lt;!&ndash;<span class="fileinput-filename"></span><span class="fileinput-new">No file chosen</span>&ndash;&gt;-->
+                    <!--</div>-->
+
+                    <br/>
+                    <input type="button" value="Submit" class="btn btn-primary" id="submit">
+                </form>
+                <p id="result">{{ result }} </p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

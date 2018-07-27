@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>AI Research Helper</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<!-- VENDOR CSS -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+{#	<link rel="stylesheet" href="/static/assets/vendor/bootstrap/css/bootstrap.min.css">#}
+	<link rel="stylesheet" href="/static/assets/vendor/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/static/assets/vendor/linearicons/style.css">
+	<link rel="stylesheet" href="/static/assets/vendor/chartist/css/chartist-custom.css">
+	<!-- MAIN CSS -->
+	<link rel="stylesheet" href="/static/assets/css/main.css">
+    <link rel="stylesheet" href="/static/assets/css/design.css">
+	<!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
+	<link rel="stylesheet" href="/static/assets/css/demo.css">
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	<!-- ICONS -->
+	<link rel="apple-touch-icon" sizes="76x76" href="/static/assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/static/assets/img/favicon.png">
+	<!--<link rel="stylesheet" href="../assets/css/design.css">-->
+
+	        <!-- CORE CSS FRAMEWORK - START -->
+        <link href="/static/assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="/static/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="/static/assets/plugins/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+
+        <link href="/static/assets/plugins/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" type="text/css"/>
+        <!-- CORE CSS FRAMEWORK - END -->
+
+{#        <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START -->#}
+{#        <link href="/static/assets/plugins/morris-chart/css/morris.css" rel="stylesheet" type="text/css" media="screen"/>#}
+{#		<link href="/static/assets/plugins/jquery-ui/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" media="screen"/>#}
+{#		<link href="/static/assets/plugins/rickshaw-chart/css/graph.css" rel="stylesheet" type="text/css" media="screen"/>#}
+{#		<link href="/static/assets/plugins/rickshaw-chart/css/detail.css" rel="stylesheet" type="text/css" media="screen"/>#}
+{#		<link href="/static/assets/plugins/rickshaw-chart/css/legend.css" rel="stylesheet" type="text/css" media="screen"/>#}
+{#		<link href="/static/assets/plugins/rickshaw-chart/css/extensions.css" rel="stylesheet" type="text/css" media="screen"/>#}
+{#		<link href="/static/assets/plugins/rickshaw-chart/css/rickshaw.min.css" rel="stylesheet" type="text/css" media="screen"/>#}
+{#		<link href="/static/assets/plugins/rickshaw-chart/css/lines.css" rel="stylesheet" type="text/css" media="screen"/>#}
+{#		<link href="/static/assets/plugins/jvectormap/jquery-jvectormap-2.0.1.css" rel="stylesheet" type="text/css" media="screen"/>#}
+{#		<link href="/static/assets/plugins/icheck/skins/minimal/white.css" rel="stylesheet" type="text/css" media="screen"/>#}
+{#        <link href="/assets/css/toastr.min.css" rel="stylesheet">#}
+{#        <script src="/assets/js/toastr.min.js"></script><!-- Alert like Notifications -->#}
+    <style type="text/css">
+      body{
+        font-family: "sans-serif";
+      }
+      input{
+        height: 20px;
+        width: 200px;
+      }
+      input::placeholder{
+        font-size: 14;
+        font-family: "sans-serif";
+      }
+
+      #youcantseeme{
+      	display: none
+      }
+
+    </style>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script type='text/javascript'>
+    		var i = 3;
+        function addFields() {
+
+            // Number of inputs to create
+            var container = document.getElementById("sub-topic-form");
+            // add label here
+            var label = document.createElement("label");
+            label.className = "form-group";
+            label.innerHTML = "Sub-Topic Name:";
+            container.appendChild(label);
+
+
+            var input = document.createElement("input");
+            input.type = "text";
+            input.name = "subtopic" + (i);
+            input.id = "sub-topic-" + (i);
+            input.className = "form-control";
+            input.placeholder = "Sub-topic " + (i + 1);
+            //input.required = "True";
+            container.appendChild(input);
+            // Append a line break 
+            container.appendChild(document.createElement("br"));
+            container.appendChild(document.createElement("br"));
+            // add label here
+            var label = document.createElement("label");
+            label.className = "form-group";
+            label.innerHTML = "Sub-Topic Keywords:";
+            container.appendChild(label);
+
+            var textarea = document.createElement("textarea");
+            textarea.name = "keywords" + (i);
+            textarea.id = "key-words-" + i;
+            textarea.className = "form-control";
+            textarea.placeholder = "Enter keywords separated by commas for sub-topic " + (i + 1);
+
+            textarea.cols = "30";
+            textarea.rows = "10";
+            container.appendChild(textarea);
+            container.appendChild(document.createElement("br"));
+            i++;
+            document.getElementById("youcantseeme").value = i;
+        }
+
+    </script>
+    <script type="text/javascript">
+    	$(document).ready(function(){
+    		$("#youcantseeme").val(3);
+    	});
+
+        $(function () {
+            $('#submit').click(function () {
+{#                var user = $('#txtUsername').val();#}
+{#                var pass = $('#txtPassword').val();#}
+
+                console.log($('#sub-topic-form').children('input').length);
+                var flag=true;
+                for(var i=0;i<$('#sub-topic-form').children('input').length;i++){
+                    if($('#sub-topic-'+i).val()!=''){
+                        if($('#key-words-'+i).val()!=''){
+                            //All requirments are fulfilled
+                            continue;
+                        }
+                        else {
+                            //keywords are missing
+                            bootbox.alert("Please enter keywords for sub topic "+ (i+1));
+                            flag=false;
+                            break;
+                        }
+                    }
+                    else {
+                        if($('#key-words-'+i).val()!=''){
+                            //needs to enter the subtopic
+                            bootbox.alert("Please enter name for sub topic "+ (i+1));
+                            flag=false;
+                            break;
+                        }
+                        else {
+                           continue;
+                        }
+                    }
+                }
+
+                if(!($('#model_name').val()))
+                {
+{#                    console.log("i get here");#}
+                    bootbox.alert("Please provide model name")
+                }
+                else if(!($('#topic_name').val()))
+                {
+{#                    console.log("i get here");#}
+                    bootbox.alert("Please provide topic name")
+                }
+                else if(!($('#sub-topic-0').val())){
+                    bootbox.alert("Please mention atleast one subtopic")
+                }
+                else if(!flag){
+                    //do nothing
+{#                    console.log("getting here");#}
+                }
+                else {
+{#                    console.log("getting in click function");#}
+                    $.ajax({
+                        url: '/generate_data_model',
+                        data: $('#topics_data').serialize(),
+                        type: 'POST',
+                        success: function (response) {
+                            console.log(response);
+                            console.log("getting response");
+                            window.location='/ModelsStatus';
+
+
+                        },
+                        error: function (error) {
+                            console.log(error);
+{#                            console.log("got error");#}
+                            bootbox.alert("cannot process request")
+                        }
+                    });
+                }
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        {% include "navbar.html"%}
+        {% include "sidebar.html"%}
+
+
+        <div class="main">
+            <!-- MAIN CONTENT -->
+            <div class="main-content">
+                <div  id="overview">
+                    <div>
+                        <h2> Please enter the following details </h2>
+                        <form id="topics_data">
+                            <div class="row">
+                                <div class="col-md-3 ">
+                                    <div class="form-group">
+                                    <label>Model Name:</label>
+
+                                    <input class="form-group form-control" id="model_name" name="model" type="text"
+                                           placeholder="Model Name"
+                                           required="True"/>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 ">
+                                    <div class="form-group">
+                                    <label>Topic Name:</label>
+
+                                    <input class="form-group form-control" id="topic_name" name="topic" type="text"
+                                           placeholder="Topic Name"
+                                           required="True"/>
+                                        </div>
+                                </div>
+                                <div class="col-md-3 form-group">
+                                    <label>Topic Alias:</label>
+                                    <input class="topic_name form-control" name="topic2" type="text"
+                                           placeholder="Topic Name Alias (Optional)"/>
+                                </div>
+                                <div class="col-md-3 form-group">
+                                    <label>Topic Alias:</label>
+                                    <input class="topic_name form-control" name="topic3" type="text"
+                                           placeholder="Topic Name Alias (Optional)"/>
+                                </div>
+                            </div>
+
+
+                            <div id="container">
+                                <div id="sub-topic-form">
+                                    <label class="form-group"><h4>Add Sub-topics Here.</h4></label>
+                                    <br>
+                                    <label class="form-group">Sub-Topic Name:</label>
+                                    <input class="form-control" name="subtopic0" type="text" id="sub-topic-0" placeholder="Sub-topic 1"
+                                           required="True"/><br/><br/>
+                                    <label class="form-group">Sub-Topic Keywords:</label>
+                                    <textarea class="form-control" name="keywords0" id="key-words-0"
+                                              placeholder="Enter keywords separated by commas for sub-topic 1"
+                                              cols="30" rows="10" required="True"></textarea><br/><br/>
+
+                                    <label class="form-group">Sub-Topic Name:</label>
+                                    <input class="form-control" name="subtopic1" type="text" placeholder="Sub-topic 2" id="sub-topic-1"
+                                           /><br/><br/>
+                                    <label class="form-group">Sub-Topic Keywords:</label>
+                                    <textarea class="form-control" name="keywords1" id="key-words-1"
+                                              placeholder="Enter keywords separated by commas for sub-topic 2"
+                                              cols="30" rows="10" ></textarea><br/><br/>
+
+                                    <label class="form-group">Sub-Topic Name:</label>
+                                    <input class="form-control" name="subtopic2" type="text" id="sub-topic-2" placeholder="Sub-topic 3"
+                                           /><br/><br/>
+                                    <label class="form-group">Sub-Topic Keywords:</label>
+                                    <textarea class="form-control" name="keywords2" id="key-words-2"
+                                              placeholder="Enter keywords separated by commas for sub-topic 3"
+                                              cols="30" rows="10" ></textarea><br/><br/>
+
+                                </div>
+
+                                <!--input type="text" id="subtopics" name="subtopics" placeholder="Number of sub-topics" value="" required="True"-->
+
+
+                            </div>
+                            <a href="#submit" id="filldetails" onclick="addFields()">Add another sub-topic field</a>
+                            <br/><br/>
+                            <input name="youcantseeme" id="youcantseeme"></input>
+                        </form>
+                        <input style="line-height:0.428571" class="btn btn-primary" id="submit" type="button" value="Submit">
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- CORE JS FRAMEWORK - START -->
+<script src="/static/assets/scripts/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script src="/static/assets/scripts/jquery.easing.min.js" type="text/javascript"></script>
+<script src="/static/assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/static/assets/plugins/pace/pace.min.js" type="text/javascript"></script>
+<script src="/static/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js" type="text/javascript"></script>
+<script src="/static/assets/plugins/viewport/viewportchecker.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+</body>
+</html>

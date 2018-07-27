@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AI Research Helper</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- VENDOR CSS -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    {#	<link rel="stylesheet" href="/static/assets/vendor/bootstrap/css/bootstrap.min.css">#}
+    <link rel="stylesheet" href="/static/assets/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/assets/vendor/linearicons/style.css">
+    <link rel="stylesheet" href="/static/assets/vendor/chartist/css/chartist-custom.css">
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="/static/assets/css/main.css">
+    <link rel="stylesheet" href="/static/assets/css/design.css">
+    <!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
+    <link rel="stylesheet" href="/static/assets/css/demo.css">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+    <!-- ICONS -->
+    <link rel="apple-touch-icon" sizes="76x76" href="/static/assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/static/assets/img/favicon.png">
+    <!--<link rel="stylesheet" href="../assets/css/design.css">-->
+
+    <!-- CORE CSS FRAMEWORK - START -->
+    <link href="/static/assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="/static/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/static/assets/plugins/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+
+    <link href="/static/assets/plugins/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" type="text/css"/>
+    <!-- CORE CSS FRAMEWORK - END -->
+
+    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START -->
+    <link href="/static/assets/plugins/morris-chart/css/morris.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="/static/assets/plugins/jquery-ui/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css"
+          media="screen"/>
+    <link href="/static/assets/plugins/rickshaw-chart/css/graph.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="/static/assets/plugins/rickshaw-chart/css/detail.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="/static/assets/plugins/rickshaw-chart/css/legend.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="/static/assets/plugins/rickshaw-chart/css/extensions.css" rel="stylesheet" type="text/css"
+          media="screen"/>
+    <link href="/static/assets/plugins/rickshaw-chart/css/rickshaw.min.css" rel="stylesheet" type="text/css"
+          media="screen"/>
+    <link href="/static/assets/plugins/rickshaw-chart/css/lines.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="/static/assets/plugins/jvectormap/jquery-jvectormap-2.0.1.css" rel="stylesheet" type="text/css"
+          media="screen"/>
+    <link href="/static/assets/plugins/icheck/skins/minimal/white.css" rel="stylesheet" type="text/css" media="screen"/>
+
+
+    <meta charset="UTF-8">
+    <title>Generate summaries</title>
+    <style type="text/css">
+        body {
+            font-family: "sans-serif";
+            font-size: 14;
+        }
+
+        .dropbtn {
+            background-color: #939393;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #696969;
+        }
+
+        #container1 {
+            display: none;
+        }
+
+        .file {
+            visibility: hidden;
+            position: absolute;
+        }
+
+        [hidden] {
+            display: none !important;
+        }
+
+
+    </style>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+</head>
+<body>
+<div id="wrapper">
+
+    {% include "navbar.html" %}
+    {% include "sidebar.html" %}
+    <div class="main">
+        <div class="main-content">
+            <div id="overview">
+                <p>This ML system contains the following functionalities</p>
+                <ol>
+                    <li dir="ltr">
+                        <h3 dir="ltr"><span>Data Collection</span><span></span><a
+                                href="http://54.147.203.248:5000"></a><span></span>
+                        </h3>
+                    </li>
+                </ol>
+                <p dir="ltr"><span>This page takes the topics, subtopics and keywords as input from the user. When you hit submit, you are redirected to Models Status page</span>
+                </p>
+                <ol start="2">
+                    <li dir="ltr">
+                        <h3 dir="ltr"><span>Models Status</span><span></span><a
+                                href="http://54.147.203.248:5000/GetModelsStatus"></a><span></span>
+                        </h3>
+                    </li>
+                </ol>
+                <p dir="ltr"><span>This page displays the processing status of all the models in the database</span></p>
+                <ol start="3">
+                    <li dir="ltr">
+                        <h3 dir="ltr"><span>Generate Summary</span><span> </span><a
+                                href="http://54.147.203.248:5000/GenerateSummary"></a><span></span>
+                        </h3>
+                    </li>
+                </ol>
+                <p dir="ltr"><span>This page takes the required (processed) model name (fetched from the database) and zip file containing txts as input from the user. When you hit submit, you are redirected to Summaries status page. Here is a sample zip file that can be used to test this functionality: </span><a
+                        href="https://www.dropbox.com/s/h605bfbnfamsfd6/refined_ocred_data.zip?dl=0"><span>https://www.dropbox.com/s/h605bfbnfamsfd6/refined_ocred_data.zip?dl=0</span></a>
+                </p>
+                <ol start="4">
+                    <li dir="ltr">
+                        <h3 dir="ltr"><span>Summaries Status</span><span></span><a
+                                href="http://54.147.203.248:5000/GetSummariesStatus"></a><span></span>
+                        </h3>
+                    </li>
+                </ol>
+                <p dir="ltr"><span>This page displays the processing status of all the summaries in the database along with their respective model name. There is also an option to download and/or visualize the summary. </span>
+                </p>
+                <p><span>&nbsp;</span></p>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>

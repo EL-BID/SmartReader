@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- VENDOR CSS -->
+    <link rel="stylesheet" href="/static/assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/assets/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/assets/vendor/linearicons/style.css">
+    <link rel="stylesheet" href="/static/assets/vendor/chartist/css/chartist-custom.css">
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="/static/assets/css/main.css">
+    <!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
+    <link rel="stylesheet" href="/static/assets/css/demo.css">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+    <!-- ICONS -->
+    <link rel="apple-touch-icon" sizes="76x76" href="/static/assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/static/assets/img/favicon.png">
+
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- CORE CSS FRAMEWORK - START -->
+    <link href="/static/assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="/static/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/static/assets/plugins/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+
+    <link href="/static/assets/plugins/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" type="text/css"/>
+    <!-- CORE CSS FRAMEWORK - END -->
+
+    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START -->
+    <link href="/static/assets/plugins/morris-chart/css/morris.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="/static/assets/plugins/jquery-ui/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css"
+          media="screen"/>
+    <link href="/static/assets/plugins/rickshaw-chart/css/graph.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="/static/assets/plugins/rickshaw-chart/css/detail.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="/static/assets/plugins/rickshaw-chart/css/legend.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="/static/assets/plugins/rickshaw-chart/css/extensions.css" rel="stylesheet" type="text/css"
+          media="screen"/>
+    <link href="/static/assets/plugins/rickshaw-chart/css/rickshaw.min.css" rel="stylesheet" type="text/css"
+          media="screen"/>
+    <link href="/static/assets/plugins/rickshaw-chart/css/lines.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="/static/assets/plugins/jvectormap/jquery-jvectormap-2.0.1.css" rel="stylesheet" type="text/css"
+          media="screen"/>
+    <link href="/static/assets/plugins/icheck/skins/minimal/white.css" rel="stylesheet" type="text/css" media="screen"/>
+
+    <script type="text/javascript">
+
+    </script>
+
+    <style type="text/css">
+
+        .word_cloud {
+            width: 100%;
+            height: 430px !important;
+        }
+
+        tspan {
+            display: none;
+        }
+
+        .map {
+            width: 100%;
+            height: 400px !important;
+        }
+
+        .subtopic-heading {
+            background: #e5e5e5;
+            color: #000;
+            padding: 8px;
+            margin: 0px;
+        }
+
+        .jvectormap-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .jvectormap-zoomin {
+            display: none;
+        }
+
+        .jvectormap-zoomout {
+            display: none;
+        }
+
+        .custom_tooltip {
+            position: relative;
+            /*display: inline-block; */
+        }
+
+        .custom_tooltip .custom_tooltiptext {
+            visibility: hidden;
+            max-width: 1000px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 10px;
+
+            /* Position the custom_tooltip */
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+
+        }
+
+        .custom_tooltip:hover .custom_tooltiptext {
+            visibility: visible;
+        }
+    </style>
+{#    <script type="text/javascript">#}
+{#        var div#}
+{##}
+{#    </script>#}
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+    {% include "navbar.html" %}
+    {% include "sidebar.html" %}
+    <!-- MAIN -->
+    <div class="main">
+        <!-- MAIN CONTENT -->
+        <div class="main-content">
+            <div class="container-fluid" id="overview">
+                <h3 class="page-title subtopic-heading">Overview</h3>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Keywords</h3>
+                            </div>
+                            <div id="overview_keyword_cloud_container" style="width:100%;height:430px">
+                                <canvas id="overview_keyword_cloud_canvas" class="word_cloud"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Locations</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div id="overview_location_cloud_container" style="width:100%;height:430px">
+                                    <canvas id="overview_location_cloud_canvas" class="word_cloud"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Entities</h3>
+                            </div>
+                            <div id="overview_entities_cloud_container" style="width:100%;height:430px">
+                                <canvas id="overview_entities_cloud_canvas" class="word_cloud"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <!-- END MAIN CONTENT -->
+</div>
+<!-- END MAIN -->
+</div>
+<!-- END WRAPPER -->
+<!-- Javascript -->
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<script src="/static/assets/scripts/wordcloud2.js"></script>
+
+
+<script>
+    var options =
+        {
+            list: [],
+            gridSize: Math.round(16 * document.getElementById('overview_keyword_cloud_canvas').offsetWidth / 1024),
+            weightFactor: function (size) {
+                return Math.pow(size, 1.9) * document.getElementById('overview_keyword_cloud_canvas').offsetWidth / 1024;
+            }
+        };
+    var div = document.getElementById("overview_keyword_cloud_container");
+    var canvas = document.getElementById("overview_keyword_cloud_canvas");
+    canvas.height = div.offsetHeight;
+    canvas.width = div.offsetWidth;
+    WordCloud(document.getElementById('overview_keyword_cloud_canvas'), options);
+
+
+</script>
+<script src="/static/assets/scripts/mapdata.js"></script>
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="http://www.fsfoo.com/js/vendor/handlebars-1.0.rc.2.js"></script>
+
+
+{#<script src="/static/assets/output_informal_economy_1_with_loc_1.1.json"></script>#}
+
+
+{% raw %}
+
+<template id="rec_template" type="text/x-handlebars-template">
+    {{#topics}}
+    <div class="container-fluid" id="subtopic_{{removeSpaces topic}}" style="padding-top: 93px; margin-top: -63px;">
+        <h3 class="page-title subtopic-heading">{{topic}}</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Keywords</h3>
+                    </div>
+                    <div id="keywords_word_cloud_container_{{removeSpaces topic}}" style="width:100%;height:430px">
+                        <canvas id="keywords_word_cloud_canvas_{{removeSpaces topic}}" class="word_cloud"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Locations</h3>
+                    </div>
+                    <div id="locations_word_cloud_container_{{removeSpaces topic}}" style="width:100%;height:430px">
+                        <canvas id="locations_word_cloud_canvas_{{removeSpaces topic}}" class="word_cloud"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Entities</h3>
+                    </div>
+                    <div id="entities_word_cloud_container_{{removeSpaces topic}}" style="width:100%;height:430px">
+                        <canvas id="entities_word_cloud_canvas_{{removeSpaces topic}}" class="word_cloud"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="summary" style="padding:20px;">
+                <b>Summary</b>
+                <hr/>
+                <ul>
+
+                    {{#each summary_points}}
+                    <li>
+                        <div class="custom_tooltip">{{summary}}<span class="custom_tooltiptext">{{context}}</span></div>
+                        <a style=" " target="_blank"
+                           href="/static/documents//{{../folder_name}}/{{doc_id}}.html#{{para_id}}"> Read More</a></li>
+                    {{/each}}
+                </ul>
+            </div>
+
+
+        </div>
+
+
+    </div>
+    {{add_keywords_cloud topic keywords locations entities}}
+    {{/topics}}
+</template>
+{% endraw %}
+
+
+<script type='text/javascript'>
+    function convertRange(value, r1, r2) {
+        return ( value - r1[0] ) * ( r2[1] - r2[0] ) / ( r1[1] - r1[0] ) + r2[0];
+    }
+
+    var keywords_cloud_options_arr = [];
+    var locations_cloud_options_arr = [];
+    var entities_cloud_options_arr = [];
+
+
+    var overview_keywords_cloud_list = [];
+    var overview_locations_cloud_list = [];
+    var overview_entities_cloud_list = [];
+
+    var overview_keyword_cloud_options = {};
+    var overview_location_cloud_options = {};
+    var overview_entities_cloud_options = {};
+
+
+
+    $(window).load(function () {
+
+        var topic_names = [];
+
+        var tempData = {{ summary_json|tojson }};
+        var thanks_to_shahrukh = JSON.parse(tempData);
+        var location_names = [];
+        var source = $("#rec_template").html();
+        var template = Handlebars.compile(source);
+
+         var data = {
+                    topics : thanks_to_shahrukh
+                };
+
+        Handlebars.registerHelper('fullName', function (person) {
+            return person.firstName + " " + person.lastName;
+        });
+
+        Handlebars.registerHelper('removeSpaces', function (text) {
+            if(text){
+                return text.split(' ').join('_');
+            }
+            else return null;
+
+        });
+
+        Handlebars.registerHelper('add_keywords_cloud', function (topic, keywords, locations, entities) {
+            topic_names.push(topic);
+            var t_list = [];
+            var maxKeywordCount = Math.max.apply(Math, keywords.map(function (word) {
+                return word.count;
+            }));
+            var minKeywordCount = Math.min.apply(Math, keywords.map(function (word) {
+                return word.count;
+            }));
+
+            var maxLocationCount = Math.max.apply(Math, locations.map(function (word) {
+                return word.count;
+            }));
+            var minLocationCount = Math.min.apply(Math, locations.map(function (word) {
+                return word.count;
+            }));
+
+            var maxEntityCount = Math.max.apply(Math, entities.map(function (word) {
+                return word.count;
+            }));
+            var minEntityCount = Math.min.apply(Math, entities.map(function (word) {
+                return word.count;
+            }));
+
+            var keywordsThreshold = maxKeywordCount * 0.5;
+
+            for (var i = 0; i < keywords.length; i++) {
+                var t_count = keywords[i].count;
+
+                t_count = Math.round(convertRange(t_count, [minKeywordCount, maxKeywordCount], [8, 14]));
+                t_list.push([keywords[i].keyword, (t_count).toString()]);
+                overview_keywords_cloud_list.push([keywords[i].keyword, (t_count).toString()]);
+            }
+            ;
+            t_list.sort(function (a, b) {
+                return a[1] > b[1];
+            }).reverse();
+
+            keywords_cloud_options_arr.push(
+                {
+                    list: t_list,
+                    gridSize: Math.round(16 * document.getElementById('overview_keyword_cloud_canvas').offsetWidth / 1024),
+                    weightFactor: function (size) {
+                        return Math.pow(size, 1.9) * document.getElementById('overview_keyword_cloud_canvas').offsetWidth / 1024;
+                    }
+                });
+
+
+            var t_list = [];
+            for (var i = 0; i < locations.length; i++) {
+                var t_count = locations[i].count;
+                t_count = Math.round(convertRange(t_count, [minLocationCount, maxLocationCount], [8, 14]));
+
+                t_list.push([locations[i].keyword, (t_count).toString()]);
+                overview_locations_cloud_list.push([locations[i].keyword, (t_count).toString()]);
+            }
+            ;
+            t_list.sort(function (a, b) {
+                return a[1] > b[1];
+            }).reverse();
+
+            locations_cloud_options_arr.push(
+                {
+                    list: t_list,
+                    gridSize: Math.round(16 * document.getElementById('overview_keyword_cloud_canvas').offsetWidth / 1024),
+                    weightFactor: function (size) {
+                        return Math.pow(size, 1.9) * document.getElementById('overview_keyword_cloud_canvas').offsetWidth / 1024;
+                    }
+                });
+
+
+            var t_list = [];
+            for (var i = 0; i < entities.length; i++) {
+                var t_count = entities[i].count;
+
+                if (t_count >= (maxEntityCount * 0.7)) {
+                    t_count = 10;
+                }
+                else if (t_count > (maxEntityCount * 0.5)) {
+                    t_count = 7;
+                }
+                else {
+                    t_count = 5;
+                }
+                t_list.push([entities[i].keyword, (t_count).toString()]);
+                overview_entities_cloud_list.push([entities[i].keyword, (t_count).toString()]);
+            }
+            ;
+            t_list.sort(function (a, b) {
+                return a[1] > b[1];
+            }).reverse();
+            entities_cloud_options_arr.push(
+                {
+                    list: t_list,
+                    gridSize: Math.round(16 * document.getElementById('overview_keyword_cloud_canvas').offsetWidth / 1024),
+                    weightFactor: function (size) {
+                        return Math.pow(size, 1.9) * document.getElementById('overview_keyword_cloud_canvas').offsetWidth / 1024;
+                    }
+                });
+            return "";
+
+
+        });
+
+
+        $('.main-content').append(template(data));
+
+        var arrayLength = topic_names.length;
+
+        for (var i = 0; i < arrayLength; i++ || function () {
+            overview_keywords_cloud_list.sort(function (a, b) {
+                return a[1] > b[1];
+            }).reverse();
+            overview_locations_cloud_list.sort(function (a, b) {
+                return a[1] > b[1];
+            }).reverse();
+            overview_entities_cloud_list.sort(function (a, b) {
+                return a[1] > b[1];
+            }).reverse();
+
+            overview_keyword_cloud_options = {
+                list: overview_keywords_cloud_list,
+                gridSize: Math.round(16 * document.getElementById('overview_keyword_cloud_canvas').offsetWidth / 1024),
+                weightFactor: function (size) {
+                    return Math.pow(size, 1.9) * document.getElementById('overview_keyword_cloud_canvas').offsetWidth / 1024;
+                }
+            };
+
+            overview_location_cloud_options = {
+                list: overview_locations_cloud_list,
+                gridSize: Math.round(16 * document.getElementById('overview_keyword_cloud_canvas').offsetWidth / 1024),
+                weightFactor: function (size) {
+                    return Math.pow(size, 1.9) * document.getElementById('overview_keyword_cloud_canvas').offsetWidth / 1024;
+                }
+            };
+
+            overview_entities_cloud_options = {
+                list: overview_entities_cloud_list,
+                gridSize: Math.round(16 * document.getElementById('overview_keyword_cloud_canvas').offsetWidth / 1024),
+                weightFactor: function (size) {
+                    return Math.pow(size, 1.9) * document.getElementById('overview_keyword_cloud_canvas').offsetWidth / 1024;
+                }
+            };
+
+            $("body").append("<script>   var div = document.getElementById('overview_keyword_cloud_container');  var canvas = document.getElementById('overview_keyword_cloud_canvas');  canvas.height = div.offsetHeight;   canvas.width  = div.offsetWidth;  WordCloud(document.getElementById('overview_keyword_cloud_canvas'), overview_keyword_cloud_options); 	  <\/script>");
+            $("body").append("<script>   var div = document.getElementById('overview_location_cloud_container');  var canvas = document.getElementById('overview_location_cloud_canvas');  canvas.height = div.offsetHeight;   canvas.width  = div.offsetWidth;  WordCloud(document.getElementById('overview_location_cloud_canvas'), overview_location_cloud_options); 	  <\/script>");
+            $("body").append("<script>   var div = document.getElementById('overview_entities_cloud_container');  var canvas = document.getElementById('overview_entities_cloud_canvas');  canvas.height = div.offsetHeight;   canvas.width  = div.offsetWidth;  WordCloud(document.getElementById('overview_entities_cloud_canvas'), overview_entities_cloud_options); 	  <\/script>");
+
+
+        }(), false, i) {
+
+            var name = topic_names[i].split(' ').join('_');
+
+            $("#navigation").append('<li><a href="#subtopic_' + name + '" class=""><i class="lnr lnr-arrow-right"></i> <span>' + name.split('_').join(' ') + '</span></a></li>');
+            $("body").append("<script>   var div = document.getElementById('keywords_word_cloud_container_" + name + "');  var canvas = document.getElementById('keywords_word_cloud_canvas_" + name + "');  canvas.height = div.offsetHeight;   canvas.width  = div.offsetWidth;  WordCloud(document.getElementById('keywords_word_cloud_canvas_" + name + "'), keywords_cloud_options_arr[" + i + "]); 	  <\/script>");
+            $("body").append("<script>   var div = document.getElementById('locations_word_cloud_container_" + name + "');  var canvas = document.getElementById('locations_word_cloud_canvas_" + name + "');   canvas.height = div.offsetHeight;   canvas.width  = div.offsetWidth;  WordCloud(document.getElementById('locations_word_cloud_canvas_" + name + "'), locations_cloud_options_arr[" + i + "]); 	  <\/script>");
+            $("body").append("<script>   var div = document.getElementById('entities_word_cloud_container_" + name + "');  var canvas = document.getElementById('entities_word_cloud_canvas_" + name + "');   canvas.height = div.offsetHeight;   canvas.width  = div.offsetWidth;  WordCloud(document.getElementById('entities_word_cloud_canvas_" + name + "'), entities_cloud_options_arr[" + i + "]); 	  <\/script>");
+
+
+        }
+
+    });
+
+
+</script>
+
+
+<!-- CORE JS FRAMEWORK - START -->
+<script src="/static/assets/scripts/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script src="/static/assets/scripts/jquery.easing.min.js" type="text/javascript"></script>
+<script src="/static/assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/static/assets/plugins/pace/pace.min.js" type="text/javascript"></script>
+<script src="/static/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js" type="text/javascript"></script>
+<script src="/static/assets/plugins/viewport/viewportchecker.js" type="text/javascript"></script>
+<!-- CORE JS FRAMEWORK - END -->
+
+<script src="/static/assets/plugins/jvectormap/jquery-jvectormap-2.0.1.min.js" type="text/javascript"></script>
+<script src="/static/assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js" type="text/javascript"></script>
+
+
+</body>
+
+</html>

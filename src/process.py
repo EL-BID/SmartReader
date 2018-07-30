@@ -122,12 +122,12 @@ def consolidate_data(dataset, model):
 	return output
 
 def create_summary(dataset_location, model_name):
-	print('XXXXXXXXXXXXXXXXXXXXXXXXX')
-	print('Dataset location:')
-	print(dataset_location)
-	print('Model Name:')
-	print(model_name)
-	print('YYYYYYYYYYYYYYYYYYYYYYYYY')
+	# print('XXXXXXXXXXXXXXXXXXXXXXXXX')
+	# print('Dataset location:')
+	# print(dataset_location)
+	# print('Model Name:')
+	# print(model_name)
+	# print('YYYYYYYYYYYYYYYYYYYYYYYYY')
 
 	model_name = "models/" + model_name
 

@@ -26,10 +26,11 @@ def updateJobStatus(jobid, status):
 def run_job(job):
     jobid = ""
     for document in job:
+        print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')#daniela
+        print(document)#daniela
         try:
             jobid = document["_id"]
             updateJobStatus(jobid, "Processing")
-            #print("Processing")
             output_json = create_summary(document["file_path"], document["model_file_name"])
             convert_txt_html(output_json)
             if not os.path.isdir('Summaries'):

@@ -8,8 +8,8 @@ from src.convert_dataset import *
 
 
 def getJob():
-
     result = summary_collection.find( { 'status': "Queued" } ).limit( 1 )
+    print(result)
     return result
 
 def updateJobStatus(jobid, status):
@@ -42,7 +42,7 @@ def run_job(job):
 
         except Exception as e:
             print (e)
-            updateJobStatus(jobid, "Error")
+            updateJobStatus(jobid, "Error in function run_job")
 
 
 def processNextJob():

@@ -29,7 +29,10 @@ def run_job(job):
         try:
             jobid = document["_id"]
             updateJobStatus(jobid, "Processing")
+            print('BeforeXXXXXXXXXXXXXXXXXXX')
             output_json = create_summary(document["file_path"], document["model_file_name"])
+            print(output_json)
+            print('AfterXXXXXXXXXXXXXXXXXXXX')
             convert_txt_html(output_json)
             if not os.path.isdir('Summaries'):
                 os.mkdir('Summaries')

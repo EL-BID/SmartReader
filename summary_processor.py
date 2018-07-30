@@ -28,7 +28,8 @@ def run_job(job):
     print('XXXXXXXXXXXXXXXXXXXXXX')    
     jobid = ""
     for document in job:
-        print(job)
+        print(document)
+        print('YYYYYYYYYYY')
         try:
             jobid = document["_id"]
             updateJobStatus(jobid, "Processing")

@@ -41,6 +41,7 @@ def get_summary_status_page():
 
 @app.route('/VisualizeSummary', methods=['GET'])
 def visualize_summary():
+    print ("i am here")
     summary_filename = request.args['summary_filename']
     #print ("summary filename : " + summary_filename)
     with open(("Summaries/" + summary_filename), "r") as sj:

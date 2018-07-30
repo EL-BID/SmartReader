@@ -26,13 +26,14 @@ def updateJobStatus(jobid, status):
 
 def run_job(job):#in this context is the group of 'Queued' jobs retrieved from the database
     for document in job:
-        print('this is a document', document)
         try:
             print (document["model_name"])
             jobid = document["_id"]
             updateJobStatus(jobid, "Processing")
             topic_text = get_data(document["input"])
             all_text = " ".join([topic_text[text] for text in topic_text])#joined text from the results of querying the topics on the internet
+            #print('all_text',all_text)
+            #print('type of all_text:', type(topic_text))
 
             if len(all_text.strip()) > 0:
                 print("Creating Model")

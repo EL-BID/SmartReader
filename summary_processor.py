@@ -8,8 +8,8 @@ from src.convert_dataset import *
 
 
 def getJob():
+
     result = summary_collection.find( { 'status': "Queued" } ).limit( 1 )
-    print(result)
     return result
 
 def updateJobStatus(jobid, status):
@@ -24,15 +24,14 @@ def updateJobStatus(jobid, status):
     )
 
 def run_job(job):
+    #print('run_job from summary_processor')
     jobid = ""
     for document in job:
         try:
             jobid = document["_id"]
             updateJobStatus(jobid, "Processing")
-            print('BeforeXXXXXXXXXXXXXXXXXXX')
+            #print("Processing")
             output_json = create_summary(document["file_path"], document["model_file_name"])
-            print(output_json)
-            print('AfterXXXXXXXXXXXXXXXXXXXX')
             convert_txt_html(output_json)
             if not os.path.isdir('Summaries'):
                 os.mkdir('Summaries')
@@ -41,7 +40,7 @@ def run_job(job):
 
         except Exception as e:
             print (e)
-            updateJobStatus(jobid, "Error in function run_job")
+            updateJobStatus(jobid, "Error")
 
 
 def processNextJob():

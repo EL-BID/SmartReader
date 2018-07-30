@@ -25,10 +25,10 @@ def updateJobStatus(jobid, status):
 
 def run_job(job):
     #print('run_job from summary_processor')
-    print('XXXXXXXXXXXXXXXXXXXXXX')
-    print(job)
+    print('XXXXXXXXXXXXXXXXXXXXXX')    
     jobid = ""
     for document in job:
+        print(job)
         try:
             jobid = document["_id"]
             updateJobStatus(jobid, "Processing")

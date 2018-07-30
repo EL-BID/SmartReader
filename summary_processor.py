@@ -24,7 +24,6 @@ def updateJobStatus(jobid, status):
     )
 
 def run_job(job):
-    #print('run_job from summary_processor')
     jobid = ""
     for document in job:
         try:

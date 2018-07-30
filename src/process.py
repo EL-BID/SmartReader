@@ -75,7 +75,7 @@ def consolidate_data(dataset, model):
 	return output
 
 def create_summary(dataset_location, model_name):
-
+	print('Entering create_summary')
 	#dataset_location = "refined_ocred_data"
 	#model_name = "models/informal_economy_new.pkl"
 	#print (os.getcwd())

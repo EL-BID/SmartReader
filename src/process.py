@@ -109,16 +109,16 @@ def create_summary(dataset_location, model_name):
 		paragraphs = topic["paragraphs"]
 
 		for p in paragraphs[0:50]:
-			print('XXXXXXXXXXXXXXXXXXXXXXXXX')
-			print(p)
-			print('YYYYYYYYYYYYYYYYYYYYYYY')
 			try:
 				full_text = p["para"].text
+				sentences = sent_tokenize(full_text)
 				print('XXXXXXXXXXXXXXXXXXXXXXXXX')
-				print(full_text)
+				print(sentences)
 				print('YYYYYYYYYYYYYYYYYYYYYYY')
-				# sentences = sent_tokenize(full_text)
-				# summary = get_summary( full_text, 1, len(sentences) )[0]
+				summary = get_summary( full_text, 1, len(sentences) )[0]
+				print('XXXXXXXXXXXXXXXXXXXXXXXXX')
+				print(summary)
+				print('YYYYYYYYYYYYYYYYYYYYYYY')
 				# original_sentence = summary
 				# summary_index = sentences.index(summary)
 				# summary = spell_check.check_spelling(summary)

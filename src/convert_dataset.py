@@ -4,7 +4,7 @@ import shutil
 
 
 def convert_txt_html(js):
-
+	print(js)
 	# print (js[0]["folder"])
 	docs_folder = os.path.join("static","documents", js[0]["folder_name"])
 	input_folder = js[0]["folder"]

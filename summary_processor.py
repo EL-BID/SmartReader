@@ -32,11 +32,11 @@ def run_job(job):
             updateJobStatus(jobid, "Processing")
             #print("Processing")
             output_json = create_summary(document["file_path"], document["model_file_name"])
-            # convert_txt_html(output_json)
-            # if not os.path.isdir('Summaries'):
-            #     os.mkdir('Summaries')
-            # json.dump(output_json, open("Summaries/" + document["summary_filename"], "w"))
-            # updateJobStatus(jobid, "Done")
+            convert_txt_html(output_json)
+            if not os.path.isdir('Summaries'):
+                os.mkdir('Summaries')
+            json.dump(output_json, open("Summaries/" + document["summary_filename"], "w"))
+            updateJobStatus(jobid, "Done")
 
         except Exception as e:
             print (e)

@@ -83,9 +83,9 @@ def create_summary(dataset_location, model_name):
 	# print (model_name)
 
 	dataset = dataset_reader.read_dataset_text(dataset_location)
-	#print ("Number of files: ", len(dataset))
+	print ("Number of files: ", len(dataset))
 	model = create_model.load_model(model_name)
-	#print("Model loaded...")
+	print("Model loaded", model)
 	i = 0
 	# limit = 2
 	for doc in dataset:
@@ -162,6 +162,7 @@ def create_summary(dataset_location, model_name):
 		d["folder_name"] = dataset_location.split("/")[-1]
 		#print (d["folder_name"])
 		js.append(d)
+		print ("***********", js)
 
 	os.remove("prelim_output_informal_economy_new.bin")
 

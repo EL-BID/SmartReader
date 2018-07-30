@@ -83,9 +83,9 @@ def create_summary(dataset_location, model_name):
 	# print (model_name)
 
 	dataset = dataset_reader.read_dataset_text(dataset_location)
-	print ("Number of files: ", len(dataset))
+	# print ("Number of files: ", len(dataset))
 	model = create_model.load_model(model_name)
-	print("Model loaded", model)
+	# print("Model loaded", model)
 	i = 0
 	# limit = 2
 	for doc in dataset:
@@ -116,9 +116,6 @@ def create_summary(dataset_location, model_name):
 				print(sentences)
 				print('YYYYYYYYYYYYYYYYYYYYYYY')
 				summary = get_summary( full_text, 1, len(sentences) )[0]
-				print('XXXXXXXXXXXXXXXXXXXXXXXXX')
-				print(summary)
-				print('YYYYYYYYYYYYYYYYYYYYYYY')
 				# original_sentence = summary
 				# summary_index = sentences.index(summary)
 				# summary = spell_check.check_spelling(summary)

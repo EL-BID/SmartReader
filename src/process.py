@@ -55,12 +55,12 @@ def score_doc(model, doc):
 			for et in entity_types_non_loc:
 				doc.paragraphs[i].entities.extend(entities[et])
 	for i in range(len(doc.paragraphs)):
-		sm = 1.0*np.sum( doc.paragraphs[i].classification.values() )
+		sm = 1.0*sum( doc.paragraphs[i].classification.values() )
 		if sm == 0 or True:
 			sm = 1
 		for topic_name in doc.paragraphs[i].classification:
 			doc.paragraphs[i].classification[topic_name] /= sm
-			
+
 # def score_doc(model, doc):
 # 	texts = [par.text for par in doc.paragraphs]#generating a list of paragraphs per document. So len(texts) will return the number of paragraphs in a document
 # 	for topic in model:

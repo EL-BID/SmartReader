@@ -112,28 +112,31 @@ def create_summary(dataset_location, model_name):
 			print('XXXXXXXXXXXXXXXXXXXXXXXXX')
 			print(p)
 			print('YYYYYYYYYYYYYYYYYYYYYYY')
-		# 	try:
-		# 		full_text = p["para"].text
-		# 		sentences = sent_tokenize(full_text)
-		# 		summary = get_summary( full_text, 1, len(sentences) )[0]
-		# 		original_sentence = summary
-		# 		summary_index = sentences.index(summary)
-		# 		summary = spell_check.check_spelling(summary)
-		# 		context = sentences[summary_index-1] + sentences[summary_index] + sentences[summary_index+1]
-		# 		context = spell_check.check_spelling(context)
+			try:
+				full_text = p["para"].text
+				print('XXXXXXXXXXXXXXXXXXXXXXXXX')
+				print(full_text)
+				print('YYYYYYYYYYYYYYYYYYYYYYY')
+				# sentences = sent_tokenize(full_text)
+				# summary = get_summary( full_text, 1, len(sentences) )[0]
+				# original_sentence = summary
+				# summary_index = sentences.index(summary)
+				# summary = spell_check.check_spelling(summary)
+				# context = sentences[summary_index-1] + sentences[summary_index] + sentences[summary_index+1]
+				# context = spell_check.check_spelling(context)
 
-		# 		summary_points.append({ "summary":summary, "context": context, "original_sentence": original_sentence ,"text":full_text, "doc_id":p["para"].document.name.split('/')[-1], "para_id":p["para"].para_id, "score":p["score"]})
-		# 		for kwo in p["para"].topic_keywords[topic_name]:
-		# 			kw = kwo["keyword"]
-		# 			all_keywords[kw] += kwo["count"]
-		# 		for eto in p["para"].locations:
-		# 			all_locations[ eto["text"] ] += 1
-		# 		for eto in p["para"].entities:
-		# 			all_entities[ eto["text"] ] += 1
-		# 			all_entities_type[eto["text"]] = eto["type"]
+				# summary_points.append({ "summary":summary, "context": context, "original_sentence": original_sentence ,"text":full_text, "doc_id":p["para"].document.name.split('/')[-1], "para_id":p["para"].para_id, "score":p["score"]})
+				# for kwo in p["para"].topic_keywords[topic_name]:
+				# 	kw = kwo["keyword"]
+				# 	all_keywords[kw] += kwo["count"]
+				# for eto in p["para"].locations:
+				# 	all_locations[ eto["text"] ] += 1
+				# for eto in p["para"].entities:
+				# 	all_entities[ eto["text"] ] += 1
+				# 	all_entities_type[eto["text"]] = eto["type"]
 
-		# 	except:
-		# 		pass
+			except:
+				pass
 		# d['summary_points'] = summary_points
 		# d["keywords"] = [ {"keyword":k, "count":all_keywords[k]} for k in all_keywords]
 		# sm = np.sum( [kw["count"] for kw in d["keywords"]] )

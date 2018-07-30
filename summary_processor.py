@@ -26,8 +26,6 @@ def updateJobStatus(jobid, status):
 def run_job(job):
     jobid = ""
     for document in job:
-        print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')#daniela
-        print(document)#daniela
         try:
             jobid = document["_id"]
             updateJobStatus(jobid, "Processing")

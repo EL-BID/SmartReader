@@ -26,6 +26,7 @@ def updateJobStatus(jobid, status):
 
 def run_job(job):#in this context is the group of 'Queued' jobs retrieved from the database
     for document in job:
+        print('this is a document', document)
         try:
             print (document["model_name"])
             jobid = document["_id"]

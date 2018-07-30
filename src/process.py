@@ -37,7 +37,7 @@ def score_doc(model, doc):
 			score = 0#scores[i, 0]
 			hits = []
 			for feat in feature_indices:#feat returns the keyword itself
-				print("feat in feature_indices: ", feat)
+				# print("feat in feature_indices: ", feat)
 				j = feature_indices[feat]#j returns the index of the keyword
 				if feat in topic["keywords"] and X[i,j] > 0: # iterate through keywords and weights ?????
 					sc = (X[i,j] * topic["keywords"][feat])
@@ -93,6 +93,8 @@ def create_summary(dataset_location, model_name):
 		i = i + 1
 		score_doc(model, doc)
 	output = consolidate_data(dataset, model)
+	print('XXXXXXXXXXXXXXXXOUTPUTxxxxxxxxxxxxxxxxxxxxxxxxx')
+	print(output)
 	pickle.dump(output, open("prelim_output_informal_economy_new.bin", "wb"))
 
 	get_lat_lng = False
@@ -109,6 +111,9 @@ def create_summary(dataset_location, model_name):
 		paragraphs = topic["paragraphs"]
 
 		for p in paragraphs[0:50]:
+			print('XXXXXXXXXXXXXXXXXXXXXXXXX')
+			print(p)
+			print('YYYYYYYYYYYYYYYYYYYYYYY')
 			try:
 				full_text = p["para"].text
 				sentences = sent_tokenize(full_text)

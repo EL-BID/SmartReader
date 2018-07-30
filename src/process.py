@@ -122,12 +122,14 @@ def consolidate_data(dataset, model):
 	return output
 
 def create_summary(dataset_location, model_name):
+	print('XXXXXXXXXXXXXXXXXXXXXXXXX')
+	print('Dataset location:')
+	print(dataset_location)
+	print('Model Name:')
+	print(model_name)
+	print('YYYYYYYYYYYYYYYYYYYYYYYYY')
 
-	#dataset_location = "refined_ocred_data"
-	#model_name = "models/informal_economy_new.pkl"
-	#print (os.getcwd())
 	model_name = "models/" + model_name
-	# print (model_name)
 
 	dataset = dataset_reader.read_dataset_text(dataset_location)
 	#print ("Number of files: ", len(dataset))

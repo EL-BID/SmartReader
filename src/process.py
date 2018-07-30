@@ -41,30 +41,30 @@ def score_doc(model, doc):
 			score = 0#scores[i, 0]
 			hits = []
 			for feat in feature_indices:#feat returns the keyword itself
-				print("feat in feature_indices: ", feat)
+				#print("feat in feature_indices: ", feat)
 				j = feature_indices[feat]#j returns the index of the keyword
-				print("J:", j)
-				Y = X.get_feature_names()
-				print(" YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY :")
-				print(" Y :", Y)
-		# 		if feat in topic["keywords"] and X[i,j] > 0: # iterate through keywords and weights ?????
-		# 			print("feat in topic[keyword]: ", feat)
-		# 			sc = (X[i,j] * topic["keywords"][feat])
-		# 			print('X[i,j]: ', X[i,j])
-		# 			print('keywords_feat: ', topic["keywords"][feat])
-		# 			print('score: ', sc)
-		# 			# print("topic [keywords]:", topic["keywords"])
-		# 			hits.append( {"keyword":feat, "count": sc } )
-		# 			score = score + sc
-			# doc.paragraphs[i].classification[ topic["topic"] ] = score
-			# doc.paragraphs[i].topic_keywords[topic["topic"]] = hits
-			# entities = get_entities(nlp, u'%s' % texts[i])
-			# doc.paragraphs[i].locations = []
-			# for et in entity_types_loc:
-			# 	doc.paragraphs[i].locations.extend(entities[et])
-			# doc.paragraphs[i].entities = []
-			# for et in entity_types_non_loc:
-			# 	doc.paragraphs[i].entities.extend(entities[et])
+				#print("J:", j)
+				#Y = X.get_feature_names()
+				# print(" YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY :")
+				# print(" Y :", Y)
+				if feat in topic["keywords"] and X[i,j] > 0: # iterate through keywords and weights ?????
+					# print("feat in topic[keyword]: ", feat)
+					sc = (X[i,j] * topic["keywords"][feat])
+					# print('X[i,j]: ', X[i,j])
+					# print('keywords_feat: ', topic["keywords"][feat])
+					# print('score: ', sc)
+					# print("topic [keywords]:", topic["keywords"])
+					hits.append( {"keyword":feat, "count": sc } )
+					score = score + sc
+			doc.paragraphs[i].classification[ topic["topic"] ] = score
+			doc.paragraphs[i].topic_keywords[topic["topic"]] = hits
+			entities = get_entities(nlp, u'%s' % texts[i])
+			doc.paragraphs[i].locations = []
+			for et in entity_types_loc:
+				doc.paragraphs[i].locations.extend(entities[et])
+			doc.paragraphs[i].entities = []
+			for et in entity_types_non_loc:
+				doc.paragraphs[i].entities.extend(entities[et])
 	for i in range(len(doc.paragraphs)):
 		sm = 1.0*sum( doc.paragraphs[i].classification.values() )
 		if sm == 0 or True:

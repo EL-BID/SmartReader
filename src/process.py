@@ -27,33 +27,22 @@ def get_entities(nlp, text):
 		entities[ent.label_].append( {"type":ent.label_, "text":ent.text} )
 	return entities
 
+
 def score_doc(model, doc):
-	texts = [par.text for par in doc.paragraphs]#generating a list of paragraphs per document. So len(texts) will return the number of paragraphs in a document
+	texts = [ par.text for par in doc.paragraphs ]
 	for topic in model:
-		vec = topic['vectorizer']#vec returns the TfidfVectorizer function of the model with its corresponding parameters
-		# print(vec)
-		X = vec.transform(texts)#vec.transform would transform documents(text) to a document-term matrix. It returns X which is a sparse matrix, [n_samples, n_features]
-		# for i in range(5):
-		# 	print ("X.shape[0]", X[i])
-		# 	print ("X.shape[1]", X[0][i])
+		vec = topic['vectorizer']
+		X = vec.transform(texts) #.toarray()
 		feature_indices = topic["feature_indices"]
-		for i in range(X.shape[0]):#X.shape[0] is the number of rows, e.g.: 126 rows or paragraphs. From now, "topic" refers to the information in the model and "X" refers to text file
+		# a, b = X, topic["X"]
+		# scores = cdist(X, topic["X"])
+		for i in range(X.shape[0]):
 			score = 0#scores[i, 0]
 			hits = []
-			for feat in feature_indices:#feat returns the keyword itself
-				#print("feat in feature_indices: ", feat)
-				j = feature_indices[feat]#j returns the index of the keyword
-				#print("J:", j)
-				#Y = X.get_feature_names()
-				# print(" YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY :")
-				# print(" Y :", Y)
-				if feat in topic["keywords"] and X[i,j] > 0: # iterate through keywords and weights ?????
-					# print("feat in topic[keyword]: ", feat)
+			for feat in feature_indices:
+				j = feature_indices[feat]
+				if feat in topic["keywords"] and X[i,j] > 0:
 					sc = (X[i,j] * topic["keywords"][feat])
-					# print('X[i,j]: ', X[i,j])
-					# print('keywords_feat: ', topic["keywords"][feat])
-					# print('score: ', sc)
-					# print("topic [keywords]:", topic["keywords"])
 					hits.append( {"keyword":feat, "count": sc } )
 					score = score + sc
 			doc.paragraphs[i].classification[ topic["topic"] ] = score
@@ -66,11 +55,56 @@ def score_doc(model, doc):
 			for et in entity_types_non_loc:
 				doc.paragraphs[i].entities.extend(entities[et])
 	for i in range(len(doc.paragraphs)):
-		sm = 1.0*sum( doc.paragraphs[i].classification.values() )
+		sm = 1.0*np.sum( doc.paragraphs[i].classification.values() )
 		if sm == 0 or True:
 			sm = 1
 		for topic_name in doc.paragraphs[i].classification:
 			doc.paragraphs[i].classification[topic_name] /= sm
+			
+# def score_doc(model, doc):
+# 	texts = [par.text for par in doc.paragraphs]#generating a list of paragraphs per document. So len(texts) will return the number of paragraphs in a document
+# 	for topic in model:
+# 		vec = topic['vectorizer']#vec returns the TfidfVectorizer function of the model with its corresponding parameters
+# 		# print(vec)
+# 		X = vec.transform(texts)#vec.transform would transform documents(text) to a document-term matrix. It returns X which is a sparse matrix, [n_samples, n_features]
+# 		# for i in range(5):
+# 		# 	print ("X.shape[0]", X[i])
+# 		# 	print ("X.shape[1]", X[0][i])
+# 		feature_indices = topic["feature_indices"]
+# 		for i in range(X.shape[0]):#X.shape[0] is the number of rows, e.g.: 126 rows or paragraphs. From now, "topic" refers to the information in the model and "X" refers to text file
+# 			score = 0#scores[i, 0]
+# 			hits = []
+# 			for feat in feature_indices:#feat returns the keyword itself
+# 				#print("feat in feature_indices: ", feat)
+# 				j = feature_indices[feat]#j returns the index of the keyword
+# 				#print("J:", j)
+# 				#Y = X.get_feature_names()
+# 				# print(" YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY :")
+# 				# print(" Y :", Y)
+# 				if feat in topic["keywords"] and X[i,j] > 0: # iterate through keywords and weights ?????
+# 					# print("feat in topic[keyword]: ", feat)
+# 					sc = (X[i,j] * topic["keywords"][feat])
+# 					# print('X[i,j]: ', X[i,j])
+# 					# print('keywords_feat: ', topic["keywords"][feat])
+# 					# print('score: ', sc)
+# 					# print("topic [keywords]:", topic["keywords"])
+# 					hits.append( {"keyword":feat, "count": sc } )
+# 					score = score + sc
+# 			doc.paragraphs[i].classification[ topic["topic"] ] = score
+# 			doc.paragraphs[i].topic_keywords[topic["topic"]] = hits
+# 			entities = get_entities(nlp, u'%s' % texts[i])
+# 			doc.paragraphs[i].locations = []
+# 			for et in entity_types_loc:
+# 				doc.paragraphs[i].locations.extend(entities[et])
+# 			doc.paragraphs[i].entities = []
+# 			for et in entity_types_non_loc:
+# 				doc.paragraphs[i].entities.extend(entities[et])
+# 	for i in range(len(doc.paragraphs)):
+# 		sm = 1.0*sum( doc.paragraphs[i].classification.values() )
+# 		if sm == 0 or True:
+# 			sm = 1
+# 		for topic_name in doc.paragraphs[i].classification:
+# 			doc.paragraphs[i].classification[topic_name] /= sm
 
 para_g = None
 def consolidate_data(dataset, model):

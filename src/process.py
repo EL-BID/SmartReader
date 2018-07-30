@@ -79,8 +79,9 @@ def create_summary(dataset_location, model_name):
 	#dataset_location = "refined_ocred_data"
 	#model_name = "models/informal_economy_new.pkl"
 	#print (os.getcwd())
+	print('XXXXXXXXXXXXXXENTRANDOENCREATESUMMARY')
 	model_name = "models/" + model_name
-	# print (model_name)
+	print (model_name)
 
 	dataset = dataset_reader.read_dataset_text(dataset_location)
 	# print ("Number of files: ", len(dataset))

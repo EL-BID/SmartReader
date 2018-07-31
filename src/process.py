@@ -112,60 +112,60 @@ def create_summary(dataset_location, model_name):
 			try:
 				full_text = p["para"].text
 				sentences = sent_tokenize(full_text)
-				print('XXXXXXXXXXXXXXXXXXXXXXXXX')
-				print(sentences)
-				print('YYYYYYYYYYYYYYYYYYYYYYY')
+				# print('XXXXXXXXXXXXXXXXXXXXXXXXX')
+				# print(sentences)
+				# print('YYYYYYYYYYYYYYYYYYYYYYY')
 				summary = get_summary( full_text, 1, len(sentences) )[0]
-				# original_sentence = summary
-				# summary_index = sentences.index(summary)
-				# summary = spell_check.check_spelling(summary)
-				# context = sentences[summary_index-1] + sentences[summary_index] + sentences[summary_index+1]
-				# context = spell_check.check_spelling(context)
+				original_sentence = summary
+				summary_index = sentences.index(summary)
+				summary = spell_check.check_spelling(summary)
+				context = sentences[summary_index-1] + sentences[summary_index] + sentences[summary_index+1]
+				context = spell_check.check_spelling(context)
 
-				# summary_points.append({ "summary":summary, "context": context, "original_sentence": original_sentence ,"text":full_text, "doc_id":p["para"].document.name.split('/')[-1], "para_id":p["para"].para_id, "score":p["score"]})
-				# for kwo in p["para"].topic_keywords[topic_name]:
-				# 	kw = kwo["keyword"]
-				# 	all_keywords[kw] += kwo["count"]
-				# for eto in p["para"].locations:
-				# 	all_locations[ eto["text"] ] += 1
-				# for eto in p["para"].entities:
-				# 	all_entities[ eto["text"] ] += 1
-				# 	all_entities_type[eto["text"]] = eto["type"]
+				summary_points.append({ "summary":summary, "context": context, "original_sentence": original_sentence ,"text":full_text, "doc_id":p["para"].document.name.split('/')[-1], "para_id":p["para"].para_id, "score":p["score"]})
+				for kwo in p["para"].topic_keywords[topic_name]:
+					kw = kwo["keyword"]
+					all_keywords[kw] += kwo["count"]
+				for eto in p["para"].locations:
+					all_locations[ eto["text"] ] += 1
+				for eto in p["para"].entities:
+					all_entities[ eto["text"] ] += 1
+					all_entities_type[eto["text"]] = eto["type"]
 
 			except:
 				pass
-		# d['summary_points'] = summary_points
-		# d["keywords"] = [ {"keyword":k, "count":all_keywords[k]} for k in all_keywords]
-		# sm = np.sum( [kw["count"] for kw in d["keywords"]] )
-		# for kw in d["keywords"]:
-		# 	kw["count"] = int(1000*kw["count"]/sm)
+		d['summary_points'] = summary_points
+		d["keywords"] = [ {"keyword":k, "count":all_keywords[k]} for k in all_keywords]
+		sm = np.sum( [kw["count"] for kw in d["keywords"]] )
+		for kw in d["keywords"]:
+			kw["count"] = int(1000*kw["count"]/sm)
 
-		# d["locations"] = [ {"keyword":k, "count":all_locations[k], "type":"LOCATION"} for k in all_locations if len(k) > 1]
-		# if get_lat_lng == True:
-		# 	for l in d["locations"]:
-		# 		count = 0
-		# 		while count <= 3:
-		# 			count = count + 1
-		# 			#print(count)
-		# 			try:
-		# 				if l['keyword']  in location_history:
-		# 					latlng = location_history[ l['keyword'] ]
-		# 				else:
-		# 					latlng = geolocator.geocode(l['keyword'])
-		# 					location_history[ l['keyword'] ] = latlng
+		d["locations"] = [ {"keyword":k, "count":all_locations[k], "type":"LOCATION"} for k in all_locations if len(k) > 1]
+		if get_lat_lng == True:
+			for l in d["locations"]:
+				count = 0
+				while count <= 3:
+					count = count + 1
+					#print(count)
+					try:
+						if l['keyword']  in location_history:
+							latlng = location_history[ l['keyword'] ]
+						else:
+							latlng = geolocator.geocode(l['keyword'])
+							location_history[ l['keyword'] ] = latlng
 
-		# 				break
-		# 				if latlng:
-		# 					l["lat"] = latlng.latitude
-		# 					l["lng"] = latlng.longitude
-		# 			except:
-		# 				pass
-		# d["entities"] = [ {"keyword":k, "count":all_entities[k] , "type":all_entities_type[k]} for k in all_entities if len(k) > 1]
-		# d["folder"] = dataset_location
-		# d["folder_name"] = dataset_location.split("/")[-1]
-		# #print (d["folder_name"])
-		# js.append(d)
+						break
+						if latlng:
+							l["lat"] = latlng.latitude
+							l["lng"] = latlng.longitude
+					except:
+						pass
+		d["entities"] = [ {"keyword":k, "count":all_entities[k] , "type":all_entities_type[k]} for k in all_entities if len(k) > 1]
+		d["folder"] = dataset_location
+		d["folder_name"] = dataset_location.split("/")[-1]
+		#print (d["folder_name"])
+		js.append(d)
 		# print ("***********", js)
 
-	# os.remove("prelim_output_informal_economy_new.bin")
+	os.remove("prelim_output_informal_economy_new.bin")
 	return js

@@ -75,9 +75,6 @@ def consolidate_data(dataset, model):
 	return output
 
 def create_summary(dataset_location, model_name):
-
-	#dataset_location = "refined_ocred_data"
-	#model_name = "models/informal_economy_new.pkl"
 	print (os.getcwd())
 	model_name = "models/" + model_name
 	print (model_name)
@@ -114,9 +111,10 @@ def create_summary(dataset_location, model_name):
 				full_text = p["para"].text
 				sentences = sent_tokenize(full_text)
 				summary = get_summary( full_text, 1, len(sentences) )[0]
-				original_sentence = summary
 				print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-				print(original_sentence)
+				print(summary)
+				original_sentence = summary
+				
 	# 			summary_index = sentences.index(summary)
 	# 			summary = spell_check.check_spelling(summary)
 	# 			context = sentences[summary_index-1] + sentences[summary_index] + sentences[summary_index+1]

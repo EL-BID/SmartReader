@@ -141,27 +141,21 @@ def get_models():
 def upload_file():
     try:
         try:
-
             model = request.form.get('model')
-            #print (model)
             model_name = " ".join(model.split(",")[:-1]).strip()
             model_file_name = model.split(",")[-1].strip()
-            # print (model_file_name)
             print ("model: ", model_name)
             file = request.files['file']
             filename = secure_filename(file.filename)
-            #print ("filename: ", filename)
-            #print (type(filename))
+ 
         except Exception as e:
             print (e)
         if filename.endswith('.zip'):
             if not os.path.isdir('Data'):
                 os.mkdir('Data')
             summary_filename = "summary_json_"+ datetime.now().strftime("%Y-%m-%d_%H-%M-%S") +".json"
-            #print ("sumary filename is"+ summary_filename)
             folder_name = "text_files_"+datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
             file_path = os.path.join(os.getcwd(),"Data",folder_name)
-            #print ("filepath: " + file_path)
             os.mkdir(file_path)
             file.save(filename)
             upload_input_files(filename, file_path)

@@ -82,11 +82,11 @@ def create_summary(dataset_location, model_name):
 	dataset = dataset_reader.read_dataset_text(dataset_location)
 	print ("Number of files: ", len(dataset))
 	model = create_model.load_model(model_name)
-	print("Model loaded...")
+	# print("Model loaded...")
 	i = 0
 	# limit = 2
 	for doc in dataset:
-		print(i)
+		# print(i)
 		i = i + 1
 		score_doc(model, doc)
 	output = consolidate_data(dataset, model)
@@ -110,10 +110,11 @@ def create_summary(dataset_location, model_name):
 			try:
 				full_text = p["para"].text
 				sentences = sent_tokenize(full_text)
-				summary = get_summary( full_text, 1, len(sentences) )[0]
 				print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-				print(summary)
-				original_sentence = summary
+				print(sentences)
+				# summary = get_summary( full_text, 1, len(sentences) )[0]
+				
+				# original_sentence = summary
 				
 	# 			summary_index = sentences.index(summary)
 	# 			summary = spell_check.check_spelling(summary)

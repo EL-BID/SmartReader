@@ -116,23 +116,23 @@ def create_summary(dataset_location, model_name):
 				print('XXXXXXXXXXXXXXXXXXXXXXXXX')
 				print(summary)
 				print('YYYYYYYYYYYYYYYYYYYYYYY')
-				original_sentence = summary
-				summary_index = sentences.index(summary)
-				summary = spell_check.check_spelling(summary)
-				context = sentences[summary_index-1] + sentences[summary_index] + sentences[summary_index+1]
-				context = spell_check.check_spelling(context)
-				print('******************************')
-				print(context)
-				print('-------------------------------')
-				summary_points.append({ "summary":summary, "context": context, "original_sentence": original_sentence ,"text":full_text, "doc_id":p["para"].document.name.split('/')[-1], "para_id":p["para"].para_id, "score":p["score"]})
-				for kwo in p["para"].topic_keywords[topic_name]:
-					kw = kwo["keyword"]
-					all_keywords[kw] += kwo["count"]
-				for eto in p["para"].locations:
-					all_locations[ eto["text"] ] += 1
-				for eto in p["para"].entities:
-					all_entities[ eto["text"] ] += 1
-					all_entities_type[eto["text"]] = eto["type"]
+				# original_sentence = summary
+				# summary_index = sentences.index(summary)
+				# summary = spell_check.check_spelling(summary)
+				# context = sentences[summary_index-1] + sentences[summary_index] + sentences[summary_index+1]
+				# context = spell_check.check_spelling(context)
+				# print('******************************')
+				# print(context)
+				# print('-------------------------------')
+				# summary_points.append({ "summary":summary, "context": context, "original_sentence": original_sentence ,"text":full_text, "doc_id":p["para"].document.name.split('/')[-1], "para_id":p["para"].para_id, "score":p["score"]})
+				# for kwo in p["para"].topic_keywords[topic_name]:
+				# 	kw = kwo["keyword"]
+				# 	all_keywords[kw] += kwo["count"]
+				# for eto in p["para"].locations:
+				# 	all_locations[ eto["text"] ] += 1
+				# for eto in p["para"].entities:
+				# 	all_entities[ eto["text"] ] += 1
+				# 	all_entities_type[eto["text"]] = eto["type"]
 
 			except:
 				pass
@@ -167,7 +167,7 @@ def create_summary(dataset_location, model_name):
 		d["folder_name"] = dataset_location.split("/")[-1]
 		#print (d["folder_name"])
 		js.append(d)
-		print ("***********", js)
+		# print ("***********", js)
 
 	os.remove("prelim_output_informal_economy_new.bin")
 	return js

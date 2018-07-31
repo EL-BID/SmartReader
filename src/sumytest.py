@@ -51,16 +51,12 @@ def get_summary(textss , truereq, numofsent):
 
     for sentence in summarizer(parser.document,numofsent):
         hold=str(sentence)
-        print('hold')
-        print(hold)
-
         ttt=nltk.word_tokenize(hold)
-        print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-        print('ttt')
-        print(ttt)
         count=0
-        for i in range(0, len(ttt)):
+        for i in range(0, len(ttt)):#loops over the each token from current sentence
             for j in range(0,len(holdfirst)):
+                print("ttt[i]",ttt[i])
+                print("holdfirst[j]",holdfirst[j])
                 if ttt[i]==holdfirst[j]:
                     count+=1
         compare.append(count)

@@ -110,7 +110,7 @@ def create_summary(dataset_location, model_name):
 			try:
 				full_text = p["para"].text
 				sentences = sent_tokenize(full_text)
-				summary = get_summary( full_text, 1, len(sentences) )[0]
+				summary = get_summary(full_text, 1, len(sentences))[0]
 				print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 				print(summary)
 				# original_sentence = summary

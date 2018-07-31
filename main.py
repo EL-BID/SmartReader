@@ -144,7 +144,7 @@ def upload_file():
             model = request.form.get('model')
             model_name = " ".join(model.split(",")[:-1]).strip()
             model_file_name = model.split(",")[-1].strip()
-            print ("model: ", model_name)
+            # print ("model: ", model_name)
             file = request.files['file']
             filename = secure_filename(file.filename)
  
@@ -159,10 +159,10 @@ def upload_file():
             os.mkdir(file_path)
             file.save(filename)
             upload_input_files(filename, file_path)
-            print ("Inserting")
+            # print ("Inserting")
             timestamp = datetime.now()
             summary_collection.insert({"file_path": file_path, "summary_filename": summary_filename, "model_name": model_name, "model_file_name": model_file_name , "status": "Queued", "timestamp": timestamp})
-            print ("all working done")
+            # print ("all working done")
 
             return Response(json.dumps({'success': True}), 200, {'contentType': 'application/json'})
         else:

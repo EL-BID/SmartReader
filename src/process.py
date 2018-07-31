@@ -116,6 +116,7 @@ def create_summary(dataset_location, model_name):
 				print('XXXXXXXXXXXXXXXXXXXXXXXXX')
 				print(summary)
 				print('YYYYYYYYYYYYYYYYYYYYYYY')
+			break
 				# original_sentence = summary
 				# summary_index = sentences.index(summary)
 				# summary = spell_check.check_spelling(summary)
@@ -133,41 +134,41 @@ def create_summary(dataset_location, model_name):
 				# for eto in p["para"].entities:
 				# 	all_entities[ eto["text"] ] += 1
 				# 	all_entities_type[eto["text"]] = eto["type"]
-
-			except:
-				pass
-		d['summary_points'] = summary_points
-		d["keywords"] = [ {"keyword":k, "count":all_keywords[k]} for k in all_keywords]
-		sm = np.sum( [kw["count"] for kw in d["keywords"]] )
-		for kw in d["keywords"]:
-			kw["count"] = int(1000*kw["count"]/sm)
-
-		d["locations"] = [ {"keyword":k, "count":all_locations[k], "type":"LOCATION"} for k in all_locations if len(k) > 1]
-		if get_lat_lng == True:
-			for l in d["locations"]:
-				count = 0
-				while count <= 3:
-					count = count + 1
-					#print(count)
-					try:
-						if l['keyword']  in location_history:
-							latlng = location_history[ l['keyword'] ]
-						else:
-							latlng = geolocator.geocode(l['keyword'])
-							location_history[ l['keyword'] ] = latlng
-
-						break
-						if latlng:
-							l["lat"] = latlng.latitude
-							l["lng"] = latlng.longitude
-					except:
-						pass
-		d["entities"] = [ {"keyword":k, "count":all_entities[k] , "type":all_entities_type[k]} for k in all_entities if len(k) > 1]
-		d["folder"] = dataset_location
-		d["folder_name"] = dataset_location.split("/")[-1]
-		#print (d["folder_name"])
-		js.append(d)
-		# print ("***********", js)
-
-	os.remove("prelim_output_informal_economy_new.bin")
-	return js
+	#
+	# 		except:
+	# 			pass
+	# 	d['summary_points'] = summary_points
+	# 	d["keywords"] = [ {"keyword":k, "count":all_keywords[k]} for k in all_keywords]
+	# 	sm = np.sum( [kw["count"] for kw in d["keywords"]] )
+	# 	for kw in d["keywords"]:
+	# 		kw["count"] = int(1000*kw["count"]/sm)
+	#
+	# 	d["locations"] = [ {"keyword":k, "count":all_locations[k], "type":"LOCATION"} for k in all_locations if len(k) > 1]
+	# 	if get_lat_lng == True:
+	# 		for l in d["locations"]:
+	# 			count = 0
+	# 			while count <= 3:
+	# 				count = count + 1
+	# 				#print(count)
+	# 				try:
+	# 					if l['keyword']  in location_history:
+	# 						latlng = location_history[ l['keyword'] ]
+	# 					else:
+	# 						latlng = geolocator.geocode(l['keyword'])
+	# 						location_history[ l['keyword'] ] = latlng
+	#
+	# 					break
+	# 					if latlng:
+	# 						l["lat"] = latlng.latitude
+	# 						l["lng"] = latlng.longitude
+	# 				except:
+	# 					pass
+	# 	d["entities"] = [ {"keyword":k, "count":all_entities[k] , "type":all_entities_type[k]} for k in all_entities if len(k) > 1]
+	# 	d["folder"] = dataset_location
+	# 	d["folder_name"] = dataset_location.split("/")[-1]
+	# 	#print (d["folder_name"])
+	# 	js.append(d)
+	# 	# print ("***********", js)
+	#
+	# os.remove("prelim_output_informal_economy_new.bin")
+	# return js

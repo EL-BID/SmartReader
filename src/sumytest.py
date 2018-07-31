@@ -39,7 +39,14 @@ def get_summary(textss , truereq, numofsent):
     truecount=0
     store=''
     store=keywords(textss,ratio=0.05)
+    print('store')
+    print(type(store))
     store1=str(store)
+
+    print('store1')
+    print(store1)
+
+
     holdfirst=nltk.word_tokenize(store1)#This variable holds the first word of a string with multiple words
     parser=PlaintextParser.from_string(textss,Tokenizer(LANGUAGE)) #If reading from TEXT file
     stemmer = Stemmer(LANGUAGE)
@@ -55,9 +62,7 @@ def get_summary(textss , truereq, numofsent):
         count=0
         for i in range(0, len(ttt)):#loops over the each token from current sentence
             for j in range(0,len(holdfirst)):
-                print("ttt[i]",ttt[i])
-                print("holdfirst[j]",holdfirst[j])
-                if ttt[i]==holdfirst[j]:
+                if ttt[i]==holdfirst[j]:#compares two strings, the current token from the current sentence with holdfirst[j]
                     count+=1
         compare.append(count)
         sentencess.append(str(sentence))

@@ -48,19 +48,18 @@ def get_summary(textss , truereq, numofsent):
     truecount=0
     store=''
     store=keywords(textss,ratio=0.05)
-    
-    print('store')
-    print(store)
-
-
     store1=str(store)
-
-    print('store1')
-    print(store1)
-
     holdfirst=nltk.word_tokenize(store1)
+    print('holdfirst')
+    print(holdfirst)
+
     parser=PlaintextParser.from_string(textss,Tokenizer(LANGUAGE)) # IF READING FROM A TEXT FILE
+    print('pareser')
+    print(parser)
+
     stemmer = Stemmer(LANGUAGE)
+    print('stemmer')
+    print(stemmer)
     #summarizer = LexRankSummarizer(stemmer)
     summarizer = Summarizer(stemmer)
     summarizer.stop_words = get_stop_words(LANGUAGE)

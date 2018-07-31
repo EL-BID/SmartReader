@@ -117,6 +117,7 @@ def create_summary(dataset_location, model_name):
 				print(summary)
 				print('YYYYYYYYYYYYYYYYYYYYYYY')
 		break
+	break
 				# original_sentence = summary
 				# summary_index = sentences.index(summary)
 				# summary = spell_check.check_spelling(summary)

@@ -34,21 +34,30 @@ compare=[]
 LANGUAGE = "english"
 
 def get_summary(textss , truereq, numofsent):
-    print('textss: ')
-    print(textss)
+    # print('textss: ')
+    # print(textss)
 
-    print('truereq')
-    print(truereq)
+    # print('truereq')
+    # print(truereq)
 
-    print('numofsent')
-    print(numofsent)
+    # print('numofsent')
+    # print(numofsent)
 
     output_sentences = []
     hold=''
     truecount=0
     store=''
     store=keywords(textss,ratio=0.05)
+    
+    print('store')
+    print(store)
+
+
     store1=str(store)
+
+    print('store1')
+    print(store1)
+
     holdfirst=nltk.word_tokenize(store1)
     parser=PlaintextParser.from_string(textss,Tokenizer(LANGUAGE)) # IF READING FROM A TEXT FILE
     stemmer = Stemmer(LANGUAGE)

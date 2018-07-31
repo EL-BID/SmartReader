@@ -112,15 +112,18 @@ def create_summary(dataset_location, model_name):
 			try:
 				full_text = p["para"].text
 				sentences = sent_tokenize(full_text)
-				# print('XXXXXXXXXXXXXXXXXXXXXXXXX')
-				# print(sentences)
-				# print('YYYYYYYYYYYYYYYYYYYYYYY')
 				summary = get_summary( full_text, 1, len(sentences) )[0]
+				print('XXXXXXXXXXXXXXXXXXXXXXXXX')
+				print(summary)
+				print('YYYYYYYYYYYYYYYYYYYYYYY')
 				original_sentence = summary
 				summary_index = sentences.index(summary)
 				summary = spell_check.check_spelling(summary)
 				context = sentences[summary_index-1] + sentences[summary_index] + sentences[summary_index+1]
 				context = spell_check.check_spelling(context)
+				print('******************************')
+				print(context)
+				print('-------------------------------')
 
 				summary_points.append({ "summary":summary, "context": context, "original_sentence": original_sentence ,"text":full_text, "doc_id":p["para"].document.name.split('/')[-1], "para_id":p["para"].para_id, "score":p["score"]})
 				for kwo in p["para"].topic_keywords[topic_name]:

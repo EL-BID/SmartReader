@@ -80,7 +80,7 @@ def create_summary(dataset_location, model_name):
 	print (model_name)
 
 	dataset = dataset_reader.read_dataset_text(dataset_location)
-	print ("Number of files: ", len(dataset))
+	#print ("Number of files: ", len(dataset))
 	model = create_model.load_model(model_name)
 	# print("Model loaded...")
 	i = 0

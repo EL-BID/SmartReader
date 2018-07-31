@@ -34,15 +34,6 @@ compare=[]
 LANGUAGE = "english"
 
 def get_summary(textss , truereq, numofsent):
-    # print('textss: ')
-    # print(textss)
-
-    # print('truereq')
-    # print(truereq)
-
-    # print('numofsent')
-    # print(numofsent)
-
     output_sentences = []
     hold=''
     truecount=0
@@ -52,23 +43,21 @@ def get_summary(textss , truereq, numofsent):
     holdfirst=nltk.word_tokenize(store1)#This variable holds the first word of a string with multiple words
     parser=PlaintextParser.from_string(textss,Tokenizer(LANGUAGE)) #If reading from TEXT file
     stemmer = Stemmer(LANGUAGE)
-    #summarizer = LexRankSummarizer(stemmer)
     summarizer = Summarizer(stemmer)
-    print('summarizer')
-    print(summarizer)
-
     summarizer.stop_words = get_stop_words(LANGUAGE)
-    print('stop_words')
-    print(summarizer.stop_words)
 
     sentencess=[]
     compare=[]
 
     for sentence in summarizer(parser.document,numofsent):
-        #print(sentence)
-        # print('\n')
         hold=str(sentence)
+        print('hold')
+        print(hold)
+
         ttt=nltk.word_tokenize(hold)
+        print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+        print('ttt')
+        print(ttt)
         count=0
         for i in range(0, len(ttt)):
             for j in range(0,len(holdfirst)):

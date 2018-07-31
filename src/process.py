@@ -170,5 +170,5 @@ def create_summary(dataset_location, model_name):
 		# js.append(d)
 		# print ("***********", js)
 
-	os.remove("prelim_output_informal_economy_new.bin")
+	# os.remove("prelim_output_informal_economy_new.bin")
 	return js

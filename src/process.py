@@ -78,12 +78,12 @@ def create_summary(dataset_location, model_name):
 
 	#dataset_location = "refined_ocred_data"
 	#model_name = "models/informal_economy_new.pkl"
-	print os.getcwd()
+	print (os.getcwd())
 	model_name = "models/" + model_name
-	print model_name
+	print (model_name)
 
 	dataset = dataset_reader.read_dataset_text(dataset_location)
-	print "Number of files: ", len(dataset)
+	print ("Number of files: ", len(dataset))
 	model = create_model.load_model(model_name)
 	print("Model loaded...")
 	i = 0
@@ -158,7 +158,7 @@ def create_summary(dataset_location, model_name):
 		d["entities"] = [ {"keyword":k, "count":all_entities[k] , "type":all_entities_type[k]} for k in all_entities if len(k) > 1]
 		d["folder"] = dataset_location
 		d["folder_name"] = dataset_location.split("/")[-1]
-		print d["folder_name"]
+		print (d["folder_name"])
 		js.append(d)
 
 	os.remove("prelim_output_informal_economy_new.bin")

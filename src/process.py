@@ -130,8 +130,8 @@ def create_summary(dataset_location, model_name):
 	# 				all_entities_type[eto["text"]] = eto["type"]
 			except:
 				pass
+			break
 		break
-	break
 	# 	d['summary_points'] = summary_points
 	# 	d["keywords"] = [ {"keyword":k, "count":all_keywords[k]} for k in all_keywords]
 	# 	sm = np.sum( [kw["count"] for kw in d["keywords"]] )

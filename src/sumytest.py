@@ -25,7 +25,7 @@ import logging
 # logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 import nltk, re, pprint
 from nltk import word_tokenize
-from nltk import sent_tokenize
+from nltk imporpit sent_tokenize
 from gensim.summarization import keywords
 from gensim.summarization import summarize
 
@@ -78,18 +78,14 @@ def get_summary(textss , truereq, numofsent):
 
     texts = [[token for token in text if frequency[token] > 1]
               for text in texts]#array of words that occur more than once
-    print(texts)
+    
     for i in range(len(texts)):
         print(i)
     
     from pprint import pprint  
     dictionary = corpora.Dictionary(texts)#dictionary is a list of unique words
     dictionary.save(os.path.join(TEMP_FOLDER, 'deerwester.dict'))
-    print('DDDDDDDDDDDDDDDDDDDDDDDDDDDD')
-    print(textss)
     new_doc = str(textss.encode('utf-8'))
-    print('SSSSSSSSSSSSSSSSSSSSSSSSSS')
-    print(new_doc)
     new_vec = dictionary.doc2bow(new_doc.lower().split())
     corpus = [dictionary.doc2bow(text) for text in texts]
     corpora.MmCorpus.serialize(os.path.join(TEMP_FOLDER, 'deerwester.mm'), corpus)  # store to disk, for later use

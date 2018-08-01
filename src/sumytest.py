@@ -47,13 +47,9 @@ def get_summary(textss , truereq, numofsent):
     # print(store1)
 
 
-    holdfirst=nltk.word_tokenize(store1)#This variable holds the first word of a string with multiple words
-    # print('XXXXXXXXXXXXXXXXholdfirst')
-    # print(holdfirst)
-
+    holdfirst=nltk.word_tokenize(store1)#This variable holds the first word of a string with multiple keywords
     parser = PlaintextParser.from_string(textss,Tokenizer(LANGUAGE)) #parser is an object that represents the full text
-    
-    # print('XXXXXXXPARSERXXXXXXXXXXX', parser)
+
 
     stemmer = Stemmer(LANGUAGE)
     summarizer = Summarizer(stemmer)
@@ -64,18 +60,12 @@ def get_summary(textss , truereq, numofsent):
 
     for sentence in summarizer(parser.document,numofsent):#iterating through sentences of full text
         hold=str(sentence)
-        # print('XXXXXXXHOLDxxxxxxxxxxxxxxxxxxxx', hold)
-        ttt=nltk.word_tokenize(hold)
-        print('XXXXXXXXXXXXXXXXXX')
-        print(hold)
+        ttt=nltk.word_tokenize(hold)#list of words/tokens
         count=0
         for i in range(0, len(ttt)):#loops over the each token from current sentence
             for j in range(0,len(holdfirst)):
-                if ttt[i]==holdfirst[j]:#compares two strings, the current token from the current sentence with holdfirst[j]
-                    # print('YYYYYYYYYYYYYYYYY')
-                    # print(holdfirst[j])
+                if ttt[i]==holdfirst[j]:#compares two words, the current from the current sentence with the current keyword
                     count+=1
-        break#daniela
         compare.append(count)
         sentencess.append(str(sentence))
 
@@ -84,12 +74,13 @@ def get_summary(textss , truereq, numofsent):
     import os
     import tempfile
     TEMP_FOLDER = tempfile.gettempdir()
-    #print('Folder "{}" will be used to save temporary dictionary and corpus.'.format(TEMP_FOLDER))
-    documents=sent_tokenize(textss)
-    summalen=len(documents)
+    documents=sent_tokenize(textss)#segmenting full text into sentences
+    print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+    print(documents)
+    summalen=len(documents)#number of sentences
     stoplist = set('for a of the and to in'.split())
     texts = [[word for word in document.lower().split() if word not in stoplist]
-              for document in documents]
+              for document in documents]#removing stopwords from text
 
     from collections import defaultdict
     frequency = defaultdict(int)

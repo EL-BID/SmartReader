@@ -109,9 +109,9 @@ def create_summary(dataset_location, model_name):
 
 		print('*******************************')
 		for x in paragraphs:
-    		print (x)
-    		for y in paragraphs[x]:
-       		 	print (y,':',paragraphs[x][y])
+			print(x)
+			for y in paragraphs[x]:
+				print(y,':',paragraphs[x][y])
 
 		for p in paragraphs[0:50]:
 			try:

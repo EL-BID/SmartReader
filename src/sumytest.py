@@ -25,7 +25,7 @@ import logging
 # logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 import nltk, re, pprint
 from nltk import word_tokenize
-from nltk imporpit sent_tokenize
+from nltk import sent_tokenize
 from gensim.summarization import keywords
 from gensim.summarization import summarize
 

@@ -66,10 +66,6 @@ def get_summary(textss , truereq, numofsent):
     TEMP_FOLDER = tempfile.gettempdir()
     documents=sent_tokenize(textss)#segmenting full text into sentences
     summalen=len(documents)#number of sentences
-    print('XXXXXXXXXXXXXXXXXXXXX')
-    print(summalen)
-
-
     stoplist = set('for a of the and to in'.split())
     texts = [[word for word in document.lower().split() if word not in stoplist]
               for document in documents]#texts is an array of sentences where each sentence is a list of words without stopwords
@@ -83,6 +79,8 @@ def get_summary(textss , truereq, numofsent):
     texts = [[token for token in text if frequency[token] > 1]
               for text in texts]
 
+    print(texts)
+    
     from pprint import pprint  # pretty-#printer
     #pprint(texts)
     dictionary = corpora.Dictionary(texts)

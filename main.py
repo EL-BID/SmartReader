@@ -30,7 +30,7 @@ def generate_summary_page():
 
 @app.route('/ModelsStatus')
 def get_model_status_page():
-    print ("i get here")
+    print ("get_model_status_page is being called")
     return render_template('models_status.html')
 
 
@@ -41,7 +41,7 @@ def get_summary_status_page():
 
 @app.route('/VisualizeSummary', methods=['GET'])
 def visualize_summary():
-    print ("i am here")
+    print ("visualize_summary() is being called")
     summary_filename = request.args['summary_filename']
     #print ("summary filename : " + summary_filename)
     with open(("Summaries/" + summary_filename), "r") as sj:
@@ -80,7 +80,7 @@ def return_json():
 @app.route('/generate_data_model', methods=['POST'])
 def get_data():
 
-    print ("i get here")
+    print ("get_data is being called")
     try:
         json_obj = {}
 

@@ -1,14 +1,13 @@
 from gensim.corpora import MmCorpus
 from gensim.test.utils import get_tmpfile
-corpus = [[(1, 0.3), (2, 0.1)], [(1, 0.1)], [(2, 0.3)]]
+corpus = [[(0, 1), (1, 1)], [(0, 1), (1, 1), (2, 2)]]
 output_fname = get_tmpfile("test.mm")
 
-nn = MmCorpus.serialize(output_fname, corpus)
+MmCorpus.serialize(output_fname, corpus)
 mm = MmCorpus(output_fname) # `mm` document stream now has random access
 # print(mm[1]) # retrieve document no. 42, etc.
 # print(mm[0])
-print('NNNNNNNNNNNNNNNN',nn)
-print('MMMMMMMMMMMMMMMM',mm)
+
 
 
 

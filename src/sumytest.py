@@ -77,12 +77,16 @@ def get_summary(textss , truereq, numofsent):
             frequency[token] += 1
 
     texts = [[token for token in text if frequency[token] > 1]
-              for text in texts]
-
+              for text in texts]#array of words that occur more than once
+    print(texts)
+    for i in range(len(texts)):
+        print(i)
+    
     from pprint import pprint  
     dictionary = corpora.Dictionary(texts)
+    print(dictionary)#here it is failing because it prints empty
     dictionary.save(os.path.join(TEMP_FOLDER, 'deerwester.dict'))  # store the dictionary, for future reference
-    print(dictionary)
+    
     #print(dictionary.token2id)###################################
     new_doc = str(textss.encode('utf-8'))
     new_vec = dictionary.doc2bow(new_doc.lower().split())

@@ -83,12 +83,13 @@ def get_summary(textss , truereq, numofsent):
         print(i)
     
     from pprint import pprint  
-    dictionary = corpora.Dictionary(texts)
-    print(dictionary)#here it is failing because it prints empty
-    dictionary.save(os.path.join(TEMP_FOLDER, 'deerwester.dict'))  # store the dictionary, for future reference
-    
-    #print(dictionary.token2id)###################################
+    dictionary = corpora.Dictionary(texts)#dictionary is a list of unique words
+    dictionary.save(os.path.join(TEMP_FOLDER, 'deerwester.dict'))
+    print('DDDDDDDDDDDDDDDDDDDDDDDDDDDDDD')
+    print(textss)
     new_doc = str(textss.encode('utf-8'))
+    print('SSSSSSSSSSSSSSSSSSSSSSSSSS')
+    print(new_doc)
     new_vec = dictionary.doc2bow(new_doc.lower().split())
     corpus = [dictionary.doc2bow(text) for text in texts]
     corpora.MmCorpus.serialize(os.path.join(TEMP_FOLDER, 'deerwester.mm'), corpus)  # store to disk, for later use

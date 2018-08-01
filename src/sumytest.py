@@ -79,13 +79,10 @@ def get_summary(textss , truereq, numofsent):
     texts = [[token for token in text if frequency[token] > 1]
               for text in texts]
 
-    print(texts)
-    
-    from pprint import pprint  # pretty-#printer
-    #pprint(texts)
+    from pprint import pprint  
     dictionary = corpora.Dictionary(texts)
     dictionary.save(os.path.join(TEMP_FOLDER, 'deerwester.dict'))  # store the dictionary, for future reference
-    #print(dictionary)
+    print(dictionary)
     #print(dictionary.token2id)###################################
     new_doc = str(textss.encode('utf-8'))
     new_vec = dictionary.doc2bow(new_doc.lower().split())

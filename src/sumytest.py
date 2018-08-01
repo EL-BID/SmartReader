@@ -48,6 +48,9 @@ def get_summary(textss , truereq, numofsent):
 
 
     holdfirst=nltk.word_tokenize(store1)#This variable holds the first word of a string with multiple words
+    print('XXXXXXXXXXXXXXXXholdfirst')
+    print(holdfirst)
+
     parser=PlaintextParser.from_string(textss,Tokenizer(LANGUAGE)) #If reading from TEXT file
     stemmer = Stemmer(LANGUAGE)
     summarizer = Summarizer(stemmer)
@@ -63,7 +66,10 @@ def get_summary(textss , truereq, numofsent):
         for i in range(0, len(ttt)):#loops over the each token from current sentence
             for j in range(0,len(holdfirst)):
                 if ttt[i]==holdfirst[j]:#compares two strings, the current token from the current sentence with holdfirst[j]
+                    print('YYYYYYYYYYYYYYYYY')
+                    print(holdfirst[j])
                     count+=1
+        break#daniela
         compare.append(count)
         sentencess.append(str(sentence))
 

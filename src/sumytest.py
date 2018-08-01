@@ -79,12 +79,13 @@ def get_summary(textss , truereq, numofsent):
     texts = [[token for token in text if frequency[token] > 1]
               for text in texts]#array of words that occur more than once
     
-    for i in range(len(texts)):
-        print(i)
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     
     from pprint import pprint  
     dictionary = corpora.Dictionary(texts)#dictionary is a list of unique words
+    print("KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK")
     dictionary.save(os.path.join(TEMP_FOLDER, 'deerwester.dict'))
+    print("WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW")
     new_doc = str(textss.encode('utf-8'))
     print("*-*-*-", new_doc)
     new_vec = dictionary.doc2bow(new_doc.lower().split())

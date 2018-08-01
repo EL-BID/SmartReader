@@ -85,7 +85,9 @@ def get_summary(textss , truereq, numofsent):
     new_doc = str(textss.encode('utf-8')) # transform textss to utf-8 
     print("RRRRRRRRRRRRRRRRRRRRRnew_doc", new_doc)
     new_vec = dictionary.doc2bow(new_doc.lower().split())#Convert document (a list of words) into the bag-of-words format = list of (token_id, token_count) 2-tuples. Each word is assumed to be a tokenized and normalized string (either unicode or utf8-encoded). 
+    print("1111111111")
     corpus = [dictionary.doc2bow(text) for text in texts] #Apply doc2bow to full text and save into an array
+    print("2222222")
     corpora.MmCorpus.serialize(os.path.join(TEMP_FOLDER, 'deerwester.mm'), corpus)  # store to disk, for later use
     print("QQQQQQQQQ")
     dictionary = corpora.Dictionary.load( os.path.join(TEMP_FOLDER,  'deerwester.dict'))

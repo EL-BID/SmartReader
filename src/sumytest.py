@@ -76,10 +76,13 @@ def get_summary(textss , truereq, numofsent):
     TEMP_FOLDER = tempfile.gettempdir()
     documents=sent_tokenize(textss)#segmenting full text into sentences
     summalen=len(documents)#number of sentences
+    print('XXXXXXXXXXXXXXXXXXXXX')
+    print(summalen)
+
+
     stoplist = set('for a of the and to in'.split())
     texts = [[word for word in document.lower().split() if word not in stoplist]
-              for document in documents]#removing stopwords from text
-    print("*****************", texts)
+              for document in documents]#texts is an array of sentences where each sentence is a list of words without stopwords
 
     from collections import defaultdict
     frequency = defaultdict(int)

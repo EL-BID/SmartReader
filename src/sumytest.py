@@ -39,22 +39,12 @@ def get_summary(textss , truereq, numofsent):
     truecount=0
     store=''
     store=keywords(textss,ratio=0.05)#extracts most relevant words from full text
-    # print('store')
-    # print(type(store))
     store1=str(store)
-
-    # print('store1')
-    # print(store1)
-
-
     holdfirst=nltk.word_tokenize(store1)#This variable holds the first word of a string with multiple keywords
     parser = PlaintextParser.from_string(textss,Tokenizer(LANGUAGE)) #parser is an object that represents the full text
-
-
     stemmer = Stemmer(LANGUAGE)
     summarizer = Summarizer(stemmer)
     summarizer.stop_words = get_stop_words(LANGUAGE)
-
     sentencess=[]
     compare=[]
 

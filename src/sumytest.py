@@ -86,8 +86,11 @@ def get_summary(textss , truereq, numofsent):
     dictionary = corpora.Dictionary(texts)#dictionary is a list of unique words
     dictionary.save(os.path.join(TEMP_FOLDER, 'deerwester.dict'))
     new_doc = str(textss.encode('utf-8'))
+    print("*-*-*-", new_doc)
     new_vec = dictionary.doc2bow(new_doc.lower().split())
+    print("+++++++++++++++++", new_vec)
     corpus = [dictionary.doc2bow(text) for text in texts]
+    print("/////////", corpus)
     corpora.MmCorpus.serialize(os.path.join(TEMP_FOLDER, 'deerwester.mm'), corpus)  # store to disk, for later use
     dictionary = corpora.Dictionary.load( os.path.join(TEMP_FOLDER,  'deerwester.dict') )
     corpus = corpora.MmCorpus( os.path.join(TEMP_FOLDER,  'deerwester.mm') ) # comes from the first tutorial, "From strings to vectors"
@@ -98,6 +101,7 @@ def get_summary(textss , truereq, numofsent):
     vec_lsi = lsi[vec_bow] # convert the query to LSI space
     ##print(vec_lsi)
     index = similarities.MatrixSimilarity(lsi[corpus])
+    print("Index:", index)
     index.save( os.path.join(TEMP_FOLDER,  'deerwester.index') )
     index = similarities.MatrixSimilarity.load( os.path.join(TEMP_FOLDER,  'deerwester.index') )
     sims = index[vec_lsi]

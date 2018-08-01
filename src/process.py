@@ -109,7 +109,8 @@ def create_summary(dataset_location, model_name):
 
 		for p in paragraphs[0:50]:
 			print('*******************************')
-			print(p)
+			print(type(p))
+			print(len(p))
 			try:
 				full_text = p["para"].text
 				sentences = sent_tokenize(full_text)

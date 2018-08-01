@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-from __future__ import division #print_function, unicode_literals
+from __future__ import division, print_function, unicode_literals
 from unidecode import unidecode
 import sys, traceback
 import unicodedata

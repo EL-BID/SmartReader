@@ -85,7 +85,7 @@ def get_summary(textss , truereq, numofsent):
     from pprint import pprint  
     dictionary = corpora.Dictionary(texts)#dictionary is a list of unique words
     dictionary.save(os.path.join(TEMP_FOLDER, 'deerwester.dict'))
-    print('DDDDDDDDDDDDDDDDDDDDDDDDDDDDDD')
+    print('DDDDDDDDDDDDDDDDDDDDDDDDDDDD')
     print(textss)
     new_doc = str(textss.encode('utf-8'))
     print('SSSSSSSSSSSSSSSSSSSSSSSSSS')

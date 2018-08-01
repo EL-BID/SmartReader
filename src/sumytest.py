@@ -51,8 +51,9 @@ def get_summary(textss , truereq, numofsent):
     # print('XXXXXXXXXXXXXXXXholdfirst')
     # print(holdfirst)
 
-    parser = PlaintextParser.from_string(textss,Tokenizer(LANGUAGE)) #If reading from TEXT file
-    print('XXXXXXXPARSERXXXXXXXXXXX', parser)
+    parser = PlaintextParser.from_string(textss,Tokenizer(LANGUAGE)) #parser is an object that represents the full text
+    
+    # print('XXXXXXXPARSERXXXXXXXXXXX', parser)
 
     stemmer = Stemmer(LANGUAGE)
     summarizer = Summarizer(stemmer)
@@ -61,10 +62,12 @@ def get_summary(textss , truereq, numofsent):
     sentencess=[]
     compare=[]
 
-    for sentence in summarizer(parser.document,numofsent):
+    for sentence in summarizer(parser.document,numofsent):#iterating through sentences of full text
         hold=str(sentence)
-        print('XXXXXXXHOLDxxxxxxxxxxxxxxxxxxxx', hold)
+        # print('XXXXXXXHOLDxxxxxxxxxxxxxxxxxxxx', hold)
         ttt=nltk.word_tokenize(hold)
+        print('XXXXXXXXXXXXXXXXXX')
+        print(hold)
         count=0
         for i in range(0, len(ttt)):#loops over the each token from current sentence
             for j in range(0,len(holdfirst)):

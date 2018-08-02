@@ -40,16 +40,16 @@ def get_summary(textss , truereq, numofsent):
     store=''
     store=keywords(textss,ratio=0.05)#extracts most relevant words from full text
     store1=str(store)
-    holdfirst=nltk.word_tokenize(store1)#list of tokenized keywords
-    print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-    print(type(holdfirst))
-    parser = PlaintextParser.from_string(textss,Tokenizer(LANGUAGE)) #parser is an object that represents the full text
+    holdfirst=nltk.word_tokenize(store1)#Tokenize a string (keywords) to split off punctuation other than periods 
+    nparser = PlaintextParser.from_string(textss,Tokenizer(LANGUAGE)) #parser is an object that represents the full text
     stemmer = Stemmer(LANGUAGE)
     summarizer = Summarizer(stemmer)
     summarizer.stop_words = get_stop_words(LANGUAGE)
     sentencess=[]
     compare=[]
-
+    print('LLLLLLLLLLLLLLLLLLLLLLLL')
+    print(type(summarizer(parser.document,numofsent)))
+    print(summarizer(parser.document,numofsent))
     for sentence in summarizer(parser.document,numofsent):#iterating through sentences of full text
         hold=str(sentence)
         ttt=nltk.word_tokenize(hold)#list of words/tokens

@@ -44,6 +44,9 @@ store=keywords(textss,ratio=0.05)#extracts most relevant words from full text
 store1=str(store)
 
 holdfirst=nltk.word_tokenize(store1)#Tokenize a string (keywords) to split off punctuation other than periods 
-print(holdfirst)
+# print(holdfirst)
 nparser = PlaintextParser.from_string(textss,Tokenizer(LANGUAGE))
-print(nparser)
+# print(nparser)
+
+documents=sent_tokenize(textss)
+print(documents)

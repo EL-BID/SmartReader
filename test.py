@@ -33,20 +33,39 @@ from nltk.tokenize import sent_tokenize
 import os
 import tempfile
 
-sentencess=[]
-compare=[]
 LANGUAGE = "english"
-stemmer = Stemmer("english")
-summarizer = Summarizer(stemmer)
 textss = "Type II markets tend to share two major features. First, banks are deeply rooted in the economy and are strong contenders to become leaders in mobile financial services in their respective countries. Second, mobile operators and retailers have achieved high penetration levels and built strong customer relationships in their core business. Multiple strong contenders have emerged to provide financial services and, in some markets, mobile operators, banks, and retailers have partnered to leverage each other's assets. In others, entrenched interests or regulatory restrictions have resulted in partnership models that not all parties approve of. Regardless of the market dynamics, however, Type II markets tend to be more integrated with existing financial and retail infrastructure, often including access to national clearing and settlement systems. These markets include Brazil, Mexico and Panama."
 
+output_sentences = []
+hold=''
+truecount=0
+store=''
 store=keywords(textss,ratio=0.05)#extracts most relevant words from full text
 store1=str(store)
-
 holdfirst=nltk.word_tokenize(store1)#Tokenize a string (keywords) to split off punctuation other than periods 
-# print(holdfirst)
-nparser = PlaintextParser.from_string(textss,Tokenizer(LANGUAGE))
-# print(nparser)
+nparser = PlaintextParser.from_string(textss,Tokenizer(LANGUAGE)) #parser is an object that represents the full text
+stemmer = Stemmer(LANGUAGE)
+print('stemmer: ', stemmer)
+summarizer = Summarizer(stemmer)
+print('summarizer: ')
+print(type(summarizer))
+summarizer.stop_words = get_stop_words(LANGUAGE)
+print('summarizer_stopwords')
+print(summarizer.stop_words)
+sentencess=[]
+compare=[]
+TEMP_FOLDER = tempfile.gettempdir()
+documents=sent_tokenize(textss)#full text into sentences
+summalen=len(documents)#number of sentences
+stoplist = set('for a of the and to in'.split())
+print(stoplist)
+    
+texts = [[word for word in document.lower().split() if word not in stoplist]
+              for document in documents]#texts is an array of sentences where each sentence is a list of words without stopwords
+frequency = defaultdict(int)#dict subclass that calls a factory function to supply missing values
+    
+for text in texts:
+	for token in text:
+		frequency[token] += 1
 
-documents=sent_tokenize(textss)
-print(documents)
+texts = [[token for token in text if frequency[token] > 1] for text in texts]#array of words that occur more than once

@@ -29,9 +29,11 @@ from nltk import sent_tokenize
 from gensim.summarization import keywords
 from gensim.summarization import summarize
 from gensim import corpora, models, similarities
+from collections import defaultdict
 from nltk.tokenize import sent_tokenize
 import os
 import tempfile
+from pprint import pprint
 
 sentencess=[]
 compare=[]
@@ -55,11 +57,11 @@ def get_summary(textss , truereq, numofsent):
     documents=sent_tokenize(textss)#full text into sentences
     summalen=len(documents)#number of sentences
     stoplist = set('for a of the and to in'.split())
+    
     texts = [[word for word in document.lower().split() if word not in stoplist]
               for document in documents]#texts is an array of sentences where each sentence is a list of words without stopwords
-
-    from collections import defaultdict
     frequency = defaultdict(int)#dict subclass that calls a factory function to supply missing values
+    
     for text in texts:
         for token in text:
             frequency[token] += 1
@@ -67,7 +69,7 @@ def get_summary(textss , truereq, numofsent):
     texts = [[token for token in text if frequency[token] > 1]
               for text in texts]#array of words that occur more than once
 
-    from pprint import pprint
+    
     dictionary = corpora.Dictionary(texts)#a mapping between words and their integer ids
     dictionary.save(os.path.join(TEMP_FOLDER, 'deerwester.dict'))
     new_doc = str(textss.encode('utf-8')) # transform textss (original) to utf-8

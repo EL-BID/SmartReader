@@ -28,6 +28,10 @@ from nltk import word_tokenize
 from nltk import sent_tokenize
 from gensim.summarization import keywords
 from gensim.summarization import summarize
+from gensim import corpora, models, similarities
+from nltk.tokenize import sent_tokenize
+import os
+import tempfile
 
 sentencess=[]
 compare=[]
@@ -47,23 +51,6 @@ def get_summary(textss , truereq, numofsent):
     summarizer.stop_words = get_stop_words(LANGUAGE)
     sentencess=[]
     compare=[]
-    # for sentence in summarizer(parser.document,numofsent):#iterating through sentences of full text
-    #     print('ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ')
-    #     print(sentence)
-    #     hold=str(sentence)
-    #     ttt=nltk.word_tokenize(hold)#list of words/tokens
-    #     count=0
-    #     for i in range(0, len(ttt)):#loops over the each token from current sentence
-    #         for j in range(0,len(holdfirst)):
-    #             if ttt[i]==holdfirst[j]:#compares two words, the current from the current sentence with the current keyword
-    #                 count+=1
-        # compare.append(count)
-        # sentencess.append(str(sentence))
-
-    from gensim import corpora, models, similarities
-    from nltk.tokenize import sent_tokenize
-    import os
-    import tempfile
     TEMP_FOLDER = tempfile.gettempdir()
     documents=sent_tokenize(textss)#full text into sentences
     summalen=len(documents)#number of sentences
@@ -96,7 +83,7 @@ def get_summary(textss , truereq, numofsent):
     vec_lsi = lsi[vec_bow] # convert the query to LSI space
     ##print(vec_lsi)
     index = similarities.MatrixSimilarity(lsi[corpus])
-    print("Index:", index)
+    # print("Index:", index)
     index.save( os.path.join(TEMP_FOLDER,  'deerwester.index') )
     index = similarities.MatrixSimilarity.load( os.path.join(TEMP_FOLDER,  'deerwester.index') )
     sims = index[vec_lsi]

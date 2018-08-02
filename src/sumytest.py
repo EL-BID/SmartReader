@@ -48,6 +48,8 @@ def get_summary(textss , truereq, numofsent):
     sentencess=[]
     compare=[]
     for sentence in summarizer(parser.document,numofsent):#iterating through sentences of full text
+        print('ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ')
+        print(sentence)
         hold=str(sentence)
         ttt=nltk.word_tokenize(hold)#list of words/tokens
         count=0
@@ -64,8 +66,6 @@ def get_summary(textss , truereq, numofsent):
     import tempfile
     TEMP_FOLDER = tempfile.gettempdir()
     documents=sent_tokenize(textss)#full text into sentences
-    print('YYYYYYYYYYYYYYYYYYYYYYYYYYY')
-    print(type(documents))
     summalen=len(documents)#number of sentences
     stoplist = set('for a of the and to in'.split())
     texts = [[word for word in document.lower().split() if word not in stoplist]
@@ -86,8 +86,6 @@ def get_summary(textss , truereq, numofsent):
     new_doc = str(textss.encode('utf-8')) # transform textss (original) to utf-8
     new_vec = dictionary.doc2bow(new_doc.lower().split())#Converting utf-9 econded textss into the bag-of-words format = list of (token_id, token_count) 2-tuples. Each word is assumed to be a tokenized and normalized string (either unicode or utf8-encoded).
     
-    print('MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM')
-    print(new_vec)
     corpus = [dictionary.doc2bow(text) for text in texts] #Apply doc2bow to texts(list of  words that occur more than once) save into an array
     corpora.MmCorpus.serialize(os.path.join(TEMP_FOLDER, 'deerwester.mm'), corpus)  # store to disk, for later use
     dictionary = corpora.Dictionary.load( os.path.join(TEMP_FOLDER,  'deerwester.dict'))

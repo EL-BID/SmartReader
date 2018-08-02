@@ -8,6 +8,7 @@ from sumy.parsers.plaintext import PlaintextParser
 
 stemmer = Stemmer("english")
 summarizer = Summarizer(stemmer)
+nparser = PlaintextParser.from_string(textss,Tokenizer(LANGUAGE))
 
 for sentence in summarizer(parser.document,1):
 	print(sentence)

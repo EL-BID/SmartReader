@@ -34,6 +34,7 @@ compare=[]
 LANGUAGE = "english"
 
 def get_summary(textss , truereq, numofsent):
+    print(type(textss))
     output_sentences = []
     hold=''
     truecount=0

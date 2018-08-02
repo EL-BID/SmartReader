@@ -31,7 +31,7 @@ def convert_txt_html(js):
 				else:
 					doc = open( os.path.join(input_folder , doc_id.replace(".html", "").replace(".txt", ".txt")) ).read()
 					all_docs[doc_id] = doc
-					print ("Hello")
+					# print ("Hello")
 
 				if doc.find(sentence) < 0:
 					yada

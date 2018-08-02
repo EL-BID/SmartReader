@@ -49,7 +49,6 @@ def get_summary(textss , truereq, numofsent):
     compare=[]
     print('LLLLLLLLLLLLLLLLLLLLLLLL')
     print(type(summarizer(parser.document,numofsent)))
-    print(summarizer(parser.document,numofsent))
     for sentence in summarizer(parser.document,numofsent):#iterating through sentences of full text
         hold=str(sentence)
         ttt=nltk.word_tokenize(hold)#list of words/tokens

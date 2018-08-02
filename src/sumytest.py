@@ -48,8 +48,8 @@ def get_summary(textss , truereq, numofsent):
     store1=str(store)
     holdfirst=nltk.word_tokenize(store1)#Tokenize a string (keywords) to split off punctuation other than periods 
     nparser = PlaintextParser.from_string(textss,Tokenizer(LANGUAGE)) #parser is an object that represents the full text
-    stemmer = Stemmer(LANGUAGE)
-    summarizer = Summarizer(stemmer)
+    stemmer = Stemmer(LANGUAGE) #sumy.nlp.stemmers.Stemmer object
+    summarizer = Summarizer(stemmer)# Class sumy.summarizers.lsa.LsaSummarizer
     summarizer.stop_words = get_stop_words(LANGUAGE)
     sentencess=[]
     compare=[]

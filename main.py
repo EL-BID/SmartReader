@@ -143,12 +143,9 @@ def upload_file():
         try:
             model = request.form.get('model')
             model_name = " ".join(model.split(",")[:-1]).strip()
-            model_file_name = model.split(",")[-1].strip()# string with the date the model was created
-            file = request.files['file']
-            print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-            print("file: ", file)
-            filename = secure_filename(file.filename)
-            print("filename: ", filename)
+            model_file_name = model.split(",")[-1].strip()#string with the date the model was created
+            file = request.files['file']#file are the zipped files
+            filename = secure_filename(file.filename)#filename is the name of the zipped folder
  
         except Exception as e:
             print (e)

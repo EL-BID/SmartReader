@@ -145,7 +145,10 @@ def upload_file():
             model_name = " ".join(model.split(",")[:-1]).strip()
             model_file_name = model.split(",")[-1].strip()# string with the date the model was created
             file = request.files['file']
+            print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+            print("file: ", file)
             filename = secure_filename(file.filename)
+            print("filename: ", filename)
  
         except Exception as e:
             print (e)

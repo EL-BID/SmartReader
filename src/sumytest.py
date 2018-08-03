@@ -59,16 +59,15 @@ def get_summary(textss , truereq, numofsent):
     stoplist = set('for a of the and to in'.split())
     
     for sentence in summarizer(parser.document,numofsent):
-            hold=str(sentence)
-            print("hold: ", hold)
-            ttt=nltk.word_tokenize(hold)
-            count=0
-            for i in range(0, len(ttt)):
-                for j in range(0,len(holdfirst)):
-                    if ttt[i]==holdfirst[j]:                  
-                        count+=1
-            compare.append(count)
-            sentencess.append(str(sentence))
+        hold=str(sentence)
+        ttt=nltk.word_tokenize(hold)
+        count=0
+        for i in range(0, len(ttt)):
+            for j in range(0,len(holdfirst)):
+                if ttt[i]==holdfirst[j]:                  
+                    count+=1
+        compare.append(count)
+        sentencess.append(str(sentence))
 
     texts = [[word for word in document.lower().split() if word not in stoplist]
               for document in documents]#texts is an array of sentences where each sentence is a list of words without stopwords

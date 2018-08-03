@@ -143,8 +143,7 @@ def upload_file():
         try:
             model = request.form.get('model')
             model_name = " ".join(model.split(",")[:-1]).strip()
-            model_file_name = model.split(",")[-1].strip()
-            # print ("model: ", model_name)
+            model_file_name = model.split(",")[-1].strip()# string with the date the model was created
             file = request.files['file']
             filename = secure_filename(file.filename)
  

@@ -47,7 +47,7 @@ def get_summary(textss , truereq, numofsent):
     store=keywords(textss,ratio=0.05)#extracts most relevant words from full text
     store1=str(store)
     holdfirst=nltk.word_tokenize(store1)#Tokenize a string (keywords) to split off punctuation other than periods 
-    nparser = PlaintextParser.from_string(textss,Tokenizer(LANGUAGE)) #parser is an object that represents the full text
+    parser = PlaintextParser.from_string(textss,Tokenizer(LANGUAGE)) #parser is an object that represents the full text
     stemmer = Stemmer(LANGUAGE) #sumy.nlp.stemmers.Stemmer object
     summarizer = Summarizer(stemmer)# Class sumy.summarizers.lsa.LsaSummarizer
     summarizer.stop_words = get_stop_words(LANGUAGE)
@@ -58,6 +58,18 @@ def get_summary(textss , truereq, numofsent):
     summalen=len(documents)#number of sentences
     stoplist = set('for a of the and to in'.split())
     
+    for sentence in summarizer(parser.document,numofsent):
+            hold=str(sentence)
+            print("hold: ", hold)
+            ttt=nltk.word_tokenize(hold)
+            count=0
+            for i in range(0, len(ttt)):
+                for j in range(0,len(holdfirst)):
+                    if ttt[i]==holdfirst[j]:                  
+                        count+=1
+            compare.append(count)
+            sentencess.append(str(sentence))
+
     texts = [[word for word in document.lower().split() if word not in stoplist]
               for document in documents]#texts is an array of sentences where each sentence is a list of words without stopwords
     frequency = defaultdict(int)#dict subclass that calls a factory function to supply missing values

@@ -90,6 +90,8 @@ def create_summary(dataset_location, model_name):
 		i = i + 1
 		score_doc(model, doc)
 	output = consolidate_data(dataset, model)
+	print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+	print("output", output)
 
 	pickle.dump(output, open("prelim_output_informal_economy_new.bin", "wb"))
 

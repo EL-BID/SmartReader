@@ -76,6 +76,7 @@ def consolidate_data(dataset, model):
 	output = []
 	for topic in output_prelim:
 		d = {"topic":topic, "paragraphs": sorted( output_prelim[topic]  , key=lambda x:-x[ "score" ]) }
+		print("DDDDDDDDDDDDDDDDDDDDDDDD: ", d)
 		output.append(d)
 	return output
 
@@ -95,8 +96,6 @@ def create_summary(dataset_location, model_name):
 		i = i + 1
 		score_doc(model, doc)
 	output = consolidate_data(dataset, model)
-	print("-****************-**-*--*")
-	print(output)
 	pickle.dump(output, open("prelim_output_informal_economy_new.bin", "wb"))
 
 	get_lat_lng = False

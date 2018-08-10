@@ -71,7 +71,7 @@ def consolidate_data(dataset, model):
 		for para in doc.paragraphs:
 			para_g = para
 			best_topic = max( para.classification, key=para.classification.get )
-			print("Best topic: ", best_topic)
+			# print("Best topic: ", best_topic)
 			output_prelim[best_topic].append( { "para":para, "score":para.classification[best_topic] } )
 	output = []
 	for topic in output_prelim:

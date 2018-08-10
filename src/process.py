@@ -103,7 +103,7 @@ def create_summary(dataset_location, model_name):
 		summary_points = []
 		paragraphs = topic["paragraphs"]
 		i = 1
-		for p in paragraphs[0:100]:
+		for p in paragraphs[0:500]:
 			print (i)
 			i = i + 1
 			try:

@@ -94,9 +94,8 @@ def create_summary(dataset_location, model_name):
 	js = []
 	for topic in output:
 		topic_name = topic["topic"]
-		print("*----------------------************-**************  topic name: ", topic_name)
 		d = {"topic":topic_name}
-		print("DDDDDDDDDDDDDDD", d)
+		print("XXXXXXXXXXXXXXXX", topic)
 
 		all_keywords = defaultdict(lambda:0) #creating dictionary
 		all_locations = defaultdict(lambda:0) #creating dictionary

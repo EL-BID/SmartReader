@@ -95,7 +95,6 @@ def create_summary(dataset_location, model_name):
 	for topic in output:
 		topic_name = topic["topic"]
 		d = {"topic":topic_name}
-		print("XXXXXXXXXXXXXXXX", topic)
 
 		all_keywords = defaultdict(lambda:0) #creating dictionary
 		all_locations = defaultdict(lambda:0) #creating dictionary
@@ -103,8 +102,10 @@ def create_summary(dataset_location, model_name):
 		all_entities_type = defaultdict(lambda:0) #creating dictionary
 		summary_points = []
 		paragraphs = topic["paragraphs"]
-
+		i = 1
 		for p in paragraphs[0:50]:
+			print (i)
+			i = i + 1
 			try:
 				full_text = p["para"].text
 				sentences = sent_tokenize(full_text)

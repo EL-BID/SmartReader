@@ -63,7 +63,7 @@ def score_doc(model, doc):
 			doc.paragraphs[i].classification[topic_name] /= sm
 
 para_g = None
-def consolidate_data(dataset, model):
+def consolidate_data(dataset, model): # order paragraphes by the most revelant
 	output_prelim = defaultdict(lambda:[])
 	global para_g
 	for doc in dataset:
@@ -86,7 +86,7 @@ def create_summary(dataset_location, model_name):
 	model = create_model.load_model(model_name)
 	for doc in dataset:
 		score_doc(model, doc)
-	output = consolidate_data(dataset, model) #Returns score for each paragraph
+	output = consolidate_data(dataset, model) #Returns paragraphes and scores in order of highest score first
 	pickle.dump(output, open("prelim_output_informal_economy_new.bin", "wb")) #serializing output
 
 	get_lat_lng = False
@@ -102,10 +102,9 @@ def create_summary(dataset_location, model_name):
 		all_entities_type = defaultdict(lambda:0) #creating dictionary
 		summary_points = []
 		paragraphs = topic["paragraphs"]
-		i = 1
-		for p in paragraphs[0:2]:
-			print ("PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP:", p)
-
+		for p in paragraphs[0:10]: # iterating through the first 50 paragraphs
+			print("XXXXXXXXXXXXXXXXXX")
+			print(p)
 			try:
 				full_text = p["para"].text
 				sentences = sent_tokenize(full_text)

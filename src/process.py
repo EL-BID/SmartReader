@@ -53,9 +53,13 @@ def score_doc(model, doc):
 			doc.paragraphs[i].locations = []
 			for et in entity_types_loc:
 				doc.paragraphs[i].locations.extend(entities[et])
+				print ("DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD")
+				print("Location: ", doc.paragraphs[i].locations.extend(entities[et]))
 			doc.paragraphs[i].entities = []
 			for et in entity_types_non_loc:
 				doc.paragraphs[i].entities.extend(entities[et])
+				print ("HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH")
+				print("Location: ", doc.paragraphs[i].entities.extend(entities[et]))
 			break
 		break
 	for i in range(len(doc.paragraphs)):
@@ -64,6 +68,8 @@ def score_doc(model, doc):
 			sm = 1
 		for topic_name in doc.paragraphs[i].classification:
 			doc.paragraphs[i].classification[topic_name] /= sm
+			print("************************************")
+			print("Result:", doc.paragraphs[i].classification[topic_name])
 
 para_g = None
 def consolidate_data(dataset, model):

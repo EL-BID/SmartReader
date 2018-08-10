@@ -44,32 +44,23 @@ def score_doc(model, doc):
 					hits.append( {"keyword":feat, "count": sc } )
 					score = score + sc
 			doc.paragraphs[i].classification[ topic["topic"] ] = score
-			print ("XXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-			print("score: ", doc.paragraphs[i].classification[ topic["topic"] ])
 			doc.paragraphs[i].topic_keywords[topic["topic"]] = hits
-			print ("YYYYYYYYYYYYYYYYYYYYYYYYYYYYY")
-			print("hits: ", doc.paragraphs[i].topic_keywords[topic["topic"]])
+
 			entities = get_entities(nlp, u'%s' % texts[i])
 			doc.paragraphs[i].locations = []
 			for et in entity_types_loc:
 				doc.paragraphs[i].locations.extend(entities[et])
-				print ("DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD")
-				print("Location: ", doc.paragraphs[i].locations.extend(entities[et]))
+
 			doc.paragraphs[i].entities = []
 			for et in entity_types_non_loc:
 				doc.paragraphs[i].entities.extend(entities[et])
-				print ("HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH")
-				print("Location: ", doc.paragraphs[i].entities.extend(entities[et]))
-			break
-		break
+
 	for i in range(len(doc.paragraphs)):
 		sm = 1.0*sum( doc.paragraphs[i].classification.values() )
 		if sm == 0 or True:
 			sm = 1
 		for topic_name in doc.paragraphs[i].classification:
 			doc.paragraphs[i].classification[topic_name] /= sm
-			print("************************************")
-			print("Result:", doc.paragraphs[i].classification[topic_name])
 
 para_g = None
 def consolidate_data(dataset, model):

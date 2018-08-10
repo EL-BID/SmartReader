@@ -103,9 +103,9 @@ def create_summary(dataset_location, model_name):
 		summary_points = []
 		paragraphs = topic["paragraphs"]
 		i = 1
-		for p in paragraphs[0:50]:
-			print (i)
-			i = i + 1
+		for p in paragraphs[0:2]:
+			print ("PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP:", 3)
+
 			try:
 				full_text = p["para"].text
 				sentences = sent_tokenize(full_text)

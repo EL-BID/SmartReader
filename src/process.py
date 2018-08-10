@@ -106,9 +106,7 @@ def create_summary(dataset_location, model_name):
 			try:
 				full_text = p["para"].text # paragraph
 				sentences = sent_tokenize(full_text) # paragraph tokenize into sentences
-				summary = get_summary(full_text, 1, len(sentences))[0]
-				print("XXXXXXXXXXXXX")
-				print(summary)
+				summary = get_summary(full_text, 1, len(sentences))[0] #most revelant sentence is paragraph
 				original_sentence = summary
 				summary_index = sentences.index(summary)
 				summary = spell_check.check_spelling(summary)

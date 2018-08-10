@@ -65,13 +65,11 @@ def score_doc(model, doc):
 para_g = None
 def consolidate_data(dataset, model):
 	output_prelim = defaultdict(lambda:[])
-	print ("output_prelim: ",output_prelim )
 	global para_g
 	for doc in dataset:
 		for para in doc.paragraphs:
 			para_g = para
 			best_topic = max( para.classification, key=para.classification.get )
-			# print("Best topic: ", best_topic)
 			output_prelim[best_topic].append( { "para":para, "score":para.classification[best_topic] } )
 	output = []
 	for topic in output_prelim:
@@ -85,14 +83,8 @@ def create_summary(dataset_location, model_name):
 	print (model_name)
 
 	dataset = dataset_reader.read_dataset_text(dataset_location)
-	#print ("Number of files: ", len(dataset))
 	model = create_model.load_model(model_name)
-	# print("Model loaded...")
-	i = 0
-	# limit = 2
 	for doc in dataset:
-		# print(i)
-		i = i + 1
 		score_doc(model, doc)
 	output = consolidate_data(dataset, model)
 	pickle.dump(output, open("prelim_output_informal_economy_new.bin", "wb"))

@@ -104,13 +104,11 @@ def create_summary(dataset_location, model_name):
 		paragraphs = topic["paragraphs"]
 		for p in paragraphs[0:3]: # iterating through the 50 most relevant paragraphs
 			try:
-				full_text = p["para"].text
-				print("XXXXXXXXXXXXXXXXXXXXXX")
-				print(full_text)
-				sentences = sent_tokenize(full_text)
-				print("*-*-*-*-*-*-*-*-*-*-*")
-				print(sentences)
+				full_text = p["para"].text # paragraph
+				sentences = sent_tokenize(full_text) # paragraph tokenize into sentences
 				summary = get_summary(full_text, 1, len(sentences))[0]
+				print("XXXXXXXXXXXXX")
+				print(summary)
 				original_sentence = summary
 				summary_index = sentences.index(summary)
 				summary = spell_check.check_spelling(summary)

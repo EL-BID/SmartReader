@@ -78,6 +78,7 @@ def consolidate_data(dataset, model):
 		d = {"topic":topic, "paragraphs": sorted( output_prelim[topic]  , key=lambda x:-x[ "score" ]) }
 		print("DDDDDDDDDDDDDDDDDDDDDDDD: ", d)
 		output.append(d)
+		break
 	return output
 
 def create_summary(dataset_location, model_name):

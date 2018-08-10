@@ -86,20 +86,22 @@ def create_summary(dataset_location, model_name):
 	model = create_model.load_model(model_name)
 	for doc in dataset:
 		score_doc(model, doc)
-	output = consolidate_data(dataset, model)
-	pickle.dump(output, open("prelim_output_informal_economy_new.bin", "wb"))
+	output = consolidate_data(dataset, model) #Returns score for each paragraph
+	pickle.dump(output, open("prelim_output_informal_economy_new.bin", "wb")) #serializing output
 
 	get_lat_lng = False
 	location_history = {}
 	js = []
 	for topic in output:
 		topic_name = topic["topic"]
+		print("*----------------------************-**************  topic name: ", topic_name)
 		d = {"topic":topic_name}
+		print("DDDDDDDDDDDDDDD", d)
 
-		all_keywords = defaultdict(lambda:0)
-		all_locations = defaultdict(lambda:0)
-		all_entities = defaultdict(lambda:0)
-		all_entities_type = defaultdict(lambda:0)
+		all_keywords = defaultdict(lambda:0) #creating dictionary
+		all_locations = defaultdict(lambda:0) #creating dictionary
+		all_entities = defaultdict(lambda:0) #creating dictionary
+		all_entities_type = defaultdict(lambda:0) #creating dictionary
 		summary_points = []
 		paragraphs = topic["paragraphs"]
 

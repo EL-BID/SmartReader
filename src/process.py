@@ -39,12 +39,16 @@ def score_doc(model, doc):
 			for feat in feature_indices:#feat returns the keyword itself
 				# print("feat in feature_indices: ", feat)
 				j = feature_indices[feat]#j returns the index of the keyword
-				if feat in topic["keywords"] and X[i,j] > 0: # iterate through keywords and weights ?????
+				if feat in topic["keywords"] and X[i,j] > 0: # Calculating the score of each feature
 					sc = (X[i,j] * topic["keywords"][feat])
 					hits.append( {"keyword":feat, "count": sc } )
 					score = score + sc
 			doc.paragraphs[i].classification[ topic["topic"] ] = score
+			print ("XXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+			print("score: ", doc.paragraphs[i].classification[ topic["topic"] ])
 			doc.paragraphs[i].topic_keywords[topic["topic"]] = hits
+			print ("YYYYYYYYYYYYYYYYYYYYYYYYYYYYY")
+			print("hits: ", doc.paragraphs[i].topic_keywords[topic["topic"]])
 			entities = get_entities(nlp, u'%s' % texts[i])
 			doc.paragraphs[i].locations = []
 			for et in entity_types_loc:
@@ -90,9 +94,6 @@ def create_summary(dataset_location, model_name):
 		i = i + 1
 		score_doc(model, doc)
 	output = consolidate_data(dataset, model)
-	print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-	print("output", output)
-
 	pickle.dump(output, open("prelim_output_informal_economy_new.bin", "wb"))
 
 	get_lat_lng = False
@@ -129,7 +130,7 @@ def create_summary(dataset_location, model_name):
 					all_entities[ eto["text"] ] += 1
 					all_entities_type[eto["text"]] = eto["type"]
 			except:
-				pass	
+				pass
 		d['summary_points'] = summary_points
 		d["keywords"] = [ {"keyword":k, "count":all_keywords[k]} for k in all_keywords]
 		sm = np.sum( [kw["count"] for kw in d["keywords"]] )

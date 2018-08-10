@@ -56,6 +56,8 @@ def score_doc(model, doc):
 			doc.paragraphs[i].entities = []
 			for et in entity_types_non_loc:
 				doc.paragraphs[i].entities.extend(entities[et])
+			break
+		break
 	for i in range(len(doc.paragraphs)):
 		sm = 1.0*sum( doc.paragraphs[i].classification.values() )
 		if sm == 0 or True:

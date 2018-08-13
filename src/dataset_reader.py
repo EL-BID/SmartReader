@@ -4,7 +4,6 @@ from src.document import *
 
 dataset_location = "datasets/informal_economy/text"
 
-
 def read_dataset_text(dataset_location):
 	dataset = []
 	locs = []

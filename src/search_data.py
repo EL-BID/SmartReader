@@ -29,9 +29,7 @@ def google_search_query(query):
 
             if 'application/pdf' != mime_type:
                 subtopic_text = subtopic_text + get_text_from_url(response).strip()
-                # print("Subtopic not pdf: ", subtopic_text)
                 subtopic_text = re.sub('[^A-Za-z0-9]+', ' ', subtopic_text)
-                # print("Subtopic No punctuation: ", subtopic_text)
         except Exception as e:
             pass
     return subtopic_text

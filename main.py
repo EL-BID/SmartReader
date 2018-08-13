@@ -10,7 +10,7 @@ from datetime import datetime
 from flask import Flask, render_template, request, send_from_directory, Response, send_file, jsonify
 from werkzeug import secure_filename
 
-app = Flask(__name__)#, static_url_path='')
+app = Flask(__name__)
 
 
 @app.route('/', methods=['GET'])
@@ -41,9 +41,7 @@ def get_summary_status_page():
 
 @app.route('/VisualizeSummary', methods=['GET'])
 def visualize_summary():
-    print ("visualize_summary() is being called")
     summary_filename = request.args['summary_filename']
-    #print ("summary filename : " + summary_filename)
     with open(("Summaries/" + summary_filename), "r") as sj:
         output_json = json.load(sj)
 
@@ -102,9 +100,7 @@ def get_data():
 
         print (os.getcwd())
         model_name = json_obj["model_name"]
-        # print (model_name)
         output_model_file_name = "model_"+json_obj["topic_name"][0].replace(" ","_")+"_"+datetime.now().strftime('%Y-%m-%d_%H_%M_%S')+".pkl"
-        # print (output_model_file_name)
         timestamp = datetime.now()
         collection.insert({"input": json_obj, "model_name": model_name, "output_model_file":  output_model_file_name , "timestamp" : timestamp, "status": "Queued"})
 
@@ -131,7 +127,6 @@ def get_models():
     models = []
     cursor = collection.find({"status": "Done"})
     for document in cursor:
-        # print("document:", document)
         models.append([document["model_name"], document["output_model_file"], document['timestamp'].strftime('%Y-%m-%d %H:%M:%S')])
 
     model_json = json.dumps(models)
@@ -146,7 +141,7 @@ def upload_file():
             model_file_name = model.split(",")[-1].strip()#string with the date the model was created
             file = request.files['file']#file are the zipped files
             filename = secure_filename(file.filename)#filename is the name of the zipped folder
- 
+
         except Exception as e:
             print (e)
         if filename.endswith('.zip'):
@@ -158,10 +153,8 @@ def upload_file():
             os.mkdir(file_path)
             file.save(filename)
             upload_input_files(filename, file_path)
-            # print ("Inserting")
             timestamp = datetime.now()
             summary_collection.insert({"file_path": file_path, "summary_filename": summary_filename, "model_name": model_name, "model_file_name": model_file_name , "status": "Queued", "timestamp": timestamp})
-            # print ("all working done")
 
             return Response(json.dumps({'success': True}), 200, {'contentType': 'application/json'})
         else:

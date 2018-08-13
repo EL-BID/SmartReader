@@ -4,7 +4,7 @@ import os
 
 try:
 
-    if os.system("grep mongod") != 256: #if os.system("pgrep mongod") != 256:
+    if os.system("grep mongod") != 256:
         pass
     else:
         os.system("service mongod start")
@@ -12,8 +12,6 @@ try:
     db = client.classifier_database
     collection = db.model_jobs
     summary_collection = db.summary_jobs
-    # collection.remove({})
-    # summary_collection.remove({})
 
 except Exception as e:
     print(traceback.format_exc())

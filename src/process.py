@@ -37,7 +37,6 @@ def score_doc(model, doc):
 			score = 0#scores[i, 0]
 			hits = []
 			for feat in feature_indices:#feat returns the keyword itself
-				# print("feat in feature_indices: ", feat)
 				j = feature_indices[feat]#j returns the index of the keyword
 				if feat in topic["keywords"] and X[i,j] > 0: # Calculating the score of each feature
 					sc = (X[i,j] * topic["keywords"][feat])

@@ -46,7 +46,7 @@ def get_summary(textss , truereq, numofsent):
     store=''
     store=keywords(textss,ratio=0.05)#extracts most relevant words from full text
     store1=str(store)
-    holdfirst=nltk.word_tokenize(store1)#Tokenize a string (keywords) to split off punctuation other than periods 
+    holdfirst=nltk.word_tokenize(store1)#Tokenize a string (keywords) to split off punctuation other than periods
     parser = PlaintextParser.from_string(textss,Tokenizer(LANGUAGE)) #parser is an object that represents the full text
     stemmer = Stemmer(LANGUAGE) #sumy.nlp.stemmers.Stemmer object
     summarizer = Summarizer(stemmer)# Class sumy.summarizers.lsa.LsaSummarizer
@@ -57,14 +57,14 @@ def get_summary(textss , truereq, numofsent):
     documents=sent_tokenize(textss)#full text into sentences
     summalen=len(documents)#number of sentences
     stoplist = set('for a of the and to in'.split())
-    
+
     for sentence in summarizer(parser.document,numofsent):
         hold=str(sentence)
         ttt=nltk.word_tokenize(hold)
         count=0
         for i in range(0, len(ttt)):
             for j in range(0,len(holdfirst)):
-                if ttt[i]==holdfirst[j]:                  
+                if ttt[i]==holdfirst[j]:
                     count+=1
         compare.append(count)
         sentencess.append(str(sentence))
@@ -72,7 +72,7 @@ def get_summary(textss , truereq, numofsent):
     texts = [[word for word in document.lower().split() if word not in stoplist]
               for document in documents]#texts is an array of sentences where each sentence is a list of words without stopwords
     frequency = defaultdict(int)#dict subclass that calls a factory function to supply missing values
-    
+
     for text in texts:
         for token in text:
             frequency[token] += 1
@@ -80,12 +80,12 @@ def get_summary(textss , truereq, numofsent):
     texts = [[token for token in text if frequency[token] > 1]
               for text in texts]#array of words that occur more than once
 
-    
+
     dictionary = corpora.Dictionary(texts)#a mapping between words and their integer ids
     dictionary.save(os.path.join(TEMP_FOLDER, 'deerwester.dict'))
     new_doc = str(textss.encode('utf-8')) # transform textss (original) to utf-8
     new_vec = dictionary.doc2bow(new_doc.lower().split())#Converting utf-9 econded textss into the bag-of-words format = list of (token_id, token_count) 2-tuples. Each word is assumed to be a tokenized and normalized string (either unicode or utf8-encoded).
-    
+
     corpus = [dictionary.doc2bow(text) for text in texts] #Apply doc2bow to texts(list of  words that occur more than once) save into an array
     corpora.MmCorpus.serialize(os.path.join(TEMP_FOLDER, 'deerwester.mm'), corpus)  # store to disk, for later use
     dictionary = corpora.Dictionary.load( os.path.join(TEMP_FOLDER,  'deerwester.dict'))
@@ -94,13 +94,10 @@ def get_summary(textss , truereq, numofsent):
     doc = str(textss.encode('utf-8'))
     vec_bow = dictionary.doc2bow(doc.lower().split())
     vec_lsi = lsi[vec_bow] # convert the query to LSI space
-    ##print(vec_lsi)
     index = similarities.MatrixSimilarity(lsi[corpus])
-    # print("Index:", index)
     index.save( os.path.join(TEMP_FOLDER,  'deerwester.index') )
     index = similarities.MatrixSimilarity.load( os.path.join(TEMP_FOLDER,  'deerwester.index') )
     sims = index[vec_lsi]
-    ##print(list(enumerate(sims)))
     sims = sorted(enumerate(sims), key=lambda item: -item[1])
     newlist=[]
 
@@ -133,7 +130,6 @@ def get_summary(textss , truereq, numofsent):
             if holdsubs[0]!='they' and holdsubs[0]!='their' and holdsubs[0]!='both' and holdsubs[0]!='these' and holdsubs[0]!='this':
                 countcomma=str(sentencess[indexes]).count(',')
                 if countcomma<7:
-                    #print(sentencess[indexes]) # THESE ARE THE SUMMARIZED SENTENCES
                     output_sentences.append(sentencess[indexes])
                     i+=1
         del sentencess[indexes]

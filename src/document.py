@@ -7,7 +7,6 @@ class Document:
 
 	def read_text(self, file_name):
 		self.name = file_name
-		#print("reading " + file_name + "...")
 		f = open(file_name, "r")
 		for para_text in f.read().split("\n"):
 			paragraph = Paragraph(self, para_text)

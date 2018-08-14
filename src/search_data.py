@@ -49,7 +49,7 @@ def generate_search_query(topic_names, keywords):
 
     query = query + topic_names[len(topic_names)-1].lower() + ")"
     print("Query: ", query)
-    return query #concatenate keywords with topic, e.g.: subtopics = [racing, homing], topic = [birds] i.e. query = '(racing or homing) and (birds)'
+    return query #concatenate keywords with topic, e.g.: keywords = [racing, homing], topic = [birds] i.e. query = '(racing or homing) and (birds)'
 
 
 def get_data(topics):

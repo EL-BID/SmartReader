@@ -77,85 +77,79 @@ def consolidate_data(dataset, model): # order paragraphes by the most revelant
 	return output
 
 def create_summary(dataset_location, model_name):
-	print (os.getcwd())
 	model_name = "models/" + model_name
-	print (model_name)
-
 	dataset = dataset_reader.read_dataset_text(dataset_location)
 	model = create_model.load_model(model_name)
 	for doc in dataset:
-		print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-		print(doc)
 		score_doc(model, doc)
-		print("PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP")
-		print(doc)
+
 	output = consolidate_data(dataset, model) #Returns paragraphes and scores in order of highest score first
 	pickle.dump(output, open("prelim_output_informal_economy_new.bin", "wb")) #serializing output
 
-	# get_lat_lng = False
-	# location_history = {}
-	# js = []
-	# for topic in output:
-	# 	topic_name = topic["topic"]
-	# 	d = {"topic":topic_name}
-	#
-	# 	all_keywords = defaultdict(lambda:0) #creating dictionary
-	# 	all_locations = defaultdict(lambda:0) #creating dictionary
-	# 	all_entities = defaultdict(lambda:0) #creating dictionary
-	# 	all_entities_type = defaultdict(lambda:0) #creating dictionary
-	# 	summary_points = []
-	# 	paragraphs = topic["paragraphs"]
-	# 	for p in paragraphs[0:50]: # iterating through the 50 most relevant paragraphs
-	# 		try:
-	# 			full_text = p["para"].text # paragraph
-	# 			sentences = sent_tokenize(full_text) # paragraph tokenize into sentences
-	# 			summary = get_summary(full_text, 1, len(sentences))[0] #most revelant sentence is paragraph
-	# 			original_sentence = summary
-	# 			summary_index = sentences.index(summary)
-	# 			summary = spell_check.check_spelling(summary)
-	# 			context = sentences[summary_index-1] + sentences[summary_index] + sentences[summary_index+1]
-	# 			context = spell_check.check_spelling(context)
-	# 			summary_points.append({ "summary":summary, "context": context, "original_sentence": original_sentence ,"text":full_text, "doc_id":p["para"].document.name.split('/')[-1], "para_id":p["para"].para_id, "score":p["score"]})
-	# 			for kwo in p["para"].topic_keywords[topic_name]:
-	# 				kw = kwo["keyword"]
-	# 				all_keywords[kw] += kwo["count"]
-	# 			for eto in p["para"].locations:
-	# 				all_locations[ eto["text"] ] += 1
-	# 			for eto in p["para"].entities:
-	# 				all_entities[ eto["text"] ] += 1
-	# 				all_entities_type[eto["text"]] = eto["type"]
-	# 		except:
-	# 			pass
-	# 	d['summary_points'] = summary_points
-	# 	d["keywords"] = [ {"keyword":k, "count":all_keywords[k]} for k in all_keywords]
-	# 	sm = np.sum( [kw["count"] for kw in d["keywords"]] )
-	# 	for kw in d["keywords"]:
-	# 		kw["count"] = int(1000*kw["count"]/sm)
-	# 	d["locations"] = [ {"keyword":k, "count":all_locations[k], "type":"LOCATION"} for k in all_locations if len(k) > 1]
-	# 	if get_lat_lng == True:
-	# 		for l in d["locations"]:
-	# 			count = 0
-	# 			while count <= 3:
-	# 				count = count + 1
-	# 				print(count)
-	# 				try:
-	# 					if l['keyword']  in location_history:
-	# 						latlng = location_history[ l['keyword'] ]
-	# 					else:
-	# 						latlng = geolocator.geocode(l['keyword'])
-	# 						location_history[ l['keyword'] ] = latlng
-	#
-	# 					break
-	# 					if latlng:
-	# 						l["lat"] = latlng.latitude
-	# 						l["lng"] = latlng.longitude
-	# 				except:
-	# 					pass
-	# 	d["entities"] = [ {"keyword":k, "count":all_entities[k] , "type":all_entities_type[k]} for k in all_entities if len(k) > 1]
-	# 	d["folder"] = dataset_location
-	# 	d["folder_name"] = dataset_location.split("/")[-1]
-	# 	print (d["folder_name"])
-	# 	js.append(d)
+	get_lat_lng = False
+	location_history = {}
+	js = []
+	for topic in output:
+		topic_name = topic["topic"]
+		d = {"topic":topic_name}
+
+		all_keywords = defaultdict(lambda:0) #creating dictionary
+		all_locations = defaultdict(lambda:0) #creating dictionary
+		all_entities = defaultdict(lambda:0) #creating dictionary
+		all_entities_type = defaultdict(lambda:0) #creating dictionary
+		summary_points = []
+		paragraphs = topic["paragraphs"]
+		for p in paragraphs[0:50]: # iterating through the 50 most relevant paragraphs
+			try:
+				full_text = p["para"].text # paragraph
+				sentences = sent_tokenize(full_text) # paragraph tokenize into sentences
+				summary = get_summary(full_text, 1, len(sentences))[0] #most revelant sentence is paragraph
+				original_sentence = summary
+				summary_index = sentences.index(summary)
+				summary = spell_check.check_spelling(summary)
+				context = sentences[summary_index-1] + sentences[summary_index] + sentences[summary_index+1]
+				context = spell_check.check_spelling(context)
+				summary_points.append({ "summary":summary, "context": context, "original_sentence": original_sentence ,"text":full_text, "doc_id":p["para"].document.name.split('/')[-1], "para_id":p["para"].para_id, "score":p["score"]})
+				for kwo in p["para"].topic_keywords[topic_name]:
+					kw = kwo["keyword"]
+					all_keywords[kw] += kwo["count"]
+				for eto in p["para"].locations:
+					all_locations[ eto["text"] ] += 1
+				for eto in p["para"].entities:
+					all_entities[ eto["text"] ] += 1
+					all_entities_type[eto["text"]] = eto["type"]
+			except:
+				pass
+		d['summary_points'] = summary_points
+		d["keywords"] = [ {"keyword":k, "count":all_keywords[k]} for k in all_keywords]
+		sm = np.sum( [kw["count"] for kw in d["keywords"]] )
+		for kw in d["keywords"]:
+			kw["count"] = int(1000*kw["count"]/sm)
+		d["locations"] = [ {"keyword":k, "count":all_locations[k], "type":"LOCATION"} for k in all_locations if len(k) > 1]
+		if get_lat_lng == True:
+			for l in d["locations"]:
+				count = 0
+				while count <= 3:
+					count = count + 1
+					print(count)
+					try:
+						if l['keyword']  in location_history:
+							latlng = location_history[ l['keyword'] ]
+						else:
+							latlng = geolocator.geocode(l['keyword'])
+							location_history[ l['keyword'] ] = latlng
+
+						break
+						if latlng:
+							l["lat"] = latlng.latitude
+							l["lng"] = latlng.longitude
+					except:
+						pass
+		d["entities"] = [ {"keyword":k, "count":all_entities[k] , "type":all_entities_type[k]} for k in all_entities if len(k) > 1]
+		d["folder"] = dataset_location
+		d["folder_name"] = dataset_location.split("/")[-1]
+		print (d["folder_name"])
+		js.append(d)
 
 	os.remove("prelim_output_informal_economy_new.bin")
 

@@ -82,13 +82,13 @@ def create_summary(dataset_location, model_name):
 	print (model_name)
 
 	dataset = dataset_reader.read_dataset_text(dataset_location)
-	print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-	print(dataset)
 	model = create_model.load_model(model_name)
 	for doc in dataset:
+		print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+		print(doc)
 		score_doc(model, doc)
-	print("PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP")
-	print(dataset)
+		print("PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP")
+		print(doc)
 	output = consolidate_data(dataset, model) #Returns paragraphes and scores in order of highest score first
 	pickle.dump(output, open("prelim_output_informal_economy_new.bin", "wb")) #serializing output
 

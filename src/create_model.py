@@ -1,12 +1,6 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 import pickle
 from src.LemmaTokenizer import *
-#import spell_check
-
-
-#reload(sys)
-#sys.setdefaultencoding('utf-8')
-
 
 def get_topic_keywords(features, X):
 	features_with_weights = sorted([ {"keyword":features[i], "count": X[0,i], "index":i} for i in range(len(features)) ], key=lambda x:-x["count"] )[:50]
@@ -22,13 +16,11 @@ def create_and_save_model(subtopics, output_file):
 	data = []
 	all_texts = []
 	vec = TfidfVectorizer(ngram_range=(1,3), stop_words="english")
-	#print subtopics.keys()
 	subtopic_names = list(subtopics.keys())
 	no_data_subtopic_names = []
 	for topic in subtopic_names:
 		text = subtopics[topic]
 		if len(text.strip()) >0 :
-		#text = spell_check.check_spelling(text)
 			all_texts.append(text)
 		else:
 			no_data_subtopic_names.append(topic)

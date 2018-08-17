@@ -18,76 +18,13 @@
 
     </div>
 </div>
-<!-- END LEFT SIDEBAR -->
-
-<!--<div class="sidebar-collapse">-->
-    <!--<ul class="nav metismenu" id="side-menu">-->
-        <!--<li class="nav-header">-->
-
-            <!--<div class="logo-element">AI Research Helper</div>-->
-        <!--</li>-->
-
-
-
-
-            <!--<li >-->
-                <!--<a href="/dashboard">-->
-                  <!--<i class="fa fa-home"></i>-->
-                  <!--<span class="nav-label">Dashboard</span>-->
-                <!--</a>-->
-            <!--</li>-->
-
-			<!--&lt;!&ndash; USERS &ndash;&gt;-->
-			<!--<li  >-->
-				<!--<a href="/dashboard/users/">-->
-					<!--<i class="fa fa-user"></i>-->
-					<!--<span class="nav-label">Users Management</span>-->
-				<!--</a>-->
-			<!--</li>-->
-
-			<!--&lt;!&ndash; TASKS TEMPLATES &ndash;&gt;-->
-			<!--<li >-->
-				<!--<a href="/dashboard/tasks/">-->
-					<!--<i class="fa fa-tasks"></i>-->
-					<!--<span class="nav-label">Tasks Templates</span>-->
-				<!--</a>-->
-
-			<!--</li>-->
-
-			<!--&lt;!&ndash; ROBOMANAGERS &ndash;&gt;-->
-			<!--<li>-->
-				<!--<a href="/dashboard/robomanagers/">-->
-					<!--<i class="fa fa-cubes"></i>-->
-					<!--<span class="nav-label">RoboManagers</span>-->
-				<!--</a>-->
-			<!--</li>-->
-
-			<!--&lt;!&ndash; PIPELINES &ndash;&gt;-->
-			<!--<li  >-->
-				<!--<a href="#">-->
-					<!--<i class="fa fa-sitemap"></i>-->
-					<!--<span class="nav-label">Pipelines</span>-->
-				<!--</a>-->
-			<!--</li>-->
-
-			<!--&lt;!&ndash; TAGS TEMPLATES &ndash;&gt;-->
-			<!--<li >-->
-			  <!--<a href="/dashboard/tags/">-->
-				<!--<i class="fa fa-tags"></i>-->
-				<!--<span class="nav-label">Tags Management</span>-->
-			  <!--</a>-->
-			<!--</li>-->
-
-
-
-      <!--&lt;!&ndash;&lt;!&ndash; Dashboard &ndash;&gt;&ndash;&gt;-->
-      <!--&lt;!&ndash;<li <% if(active=='dashboard'){ %> class="active" <% } %> >&ndash;&gt;-->
-        <!--&lt;!&ndash;<a href="/dashboard">&ndash;&gt;-->
-          <!--&lt;!&ndash;<i class="fa fa-home"></i>&ndash;&gt;-->
-          <!--&lt;!&ndash;<span class="nav-label">Dashboard</span>&ndash;&gt;-->
-        <!--&lt;!&ndash;</a>&ndash;&gt;-->
-      <!--&lt;!&ndash;</li>&ndash;&gt;-->
-
-
-    <!--</ul>-->
-<!--</div>-->
+<script type="text/javascript">
+    $(document).ready(function () {
+        var url = window.location;
+        alert(url)
+        /*$('nav a[href="'+ url +'"]').parent().addClass('active');
+        $('nav a').filter(function() {
+             return this.href == url;
+        }).parent().addClass('active');*/
+    });
+</script> 

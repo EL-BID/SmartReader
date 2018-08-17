@@ -7,7 +7,7 @@ import codecs
 import requests
 import unicodedata
 import spacy
-from spacy.lang.en import English #update for python 3
+from spacy.lang.en import English
 nlp = spacy.load('en')
 import nltk
 from nltk import word_tokenize
@@ -22,7 +22,6 @@ from sumy.utils import get_stop_words
 from sumy.summarizers.luhn import LuhnSummarizer
 from sumy.summarizers.edmundson import EdmundsonSummarizer
 import logging
-# logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 import nltk, re, pprint
 from nltk import word_tokenize
 from nltk import sent_tokenize
@@ -44,18 +43,18 @@ def get_summary(textss , truereq, numofsent):
     hold=''
     truecount=0
     store=''
-    store=keywords(textss,ratio=0.05)#extracts most relevant words from full text
+    store=keywords(textss,ratio=0.05)#extracting the most relevant words from full text
     store1=str(store)
-    holdfirst=nltk.word_tokenize(store1)#Tokenize a string (keywords) to split off punctuation other than periods
-    parser = PlaintextParser.from_string(textss,Tokenizer(LANGUAGE)) #parser is an object that represents the full text
-    stemmer = Stemmer(LANGUAGE) #sumy.nlp.stemmers.Stemmer object
-    summarizer = Summarizer(stemmer)# Class sumy.summarizers.lsa.LsaSummarizer
+    holdfirst=nltk.word_tokenize(store1)#storing the tokenized string (keywords) to remove punctuation
+    parser = PlaintextParser.from_string(textss,Tokenizer(LANGUAGE))#storing the full text into an object
+    stemmer = Stemmer(LANGUAGE)
+    summarizer = Summarizer(stemmer)
     summarizer.stop_words = get_stop_words(LANGUAGE)
     sentencess=[]
     compare=[]
     TEMP_FOLDER = tempfile.gettempdir()
-    documents=sent_tokenize(textss)#full text into sentences
-    summalen=len(documents)#number of sentences
+    documents=sent_tokenize(textss)#storing sentences of full text
+    summalen=len(documents)#storing the number of sentences
     stoplist = set('for a of the and to in'.split())
 
     for sentence in summarizer(parser.document,numofsent):
@@ -70,30 +69,30 @@ def get_summary(textss , truereq, numofsent):
         sentencess.append(str(sentence))
 
     texts = [[word for word in document.lower().split() if word not in stoplist]
-              for document in documents]#texts is an array of sentences where each sentence is a list of words without stopwords
-    frequency = defaultdict(int)#dict subclass that calls a factory function to supply missing values
+              for document in documents]#storing an array of sentences where each sentence is a list of words without stopwords
+    frequency = defaultdict(int)#storing a subclass that calls a factory function to supply missing values
 
     for text in texts:
         for token in text:
             frequency[token] += 1
 
     texts = [[token for token in text if frequency[token] > 1]
-              for text in texts]#array of words that occur more than once
+              for text in texts]#storing an array of words that occur more than once
 
 
-    dictionary = corpora.Dictionary(texts)#a mapping between words and their integer ids
+    dictionary = corpora.Dictionary(texts)#storing a map of words
     dictionary.save(os.path.join(TEMP_FOLDER, 'deerwester.dict'))
-    new_doc = str(textss.encode('utf-8')) # transform textss (original) to utf-8
-    new_vec = dictionary.doc2bow(new_doc.lower().split())#Converting utf-9 econded textss into the bag-of-words format = list of (token_id, token_count) 2-tuples. Each word is assumed to be a tokenized and normalized string (either unicode or utf8-encoded).
+    new_doc = str(textss.encode('utf-8'))#storing the utf-8 version of textss (original)
+    new_vec = dictionary.doc2bow(new_doc.lower().split())#converting the utf-8 econded textss into a bag-of-words format = list of (token_id, token_count) 2-tuples. Each word is assumed to be a tokenized and normalized string (either unicode or utf8-encoded).
 
-    corpus = [dictionary.doc2bow(text) for text in texts] #Apply doc2bow to texts(list of  words that occur more than once) save into an array
-    corpora.MmCorpus.serialize(os.path.join(TEMP_FOLDER, 'deerwester.mm'), corpus)  # store to disk, for later use
+    corpus = [dictionary.doc2bow(text) for text in texts]#applying doc2bow to texts(list of  words that occur more than once) save into an array
+    corpora.MmCorpus.serialize(os.path.join(TEMP_FOLDER, 'deerwester.mm'), corpus)
     dictionary = corpora.Dictionary.load( os.path.join(TEMP_FOLDER,  'deerwester.dict'))
-    corpus = corpora.MmCorpus(os.path.join(TEMP_FOLDER,  'deerwester.mm')) #comes from the first tutorial, "From strings to vectors"
+    corpus = corpora.MmCorpus(os.path.join(TEMP_FOLDER,  'deerwester.mm'))
     lsi = models.LsiModel(corpus, id2word=dictionary, num_topics=2)
     doc = str(textss.encode('utf-8'))
     vec_bow = dictionary.doc2bow(doc.lower().split())
-    vec_lsi = lsi[vec_bow] # convert the query to LSI space
+    vec_lsi = lsi[vec_bow]#converting the query to LSI space
     index = similarities.MatrixSimilarity(lsi[corpus])
     index.save( os.path.join(TEMP_FOLDER,  'deerwester.index') )
     index = similarities.MatrixSimilarity.load( os.path.join(TEMP_FOLDER,  'deerwester.index') )

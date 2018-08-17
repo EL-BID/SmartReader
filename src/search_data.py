@@ -1,6 +1,5 @@
 from _google_ import search
-#from urllib2 import urlopen //python 2.7
-from urllib.request import urlopen #update for python 3
+from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import re
 
@@ -38,7 +37,7 @@ def google_search_query(query):
 def generate_search_query(topic_names, keywords):
     query = "("
     for i in range(len(keywords)-1):
-        query = query + keywords[i].lower() + " or " #this concatanates the keywords with 'or'
+        query = query + keywords[i].lower() + " or "#concatenating the keywords with 'or'
 
     query = query + keywords[len(keywords)-1].lower() + ") and ("
 
@@ -47,19 +46,19 @@ def generate_search_query(topic_names, keywords):
 
     query = query + topic_names[len(topic_names)-1].lower() + ")"
     print("Query: ", query)
-    return query #concatenate keywords with topic, e.g.: keywords = [racing, homing], topic = [birds] i.e. query = '(racing or homing) and (birds)'
+    return query#concatenating the keywords with the topic, e.g.: keywords = [racing, homing]; topic = [birds] i.e. query = '(racing or homing) and (birds)'
 
 
 def get_data(topics):
-    topic_names = topics["topic_name"]#list of topics in current job
-    subtopics = topics["subtopics"]#list of subtopics in current job
-    topic_text = {}#initialize an empty dictionary
+    topic_names = topics["topic_name"]#storing a list of topics in current job
+    subtopics = topics["subtopics"]#storing a list of subtopics in current job
+    topic_text = {}#initializing an empty dictionary
     for i in range(len(subtopics)):
         print ("Looking for data")
         subtopic_name = subtopics[i]["subtopic_name"]
         print (subtopic_name)
         subtopic_keywords = subtopics[i]["keywords"]
-        search_query = generate_search_query(topic_names, subtopic_keywords)#search query string with the topics and keywords
+        search_query = generate_search_query(topic_names, subtopic_keywords)#storing the search query string with the topics and keywords
         subtopic_text = google_search_query(search_query)
 
         if len(subtopic_text.strip()) == 0:

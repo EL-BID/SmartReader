@@ -138,9 +138,9 @@ def upload_file():
         try:
             model = request.form.get('model')
             model_name = " ".join(model.split(",")[:-1]).strip()
-            model_file_name = model.split(",")[-1].strip()#string with the date the model was created
-            file = request.files['file']#file are the zipped files
-            filename = secure_filename(file.filename)#filename is the name of the zipped folder
+            model_file_name = model.split(",")[-1].strip()#storing the model name with the model's creation date
+            file = request.files['file']#storing the zipped files
+            filename = secure_filename(file.filename)#storing the name of the zipped folder
 
         except Exception as e:
             print (e)
@@ -197,7 +197,7 @@ def upload_input_files(filename, file_path):
             zip_ref.extractall(file_path)
     except Exception as e:
         print (e)
-    try: #remove original name of zip file
+    try:#removing original name of zip file
         for root, dirs, files in os.walk(file_path, topdown=False):
             if root != file_path:
                 for name in files:

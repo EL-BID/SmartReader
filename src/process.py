@@ -28,17 +28,17 @@ def get_entities(nlp, text):
 	return entities
 
 def score_doc(model, doc):
-	texts = [par.text for par in doc.paragraphs]#generating a list of paragraphs per document. So len(texts) will return the number of paragraphs in a document
+	texts = [par.text for par in doc.paragraphs]#generating a list of paragraphs per document. len(texts) returns the number of paragraphs in a document
 	for topic in model:
-		vec = topic['vectorizer']#vec returns the TfidfVectorizer function of the model with its corresponding parameters
-		X = vec.transform(texts)#vec.transform would transform documents(text) to a document-term matrix. It returns X which is a sparse matrix, [n_samples, n_features]
+		vec = topic['vectorizer']#storing the TfidfVectorizer function of the model with its corresponding parameters
+		X = vec.transform(texts)#transforming the documents(text) to a document-term matrix. It returns X which is a sparse matrix, [n_samples, n_features]
 		feature_indices = topic["feature_indices"]
 		for i in range(X.shape[0]):#X.shape[0] is the number of rows, e.g.: 126 rows or paragraphs. From now, "topic" refers to the information in the model and "X" refers to text file
 			score = 0#scores[i, 0]
 			hits = []
 			for feat in feature_indices:#feat returns the keyword itself
 				j = feature_indices[feat]#j returns the index of the keyword
-				if feat in topic["keywords"] and X[i,j] > 0: # Calculating the score of each feature
+				if feat in topic["keywords"] and X[i,j] > 0:#Calculating the score of each feature
 					sc = (X[i,j] * topic["keywords"][feat])
 					hits.append( {"keyword":feat, "count": sc } )
 					score = score + sc
@@ -62,7 +62,7 @@ def score_doc(model, doc):
 			doc.paragraphs[i].classification[topic_name] /= sm
 
 para_g = None
-def consolidate_data(dataset, model): # order paragraphes by the most revelant
+def consolidate_data(dataset, model):
 	output_prelim = defaultdict(lambda:[])
 	global para_g
 	for doc in dataset:
@@ -83,7 +83,7 @@ def create_summary(dataset_location, model_name):
 	for doc in dataset:
 		score_doc(model, doc)
 
-	output = consolidate_data(dataset, model) #Returns paragraphes and scores in order of highest score first
+	output = consolidate_data(dataset, model) #storing paragraphs and scores in descending order
 	pickle.dump(output, open("prelim_output_informal_economy_new.bin", "wb")) #serializing output
 
 	get_lat_lng = False
@@ -99,11 +99,11 @@ def create_summary(dataset_location, model_name):
 		all_entities_type = defaultdict(lambda:0) #creating dictionary
 		summary_points = []
 		paragraphs = topic["paragraphs"]
-		for p in paragraphs[0:50]: # iterating through the 50 most relevant paragraphs
+		for p in paragraphs[0:50]:#iterating through the 50 most relevant paragraphs
 			try:
-				full_text = p["para"].text # paragraph
-				sentences = sent_tokenize(full_text) # paragraph tokenize into sentences
-				summary = get_summary(full_text, 1, len(sentences))[0] #most revelant sentence is paragraph
+				full_text = p["para"].text#storing the paragraph
+				sentences = sent_tokenize(full_text)#storing the tokenized paragraph
+				summary = get_summary(full_text, 1, len(sentences))[0] #storing the most revelant sentence in paragraph
 				original_sentence = summary
 				summary_index = sentences.index(summary)
 				summary = spell_check.check_spelling(summary)

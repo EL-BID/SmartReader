@@ -12,3 +12,6 @@ body {
 #overview>ol>li{
 	font-size: 24px;
 }
+#overview>ol>li>p{
+	font-size: 14px;
+}

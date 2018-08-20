@@ -1,6 +1,6 @@
 body {
 	font-family: 'Source Sans Pro';
-	font-size: 14;
+	font-size: 14px;
 }
 .nav>li.active {
 	background-color:#08B2E3;
@@ -8,4 +8,7 @@ body {
 
 .nav>li.active>a>span {
 	color:#2b333e;
+}
+#overview>ol>li{
+	font-size: 24px;
 }

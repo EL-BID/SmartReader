@@ -1,4 +1,6 @@
 .nav>li.active {
 	background-color:#08B2E3;
+}
+.nav>li.active a{
 	color:#2B333E;
 }

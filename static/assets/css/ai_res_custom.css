@@ -6,6 +6,6 @@ body {
 	background-color:#08B2E3;
 }
 
-.nav>li.active>a {
+.nav>li.active>a>span {
 	color:#2b333e!important;
 }

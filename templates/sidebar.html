@@ -3,16 +3,10 @@
     <div class="sidebar-scroll">
         <nav id="sidebar-list">
             <ul class="nav" >
-                <li><a href="/GenerateDataCollection" class=""> <span>Model Definition</span></a></li>
-            </ul>
-             <ul class="nav">
-                <li><a href="/ModelsStatus" class=""> <span>Models Status</span></a></li>
-            </ul>
-             <ul class="nav">
-                 <li><a href="/GenerateSummary" class=""> <span>Model Application</span></a></li>
-            </ul>
-             <ul class="nav">
-                <li><a href="/SummariesStatus" class=""> <span>Results</span></a></li>
+                <li><a href="/GenerateDataCollection"> <span>Model Definition</span></a></li>
+                <li><a href="/ModelsStatus"> <span>Models Status</span></a></li>
+                <li><a href="/GenerateSummary"> <span>Model Application</span></a></li>
+                <li><a href="/SummariesStatus"> <span>Results</span></a></li>
             </ul>
         </nav>
 
@@ -22,8 +16,8 @@
     $(document).ready(function () {
         var url = window.location;
         alert(url)
-        /*$('nav a[href="'+ url +'"]').parent().addClass('active');
-        $('nav a').filter(function() {
+        $('nav a[href="'+ url +'"]').parent().addClass('active');
+        /*$('nav a').filter(function() {
              return this.href == url;
         }).parent().addClass('active');*/
     });

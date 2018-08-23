@@ -16,21 +16,6 @@ The tool comprises four interfaces: 1) Model Definition, 2) Model Status, 3) Mod
 ![flujograma](https://code.iadb.org/sites/default/files/inline-images/flujograma.jpg "Logo Title Text 1")
 
 As depicted in the chart, from left to right and from top to bottom, the process starts with the user creating a model by entering a set of topic and subtopics that match a determined research question. Afterwards, the model will generate query strings used to retrieve the most relevant data available online, this means querying Google. Afterwards, by applying the sklearn.TfidfVectorizer, a model with weighted terms will be created. In the Model Application interface, a model is applied to the corpus of documents that the user uploads in a zipped file of .txt files. The application process occurs by first scoring the paragraphs from each document, extracting their corresponding entities and locations and ordering these paragraphs in descending order. After picking the top paragraphs (a random number of 50 paragraphs was selected), the tool will proceed to select the most relevant sentences. The calculations will result in a json file and visualization of the most relevant keywords, entities, locations and sentences of our corpus of documents. For more information about how to contribute to this project please refer to the following blog post in Abierto al Público.
-
-### Guía de usuario
----Server Startup:
-1.	Install screen using the command sudo yum install screen
-2.	Create a screen for the main templating file by typing:  screen -S main in the command line.
-3.	Start the main file that allows us to view the UI in web browser by entering the following command: python run.py
-4.	Detach the screen by pressing Ctrl + A, and then Ctrl + D. To confirm whether a screen was detached list all screens using screen -ls. The screen named “main” must have the status “(Detached)”.
-5.	Now we create a screen for data collection processor.
-6.	Repeat the steps to create a new screen by choosing an arbitrary name such as “data_collection_processor”. 
-7.	Start the data collection file by typing “python processor.py”. Then detach this screen using the same method described above.
-8.	Similarly create a new screen for the summary_processor which can be named “summary_processor” and run command “python summary_processor.py” and detach it.
-9.	Check for all the running screen using screen -ls.
-10.	The server is up and running now. To access the application in the server, browse “localhost:8080”. For remote access specify the public IP address along with the port e.g. http://127.0.0.1:8080
- 
-
  	
 ### Guía de instalación
 ---
@@ -71,10 +56,19 @@ Installing dependencies:
 -->>>nltk.download('all')
 
 
-#### Dependencias
-Descripción de los recursos externos que generan una dependencia para la reutilización de la herramienta digital (librerías, frameworks, acceso a bases de datos y licencias de cada recurso). Es una buena práctica describir las últimas versiones en las que ha sido probada la herramienta digital. 
-
-    Puedes usar este estilo de letra diferenciar los comandos de instalación.
+### Guía de usuario
+---Server Startup:
+1.	Install screen using the command sudo yum install screen
+2.	Create a screen for the main templating file by typing:  screen -S main in the command line.
+3.	Start the main file that allows us to view the UI in web browser by entering the following command: python run.py
+4.	Detach the screen by pressing Ctrl + A, and then Ctrl + D. To confirm whether a screen was detached list all screens using screen -ls. The screen named “main” must have the status “(Detached)”.
+5.	Now we create a screen for data collection processor.
+6.	Repeat the steps to create a new screen by choosing an arbitrary name such as “data_collection_processor”. 
+7.	Start the data collection file by typing “python processor.py”. Then detach this screen using the same method described above.
+8.	Similarly create a new screen for the summary_processor which can be named “summary_processor” and run command “python summary_processor.py” and detach it.
+9.	Check for all the running screen using screen -ls.
+10.	The server is up and running now. To access the application in the server, browse “localhost:8080”. For remote access specify the public IP address along with the port e.g. http://127.0.0.1:8080
+ 
 
 ### Cómo contribuir
 ---

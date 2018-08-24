@@ -11,3 +11,4 @@
 .gitignore text
 *.md text
 static/* linguist-vendored
+templates/* linguist-vendored

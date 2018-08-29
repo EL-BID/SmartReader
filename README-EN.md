@@ -62,12 +62,12 @@ Clone the repository using the command `git clone https://github.com/EL-BID/Smar
 4.	To install the remaining packages, set the locale settings to use pip. Enter the following in the command line: `export LC_ALL=C`.
 5.	Install all libraries contained in the “requirements.txt” by typing sudo `pip install -r requirements.txt`.
 6.	Download the English data on spacy using the command: `sudo python -m spacy download en`.
-7.	The nltk library needs to be downloaded using python. Type python in the command line.
+7.	The nltk library needs to be downloaded using python. Type `python` in the command line.
 8.	Then import the nltk and load the data using the following commands:
 
 ```
->>>import nltk
->>>nltk.download('all')
+-- >>>import nltk
+-- >>>nltk.download('all')
 ```
 
 ### User Guide
@@ -80,7 +80,8 @@ Clone the repository using the command `git clone https://github.com/EL-BID/Smar
 6.	Start the data collection file by typing `python processor.py`. Then detach this screen using the same method described above.
 7.	Similarly create a new screen for the summary_processor which can be named “summary_processor” and run command `python summary_processor.py` and detach it.
 8.	Check for all the running screen using `screen -ls`.
-9.	The server is up and running now. To access the application in the server, browse “localhost:8080”. For remote access specify the public IP address along with the port e.g. http://127.0.0.1:8080
+9.	The server is up and running now. To access the application in the server, browse “localhost:8080”. For remote access specify the public IP address along with the port e.g. 
+“http://127.0.0.1:8080”
 
 ### How to Contribute
 ---

@@ -21,12 +21,12 @@ Como se muestra en la gráfica, de izquierda a derecha y de arriba a abajo, el p
 
 #### Requerimientos mínimos del sistema
 1.	El servidor deberá contar con al menos 20GB de espacio en disco y un RAM de 4GB. La herramienta ocupa un espacio de mínimo 3GB.
-2.	Se recomienda una buena conexión a Internet, ya que una gran cantidad de datos se descargan durante la configuración del servidor.
+2.	Se recomienda una buena conexión a Internet dado que una gran cantidad de datos se descarga durante la configuración del servidor.
 3.	Recomendamos instalar la aplicación en una distribución de CentOS.
 
 #### Instalación de Python (3.\*)
-NOTA: asegúrese de estar usando python3
-Primero compruebe si python3 ya está instalado en el servidor. Si no, siga los siguientes pasos:
+NOTA: asegúrate de estar usando python3
+Primero comprueba si python3 ya está instalado en el servidor. Caso contrario, sigue los siguientes pasos:
 ```
 sudo yum -y install https://centos7.iuscommunity.org/ius-release.rpm
 sudo yum -y install python36u
@@ -37,11 +37,11 @@ sudo yum -y install python36u
 sudo yum -y install python36u-pip
 sudo pip install –upgrade pip
 ```
-Confirme la instalación de con: `pip -V`
+Confirma la instalación de con: `pip -V`
 
 #### Instalación de MongoDB para el almacenamiento de datos:
 1.	Navega a la carpeta madre (home)
-2.	Haga clic [aquí](https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-centos-7) para ver los pasos de instalación de MongoDB. Si el enlace no funciona, copia y pega la siguiente url en tu navegador https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-centos-7 
+2.	Haz clic [aquí](https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-centos-7) para ver los pasos de instalación de MongoDB. Si el enlace no funciona, copia y pega la siguiente url en tu navegador https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-centos-7 
 
 #### Clonar el Código desde un servidor remoto de git:
 Clona el repositorio usando el comando: `git clone https://github.com/EL-BID/SmartReader.git`.
@@ -83,7 +83,9 @@ Clona el repositorio usando el comando: `git clone https://github.com/EL-BID/Sma
 
 ### Cómo contribuir
 ---
-Lista de contribución
+
+Hemos puesto a disposción el código de esta herramienta y nos encataría escuchar tu experiencia con ella. Para ver un listado de posibles mejoras que podrías hacer a *SmartReader* consulta la pestaña *Issues* de este repositorio. ¡Quedamos atentos!
+
 
 ### Code of Conduct 
 ---

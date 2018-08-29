@@ -62,12 +62,11 @@ Installing dependencies:
 2.	Create a screen for the main templating file by typing:  screen -S main in the command line.
 3.	Start the main file that allows us to view the UI in web browser by entering the following command: python run.py
 4.	Detach the screen by pressing Ctrl + A, and then Ctrl + D. To confirm whether a screen was detached list all screens using screen -ls. The screen named “main” must have the status “(Detached)”.
-5.	Now we create a screen for data collection processor.
-6.	Repeat the steps to create a new screen by choosing an arbitrary name such as “data_collection_processor”. 
-7.	Start the data collection file by typing “python processor.py”. Then detach this screen using the same method described above.
-8.	Similarly create a new screen for the summary_processor which can be named “summary_processor” and run command “python summary_processor.py” and detach it.
-9.	Check for all the running screen using screen -ls.
-10.	The server is up and running now. To access the application in the server, browse “localhost:8080”. For remote access specify the public IP address along with the port e.g. http://127.0.0.1:8080
+5.	Now we create a screen for data collection processor. Repeat the steps to create a new screen by choosing an arbitrary name such as “data_collection_processor”. 
+6.	Start the data collection file by typing “python processor.py”. Then detach this screen using the same method described above.
+7.	Similarly create a new screen for the summary_processor which can be named “summary_processor” and run command “python summary_processor.py” and detach it.
+8.	Check for all the running screen using screen -ls.
+9.	The server is up and running now. To access the application in the server, browse “localhost:8080”. For remote access specify the public IP address along with the port e.g. http://127.0.0.1:8080
  
 
 ### Cómo contribuir

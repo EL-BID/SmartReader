@@ -21,12 +21,12 @@ As depicted in the chart, from left to right and from top to bottom, the process
  	
 ### Installation Guide
 ---
-###### Minimum System Requirements:
+#### Minimum System Requirements:
 1.	The server should at least have a memory of 20GB and RAM of 4GB. The program takes space up to around 3GB minimum.
 2.	A good internet connection is also recommended as large chunk of data is downloaded during the server configuration.
 3.	We recommend installing the application on a CentOS distribution.
 
-###### Installing Python (3.*)
+#### Installing Python (3.*)
 NOTE: Make sure you are using python3.
 First check if python3 is already installed on the server. If not, please follow the following steps:
 ```
@@ -34,7 +34,7 @@ sudo yum -y install https://centos7.iuscommunity.org/ius-release.rpm
 sudo yum -y install python36u
 ```
 
-###### Installing pip
+#### Installing pip
 
 `sudo yum -y install python36u-pip
 sudo pip install –upgrade pip`
@@ -42,21 +42,21 @@ sudo pip install –upgrade pip`
 Confirm the pip installation with `pip -V`
 
 
-###### Installing MongoDB for data storage:
+#### Installing MongoDB for data storage:
 1.	Navigate to the home folder
-2.	Click here for MongoDB installation steps. If link doesn’t work, copy and paste the following url  into your browser https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-centos-7 
+2.	Click [here](https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-centos-7) for MongoDB installation steps. If link doesn’t work, copy and paste the following url  into your browser https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-centos-7 
 
-###### Importing Code from a remote git server:
+#### Importing Code from a remote git server:
 Clone the repository using the command `git clone https://github.com/EL-BID/SmartReader.git.`
 
-###### Create an environment
+#### Create an environment
 1.	Create a new folder for the project and navigate to that folder
 2.	Create virtual environment and install python3 in the environment using the following command:
 `python3.6 -m venv my_env` (where my_env is the name of environment)
 3.	Activate the newly created environment by typing: `source my_env/bin/activate`  
 4.	To deactivate the environment type: `deactivate`  
 
-###### Installing dependencies:
+#### Installing dependencies:
 1.	Activate the newly created virtual environment 
 2.	Navigate to cloned repository 
 3.	Install enchant library by typing `sudo yum install enchant`.

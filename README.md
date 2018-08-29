@@ -44,11 +44,11 @@ Confirme la instalación de con: `pip -V`
 2.	Haga clic [aquí](https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-centos-7) para ver los pasos de instalación de MongoDB. Si el enlace no funciona, copia y pega la siguiente url en tu navegador https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-centos-7 
 
 #### Clonar el Código desde un servidor remoto de git:
-Clona el repositorio usando el comando: `git clone https://github.com/EL-BID/*SmartReader*.git`.
+Clona el repositorio usando el comando: `git clone https://github.com/EL-BID/SmartReader.git`.
 
 #### Crea un entorno:
 1.	Crea una nueva carpeta para el proyecto y navega a esa carpeta
-2.	Crea un entorno virtual e instala python3 en el entorno con el siguiente comando: `python3.6 -m venv my_env` (donde my_env es el nombre del entorno)
+2.	Crea un entorno virtual e instala python3 en el entorno con el siguiente comando: `python3.6 -m venv my_env` (donde `my_env` es el nombre del entorno)
 3.	Activa el entorno recién creado con el siguiente comando: `source my_env/bin/activate`  
 4.	Para desactivar el entorno usa el siguiente comando: `deactivate`  
 
@@ -74,22 +74,21 @@ Clona el repositorio usando el comando: `git clone https://github.com/EL-BID/*Sm
 1.	Instala  *screen* con el siguiente comando: `sudo yum install screen`
 2.	Crea una pantalla para el archivo principal usando el siguiente comando: `screen -S main`.
 3.	Al iniciar el archivo principal podrás visualizar la interfaz de la aplicación. Para esto, ejecuta la siguiente línea: `python run.py`
-4.	4.	Desconecta la pantalla con Ctrl + A y luego Ctrl + D. Para confirmar que la pantalla fue desconectada puedes enlistar todas las pantallas disponibles usando `screen -ls`. . La pantalla con nombre “main” deberá tener el estado de “Desconectado”.
-5.	Now we create a screen for data collection processor. Repeat the steps to create a new screen by choosing an arbitrary name such as “data_collection_processor”. 
-6.	Start the data collection file by typing `python processor.py`. Then detach this screen using the same method described above.
-7.	Similarly create a new screen for the summary_processor which can be named “summary_processor” and run command `python summary_processor.py` and detach it.
-8.	Check for all the running screen using `screen -ls`.
-9.	The server is up and running now. To access the application in the server, browse “localhost:8080”. For remote access specify the public IP address along with the port.
+4.	Desconecta la pantalla con Ctrl + A y luego Ctrl + D. Para confirmar que la pantalla fue desconectada puedes enlistar todas las pantallas disponibles usando `screen -ls`. La pantalla con nombre “main” deberá tener el estado de “Desconectado”.
+5.	Crea la pantalla que va a albergar el procesador de los datos. Repite los pasos para crear una nueva pantalla. Puedes elegir un nombre arbitrario como “data_collection_processor”. 
+6.	Inicia el archivo para esta pantalla ejecutando: `python processor.py`. Luego desconecta esta pantalla usando el mismo método mencionado anteriormente.
+7.	Finalmente, crea una pantalla para el proceso que llamaremos summary_processor y ejecuta el correspondiente archivo con esta línea: `python summary_processor.py`. Desconecta la pantalla.
+8.	Chequea todas las pantallas en ejecución usando: `screen -ls`.
+9.	El servidor estará funcionando. Para acceder a la aplicación, utilizando tu navegador de preferencia, navega a localhost:8080. Para acceso remoto, deberás especificar una IP pública como por ejemplo: http://127.0.0.1:8080
 
-### How to Contribute
+### Cómo contribuir
 ---
-
-This section explains to developers the most useful ways to send “pull requests”, how to declare any bugs found in the tool, and which style guides should be followed when contributing new lines of code.
+Lista de contribución
 
 ### Code of Conduct 
 ---
 
-The Code of Conduct establishes the social norms, rules, and responsibility that individuals and organizations are expected to follow when interacting in any way with the digital tool and its respective community. It is considered a best practice to actively encourage an environment of respect and inclusion for making contributions to the project. The Github platform awards and supports the repositories which provide this specific section. As soon as you create *CODE_OF_CONDUCT.md* you can access the specific recommended template created by Github. 
+TBD
 
 ### Authors
 ---
@@ -104,18 +103,14 @@ Blog en Abierto al Público
 ### License 
 ---
 
-The license specifies the permission and the conditions for use that the developer authorizes to others who wish to use or modify the digital tool.
+TBD
 
-Include a note in this section with the type of license that has been assigned to the digital tool. The text of this license should be included in a specific file named *LICENSE.md* or *LICENSE.txt* in the main folder.
-
-If you are unsure about what kinds of licenses exist and which would be the best for your case, we recommend visiting the following page: https://choosealicense.com/.
-
-### Limitation of responsibilities
+## Limitación de responsabilidades
 ---
 
-The IDB is not responsible, under any circumstance, for damage or compensation, moral or patrimonial; direct or indirect; accessory or special; or by way of consequence, foreseen or unforeseen, that could arise:
+El BID no será responsable, bajo circunstancia alguna, de daño ni indemnización, moral o patrimonial; directo o indirecto; accesorio o especial; o por vía de consecuencia, previsto o imprevisto, que pudiese surgir:
 
-i. Under any concept of intellectual property, negligence or detriment of another part theory;
+i. Bajo cualquier teoría de responsabilidad, ya sea por contrato, infracción de derechos de propiedad intelectual, negligencia o bajo cualquier otra teoría; y/o
 
-ii. Following the use of the Digital Tool, including, but not limited to defects in the Digital Tool, or the loss or inaccuracy of data of any kind. The foregoing includes expenses or damages associated with communication failures and / or malfunctions of computers, linked to the use of the Digital Tool.
+ii. A raíz del uso de la Herramienta Digital, incluyendo, pero sin limitación de potenciales defectos en la Herramienta Digital, o la pérdida o inexactitud de los datos de cualquier tipo. Lo anterior incluye los gastos o daños asociados a fallas de comunicación y/o fallas de funcionamiento de computadoras, vinculados con la utilización de la Herramienta Digital.
 

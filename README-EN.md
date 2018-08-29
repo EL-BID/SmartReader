@@ -47,11 +47,11 @@ Confirm the pip installation with `pip -V`
 2.	Click [here](https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-centos-7) for MongoDB installation steps. If link doesn’t work, copy and paste the following url  into your browser https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-centos-7 
 
 #### Importing Code from a remote git server:
-Clone the repository using the command `git clone https://github.com/EL-BID/*SmartReader*.git`.
+Clone the repository using the command `git clone https://github.com/EL-BID/SmartReader.git`.
 
 #### Create an environment
 1.	Create a new folder for the project and navigate to that folder
-2.	Create virtual environment and install python3 in the environment using the following command: `python3.6 -m venv my_env` (where my_env is the name of environment)
+2.	Create virtual environment and install python3 in the environment using the following command: `python3.6 -m venv my_env` (where `my_env` is the name of environment)
 3.	Activate the newly created environment by typing: `source my_env/bin/activate`  
 4.	To deactivate the environment type: `deactivate`  
 
@@ -92,7 +92,7 @@ This section explains to developers the most useful ways to send “pull request
 ### Code of Conduct 
 ---
 
-The Code of Conduct establishes the social norms, rules, and responsibility that individuals and organizations are expected to follow when interacting in any way with the digital tool and its respective community. It is considered a best practice to actively encourage an environment of respect and inclusion for making contributions to the project. The Github platform awards and supports the repositories which provide this specific section. As soon as you create *CODE_OF_CONDUCT.md* you can access the specific recommended template created by Github. 
+TBD 
 
 ### Authors
 ---
@@ -107,11 +107,7 @@ Blog en Abierto al Público
 ### License 
 ---
 
-The license specifies the permission and the conditions for use that the developer authorizes to others who wish to use or modify the digital tool.
-
-Include a note in this section with the type of license that has been assigned to the digital tool. The text of this license should be included in a specific file named *LICENSE.md* or *LICENSE.txt* in the main folder.
-
-If you are unsure about what kinds of licenses exist and which would be the best for your case, we recommend visiting the following page: https://choosealicense.com/.
+TBD
 
 ### Limitation of responsibilities
 ---

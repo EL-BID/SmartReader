@@ -47,7 +47,7 @@ Installing dependencies:
 1.	Activate the newly created virtual environment 
 2.	Navigate to cloned repository 
 3.	Install enchant library by typing sudo yum install enchant.
-4.	For installing the remaining packages, set the locale settings to use pip. Enter the following in the command line: export LC_ALL=C.
+4.	To install the remaining packages, set the locale settings to use pip. Enter the following in the command line: export LC_ALL=C.
 5.	Install all libraries contained in the “requirements.txt” by typing sudo pip install -r requirements.txt.
 6.	Download the English data on spacy using the command: sudo python -m spacy download en.
 7.	The nltk library needs to be downloaded using python. Type python in the command line.

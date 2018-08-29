@@ -51,11 +51,7 @@ Clone the repository using the command `git clone https://github.com/EL-BID/Smar
 
 #### Create an environment
 1.	Create a new folder for the project and navigate to that folder
-2.	Create virtual environment and install python3 in the environment using the following command:
-```
-python3.6 -m venv my_env` (where my_env is the name of environment)
-
-```
+2.	Create virtual environment and install python3 in the environment using the following command: `python3.6 -m venv my_env` (where my_env is the name of environment)
 3.	Activate the newly created environment by typing: `source my_env/bin/activate`  
 4.	To deactivate the environment type: `deactivate`  
 
@@ -70,8 +66,8 @@ python3.6 -m venv my_env` (where my_env is the name of environment)
 8.	Then import the nltk and load the data using the following commands:
 
 ```
--->>>import nltk
--->>>nltk.download('all')
+>>>import nltk
+>>>nltk.download('all')
 ```
 
 ### User Guide

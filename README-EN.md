@@ -16,7 +16,6 @@ The Knowledge Innovation and Communication Department of the Inter-American Deve
 The tool comprises four interfaces: 1) Model Definition, 2) Model Status, 3) Model Application, and 4) Results interfaces. The following flow chart explain the mechanics of the tool.  
 
 ![flujograma_en](https://code.iadb.org/sites/default/files/inline-images/flujograma.jpg "Flow Chart SmartReader English Version")
-![keys_en](https://code.iadb.org/sites/default/files/inline-images/keys_en.png "Keys English")
 
 As depicted in the chart, from left to right and from top to bottom, the process starts with the user creating a model by entering a set of topic and subtopics that match a determined research question. Afterwards, the model will generate query strings used to retrieve the most relevant data available online, this means querying Google. Afterwards, by applying the sklearn.TfidfVectorizer, a model with weighted terms will be created. In the Model Application interface, a model is applied to the corpus of documents that the user uploads in a zipped file of .txt files. The application process occurs by first scoring the paragraphs from each document, extracting their corresponding entities and locations and ordering these paragraphs in descending order. After picking the top paragraphs (a random number of 50 paragraphs was selected), the tool will proceed to select the most relevant sentences. The calculations will result in a json file and visualization of the most relevant keywords, entities, locations and sentences of our corpus of documents. For more information about how to contribute to this project please refer to the following blog post in Abierto al Público.
  	
@@ -30,8 +29,10 @@ As depicted in the chart, from left to right and from top to bottom, the process
 ###### Installing Python (3.*)
 NOTE: Make sure you are using python3.
 First check if python3 is already installed on the server. If not, please follow the following steps:
-`sudo yum -y install https://centos7.iuscommunity.org/ius-release.rpm
-sudo yum -y install python36u`
+```
+sudo yum -y install https://centos7.iuscommunity.org/ius-release.rpm
+sudo yum -y install python36u
+```
 
 ###### Installing pip
 
@@ -65,11 +66,10 @@ Clone the repository using the command `git clone https://github.com/EL-BID/Smar
 7.	The nltk library needs to be downloaded using python. Type python in the command line.
 8.	Then import the nltk and load the data using the following commands:
 
-`
+```
 -->>>import nltk
-
 -->>>nltk.download('all')
-`
+```
 
 ### User Guide
 #### Server Startup:

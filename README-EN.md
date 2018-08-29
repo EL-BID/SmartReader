@@ -1,21 +1,20 @@
-
 *Visit the [Publication Guide](el-bid.github.io/guia-de-publicacion/) (currently available in Spanish) for more information about how to publish digital tools.
 To learn more about the Code for Development initiative, visit: https://code.iadb.org/en*
 
-## SmartReader
+## *SmartReader*
 
 ### Description and Context
 ---
 
-SmartReader is a tool that uses NLP techniques to give you a fresh insight of your research (research question and literature) by querying Google and retrieving related up-to-date information. It was created to tackle the challenge that knowledge workers experience when coping with the exponential amount of information generated every day. 
+*SmartReader* is a tool that uses NLP techniques to give you a fresh insight of your research (research question and literature) by querying Google and retrieving related up-to-date information. It was created to tackle the challenge that knowledge workers experience when coping with the exponential amount of information generated every day. 
 
 
 The Knowledge Innovation and Communication Department of the Inter-American Development Bank created this tool after acknowledging this need and the latency of technologies such as Artificial Intelligence and Natural language Processing, to assist the Knowledge creation process.  
 
 
-The tool comprises four interfaces: 1) Model Definition, 2) Model Status, 3) Model Application, and 4) Results interfaces. The following flow chart explain the mechanics of the tool.  
+The tool comprises four interfaces: 1) *Model Definition*, 2) *Model Status*, 3) *Model Application*, and 4) *Results interfaces*. The following flow chart explain the mechanics of the tool.  
 
-![flujograma_en](https://code.iadb.org/sites/default/files/inline-images/flujograma.jpg "Flow Chart SmartReader English Version")
+![flujograma_en](https://code.iadb.org/sites/default/files/inline-images/flujograma.jpg "Flow Chart *SmartReader* English Version")
 
 As depicted in the chart, from left to right and from top to bottom, the process starts with the user creating a model by entering a set of topic and subtopics that match a determined research question. Afterwards, the model will generate query strings used to retrieve the most relevant data available online, this means querying Google. Afterwards, by applying the sklearn.TfidfVectorizer, a model with weighted terms will be created. In the Model Application interface, a model is applied to the corpus of documents that the user uploads in a zipped file of .txt files. The application process occurs by first scoring the paragraphs from each document, extracting their corresponding entities and locations and ordering these paragraphs in descending order. After picking the top paragraphs (a random number of 50 paragraphs was selected), the tool will proceed to select the most relevant sentences. The calculations will result in a json file and visualization of the most relevant keywords, entities, locations and sentences of our corpus of documents. For more information about how to contribute to this project please refer to the following blog post in Abierto al Público.
  	
@@ -47,7 +46,7 @@ Confirm the pip installation with `pip -V`
 2.	Click [here](https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-centos-7) for MongoDB installation steps. If link doesn’t work, copy and paste the following url  into your browser https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-centos-7 
 
 #### Importing Code from a remote git server:
-Clone the repository using the command `git clone https://github.com/EL-BID/SmartReader.git`.
+Clone the repository using the command `git clone https://github.com/EL-BID/*SmartReader*.git`.
 
 #### Create an environment
 1.	Create a new folder for the project and navigate to that folder
@@ -58,21 +57,21 @@ Clone the repository using the command `git clone https://github.com/EL-BID/Smar
 #### Installing dependencies:
 1.	Activate the newly created virtual environment 
 2.	Navigate to cloned repository 
-3.	Install enchant library by typing `sudo yum install enchant`.
+3.	Install *enchant* library by typing `sudo yum install enchant`.
 4.	To install the remaining packages, set the locale settings to use pip. Enter the following in the command line: `export LC_ALL=C`.
 5.	Install all libraries contained in the “requirements.txt” by typing sudo `pip install -r requirements.txt`.
-6.	Download the English data on spacy using the command: `sudo python -m spacy download en`.
-7.	The nltk library needs to be downloaded using python. Type `python` in the command line.
-8.	Then import the nltk and load the data using the following commands:
+6.	Download the English data on *spacy* using the command: `sudo python -m spacy download en`.
+7.	The *nltk* library needs to be downloaded using python. Type `python` in the command line.
+8.	Then import the *nltk* and load the data using the following commands:
 
 ```
--- >>>import nltk
--- >>>nltk.download('all')
+>>>import nltk
+>>>nltk.download('all')
 ```
 
 ### User Guide
 #### Server Startup:
-1.	Install screen using the command `sudo yum install screen`
+1.	Install *screen* using the command `sudo yum install screen`
 2.	Create a screen for the main templating file by typing:  `screen -S main` in the command line.
 3.	Start the main file that allows us to view the UI in web browser by entering the following command: `python run.py`
 4.	Detach the screen by pressing Ctrl + A, and then Ctrl + D. To confirm whether a screen was detached list all screens using `screen -ls`. The screen named “main” must have the status “(Detached)”.
@@ -80,8 +79,7 @@ Clone the repository using the command `git clone https://github.com/EL-BID/Smar
 6.	Start the data collection file by typing `python processor.py`. Then detach this screen using the same method described above.
 7.	Similarly create a new screen for the summary_processor which can be named “summary_processor” and run command `python summary_processor.py` and detach it.
 8.	Check for all the running screen using `screen -ls`.
-9.	The server is up and running now. To access the application in the server, browse “localhost:8080”. For remote access specify the public IP address along with the port e.g. 
-“http://127.0.0.1:8080”
+9.	The server is up and running now. To access the application in the server, browse “localhost:8080”. For remote access specify the public IP address along with the port.
 
 ### How to Contribute
 ---
@@ -89,7 +87,7 @@ This section explains to developers the most useful ways to send “pull request
 
 ### Code of Conduct 
 ---
-The Code of Conduct establishes the social norms, rules, and responsibility that individuals and organizations are expected to follow when interacting in any way with the digital tool and its respective community. It is considered a best practice to actively encourage an environment of respect and inclusion for making contributions to the project. The Github platform awards and supports the repositories which provide this specific section. As soon as you create CODE_OF_CONDUCT.md you can access the specific recommended template created by Github. 
+The Code of Conduct establishes the social norms, rules, and responsibility that individuals and organizations are expected to follow when interacting in any way with the digital tool and its respective community. It is considered a best practice to actively encourage an environment of respect and inclusion for making contributions to the project. The Github platform awards and supports the repositories which provide this specific section. As soon as you create *CODE_OF_CONDUCT.md* you can access the specific recommended template created by Github. 
 
 ### Authors
 ---

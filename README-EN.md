@@ -20,12 +20,13 @@ As depicted in the chart, from left to right and from top to bottom, the process
  	
 ### Installation Guide
 ---
+
 #### Minimum System Requirements:
 1.	The server should at least have a memory of 20GB and RAM of 4GB. The program takes space up to around 3GB minimum.
 2.	A good internet connection is also recommended as large chunk of data is downloaded during the server configuration.
 3.	We recommend installing the application on a CentOS distribution.
 
-#### Installing Python (3.*)
+#### Installing Python (3.\*)
 NOTE: Make sure you are using python3.
 First check if python3 is already installed on the server. If not, please follow the following steps:
 ```
@@ -65,11 +66,13 @@ Clone the repository using the command `git clone https://github.com/EL-BID/*Sma
 8.	Then import the *nltk* and load the data using the following commands:
 
 ```
->>>import nltk
->>>nltk.download('all')
+>>> import nltk
+>>> nltk.download('all')
 ```
 
 ### User Guide
+---
+
 #### Server Startup:
 1.	Install *screen* using the command `sudo yum install screen`
 2.	Create a screen for the main templating file by typing:  `screen -S main` in the command line.
@@ -83,22 +86,27 @@ Clone the repository using the command `git clone https://github.com/EL-BID/*Sma
 
 ### How to Contribute
 ---
+
 This section explains to developers the most useful ways to send “pull requests”, how to declare any bugs found in the tool, and which style guides should be followed when contributing new lines of code.
 
 ### Code of Conduct 
 ---
+
 The Code of Conduct establishes the social norms, rules, and responsibility that individuals and organizations are expected to follow when interacting in any way with the digital tool and its respective community. It is considered a best practice to actively encourage an environment of respect and inclusion for making contributions to the project. The Github platform awards and supports the repositories which provide this specific section. As soon as you create *CODE_OF_CONDUCT.md* you can access the specific recommended template created by Github. 
 
 ### Authors
 ---
+
 BID
 
 ### Additional Information
 ---
+
 Blog en Abierto al Público
 
 ### License 
 ---
+
 The license specifies the permission and the conditions for use that the developer authorizes to others who wish to use or modify the digital tool.
 
 Include a note in this section with the type of license that has been assigned to the digital tool. The text of this license should be included in a specific file named *LICENSE.md* or *LICENSE.txt* in the main folder.
@@ -110,7 +118,7 @@ If you are unsure about what kinds of licenses exist and which would be the best
 
 The IDB is not responsible, under any circumstance, for damage or compensation, moral or patrimonial; direct or indirect; accessory or special; or by way of consequence, foreseen or unforeseen, that could arise:
 
-I. Under any concept of intellectual property, negligence or detriment of another part theory; I
+i. Under any concept of intellectual property, negligence or detriment of another part theory;
 
 ii. Following the use of the Digital Tool, including, but not limited to defects in the Digital Tool, or the loss or inaccuracy of data of any kind. The foregoing includes expenses or damages associated with communication failures and / or malfunctions of computers, linked to the use of the Digital Tool.
 

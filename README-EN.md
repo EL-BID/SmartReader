@@ -25,30 +25,36 @@ As depicted in the chart, from left to right and from top to bottom, the process
 1.	The server should at least have a memory of 20GB and RAM of 4GB. The program takes space up to around 3GB minimum.
 2.	A good internet connection is also recommended as large chunk of data is downloaded during the server configuration.
 3.	We recommend installing the application on a CentOS distribution.
+
 ###### Installing Python (3.*)
 NOTE: Make sure you are using python3.
 First check if python3 is already installed on the server. If not, please follow the following steps:
-
-
 `sudo yum -y install https://centos7.iuscommunity.org/ius-release.rpm
 sudo yum -y install python36u`
 
 
 ##### Installing pip
-sudo yum -y install python36u-pip
-sudo pip install –upgrade pip
-Confirm the pip installation with pip -V
+
+`sudo yum -y install python36u-pip
+sudo pip install –upgrade pip`
+
+Confirm the pip installation with `pip -V`
+
+
 ###### Installing MongoDB for data storage:
 1.	Navigate to the home folder
 2.	Click here for MongoDB installation steps. If link doesn’t work, copy and paste the following url  into your browser https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-centos-7 
+
 ######Importing Code from a remote git server:
-Clone the repository using the command git clone (git repository url).
+Clone the repository using the command git clone https://github.com/EL-BID/SmartReader.git.
+
 ###### Create an environment
 1.	Create a new folder for the project and navigate to that folder
 2.	Create virtual environment and install python3 in the environment using the following command:
-python3.6 -m venv my_env (where my_env is the name of environment)   
-3.	Activate the newly created environment by typing: source my_env/bin/activate  
-4.	To deactivate the environment type: deactivate  
+`python3.6 -m venv my_env` (where my_env is the name of environment)
+3.	Activate the newly created environment by typing: `source my_env/bin/activate`  
+4.	To deactivate the environment type: `deactivate`  
+
 ######Installing dependencies:
 1.	Activate the newly created virtual environment 
 2.	Navigate to cloned repository 
@@ -58,22 +64,23 @@ python3.6 -m venv my_env (where my_env is the name of environment)
 6.	Download the English data on spacy using the command: sudo python -m spacy download en.
 7.	The nltk library needs to be downloaded using python. Type python in the command line.
 8.	Then import the nltk and load the data using the following commands:
+
+`
 -->>>import nltk
 -->>>nltk.download('all')
-
+`
 
 ### User Guide
----Server Startup:
-1.	Install screen using the command sudo yum install screen
-2.	Create a screen for the main templating file by typing:  screen -S main in the command line.
-3.	Start the main file that allows us to view the UI in web browser by entering the following command: python run.py
-4.	Detach the screen by pressing Ctrl + A, and then Ctrl + D. To confirm whether a screen was detached list all screens using screen -ls. The screen named “main” must have the status “(Detached)”.
+#### Server Startup:
+1.	Install screen using the command `sudo yum install screen`
+2.	Create a screen for the main templating file by typing:  `screen -S main` in the command line.
+3.	Start the main file that allows us to view the UI in web browser by entering the following command: `python run.py`
+4.	Detach the screen by pressing Ctrl + A, and then Ctrl + D. To confirm whether a screen was detached list all screens using `screen -ls`. The screen named “main” must have the status “(Detached)”.
 5.	Now we create a screen for data collection processor. Repeat the steps to create a new screen by choosing an arbitrary name such as “data_collection_processor”. 
-6.	Start the data collection file by typing “python processor.py”. Then detach this screen using the same method described above.
-7.	Similarly create a new screen for the summary_processor which can be named “summary_processor” and run command “python summary_processor.py” and detach it.
-8.	Check for all the running screen using screen -ls.
+6.	Start the data collection file by typing `python processor.py`. Then detach this screen using the same method described above.
+7.	Similarly create a new screen for the summary_processor which can be named “summary_processor” and run command `python summary_processor.py` and detach it.
+8.	Check for all the running screen using `screen -ls`.
 9.	The server is up and running now. To access the application in the server, browse “localhost:8080”. For remote access specify the public IP address along with the port e.g. http://127.0.0.1:8080
- 
 
 ### How to Contribute
 ---

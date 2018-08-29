@@ -47,12 +47,15 @@ Confirm the pip installation with `pip -V`
 2.	Click [here](https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-centos-7) for MongoDB installation steps. If link doesn’t work, copy and paste the following url  into your browser https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-centos-7 
 
 #### Importing Code from a remote git server:
-Clone the repository using the command `git clone https://github.com/EL-BID/SmartReader.git.`
+Clone the repository using the command `git clone https://github.com/EL-BID/SmartReader.git`.
 
 #### Create an environment
 1.	Create a new folder for the project and navigate to that folder
 2.	Create virtual environment and install python3 in the environment using the following command:
-`python3.6 -m venv my_env` (where my_env is the name of environment)
+```
+python3.6 -m venv my_env` (where my_env is the name of environment)
+
+```
 3.	Activate the newly created environment by typing: `source my_env/bin/activate`  
 4.	To deactivate the environment type: `deactivate`  
 

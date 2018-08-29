@@ -28,8 +28,8 @@ Minimum System Requirements:
 Installing Python (3.*)
 NOTE: Make sure you are using python3.
 First check if python3 is already installed on the server. If not, please follow the following steps:
-`sudo yum -y install https://centos7.iuscommunity.org/ius-release.rpm
-sudo yum -y install python36u`
+```sudo yum -y install https://centos7.iuscommunity.org/ius-release.rpm
+sudo yum -y install python36u```
 Installing pip
 sudo yum -y install python36u-pip
 sudo pip install –upgrade pip

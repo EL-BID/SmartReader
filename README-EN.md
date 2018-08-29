@@ -1,5 +1,5 @@
 *Visit the [Publication Guide](el-bid.github.io/guia-de-publicacion/) (currently available in Spanish) for more information about how to publish digital tools.
-To learn more about the Code for Development initiative, visit: https://code.iadb.org/en*
+To learn more about the Code for Development initiative, visit: [code.iadb.org](https://code.iadb.org/es)*
 
 ## *SmartReader*
 

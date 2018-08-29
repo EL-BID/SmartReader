@@ -14,7 +14,7 @@ The Knowledge Innovation and Communication Department of the Inter-American Deve
 
 The tool comprises four interfaces: 1) *Model Definition*, 2) *Model Status*, 3) *Model Application*, and 4) *Results interfaces*. The following flow chart explain the mechanics of the tool.  
 
-![flujograma_en](https://code.iadb.org/sites/default/files/inline-images/flujograma.jpg "Flow Chart *SmartReader* English Version")
+![flujograma_en](https://code.iadb.org/sites/default/files/inline-images/flujograma.jpg "Flow Chart SmartReader English Version")
 
 As depicted in the chart, from left to right and from top to bottom, the process starts with the user creating a model by entering a set of topic and subtopics that match a determined research question. Afterwards, the model will generate query strings used to retrieve the most relevant data available online, this means querying Google. Afterwards, by applying the sklearn.TfidfVectorizer, a model with weighted terms will be created. In the Model Application interface, a model is applied to the corpus of documents that the user uploads in a zipped file of .txt files. The application process occurs by first scoring the paragraphs from each document, extracting their corresponding entities and locations and ordering these paragraphs in descending order. After picking the top paragraphs (a random number of 50 paragraphs was selected), the tool will proceed to select the most relevant sentences. The calculations will result in a json file and visualization of the most relevant keywords, entities, locations and sentences of our corpus of documents. For more information about how to contribute to this project please refer to the following blog post in Abierto al Público.
  	
@@ -35,10 +35,10 @@ sudo yum -y install python36u
 ```
 
 #### Installing pip
-
-`sudo yum -y install python36u-pip
-sudo pip install –upgrade pip`
-
+```
+sudo yum -y install python36u-pip
+sudo pip install –upgrade pip
+```
 Confirm the pip installation with `pip -V`
 
 
@@ -60,7 +60,7 @@ Clone the repository using the command `git clone https://github.com/EL-BID/*Sma
 2.	Navigate to cloned repository 
 3.	Install *enchant* library by typing `sudo yum install enchant`.
 4.	To install the remaining packages, set the locale settings to use pip. Enter the following in the command line: `export LC_ALL=C`.
-5.	Install all libraries contained in the “requirements.txt” by typing sudo `pip install -r requirements.txt`.
+5.	Install all libraries contained in the “requirements.txt” by typing `sudo pip install -r requirements.txt`.
 6.	Download the English data on *spacy* using the command: `sudo python -m spacy download en`.
 7.	The *nltk* library needs to be downloaded using python. Type `python` in the command line.
 8.	Then import the *nltk* and load the data using the following commands:

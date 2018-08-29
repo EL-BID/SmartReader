@@ -1,104 +1,121 @@
 *Esta herramienta digital forma parte del catálogo de herramientas del **Banco Interamericano de Desarrollo**. Puedes conocer más sobre la iniciativa del BID en [code.iadb.org](code.iadb.org)*
 
-## SmartReader
+## *SmartReader*
 
 ### Descripción y contexto
 ---
 
-SmartReader is a tool that uses NLP techniques to give you a fresh insight of your research (research question and literature) by querying Google and retrieving related up-to-date information. It was created to tackle the challenge that knowledge workers experience when coping with the exponential amount of information generated every day. 
+*SmartReader* es una herramienta que utiliza técnicas de Procesamiento de Lenguaje Natural para proporcionar una nueva perspectiva a tu investigación (pregunta de investigación y literatura recopilada); esto lo hace a través de consultar a Google y recuperar información actualizada y relacionada con tu pregunta de investigación. *SmartReader* es una alternativa para hacerle frente a la necesidad que tienen los trabajadores de conocimiento de mantener el ritmo a la cantidad exponencial de información que se genera todos los días.
+
+El Departamento de Conocimiento Innovación y Comunicación del Banco Interamericano de Desarrollo creó esta herramienta luego de reconocer esta necesidad además de querer explorar tecnologías como la Inteligencia Artificial y el Procesamiento del Lenguaje Natural para asistir en el proceso de Gestión del Conocimiento.
+
+La herramienta consta de cuatro interfaces: 1) *Definición del modelo*, 2) *Estado del modelo*, 3) *Aplicación del modelo*, e 4) *Interfaz de resultados*. El siguiente diagrama de flujo explica el funcionamiento de la herramienta:
 
 
-The Knowledge Innovation and Communication Department of the Inter-American Development Bank created this tool after acknowledging this need and the latency of technologies such as Artificial Intelligence and Natural language Processing, to assist the Knowledge creation process.  
+![flujograma_en](https://code.iadb.org/sites/default/files/inline-images/chart_es.png "Flow Chart SmartReader")
 
-
-The tool comprises four interfaces: 1) Model Definition, 2) Model Status, 3) Model Application, and 4) Results interfaces. The following flow chart explain the mechanics of the tool.  
-
-![flujograma](https://code.iadb.org/sites/default/files/inline-images/flujograma.jpg "Logo Title Text 1")
-
-As depicted in the chart, from left to right and from top to bottom, the process starts with the user creating a model by entering a set of topic and subtopics that match a determined research question. Afterwards, the model will generate query strings used to retrieve the most relevant data available online, this means querying Google. Afterwards, by applying the sklearn.TfidfVectorizer, a model with weighted terms will be created. In the Model Application interface, a model is applied to the corpus of documents that the user uploads in a zipped file of .txt files. The application process occurs by first scoring the paragraphs from each document, extracting their corresponding entities and locations and ordering these paragraphs in descending order. After picking the top paragraphs (a random number of 50 paragraphs was selected), the tool will proceed to select the most relevant sentences. The calculations will result in a json file and visualization of the most relevant keywords, entities, locations and sentences of our corpus of documents. For more information about how to contribute to this project please refer to the following blog post in Abierto al Público.
+Como se muestra en la gráfica, de izquierda a derecha y de arriba a abajo, el proceso comienza cuando el usuario crea un modelo al ingresar un conjunto de temas y subtemas que son relevantes a una determinada pregunta de investigación. Con este conjunto de palabras, la herramienta generará cadenas de consulta utilizadas para recuperar los datos más relevantes disponibles en Google. Luego, al aplicar sklearn.TfidfVectorizer, se creará un modelo con términos ponderados. Posteriormente, se aplica un modelo al corpus de documentos que el usuario carga en un archivo comprimido de archivos .txt. El proceso ocurre al calificar los párrafos de cada documento, extraer sus entidades y ubicaciones correspondientes y ordenar estos párrafos en orden descendente. Después de elegir los párrafos con mayor calificación (se seleccionó un número aleatorio de 50 párrafos), la herramienta procederá a seleccionar las oraciones más relevantes. Los cálculos dará como resultado un archivo .json y la visualización de las palabras clave, entidades, ubicaciones y frases más relevantes de nuestro corpus de documentos. Para obtener más información sobre cómo contribuir a este proyecto, consulta la siguiente entrada en nuestro blog Abierto al Público.
  	
 ### Guía de instalación
 ---
-Minimum System Requirements:
-1.	The server should at least have a memory of 20GB and RAM of 4GB. The program takes space up to around 3GB minimum.
-2.	A good internet connection is also recommended as large chunk of data is downloaded during the server configuration.
-3.	We recommend installing the application on a CentOS distribution.
-Installing Python (3.*)
-NOTE: Make sure you are using python3.
-First check if python3 is already installed on the server. If not, please follow the following steps:
+
+#### Requerimientos mínimos del sistema
+1.	El servidor deberá contar con al menos 20GB de espacio en disco y un RAM de 4GB. La herramienta ocupa un espacio de mínimo 3GB.
+2.	Se recomienda una buena conexión a Internet, ya que una gran cantidad de datos se descargan durante la configuración del servidor.
+3.	Recomendamos instalar la aplicación en una distribución de CentOS.
+
+#### Instalación de Python (3.\*)
+NOTA: asegúrese de estar usando python3
+Primero compruebe si python3 ya está instalado en el servidor. Si no, siga los siguientes pasos:
+```
 sudo yum -y install https://centos7.iuscommunity.org/ius-release.rpm
 sudo yum -y install python36u
-Installing pip
+```
+
+#### Instalación de pip
+```
 sudo yum -y install python36u-pip
 sudo pip install –upgrade pip
-Confirm the pip installation with pip -V
-Installing MongoDB for data storage:
-1.	Navigate to the home folder
-2.	Click here for MongoDB installation steps. If link doesn’t work, copy and paste the following url  into your browser https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-centos-7 
-Importing Code from a remote git server:
-Clone the repository using the command git clone (git repository url).
-Create an environment
-1.	Create a new folder for the project and navigate to that folder
-2.	Create virtual environment and install python3 in the environment using the following command:
-python3.6 -m venv my_env (where my_env is the name of environment)   
-3.	Activate the newly created environment by typing: source my_env/bin/activate  
-4.	To deactivate the environment type: deactivate  
-Installing dependencies:
-1.	Activate the newly created virtual environment 
-2.	Navigate to cloned repository 
-3.	Install enchant library by typing sudo yum install enchant.
-4.	To install the remaining packages, set the locale settings to use pip. Enter the following in the command line: export LC_ALL=C.
-5.	Install all libraries contained in the “requirements.txt” by typing sudo pip install -r requirements.txt.
-6.	Download the English data on spacy using the command: sudo python -m spacy download en.
-7.	The nltk library needs to be downloaded using python. Type python in the command line.
-8.	Then import the nltk and load the data using the following commands:
--->>>import nltk
--->>>nltk.download('all')
+```
+Confirme la instalación de con: `pip -V`
 
+#### Instalación de MongoDB para el almacenamiento de datos:
+1.	Navega a la carpeta madre (home)
+2.	Haga clic [aquí](https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-centos-7) para ver los pasos de instalación de MongoDB. Si el enlace no funciona, copia y pega la siguiente url en tu navegador https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-centos-7 
 
-### Guía de usuario
----Server Startup:
-1.	Install screen using the command sudo yum install screen
-2.	Create a screen for the main templating file by typing:  screen -S main in the command line.
-3.	Start the main file that allows us to view the UI in web browser by entering the following command: python run.py
-4.	Detach the screen by pressing Ctrl + A, and then Ctrl + D. To confirm whether a screen was detached list all screens using screen -ls. The screen named “main” must have the status “(Detached)”.
+#### Clonar el Código desde un servidor remoto de git:
+Clona el repositorio usando el comando: `git clone https://github.com/EL-BID/*SmartReader*.git`.
+
+#### Crea un entorno:
+1.	Crea una nueva carpeta para el proyecto y navega a esa carpeta
+2.	Crea un entorno virtual e instala python3 en el entorno con el siguiente comando: `python3.6 -m venv my_env` (donde my_env es el nombre del entorno)
+3.	Activa el entorno recién creado con el siguiente comando: `source my_env/bin/activate`  
+4.	Para desactivar el entorno usa el siguiente comando: `deactivate`  
+
+#### Installing dependencies:
+1.	Activa el entorno que creaste en el paso anterior 
+2.	Navega hacia la carpeta con la herramienta clonada 
+3.	Instala la librería *enchant* con el siguiente comando `sudo yum install enchant`.
+4.	Para instalar el resto de los paquetes deberás modificar tu configuración local usando la siguiente línea: `export LC_ALL=C`.
+5.	Instala todas las librerías que están en el archivo “requirements.txt” usando el siguiente comando: `sudo pip install -r requirements.txt`.
+6.	Descarga los datos en inglés de la librería *spacy* así:  `sudo python -m spacy download en`.
+7.	La librería *nltk* deberá usarse utilizando python. Para esto, activa `python` en la línea de comandos.
+8.	Importa *nltk* y descarga todos los datos usando los siguientes comandos:
+
+```
+>>> import nltk
+>>> nltk.download('all')
+```
+
+### User Guide
+---
+
+#### Server Startup:
+1.	Instala  *screen* con el siguiente comando: `sudo yum install screen`
+2.	Crea una pantalla para el archivo principal usando el siguiente comando: `screen -S main`.
+3.	Al iniciar el archivo principal podrás visualizar la interfaz de la aplicación. Para esto, ejecuta la siguiente línea: `python run.py`
+4.	4.	Desconecta la pantalla con Ctrl + A y luego Ctrl + D. Para confirmar que la pantalla fue desconectada puedes enlistar todas las pantallas disponibles usando `screen -ls`. . La pantalla con nombre “main” deberá tener el estado de “Desconectado”.
 5.	Now we create a screen for data collection processor. Repeat the steps to create a new screen by choosing an arbitrary name such as “data_collection_processor”. 
-6.	Start the data collection file by typing “python processor.py”. Then detach this screen using the same method described above.
-7.	Similarly create a new screen for the summary_processor which can be named “summary_processor” and run command “python summary_processor.py” and detach it.
-8.	Check for all the running screen using screen -ls.
-9.	The server is up and running now. To access the application in the server, browse “localhost:8080”. For remote access specify the public IP address along with the port e.g. http://127.0.0.1:8080
- 
+6.	Start the data collection file by typing `python processor.py`. Then detach this screen using the same method described above.
+7.	Similarly create a new screen for the summary_processor which can be named “summary_processor” and run command `python summary_processor.py` and detach it.
+8.	Check for all the running screen using `screen -ls`.
+9.	The server is up and running now. To access the application in the server, browse “localhost:8080”. For remote access specify the public IP address along with the port.
 
-### Cómo contribuir
+### How to Contribute
 ---
-Si deseas contribuir con este proyecto, por favor lee las siguientes guías que establece el [BID](https://www.iadb.org/es "BID"):
 
-* [Guía para Publicar Herramientas Digitales](https://el-bid.github.io/guia-de-publicacion/ "Guía para Publicar") 
-* [Guía para la Contribución de Código](https://github.com/EL-BID/Plantilla-de-repositorio/blob/master/CONTRIBUTING.md "Guía de Contribución de Código")
+This section explains to developers the most useful ways to send “pull requests”, how to declare any bugs found in the tool, and which style guides should be followed when contributing new lines of code.
 
-### Código de conducta 
+### Code of Conduct 
 ---
-Puedes ver el código de conducta para este proyecto en el siguiente archivo [CODE*OF*CONDUCT.md](CODEOFCONDUCT.md).
 
-### Información adicional
----
-Blog en Abierto al Público
+The Code of Conduct establishes the social norms, rules, and responsibility that individuals and organizations are expected to follow when interacting in any way with the digital tool and its respective community. It is considered a best practice to actively encourage an environment of respect and inclusion for making contributions to the project. The Github platform awards and supports the repositories which provide this specific section. As soon as you create *CODE_OF_CONDUCT.md* you can access the specific recommended template created by Github. 
 
-### Autor
+### Authors
 ---
+
 BID
 
-### Licencias
+### Additional Information
 ---
-Los detalles de licencia para este código fuente se encuentran en el archivo [LICENSE.md](LICENSE.md).
 
-La Documentación de Soporte y Uso del software se encuentra licenciada bajo Creative Commons IGO 3.0 Atribución-NoComercial-SinObraDerivada (CC-IGO 3.0 BY-NC-ND)
+Blog en Abierto al Público
 
-## Limitación de responsabilidades
+### License 
+---
 
-El BID no será responsable, bajo circunstancia alguna, de daño ni indemnización, moral o patrimonial; directo o indirecto; accesorio o especial; o por vía de consecuencia, previsto o imprevisto, que pudiese surgir:
+The license specifies the permission and the conditions for use that the developer authorizes to others who wish to use or modify the digital tool.
 
-i. Bajo cualquier teoría de responsabilidad, ya sea por contrato, infracción de derechos de propiedad intelectual, negligencia o bajo cualquier otra teoría; y/o
+Include a note in this section with the type of license that has been assigned to the digital tool. The text of this license should be included in a specific file named *LICENSE.md* or *LICENSE.txt* in the main folder.
 
-ii. A raíz del uso de la Herramienta Digital, incluyendo, pero sin limitación de potenciales defectos en la Herramienta Digital, o la pérdida o inexactitud de los datos de cualquier tipo. Lo anterior incluye los gastos o daños asociados a fallas de comunicación y/o fallas de funcionamiento de computadoras, vinculados con la utilización de la Herramienta Digital.
+If you are unsure about what kinds of licenses exist and which would be the best for your case, we recommend visiting the following page: https://choosealicense.com/.
+
+### Limitation of responsibilities
+---
+
+The IDB is not responsible, under any circumstance, for damage or compensation, moral or patrimonial; direct or indirect; accessory or special; or by way of consequence, foreseen or unforeseen, that could arise:
+
+i. Under any concept of intellectual property, negligence or detriment of another part theory;
+
+ii. Following the use of the Digital Tool, including, but not limited to defects in the Digital Tool, or the loss or inaccuracy of data of any kind. The foregoing includes expenses or damages associated with communication failures and / or malfunctions of computers, linked to the use of the Digital Tool.
 

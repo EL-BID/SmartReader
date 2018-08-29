@@ -32,8 +32,7 @@ First check if python3 is already installed on the server. If not, please follow
 `sudo yum -y install https://centos7.iuscommunity.org/ius-release.rpm
 sudo yum -y install python36u`
 
-
-##### Installing pip
+###### Installing pip
 
 `sudo yum -y install python36u-pip
 sudo pip install –upgrade pip`
@@ -45,8 +44,8 @@ Confirm the pip installation with `pip -V`
 1.	Navigate to the home folder
 2.	Click here for MongoDB installation steps. If link doesn’t work, copy and paste the following url  into your browser https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-centos-7 
 
-######Importing Code from a remote git server:
-Clone the repository using the command git clone https://github.com/EL-BID/SmartReader.git.
+###### Importing Code from a remote git server:
+Clone the repository using the command `git clone https://github.com/EL-BID/SmartReader.git.`
 
 ###### Create an environment
 1.	Create a new folder for the project and navigate to that folder
@@ -55,18 +54,19 @@ Clone the repository using the command git clone https://github.com/EL-BID/Smart
 3.	Activate the newly created environment by typing: `source my_env/bin/activate`  
 4.	To deactivate the environment type: `deactivate`  
 
-######Installing dependencies:
+###### Installing dependencies:
 1.	Activate the newly created virtual environment 
 2.	Navigate to cloned repository 
-3.	Install enchant library by typing sudo yum install enchant.
-4.	To install the remaining packages, set the locale settings to use pip. Enter the following in the command line: export LC_ALL=C.
-5.	Install all libraries contained in the “requirements.txt” by typing sudo pip install -r requirements.txt.
-6.	Download the English data on spacy using the command: sudo python -m spacy download en.
+3.	Install enchant library by typing `sudo yum install enchant`.
+4.	To install the remaining packages, set the locale settings to use pip. Enter the following in the command line: `export LC_ALL=C`.
+5.	Install all libraries contained in the “requirements.txt” by typing sudo `pip install -r requirements.txt`.
+6.	Download the English data on spacy using the command: `sudo python -m spacy download en`.
 7.	The nltk library needs to be downloaded using python. Type python in the command line.
 8.	Then import the nltk and load the data using the following commands:
 
 `
 -->>>import nltk
+
 -->>>nltk.download('all')
 `
 
@@ -84,34 +84,34 @@ Clone the repository using the command git clone https://github.com/EL-BID/Smart
 
 ### How to Contribute
 ---
-Si deseas contribuir con este proyecto, por favor lee las siguientes guías que establece el [BID](https://www.iadb.org/es "BID"):
+This section explains to developers the most useful ways to send “pull requests”, how to declare any bugs found in the tool, and which style guides should be followed when contributing new lines of code.
 
-* [Guía para Publicar Herramientas Digitales](https://el-bid.github.io/guia-de-publicacion/ "Guía para Publicar") 
-* [Guía para la Contribución de Código](https://github.com/EL-BID/Plantilla-de-repositorio/blob/master/CONTRIBUTING.md "Guía de Contribución de Código")
-
-### Código de conducta 
+### Code of Conduct 
 ---
-Puedes ver el código de conducta para este proyecto en el siguiente archivo [CODE*OF*CONDUCT.md](CODEOFCONDUCT.md).
+The Code of Conduct establishes the social norms, rules, and responsibility that individuals and organizations are expected to follow when interacting in any way with the digital tool and its respective community. It is considered a best practice to actively encourage an environment of respect and inclusion for making contributions to the project. The Github platform awards and supports the repositories which provide this specific section. As soon as you create CODE_OF_CONDUCT.md you can access the specific recommended template created by Github. 
 
-### Información adicional
----
-Blog en Abierto al Público
-
-### Author
+### Authors
 ---
 BID
 
-### License
+### Additional Information
 ---
-Los detalles de licencia para este código fuente se encuentran en el archivo [LICENSE.md](LICENSE.md).
+Blog en Abierto al Público
 
-La Documentación de Soporte y Uso del software se encuentra licenciada bajo Creative Commons IGO 3.0 Atribución-NoComercial-SinObraDerivada (CC-IGO 3.0 BY-NC-ND)
+### License 
+---
+The license specifies the permission and the conditions for use that the developer authorizes to others who wish to use or modify the digital tool.
 
-## Limitación de responsabilidades
+Include a note in this section with the type of license that has been assigned to the digital tool. The text of this license should be included in a specific file named *LICENSE.md* or *LICENSE.txt* in the main folder.
 
-El BID no será responsable, bajo circunstancia alguna, de daño ni indemnización, moral o patrimonial; directo o indirecto; accesorio o especial; o por vía de consecuencia, previsto o imprevisto, que pudiese surgir:
+If you are unsure about what kinds of licenses exist and which would be the best for your case, we recommend visiting the following page: https://choosealicense.com/.
 
-i. Bajo cualquier teoría de responsabilidad, ya sea por contrato, infracción de derechos de propiedad intelectual, negligencia o bajo cualquier otra teoría; y/o
+### Limitation of responsibilities
+---
 
-ii. A raíz del uso de la Herramienta Digital, incluyendo, pero sin limitación de potenciales defectos en la Herramienta Digital, o la pérdida o inexactitud de los datos de cualquier tipo. Lo anterior incluye los gastos o daños asociados a fallas de comunicación y/o fallas de funcionamiento de computadoras, vinculados con la utilización de la Herramienta Digital.
+The IDB is not responsible, under any circumstance, for damage or compensation, moral or patrimonial; direct or indirect; accessory or special; or by way of consequence, foreseen or unforeseen, that could arise:
+
+I. Under any concept of intellectual property, negligence or detriment of another part theory; I
+
+ii. Following the use of the Digital Tool, including, but not limited to defects in the Digital Tool, or the loss or inaccuracy of data of any kind. The foregoing includes expenses or damages associated with communication failures and / or malfunctions of computers, linked to the use of the Digital Tool.
 

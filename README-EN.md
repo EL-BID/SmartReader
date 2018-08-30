@@ -15,6 +15,8 @@ The Knowledge Innovation and Communication Department of the **Inter-American De
 The tool comprises four interfaces: 1) *Model Definition*, 2) *Model Status*, 3) *Model Application*, and 4) *Results interfaces*. The following flow chart explain the mechanics of the tool.  
 
 ![flujograma_en](https://code.iadb.org/sites/default/files/inline-images/flujograma.jpg "Flow Chart SmartReader English Version")
+<img   src="https://code.iadb.org/sites/default/files/inline-images/keys_en.png" 
+alt="keys!" width="50%" style="float:right;"/>
 
 As depicted in the chart, from left to right and from top to bottom, the process starts with the user creating a model by entering a set of topic and subtopics that match a determined research question. Afterwards, the model will generate query strings used to retrieve the most relevant data available online, this means querying Google. Afterwards, by applying the *sklearn.TfidfVectorizer*, a model with weighted terms will be created. In the Model Application interface, a model is applied to the corpus of documents that the user uploads in a zipped file of *.txt* files. The application process occurs by first scoring the paragraphs from each document, extracting their corresponding entities and locations and ordering these paragraphs in descending order. After picking the top paragraphs (a random number of 50 paragraphs was selected), the tool will proceed to select the most relevant sentences. The calculations will result in a *json* file and visualization of the most relevant keywords, entities, locations and sentences of our corpus of documents. For more information about how to contribute to this project please refer to the following [blog post](https://www.google.com/) in Abierto al Público.
  	
@@ -90,14 +92,19 @@ Clone the repository using the command `git clone https://github.com/EL-BID/Smar
 We have made this code available to you and we could not be more eager to hear about your experience with it. Please refer to the *Issues* tab of this repository to find some examples on how you can contribute to the improvement of *SmartReader*. Furthermore in the section [Additional Information](#additional-information) of this document you will find a link to a blogpost about *SmartReader* in *Abierto al Público*.
 
 ### Code of Conduct 
----
+--- 
 
-TBD 
+You can see the code of conduct [here] (https://github.com/EL-BID/SmartReader/blob/master/CODE-OF-CONDUCT.md)
 
 ### Authors
 ---
 
-BID
+Inter-american Development Bank  
+Involved:
+
+- [Daniela Collaguazo](mailto:dcct84@gmail.com)
+- Kyle Strand
+- Seaford Bacchas
 
 ### Additional Information
 ---
@@ -107,7 +114,9 @@ Blog en Abierto al Público
 ### License 
 ---
 
-TBD
+You can see the source code license [here] (https://github.com/EL-BID/SmartReader/blob/master/LICENSE.md)
+
+The Documentation of Support and Use of the software is licensed under Creative Commons IGO 3.0 Attribution-NonCommercial-NoDerivative (CC-IGO 3.0 BY-NC-ND)
 
 ### Limitation of responsibilities
 ---

@@ -94,7 +94,7 @@ We have made this code available to you and we could not be more eager to hear a
 ### Code of Conduct 
 --- 
 
-You can see the code of conduct [here] (https://github.com/EL-BID/SmartReader/blob/master/CODE-OF-CONDUCT.md)
+You can see the code of conduct [here](https://github.com/EL-BID/SmartReader/blob/master/CODE-OF-CONDUCT.md)
 
 ### Authors
 ---
@@ -114,7 +114,7 @@ Blog en Abierto al Público
 ### License 
 ---
 
-You can see the source code license [here] (https://github.com/EL-BID/SmartReader/blob/master/LICENSE.md)
+You can see the source code license [here](https://github.com/EL-BID/SmartReader/blob/master/LICENSE.md)
 
 The Documentation of Support and Use of the software is licensed under Creative Commons IGO 3.0 Attribution-NonCommercial-NoDerivative (CC-IGO 3.0 BY-NC-ND)
 

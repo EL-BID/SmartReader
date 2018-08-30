@@ -17,7 +17,7 @@ Si al reutilizar este código consideras que:
 - Has solucionado algún fallo existente,
 - O simplemente has mejorado la interfaz de usuario o documentación del mismo.
 
-Entonces te animamos a que devuelvas al repositorio los avances realizados. En la pestaña Issues encontrarás un listado de "mejoras" sugeridas. Para más información sobre estas sugerencias te invitamos a que leas la [entrada de blog] en *Abierto al Público*.
+Entonces te animamos a que devuelvas al repositorio los avances realizados. En la pestaña Issues encontrarás un listado de "mejoras" sugeridas. Para más información sobre estas sugerencias te invitamos a que leas la [entrada de blog](https://www.google.com/) en *Abierto al Público*.
 
 Sigue los siguientes pasos para hacer una contribución a la herramienta digital:
 

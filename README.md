@@ -37,7 +37,7 @@ sudo yum -y install python36u
 sudo yum -y install python36u-pip
 sudo pip install –upgrade pip
 ```
-Confirma la instalación de con: `pip -V`
+Confirma la instalación con: `pip -V`
 
 #### Instalación de MongoDB para el almacenamiento de datos:
 1.	Navega a la carpeta madre (home)

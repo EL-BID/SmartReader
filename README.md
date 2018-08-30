@@ -107,7 +107,9 @@ Blog en Abierto al Público
 ### Licencia
 ---
 
-Puedes ver la licencia [aquí](https://github.com/EL-BID/SmartReader/blob/master/LICENSE.md)
+Puedes ver la licencia del código fuente [aquí](https://github.com/EL-BID/SmartReader/blob/master/LICENSE.md)
+
+La Documentación de Soporte y Uso del software se encuentra licenciada bajo Creative Commons IGO 3.0 Atribución-NoComercial-SinObraDerivada (CC-IGO 3.0 BY-NC-ND)
 
 ## Limitación de responsabilidades
 ---

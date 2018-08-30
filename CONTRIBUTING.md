@@ -17,7 +17,7 @@ Si al reutilizar este código consideras que:
 - Has solucionado algún fallo existente,
 - O simplemente has mejorado la interfaz de usuario o documentación del mismo.
 
-Entonces te animamos a que devuelvas al repositorio los avances realizados.
+Entonces te animamos a que devuelvas al repositorio los avances realizados. En la pestaña Issues encontrarás un listado de "mejoras" sugeridas. Para más información sobre estas sugerencias te invitamos a que leas la [entrada de blog] en *Abierto al Público*.
 
 Sigue los siguientes pasos para hacer una contribución a la herramienta digital:
 
@@ -29,15 +29,3 @@ Sigue los siguientes pasos para hacer una contribución a la herramienta digital
 
 #### Atribuciones
 Dinos en el "pull request" tu nombre de usuario y organización para añadirlo a la lista de contribuciones en el Readme.md.
-
-## Código de conducta
-
-Este proyecto tiene un [Código de Conducta](https://github.com/EL-BID/Plantilla-de-repositorio/blob/master/CODE-OF-CONDUCT.md). Esperamos que todos los que participen estén conformes con él. Lee el código para saber qué esperamos de los contribuidores. 
-
-## Limitación de responsabilidades
-
-El BID no será responsable, bajo circunstancia alguna, de daño ni indemnización, moral o patrimonial; directo o indirecto; accesorio o especial; o por vía de consecuencia, previsto o imprevisto, que pudiese surgir:
-
-i. Bajo cualquier teoría de responsabilidad, ya sea por contrato, infracción de derechos de propiedad intelectual, negligencia o bajo cualquier otra teoría; y/o
-
-ii. A raíz del uso de la Herramienta Digital, incluyendo, pero sin limitación de potenciales defectos en la Herramienta Digital, o la pérdida o inexactitud de los datos de cualquier tipo. Lo anterior incluye los gastos o daños asociados a fallas de comunicación y/o fallas de funcionamiento de computadoras, vinculados con la utilización de la Herramienta Digital.

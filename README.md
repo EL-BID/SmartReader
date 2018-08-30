@@ -1,5 +1,7 @@
 *Esta herramienta digital forma parte del catálogo de herramientas del **Banco Interamericano de Desarrollo**. Puedes conocer más sobre la iniciativa del BID en: [code.iadb.org](https://code.iadb.org/es)*
 
+*Versión en inglés [aquí](https://github.com/EL-BID/SmartReader/blob/master/README-EN.md)*
+
 ## *SmartReader*
 
 ### Descripción y contexto
@@ -37,7 +39,7 @@ sudo yum -y install python36u
 sudo yum -y install python36u-pip
 sudo pip install –upgrade pip
 ```
-Confirma la instalación de con: `pip -V`
+Confirma la instalación con: `pip -V`
 
 #### Instalación de MongoDB para el almacenamiento de datos:
 1.	Navega a la carpeta madre (home)
@@ -90,12 +92,12 @@ Hemos puesto a disposción el código de esta herramienta y nos encataría escuc
 ### Código de Conducta 
 ---
 
-TBD
+Puedes ver el código de conducta [aquí](https://github.com/EL-BID/SmartReader/blob/master/CODE-OF-CONDUCT.md)
 
 ### Autores
 ---
 
-BID
+Banco Interamericano de Desarrollo
 
 ### Información Adicional
 ---
@@ -105,7 +107,9 @@ Blog en Abierto al Público
 ### Licencia
 ---
 
-TBD
+Puedes ver la licencia del código fuente [aquí](https://github.com/EL-BID/SmartReader/blob/master/LICENSE.md)
+
+La Documentación de Soporte y Uso del software se encuentra licenciada bajo Creative Commons IGO 3.0 Atribución-NoComercial-SinObraDerivada (CC-IGO 3.0 BY-NC-ND)
 
 ## Limitación de responsabilidades
 ---

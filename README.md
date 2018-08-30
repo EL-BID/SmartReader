@@ -17,7 +17,7 @@ La herramienta consta de cuatro interfaces: 1) *Definición del modelo*, 2) *Est
 ![flujograma_en](https://code.iadb.org/sites/default/files/inline-images/chart_es.png "Flow Chart SmartReader")  
 
 <img   src="https://code.iadb.org/sites/default/files/inline-images/keys_es.png" 
-alt="keys!" />
+alt="keys!" width="50%"/>
 <span class="keys">
 ![](https://code.iadb.org/sites/default/files/inline-images/keys_es.png) 
 </span>

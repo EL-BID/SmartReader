@@ -90,7 +90,8 @@ Clona el repositorio usando el comando: `git clone https://github.com/EL-BID/Sma
 ### Cómo contribuir
 ---
 
-Hemos puesto a disposción el código de esta herramienta y nos encataría escuchar tu experiencia con ella. Para ver un listado de posibles mejoras que podrías hacer a *SmartReader* consulta la pestaña *Issues* de este repositorio. Finalmente, te comentamos que escribimos una entrada sobre *SmartReader* en *Abierto al Público*. El enlace al blog está en la sección de [Información Adicional](#información-adicional) de este documento. ¡Quedamos atentos!
+Hemos puesto a disposción el código de esta herramienta y nos encataría escuchar tu experiencia con ella. Para ver un listado de posibles mejoras que podrías hacer a *SmartReader* consulta la pestaña *Issues* de este repositorio y el [CONTRIBUTING.md](https://github.com/EL-BID/SmartReader/blob/master/CONTRIBUTING.md).  
+Finalmente, te comentamos que escribimos una entrada sobre *SmartReader* en *Abierto al Público*. El enlace al blog está en la sección de [Información Adicional](#información-adicional) de este documento. ¡Quedamos atentos!
 
 
 ### Código de Conducta 
@@ -101,7 +102,12 @@ Puedes ver el código de conducta [aquí](https://github.com/EL-BID/SmartReader/
 ### Autores
 ---
 
-Banco Interamericano de Desarrollo
+Banco Interamericano de Desarrollo  
+Involucrados:
+
+- [Daniela Collaguazo](mailto:dcct84@gmail.com)
+- Kyle Strand
+- Seaford Bacchas
 
 ### Información Adicional
 ---

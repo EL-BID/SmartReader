@@ -16,11 +16,7 @@ La herramienta consta de cuatro interfaces: 1) *Definición del modelo*, 2) *Est
 
 ![flujograma_en](https://code.iadb.org/sites/default/files/inline-images/chart_es.png "Flow Chart SmartReader")  
 
-<img  style="width: 50%;
-    float: right;
-    position: relative;
-    bottom: 180px;
-    margin-bottom: -179px;" src="https://code.iadb.org/sites/default/files/inline-images/keys_es.png" 
+<img  style="width:50%;float:right;position:relative;bottom:180px;margin-bottom:-179px;" src="https://code.iadb.org/sites/default/files/inline-images/keys_es.png" 
 alt="keys!" />
 
 Como se muestra en la gráfica, de izquierda a derecha y de arriba a abajo, el proceso comienza cuando el usuario crea un modelo al ingresar un conjunto de temas y subtemas que son relevantes a una determinada pregunta de investigación. Con este conjunto de palabras, la herramienta generará cadenas de consulta utilizadas para recuperar los datos más relevantes disponibles en Google. Luego, al aplicar *sklearn.TfidfVectorizer*, se creará un modelo con términos ponderados. Posteriormente, se aplica un modelo al corpus de documentos que el usuario carga en un archivo comprimido de archivos *.txt*. El proceso ocurre al calificar los párrafos de cada documento, extraer sus entidades y ubicaciones correspondientes y ordenar estos párrafos en orden descendente. Después de elegir los párrafos con mayor calificación (se seleccionó un número aleatorio de 50 párrafos), la herramienta procederá a seleccionar las oraciones más relevantes. Los cálculos dará como resultado un archivo *.json* y la visualización de las palabras clave, entidades, ubicaciones geográficas y frases más relevantes de nuestro corpus de documentos. Para obtener más información sobre cómo contribuir a este proyecto, consulta la [siguiente entrada](https://www.google.com/) en nuestro blog Abierto al Público.

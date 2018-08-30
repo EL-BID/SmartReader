@@ -1,5 +1,7 @@
 *Esta herramienta digital forma parte del catálogo de herramientas del **Banco Interamericano de Desarrollo**. Puedes conocer más sobre la iniciativa del BID en: [code.iadb.org](https://code.iadb.org/es)*
 
+*Versión en inglés [aquí](https://github.com/EL-BID/SmartReader/blob/master/README-EN.md)*
+
 ## *SmartReader*
 
 ### Descripción y contexto
@@ -90,12 +92,12 @@ Hemos puesto a disposción el código de esta herramienta y nos encataría escuc
 ### Código de Conducta 
 ---
 
-TBD
+Puedes ver el código de conducta [aquí](https://github.com/EL-BID/SmartReader/blob/master/CODE-OF-CONDUCT.md)
 
 ### Autores
 ---
 
-BID
+Banco Interamericano de Desarrollo
 
 ### Información Adicional
 ---
@@ -105,7 +107,7 @@ Blog en Abierto al Público
 ### Licencia
 ---
 
-TBD
+Puedes ver la licencia [aquí](https://github.com/EL-BID/SmartReader/blob/master/LICENSE.md)
 
 ## Limitación de responsabilidades
 ---

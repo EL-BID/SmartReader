@@ -102,8 +102,8 @@ You can see the code of conduct [here](https://github.com/EL-BID/SmartReader/blo
 Inter-american Development Bank  
 Involved:
 
-- [Daniela Collaguazo](mailto:dcct84@gmail.com)
-- Kyle Strand
+- [Daniela Collaguazo](mailto:danielaco@iadb.org)
+- [Kyle Strand](mailto:kyles@iadb.org)
 - Seaford Bacchas
 
 ### Additional Information

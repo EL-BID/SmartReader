@@ -80,6 +80,8 @@ def create_summary(dataset_location, model_name):
 	model_name = "models/" + model_name
 	dataset = dataset_reader.read_dataset_text(dataset_location)
 	model = create_model.load_model(model_name)
+	print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+	print(model)
 	for doc in dataset:
 		score_doc(model, doc)
 

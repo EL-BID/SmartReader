@@ -5,7 +5,6 @@ import re
 
 
 def get_text_from_url(response):
-
     try:
         soup = BeautifulSoup(response, "html.parser")
         text = " "

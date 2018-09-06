@@ -14,6 +14,7 @@ def get_topic_keywords(features, X):
 
 def create_and_save_model(subtopics, output_file):
 	data = []
+	output = ()
 	all_texts = []
 	vec = TfidfVectorizer(ngram_range=(1,3), stop_words="english")
 	subtopic_names = list(subtopics.keys())
@@ -33,15 +34,14 @@ def create_and_save_model(subtopics, output_file):
 			Xi = X[i, :]
 			features_with_weights, feature_indices = get_topic_keywords(features, Xi)
 			data.append( {"topic":subtopic_names[i], "keywords":features_with_weights, "vectorizer":vec, "feature_indices":feature_indices} )
+			output["keywords"] = features_with_weights
+			output["feature_indices"] = feature_indices
+			print(output)
+
 	pickle.dump( data, open(output_file, "wb") )
 	print("This is the model", data)
 	global gvec
 	gvec = vec
-
-	print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-	print(type(features_with_weights))
-	print(type(feature_indices))
-
 
 
 def load_model(file_path):

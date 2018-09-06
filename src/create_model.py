@@ -37,7 +37,7 @@ def create_and_save_model(subtopics, output_file):
 	pickle.dump( data, open(output_file, "wb") )
 	print("This is the model", data)
 	temp_s = str(data)
-	d = json.dumps(data)
+	d = json.dumps(temp_s)
 	print(type(d))
 	global gvec
 	gvec = vec

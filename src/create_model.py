@@ -33,12 +33,11 @@ def create_and_save_model(subtopics, output_file):
 		if subtopic_names[i] not in no_data_subtopic_names:
 			Xi = X[i, :]
 			features_with_weights, feature_indices = get_topic_keywords(features, Xi)
+			print(type(features_with_weights))
+			print(type(feature_indices))
 			data.append( {"topic":subtopic_names[i], "keywords":features_with_weights, "vectorizer":vec, "feature_indices":feature_indices} )
 	pickle.dump( data, open(output_file, "wb") )
 	print("This is the model", data)
-	model_str = " ".join(data)
-	print('XXXXXXXXXXXXXXXXXXXXXXXX')
-	print(model_str)
 
 	global gvec
 	gvec = vec

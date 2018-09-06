@@ -1,6 +1,7 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 import pickle
 from src.LemmaTokenizer import *
+import json
 
 def get_topic_keywords(features, X):
 	features_with_weights = sorted([ {"keyword":features[i], "count": X[0,i], "index":i} for i in range(len(features)) ], key=lambda x:-x["count"] )[:50]
@@ -35,8 +36,8 @@ def create_and_save_model(subtopics, output_file):
 			data.append( {"topic":subtopic_names[i], "keywords":features_with_weights, "vectorizer":vec, "feature_indices":feature_indices} )
 	pickle.dump( data, open(output_file, "wb") )
 	print("This is the model", data)
-	print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-	print(str(data))
+	d = json.loads(str(data))
+	print(d)
 	global gvec
 	gvec = vec
 

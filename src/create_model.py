@@ -34,9 +34,11 @@ def create_and_save_model(subtopics, output_file):
 			Xi = X[i, :]
 			features_with_weights, feature_indices = get_topic_keywords(features, Xi)
 			data.append( {"topic":subtopic_names[i], "keywords":features_with_weights, "vectorizer":vec, "feature_indices":feature_indices} )
-			output["keywords"] = features_with_weights
-			output["feature_indices"] = feature_indices
-			print(str(output))
+			# output["keywords"] = features_with_weights
+			print(features_with_weights)
+			print(type(features_with_weights))
+			print(feature_indices)
+			# output["feature_indices"] = feature_indices
 
 	pickle.dump( data, open(output_file, "wb") )
 	print("This is the model", data)

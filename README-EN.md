@@ -98,6 +98,10 @@ You can see the code of conduct [here](https://github.com/EL-BID/SmartReader/blo
 
 ### Authors
 ---
+© 2017 Inter-American Development Bank and Institute for the Future.
+This software is the result of a partnership between the Inter-American Development Bank and the [Institute for the Future] (http://www.iftf.org/).
+The copyright on the software is shared by both organizations, even if your licensor is the Inter-American Development Bank only.
+
 
 Inter-american Development Bank  
 Involved:
@@ -109,7 +113,7 @@ Involved:
 ### Additional Information
 ---
 
-Blog en Abierto al Público
+[Blog en Abierto al Público](https://blogs.iadb.org/abierto-al-publico/2018/09/07/smartreader-open-source-text-analytics-tool/?lang=en)
 
 ### License 
 ---

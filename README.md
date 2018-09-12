@@ -101,6 +101,9 @@ Puedes ver el código de conducta [aquí](https://github.com/EL-BID/SmartReader/
 
 ### Autores
 ---
+© 2017 Banco Interamericano de Desarrollo e Instituto para el Futuro.
+Este software es el resultado de una asociación entre el Banco Interamericano de Desarrollo y el [Instituto para el Futuro] (http://www.iftf.org/).
+Los derechos de autor del software son compartidos por ambas organizaciones, incluso si el licenciante es únicamente el Banco Interamericano de Desarrollo.
 
 Banco Interamericano de Desarrollo  
 Involucrados:
@@ -112,7 +115,7 @@ Involucrados:
 ### Información Adicional
 ---
 
-Blog en Abierto al Público
+[Blog en Abierto al Público](https://blogs.iadb.org/abierto-al-publico/2018/09/07/smartreader-herramienta-de-analisis-de-texto/)
 
 ### Licencia
 ---

@@ -89,7 +89,7 @@ Clone the repository using the command `git clone https://github.com/EL-BID/Smar
 ### How to Contribute
 ---
 
-We have made this code available to you and we could not be more eager to hear about your experience with it. Please refer to the *Issues* tab of this repository to find some examples on how you can contribute to the improvement of *SmartReader*. Furthermore in the section [Additional Information](#additional-information) of this document you will find a link to a blogpost about *SmartReader* in *Abierto al Público*.
+We have made this code available to you and we could not be more eager to hear about your experience with it. Please refer to the *Issues* tab of this repository to find some examples on how you can contribute to the improvement of *SmartReader*. Furthermore in the section [Additional Information](#additional-information) of this document you will find a link to a blog post about *SmartReader* in *Abierto al Público*.
 
 ### Code of Conduct 
 --- 

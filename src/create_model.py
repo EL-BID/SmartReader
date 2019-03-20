@@ -40,10 +40,8 @@ def create_and_save_model(subtopics, output_file):
 			print(feature_indices)
 			# output["feature_indices"] = feature_indices
 
-	pickle.dump( data, open(output_file, "wb"))
-	print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-	print("this is the model type")
-	print(type(data))
+	pickle.dump(data, open(output_file, "wb"))
+	print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
 	print("This is the model", data)
 	global gvec
 	gvec = vec

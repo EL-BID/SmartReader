@@ -36,9 +36,10 @@ def google_search_query(query):
 def generate_search_query(topic_names, keywords):
     query = "("
     for i in range(len(keywords)-1):
-        query = query + keywords[i].lower() + " or "#concatenating the keywords with 'or'
-
+        #concatenating the keywords with 'or'
+        query = query + keywords[i].lower() + " or "
     query = query + keywords[len(keywords)-1].lower() + ") and ("
+    print(query)
 
     for i in range(len(topic_names)-1):
         query = query + topic_names[i].lower() + " or "

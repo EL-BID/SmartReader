@@ -31,7 +31,8 @@ def run_job(job):#in this context is the group of 'Queued' jobs retrieved from t
             jobid = document["_id"]
             updateJobStatus(jobid, "Processing")
             topic_text = get_data(document["input"])
-            all_text = " ".join([topic_text[text] for text in topic_text])#joined text from the results of querying the topics on the internet
+            #joined text from the results of querying the topics on the internet
+            all_text = " ".join([topic_text[text] for text in topic_text])
             if len(all_text.strip()) > 0:
                 print("Creating Model")
                 create_and_save_model(topic_text, os.path.join(os.getcwd(),"models",document["output_model_file"]))

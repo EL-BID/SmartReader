@@ -1,4 +1,4 @@
-import os
+gimport os
 import time
 from src.database_connectivity import *
 from src.search_data import *
@@ -24,7 +24,8 @@ def updateJobStatus(jobid, status):
     )
 
 
-def run_job(job):#in this context is the group of 'Queued' jobs retrieved from the database
+def run_job(job):
+    #Group of 'Queued' jobs retrieved from the database
     for document in job:
         try:
             print (document["model_name"])

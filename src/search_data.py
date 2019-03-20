@@ -50,9 +50,12 @@ def generate_search_query(topic_names, keywords):
 
 
 def get_data(topics):
-    topic_names = topics["topic_name"]#storing a list of topics in current job
-    subtopics = topics["subtopics"]#storing a list of subtopics in current job
-    topic_text = {}#initializing an empty dictionary
+    #storing a list of topics in current job
+    topic_names = topics["topic_name"]
+    #storing a list of subtopics in current job
+    subtopics = topics["subtopics"]
+    #initializing an empty dictionary
+    topic_text = {}
     for i in range(len(subtopics)):
         print ("Looking for data")
         subtopic_name = subtopics[i]["subtopic_name"]

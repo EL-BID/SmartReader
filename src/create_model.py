@@ -13,8 +13,6 @@ def get_topic_keywords(features, X):
 
 
 def create_and_save_model(subtopics, output_file):
-	print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-	print(str(output_file))
 	data = []
 	output = ()
 	all_texts = []

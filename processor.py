@@ -1,4 +1,4 @@
-gimport os
+import os
 import time
 from src.database_connectivity import *
 from src.search_data import *

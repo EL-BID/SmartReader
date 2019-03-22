@@ -1,0 +1,2146 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The Political Economy of Bureaucratic Effectiveness:
+
+Evidence from Local Rural Development Officials in India1
+
+Aditya Dasgupta2 and Devesh Kapur3 
+
+Word Count: 7,970 
+
+Abstract:
+
+Government development programs often founder because of a lack of effectiveness on the part 
+
+of local implementing bureaucracy. What determines local bureaucratic effectiveness? Public 
+
+choice arguments emphasize incentives and monitoring, while theories of state capacity highlight 
+
+the importance of organizational autonomy from excess political interference. Drawing on a 
+
+nationwide survey of the capacity and time usage of local rural development officials in India, 
+
+this paper provides evidence for a different pathology: local bureaucracies are chronically under­
+
+resourced relative to their responsibilities because politicians make these decisions 
+
+(inefficiently). We provide quantitative evidence that: i) inadequate personnel and resources 
+
+force rural development officers to multi-task excessively; ii) this inability to specialize has an 
+
+adverse impact on the performance of development programs. Factors affecting the electoral 
+
+incentives of politicians to invest in local state capacity, including political alignment and 
+
+fragmentation, account for much of the variation in local bureaucratic resources and therefore 
+
+behavior and effectiveness.
+
+1 We thank seminar participants at the Lal Bahadur Shastri National Academy of Administration, the Centre for 
+Policy Research, New Delhi, and Harvard Business School for valuable feedback.
+2 Assistant Professor of Political Science, University of California, Merced: adasgupta3@ucmerced.edu.
+3 Professor of Political Science, University of Pennsylvania: dkapur@sas.upenn.edu.
+
+1
+
+mailto:adasgupta3@ucmerced.edu
+mailto:dkapur@sas.upenn.edu
+
+
+1. Introduction
+
+Especially in developing countries, government development programs often founder because of 
+
+a lack of effectiveness on the part of local implementing bureaucracy (e.g. Pritchett, 2009; 
+
+Lipsky, 2010). What explains this ineffectiveness? Existing literature rooted in the public choice 
+
+school attributes bureaucratic under-performance to weak career incentives and inadequate 
+
+monitoring (e.g. Tullock, 1965). Theories of state capacity, by contrast, blame an absence of 
+
+organizational autonomy from excess political interference (e.g. Evans, 2012; Kohli, 2004). 
+
+While these are important factors, this paper highlights a distinct pathology, familiar to 
+
+bureaucrats but surprisingly under-theorized by social scientists: local bureaucracies are 
+
+chronically under-resourced relative to their responsibilities, because politicians and ruling 
+
+parties make these decisions (inefficiently).
+
+We highlight the adverse consequences under-resourcing can have for bureaucratic behavior and 
+
+therefore effectiveness. To cope with staff and physical resource shortages, local officials must 
+
+spread their finite time thinly across a variety of tasks which they would otherwise delegate. 
+
+Excessive multi-tasking tends to crowd out the managerial responsibilities of local officials. In 
+
+contexts where implementing development programs often requires significant office-based 
+
+planning, management, and form-filing (Gupta, 2012; Mathur, 2015), this crowding out can slow 
+
+down the flow of official funds and harm the performance of development programs. We suggest 
+
+that perverse electoral incentives and administrative inertia underlie the tendency toward 
+
+inefficient under-provision of local bureaucratic resources relative to responsibilities. Politicians 
+
+and ruling parties are inattentive to investing in local state capacity because the electoral returns
+
+2
+
+
+
+to these investments are diffuse and uncertain. By contrast, they possess strong incentives to 
+
+announce and inaugurate new and ambitious rural development programs, as well as paperwork 
+
+and monitoring requirements which facilitate the claiming of credit for service delivery.
+
+Our argument contradicts the popular image of bureaucracies as bloated, inefficient 
+
+organizations with over-sized budgets, a narrative supported by public choice scholarship (e.g. 
+
+Niskanen, 1971). There are two reasons that existing work has tended to neglect the problem of 
+
+under-resourced local bureaucracies, however. First, existing work has focused on developed 
+
+countries, which tend to have much larger public sectors than do developing countries (Besley 
+
+and Persson, 2014). On average 8 percent of the population is employed in the public sector in 
+
+high income countries, while the equivalent figure is just 1 percent for low income countries 
+
+(World Bank, 2015). Secondly, existing scholarship focuses on the dynamics of well-financed 
+
+national planning agencies located in capital cities, ignoring the significant staffing and resource 
+
+shortages that typically exist at the level of frontline service delivery in localities and rural areas. 
+
+Yet it is precisely in localities and rural areas that state capacity constraints typically bind 
+
+(O’Donnell, 1993). No matter how carefully development programs are designed by national 
+
+bureaucracies, ultimately their performance on the ground hinges on how effectively they are 
+
+implemented locally.
+
+The argument is applied to the context of Block Development Officers (BDOs), the local 
+
+officials responsible for the implementation of rural development programs in India. A 
+
+nationwide survey and time-usage analysis is conducted with BDOs across 426 rural 
+
+development blocks, which cumulatively contain nearly 70 million residents. BDOs epitomize
+
+3
+
+
+
+the general dilemma we describe. They are typically over-burdened with responsibility for 
+
+administering an ever-growing list of complex programs and tasks, yet possess relatively few 
+
+personnel and resources to do their jobs. BDOs also vary significantly in the amount of resources 
+
+with which they are provided to fulfill their obligations, providing an opportunity to test whether 
+
+this variation affects bureaucratic behavior and performance. Empirically, we examine how 
+
+differences in personnel strength affect the time allocation and organizational behavior of BDOs 
+
+as well as the performance of two major rural development programs, the National Rural 
+
+Employment Guarantee Act (a rural workfare program) and Swacch Bharat (a program to 
+
+eliminate open defection). Statistically, in our preferred specifications we control for district 
+
+fixed effects, limiting our comparison to physically proximate blocks.
+
+The results suggest that resource shortages force rural development officers to multi-task 
+
+excessively, increasing time spent on “client-facing” activities like handling individual requests 
+
+from citizens and politicians and crowding out time spent on managerial activities. We find that 
+
+this inability to specialize has a large, detrimental impact on the performance of NREGA, a 
+
+program with burdensome procedural requirements (e.g. Mathur, 2015). The impact on the 
+
+performance of Swacch Bharat, a program with less onerous requirements, is smaller. By 
+
+contrast, we show that variables measuring the strength of career incentives and organizational 
+
+autonomy from excess political interference have surprisingly little explanatory power with 
+
+regard to both programs. Examining the determinants of local bureaucratic resources, we find 
+
+that investments in local state capacity tend to be lower in opposition-controlled constituencies, 
+
+in more politically fractionalized party systems, as well as in areas that have simply grown in
+
+4
+
+
+
+population without commensurate investments in staffing -  highlighting how perverse electoral 
+
+incentives and administrative inertia jointly contribute to the problem.
+
+The results offer a new explanation for why local bureaucracies are often so ineffective when it 
+
+comes to the implementation of government programs. We argue that local bureaucracies tend to 
+
+be chronically under-resourced relative to their responsibilities because politicians, who lack the 
+
+electoral incentives to invest in state capacity, take these decisions (inefficiently). Our argument 
+
+provides an alternative explanation for bureaucratic under-performance than do prevailing public 
+
+choice arguments emphasizing bureaucratic shirking or rent-seeking. Instead, we see local 
+
+bureaucratic under-performance as a symptom of wider political pathologies which prevent 
+
+rational investments in local state capacity.
+
+The remainder of the paper is structured as follows. We first develop the theoretical argument in 
+
+relation to existing arguments before applying it to the context of rural India. We then introduce 
+
+the empirical strategy, report results and conclude.
+
+2. Theory
+
+What determines local bureaucratic effectiveness? Prevailing explanations in economics, rooted 
+
+in the public choice school, emphasize career incentives and monitoring. Incentive-based 
+
+theories originating in the public choice school attribute bureaucratic under-performance to weak 
+
+career incentives (e.g. Tullock, 1965). Because bureaucratic positions are filled on the basis of 
+
+nepotistic or corrupt criteria, and because shirking is encouraged by protected civil service
+
+5
+
+
+
+positions, bureaucrats tend to be ineffective. Reforms based on these arguments, including the 
+
+so-called “new public management”, recommend reforms based on intensive monitoring of local 
+
+bureaucrats (see e.g. Muralidharan and Sundhararaman, 2011; Duflo et al, 2012), as well as 
+
+private-sector-style hiring-and-firing and high-powered incentives for promotion linked to 
+
+measurable outcomes.
+
+Alternatively, theories from political science stress the importance of bureaucratic autonomy 
+
+from excess political interference. Classical theories of bureaucracy highlight a contrast between 
+
+modern, rule-based bureaucracies with a professional civil service that is hired and promoted on 
+
+the basis of meritocratic criteria as distinct from the pre-modern ‘patrimonial’ model of public 
+
+administration in which public sector employees serve at the will of their political masters 
+
+(Weber, 1914; Kohli, 2004). Where political control over bureaucracy is excessive, bureaucratic 
+
+morale is undermined and developmental goals are sidelined in favor of advancing the interests 
+
+of powerful social and political special interest groups (e.g. Migdal, 1988; Evans, 2012).
+
+Reforms based on these arguments, which often highlight the success of highly autonomous 
+
+developmental bureaucracies in East Asia, recommend the creation of civil service laws which 
+
+protect bureaucrats from arbitrary firing or re-posting and the creation of rule-based, meritocratic 
+
+structures for career advancement.
+
+Both incentives and insulation against excess political interference are surely important 
+
+components of bureaucratic effectiveness. However, we argue, especially at the local level, 
+
+reforms to address these issues may not be particularly effective if a more fundamental constraint 
+
+is not addressed: the chronic under-resourcing of local bureaucracies relative to their
+
+6
+
+
+
+responsibilities. Local implementing bureaucracies are unique in two important regards. First, 
+
+they are tasked with the front-line implementation of government programs as opposed to policy 
+
+formulation. Second, they undertake their jobs given a set of resources that is usually assigned by 
+
+higher levels of government, a process over which local bureaucrats typically possess little 
+
+influence. Because other actors, especially politicians, control the resources and responsibilities 
+
+of local implementing bureaucrats, we argue that local bureaucracies tend to be chronically over­
+
+burdened; they are politically mandated to perform a massive multiplicity of tasks, including 
+
+administering an ever-growing list of programs, planning and budgeting, implementing and 
+
+monitoring in the field, addressing individual complaints from citizens, as well as 
+
+accommodating directives from politicians. Simultaneously, they are often given few personnel 
+
+and physical resources to carry out their responsibilities. We first discuss the consequences of 
+
+under-resourcing before discussing its political causes.
+
+How does under-resourcing and over-burdening local implementing bureaucracies impact their 
+
+effectiveness? We divide the consequences of bureaucratic under-resourcing into direct effects 
+
+and indirect organizational and behavioral effects. Local implementing bureaucracies are 
+
+typically comprised by different types of employees, ranging from managerial officials, to 
+
+technical specialists like engineers and data entry operators, to frontline staff who interface 
+
+directly with citizens and local politicians. Directly, fewer personnel and resources mean that 
+
+bureaucracies possess less human and physical capital to apply to the production of public 
+
+services. For example, fewer frontline staff and computers mean that lines tend to be longer and 
+
+citizens are served more slowly, while fewer engineers and vehicles mean that fewer 
+
+infrastructure projects can be planned at a time.
+
+7
+
+
+
+The indirect behavioral effects are arguably just as important, however, in terms of inhibiting 
+
+local bureaucrats’ ability to divide and specialize in distinct tasks. Large-scale organizations are 
+
+premised upon the economies of scale associated with organizational differentiation and 
+
+specialization. Officials and executives specialize in coordinating the activities of lower level 
+
+employees and staff, who themselves specialize in different types of tasks. However, a shortage 
+
+of staff and resources tends to undermine this division of labor. The result is that the productivity 
+
+advantages associated with intra-organizational differentiation and specialization, a fundamental 
+
+insight dating back at least to Adam Smith and Max Weber, are under-provided. For example, a 
+
+shortage of vehicles and computers means that routine field visits and data entry cannot be easily 
+
+divided between multiple workers. A shortage of frontline staff means that instead of 
+
+specializing in managerial tasks and delegating “client-facing” activities like registering and 
+
+addressing individualized citizen complaints, local officials must pitch in on these tasks. This 
+
+kind of multi-tasking tends to crowd out time dedicated to managerial tasks by officials, at 
+
+potentially large cost to overall organizational effectiveness. Excessive multi-tasking by officials 
+
+is especially detrimental in contexts where implementing development programs requires 
+
+significant office-based planning, management, and form-filing.
+
+The general dilemma we describe is epitomized by rural development officials known as Block 
+
+Development Officers (BDOs), state-level civil service appointees and the local executives of 
+
+Block Development Offices, administrative units which are responsible for the local 
+
+implementation of state and national rural development programs in India. A typical rural 
+
+development block is comprised of roughly 150,000 residents, though this can vary significantly
+
+8
+
+
+
+across states as well as blocks within states. BDOs are responsible for the implementation of 
+
+dozens of different rural development programs, ranging from national “flagship” programs like 
+
+the National Rural Employment Guarantee Act (NREGA), a major workfare programs which is 
+
+meant to guarantee every rural household up to 100 days of public works employment annually, 
+
+and Swachh Bharat, a major sanitation program designed to provide toilets and eliminate open 
+
+defecation, to a variety of smaller-scale state-level rural development programs. We think of the 
+
+office of the BDO, like local implementing bureaucracy more generally, as the “eye of the 
+
+needle” through which rural development programs must pass if they are to be implemented 
+
+effectively.
+
+Despite their tremendous responsibilities, BDOs are given relatively scant resources to do their 
+
+jobs on average. Our survey of 426 BDOs across 25 states,4 covering a population of roughly 70 
+
+million rural residents, indicates that on average BDOs report possessing just 24.5 full-time 
+
+employees per 100,000 rural residents and just 0.8 official, 4-wheel vehicles per 100,000 rural 
+
+residents (in practice, to deal with a shortage of vehicles, BDOs often use their personal vehicles 
+
+to conduct official business). Particularly strikingly, on average across blocks nearly 48 percent 
+
+of all sanctioned positions for full-time employees were reported to be vacant, a result of budget 
+
+constraints, political conflict surrounding hiring decisions, as well as significant red tape in the 
+
+hiring process. Over 44 percent of the BDOs in our sample reported that they had incurred 
+
+personal expenses for their official work over the previous 6 months, for items ranging from 
+
+petrol to “protocol duty” (the provision of food and refreshments for official visits and 
+
+functions).
+
+4 The survey was conducted in collaboration with the Lal Bahadur Shastri National Academy for Administration.
+
+9
+
+
+
+BDOs perceive themselves to be over-worked and under-resourced, with a large number of 
+
+competing tasks vying for their finite effort. On a Likert scale from 1 (lowest) to 5 (highest), 68 
+
+percent of the BDOs in our sample rated the “adequacy of resources in [their] current Block 
+
+Development Office relative to the work they need to complete” a 3 or lower. In focus groups, 
+
+when asked to describe a comparable profession to theirs, several BDOs described their role as 
+
+similar to that of a firefighter. For example, the following quotations were recorded from one 
+
+focus group with three BDOs: “Few words which can describe the job of the BDO are: dynamic, 
+
+diverse and overburdened.... it is a combination of soldier and fire fighter. BDO guards the block 
+
+on behalf of the collector [the highest district-level bureaucrat from the Indian Administrative 
+
+Services] and also has to do a lot of fire-fighting every day, especially during grievance hour [the 
+
+period during which citizens and politicians visit the office with complaints].”
+
+The overall shortage of resources relative to responsibilities that BDOs face means that they have 
+
+to multi-task to an extreme degree. To assess the behavior of BDOs, survey enumerators 
+
+contacted each BDO by phone on one day every week for three successive weeks to complete a 
+
+time-use diary for the preceding work day.5 In Figure 1, we display patterns of time-utilization 
+
+by BDOs over the course of a typical work day. The patterns reveal that on average BDOs divide 
+
+their time across a wide range of activities and interactions with a range of stakeholders, with 
+
+notable tradeoffs between multiple tasks. For example, the left-hand-side plot reveals that while 
+
+BDOs are able to dedicate their mornings to planning, management, and form filing activities
+
+5 This analysis took note of where the BDO was located, with whom he or she was interacting 
+physically, and what types of tasks he or she was working on a half-hourly basis over the course 
+of the work day.
+
+10
+
+
+
+based in the office, these activities are swiftly “crowded out” by handling daily individualized 
+
+complaints and requests from citizens as well as politicians. Similarly, the right-hand-side plot 
+
+reveals that while BDOs have time to spend on their own or with their staff in the morning, over 
+
+the course of the day their time is increasingly taken up by constituents and other stakeholders, 
+
+usually with particularistic complaints and requests.
+
+FIGURE 1 ABOUT HERE
+
+There are clear organizational inefficiencies in the current system. As executives for 
+
+administrative units containing on average 150,000 residents, BDOs appear to dedicate too much 
+
+time to client-facing activities and too little to managerial activities. While engaging in client­
+
+facing activities is important from an informational standpoint and being sufficiently 
+
+“embedded” in the community (Evans, 2012), being unable to spend enough time in the office on 
+
+managerial and form-filing activities is particularly costly in a context where BDOs often have to 
+
+file dozens of reports and forms in a day in order to “clear” the distribution of benefits under a 
+
+variety of rural development programs (see e.g. Mathur, 2015).6 Yet BDOs are necessitated to 
+
+multi-task in this way due to a shortage of staff and resources, which makes dividing 
+
+responsibilities and tasks difficult. A shortage of frontline staff means that instead of specializing 
+
+in managerial tasks and delegating micro-transactions like registering citizen complaints and 
+
+requests to their staff, BDOs must pitch in on these tasks, essentially playing the role of a “jack 
+
+of all trades” and “master of none”. A shortage of engineers and technical specialists means that 
+
+BDOs often engage in data entry and field visits themselves. We argue that this excess multi­
+
+6 In our survey, nearly 19 percent of BDOs reported that they had filed 20 or more forms in the 
+previous working day.
+
+11
+
+
+
+tasking crowds out managerial activities and harms the overall effectiveness of BDOs, 
+
+particularly when it comes to rural development programs that are intensive in their procedural 
+
+requirements. There is scope to test such a claim, as BDOs vary greatly in the amount of 
+
+personnel and resources with which they are provided, as displayed in Figure 2, which shows the 
+
+distribution of active full-time employees per 100,000 residents across the blocks in our sample.
+
+FIGURE 2 ABOUT HERE
+
+If the performance of government programs hinges on their local implementation, why do 
+
+politicians under-invest in local state capacity? We argue that politicians are inattentive to 
+
+investing in local state capacity because the electoral returns to these investments are diffuse and 
+
+uncertain. By contrast, politicians possess strong electoral incentives to continually announce 
+
+and inaugurate new and ambitious rural development programs, as well as paperwork and 
+
+monitoring requirements which facilitate the claiming of credit for service delivery. These 
+
+combined forces result in the gradual accumulation of new bureaucratic responsibilities without 
+
+corresponding investments in capacity. We highlight two dynamics that tend to worsen this 
+
+problem. The first is perverse electoral incentives. Ruling parties possess weaker incentives to 
+
+invest in state capacity in opposition-controlled areas, where the “credit” may be claimed by 
+
+political opponents, as well as in more politically fragmented and fractionalized areas, where 
+
+political time horizons tend to be shorter. The second is administrative inertia. Investing in local 
+
+state capacity and bureaucratic reform requires significant political collective action, which is 
+
+often simply under-provided.
+
+12
+
+
+
+Alternative explanations for under-performance by BDOs are certainly possible. For example, 
+
+public choice arguments emphasizing an absence of career incentives could play a role, as BDOs 
+
+often report that they feel that they lack opportunities for promotion, let alone opportunities for 
+
+promotion linked to effort or performance. To measure perceptions of opportunities for career 
+
+advancement linked to effort, we asked BDOs:
+
+“If a BDO works hard, is there a chance of promotion to a higher position over the next
+
+10 years? If so, what is the likely next post?”
+
+BDOs were given the following choice set of responses: Very Likely (10 out of 10 times), 
+
+Somewhat Likely (7-9 out of 10 times), Possibly (4-6 out of 10 times), Unlikely (1-3 out of 10 
+
+times), No chance (0 out of 10 times). Figure 3 displays the distribution of responses. Over 35 
+
+percent of BDOs were extremely pessimistic, reporting that there was either no chance of 
+
+promotion or that it was unlikely. However, nearly 65 percent of BDOs felt that promotion was 
+
+at least possible. To operationalize a variable capturing the strength of career incentives, we 
+
+assign a BDO’s response to the median probability corresponding to his or her response (for 
+
+example a “Very Likely” response is coded as 1.0 while a “Somewhat Likely” response is coded 
+
+as an 0.8 probability). The reason we utilize this individualized measure, rather than say 
+
+objective civil service rules for promotion (see e.g. Bertrand et al, 2015), is that chances of 
+
+promotion linked to effort are often determined by informal organizational culture as well as 
+
+objective rules. Additionally, individual traits affect perceived chances for promotion, including 
+
+age and past experiences. For example, results suggest that BDOs who obtained their position 
+
+through promotion as opposed to direct exam-based recruitment report a 0.08 (standard error
+
+13
+
+
+
+0.04) higher probability of promotion linked to effort, while for each additional year in 
+
+government service BDOs tend report a 0.003 (standard error 0.0019) lower probability of 
+
+promotion linked to performance, plausibly due to jadedness.
+
+FIGURE 3 ABOUT HERE
+
+Another possible explanation for under-performance by BDOs is that they are subject to 
+
+excessive political interference, a variable highlighted by political science theories of state 
+
+capacity (e.g. Migdal, 1988; Evans, 2012). An absence of organizational autonomy from political 
+
+dictates could subvert the developmental objective of local bureaucrats and instead convert them 
+
+into agents of locally powerful social groups, politicians, and businesses. The major tool for 
+
+control over bureaucrats that local politicians possess is not the threat of firing, since BDOs are 
+
+protected by civil service laws, but by the threat of transferring uncompliant BDOs to 
+
+undesirable or “punishment” postings in another locality (see e.g. Iyer and Mani, 2012). To 
+
+measure the degree of autonomy that BDOs possess relative to local politicians, we asked BDOs 
+
+“who would prevail in a hypothetical dispute about where to allocate a project” with respect to 
+
+different types of local politicians: a village-level elected leader, a block-level elected leader, a 
+
+district-level elected leader, a local legislator belonging to the state-level opposition party, and a 
+
+local legislator belonging to the state-level ruling party. The share of respondents indicating that 
+
+a BDO is likely to prevail with respect to each of these types of politicians is displayed in Figure 
+
+4. Clearly, higher-level politicians wield greater power vis-a-vis BDOs, though partisanship and 
+
+connections to the ruling party also matter. To operationalize the measure of autonomy, we
+
+14
+
+
+
+create a variable ranging between 0 and 1 representing the share of politicians over whom the 
+
+BDO expects to prevail over in a project allocation dispute.
+
+FIGURE 4 ABOUT HERE
+
+A final alternative explanation for local bureaucratic under-performance is rigid and hierarchical 
+
+organizational norms which prevent flexible adaptation to unpredictable challenges and crowd 
+
+out initiative-taking behavior on the part of BDOs. Growing evidence, based on the 
+
+“management as technology” approach (see e.g. Bloom et al, 2013), suggests that rigid and 
+
+hierarchical organizational norms can be detrimental to the performance of mid-level managers 
+
+and officials. Rasul and Roggers (Forthcoming) provide evidence from Nigeria that bureaucratic 
+
+agencies which provide greater flexibility and discretion to their mid-level officials tend to be 
+
+more effective in terms of project completion rates.7 Mangla (2015) and Aiyar and Bhattacharya 
+
+(2016), ethnographically examining the performance of local education officials in India, 
+
+provides evidence that organizational flexibility is key to effective performance. BDOs often 
+
+report that they feel highlight constrained in their roles, and are often limited to carrying out 
+
+orders dictated from district-level superior officials. To measure the degree of organizational 
+
+flexibility in local block offices, we provided BDOs with the following vignette and asked them 
+
+about their likely response:
+
+7 Rasul and Roggers term this flexibility “autonomy” though we prefer to use the term 
+“flexibility” since a large prior literature on bureaucracy uses the term autonomy with respect to 
+outside societal pressure groups and politicians as opposed to the degree of autonomy/flexibility 
+for mid-level officials within bureaucracy,
+
+15
+
+
+
+“Suppose a project for a NREGA road has been officially sanctioned, but early monsoon 
+
+rainfalls have made it impossible to build, and village officials have come to your office 
+
+to ask what to do. In this scenario, what is your first course of action?”
+
+BDOs were given the following choice set of responses: Seek the Advice of Superiors; Take 
+
+Action Myself to Re-allocate Funds to a New Project; Cancel the Project; Delay Until Further 
+
+Notice; Unsure. Figure 5 displays the distribution of responses. Consistent with generally 
+
+hierarchical organizational norms in local administration, relatively few BDOs indicated that 
+
+they would unilaterally reallocate the funds to a new project, despite the potential social 
+
+desirability of such a response. Technically, program rules prohibit BDOs from reallocating 
+
+project funds, though in practice, given the logistical issues that invariably arise around planned 
+
+projects, BDOs need to be able to bend rules in order to implement programs like NREGA 
+
+effectively. Overwhelmingly, BDOs tend to report that they would seek the advice of a superior. 
+
+While such behavior exhibits rule compliance, it also reflects an inability to adapt to 
+
+unpredictable challenges in ways that previous literature has highlighted as important. To 
+
+operationalize the measure of organizational flexibility, we utilize an indicator variable which 
+
+takes a value of 1 if BDOs report reallocating project themselves and a value of zero otherwise.
+
+FIGURE 5 ABOUT HERE
+
+In the following sections, we test how these different variables affect the behavior and 
+
+effectiveness of BDOs. We first investigate impacts on the quantity of services provided under a 
+
+major rural development program. We then investigate behavioral channels by examining the
+
+16
+
+
+
+impact of the variables described above on the reported time allocation of BDOs to different 
+
+types of activities and physical interactions with different types of individuals over the course of 
+
+the work day.
+
+3. Effects on the Performance of Rural Development Programs
+
+To estimate the impact of these different variables on bureaucratic effectiveness, we estimate a 
+
+regression analysis of the basic form:
+
+Yt = p1RESOURCESi + ^INCENTIVES' + foAUTONOMYi + FLEXIBILITY + et
+
+where Yt is our outcome-based measure of bureaucratic effectiveness, measured for two 
+
+programs, NREGA, a rural workfare program, and Swachh Bharat, a sanitation program 
+
+designed to eliminate open defecation. These are the two national flagship programs that BDOs 
+
+overwhelmingly report spending the most time implementing. By focusing on national programs, 
+
+we are able to establish common metrics for performance across BDOs nationally. The 
+
+performance of NREGA is measured in terms of the total days of NREGA employment provided 
+
+per rural capita in each block in 2016-17. The performance of Swachh Bharat is measured in 
+
+terms of the total toilets provided per 100,000 rural residents in 2016-17.
+
+Previous research demonstrates that “rationing” or an under-provision of benefits relative to 
+
+demand is a rampant problem in the implementation of rural development programs in India (e.g. 
+
+Dreze and Khera, 2009), largely due to an absence of sufficient bureaucratic capacity to absorb
+
+17
+
+
+
+funds, implement projects, and disburse benefits on a timely basis. This makes our outcome 
+
+variables good measures of bureaucratic effectiveness. To control for background characteristics 
+
+which directly impact socioeconomic demand for the programs, in all specifications we also 
+
+control for total block rural population as well as the share of disadvantaged minorities 
+
+(scheduled caste and scheduled tribe) in the rural population. To control for the individual traits 
+
+of BDOs as distinct from systemic local state capacity, in all specifications we control for the 
+
+age, gender, highest degree level, and years in service of the BDO. Additionally, we also control 
+
+for district fixed effects in our preferred specifications, meaning that our comparisons in those 
+
+cases are restricted to spatially very proximate blocks within the same district.
+
+NREGA and Swachh Bharat differ in important regards. NREGA was the flagship program of 
+
+the previous Congress-party led national government while Swachh Bharat is the flagship 
+
+program of the currently ruling party at the national level, the BJP. NREGA is a safety net 
+
+program, designed to provide up to 100 days of employment annually to any household that 
+
+requests it. Swachh Bharat is a sanitation program that focuses on open defecation in villages, 
+
+largely through the provision of toilets. NREGA is considerably more complex to administer 
+
+than is Swachh Bharat, for two reasons. First, because NREGA provides large-scale employment 
+
+through public works programs and is intended to be demand-based, it is highly complex to 
+
+administer, involving a process of gauging demand for employment on a village-wise basis, 
+
+developing and planning a “shelf’ of public works projects specific to each village based on this 
+
+demand, and then executing the projects, monitoring the progress of works, and disbursing wage 
+
+payments on an individualized basis. Swachh Bharat, by contrast, primarily provides a single 
+
+type of benefit, toilets, on the relatively straightforward basis of applications from individuals.
+
+18
+
+
+
+Secondly, NREGA is subject to extensive monitoring systems designed to curtail corruption and 
+
+promote transparency, which have, perhaps inadvertently, generated a significant amount of 
+
+paperwork, data entry, and red tape that BDOs must complete on a daily basis in order to 
+
+maintain the flow of funds and disburse employment.
+
+The analysis includes variables representing distinct dimensions of local state capacity. The 
+
+variable RESOURCESi is the measure of active full-time staff per 100,000 rural residents. The 
+
+variable INCENTIVES£ is the measure of perceived probability of promotion linked to effort. 
+
+The variable AUTONOMY^ is the share of politicians over whom the BDO indicates he or she is 
+
+likely to prevail over in a hypothetical dispute about project allocation. The variable 
+
+FLEXIBILITYi is an indicator variable corresponding to reported flexibility in response to the 
+
+hypothetical scenario testing BDO’s degree of adaptiveness to an unpredictable challenge. By 
+
+including all the variables in the same regression, we essentially conduct a statistical “horse­
+
+race” to see which variable matters the most for local bureaucratic effectiveness. To facilitate 
+
+comparison, the RESOURCESi , INCENTIVESt and AUTONOMYi variables are standardized 
+
+by dividing by each variable’s in-sample standard deviations. The FLEXIBILITYi variable is not 
+
+standardized as it a binary indicator. A concern may be that these variables are correlated with 
+
+one another, making a horse-race of this kind difficult to interpret. Empirically it turns out, 
+
+however, that these variables are surprisingly uncorrelated with one another. Table 1 provides a 
+
+correlation matrix for the three explanatory variables.
+
+TABLE 1 ABOUT HERE
+
+19
+
+
+
+The survey was conducted in collaboration with the Lal Bahadur Shastri National Academy of 
+
+Administration (LBSNAAA) in 2016-17. LBSNAA trains new recruits into the Indian 
+
+Administrative Service (IAS), a component of which includes training in an assigned district. As 
+
+part of their training, IAS officer trainees were asked to complete the survey and time-use diaries 
+
+with three randomly sampled BDOs in each district. While we did not control the districts to 
+
+which the trainees were sent, we did control the sampling of blocks within districts. Our 
+
+preferred specifications control for district fixed effects, identifying effects solely from within- 
+
+district variation and therefore addressing concerns about sample selection that may arise from 
+
+the nature of district selection.
+
+What is the appropriate level of analysis for our regressions? Are the variables measuring 
+
+resources, incentives, autonomy, and flexibility primarily state-specific or do they vary at a more 
+
+disaggregated level? To gauge this question, we “decompose” the variance our main explanatory 
+
+variables into cross-state, within-state, and within-district components. Strikingly, it appears that 
+
+there is significant variation in bureaucratic resources, incentives, and autonomy even at a highly 
+
+disaggregated level. For example, even after partialing out differences between states and 
+
+districts, over 59 percent of the variation in resources, 46 percent of the variation in incentives, 
+
+and 46 percent of the variation autonomy, and 49 percent of the variation in flexibility remains. 
+
+We therefore empirically estimate three different types of regressions: by including no fixed 
+
+effects and thereby looking at variation across blocks across all states in the sample, by including 
+
+state fixed effects and limiting the comparison to blocks within the same states, and by including 
+
+district fixed effects and limiting the comparison only to spatially proximate blocks within the 
+
+same district. A district is the rough equivalent of an American county and therefore
+
+20
+
+
+
+specifications including district fixed effects identify effects from very localized variation. All 
+
+regressions additionally estimate standard errors adjusted for clustering at the district level, to 
+
+account for administrative commonalities within districts.
+
+TABLE 2 ABOUT HERE
+
+The regression results are reported in Table 3. Columns 1-3 examine impacts on NREGA 
+
+employment provision. By contrast, bureaucratic resources have a consistently large and positive 
+
+impact on service delivery. According to our preferred specification in column (3), which 
+
+includes district fixed effects, a one-standard deviation improvement in bureaucratic resources 
+
+and staffing is estimated to improve access to NREGA by 0.79 days of employment per rural 
+
+resident annually -  an extremely large effect, given the fact that only portion of rural adults 
+
+participate in the program. Average NREGA employment across all blocks in the sample was 
+
+2.98 days/capita. This implies that that a one standard deviation improvement in bureaucratic 
+
+resources, as proxied by active full-time staff per capita, resulted in a nearly 26.5 percent 
+
+improvement in public service delivery. The general pattern of results is similar when controlling 
+
+for state fixed effects instead of district fixed effects as well as when fixed effects are excluded 
+
+altogether. All specifications report standard errors adjusted for clustering within districts.
+
+TABLE 3 ABOUT HERE
+
+Columns 4-6 conduct the same analysis, except now look at impact on the number of toilets built 
+
+per 100,000 rural residents under Swachh Bharat. Here the effects of resources on the
+
+21
+
+
+
+performance of the program are statistically indistinguishable from zero, though positive and 
+
+sizable in our preferred specification controlling for district fixed effects. A one standard- 
+
+deviation improvement in resources is estimated to increase the number of toilets built by 120 
+
+per 100,000 rural residents, which amounts to an approximately 4 percent increase relative to the 
+
+mean of 2,890 toilets per 100,000 residents. This estimate, though sizeable, is much smaller than 
+
+the estimated impact on the performance on NREGA. As discussed this plausibly due to the fact 
+
+that under-resourcing is less detrimental to the performance of BDOs when it comes to rural 
+
+development programs that are not as procedurally intensive and complex to administer. 
+
+However, it is possible that Swachh Bharat differs in other ways from NREGA that may account 
+
+for the differential effects we find. This would an interesting avenue for further inquiry.
+
+Looking at the other dimensions of local state capacity, the small and statistically insignificant 
+
+coefficients on the autonomy and incentives variables indicate that across the board these 
+
+explanations for local bureaucratic effectiveness have surprisingly little explanatory power in 
+
+this setting. However, though the estimates do not reach conventional levels of statistical 
+
+significance, the coefficients on the flexibility variable are consistently large and positive. 
+
+Flexible organizational norms are consistently estimated to have a large, positive effect on 
+
+NREGA employment provision as well as toilet-building under Swachh Bharat. Though not 
+
+statistically significant, the direction of the coefficients is consistent with accumulating evidence 
+
+that flexible organizational norms, which provide mid-level officials with freedom and discretion 
+
+to act according to their judgment, can improve local bureaucratic effectiveness (e.g. Aiyar and 
+
+Bhattacharya, 2016; Mangla, 2015; Rasul and Roggers, Forthcoming). This is not inconsistent 
+
+with our argument, as local bureaucratic effectiveness is surely a multi-causal phenomenon.
+
+22
+
+
+
+The next step is to assess why bureaucratic resources have such a large impact on local 
+
+bureaucratic effectiveness. We have argued that over-burdened and under-resourced bureaucrats 
+
+are forced to multi-task excessively, resulting in an inability to specialize and focus, especially 
+
+with regard to managerial tasks, which are crowded out by having to deal with daily micro­
+
+transactions, such as handling particularistic requests and complaints from politicians and 
+
+citizens. To assess this hypothesis, we estimate similar regressions as before, but now utilize 
+
+bureaucratic time allocation as the outcome variable, as measured through the time-use diaries 
+
+discussed earlier. We now estimate regressions of the form:
+
+TIMEi = ^RESOURCESi + foINCENTIVESi + feAUTONOMYi + FLEXIBILITY + et,
+
+where the variable TIMEi represents one of two sets of outcomes. We first examine the 
+
+percentage of hours between 10 am and 5 pm allocated by BDOs to different types of activities: 
+
+filing forms, managing office and staff, planning and budgeting regarding schemes, field visits, 
+
+handling individual complaints and requests from citizens, handling individual requests and 
+
+complaints from village politicians or local legislators. This is on the basis of time-use diaries 
+
+completed by BDOs in a collaborative phone-based exercise with enumerators. To minimize 
+
+concerns about social desirability bias and misreporting, we asked BDOs to be highly specific 
+
+about their activities over the course of the previous working day on a half-hourly basis, making 
+
+it cognitively burdensome to falsify information. As an additional check, as an alternative
+
+4. Effects on Bureaucratic Behavior
+
+23
+
+
+
+approach we examine a second set of outcomes in terms of who BDOs reported interacting with 
+
+physically over the course of the day, an outcome measure that is arguably less subject to 
+
+measurement error or subjective perception issues. Here the outcome measures are percentage of 
+
+hours between 10 am and 5 pm during which BDO was physically interacting with different 
+
+types of individuals: by self only, with block-level staff, with district or other government 
+
+officials, with citizens, with village politicians or local legislator.
+
+In Table 4, we report the first set of results, where the outcome is the percentage of time 
+
+dedicated over the course of the work day to different types of activities. As before, we estimate 
+
+specifications with no, state, and district fixed effects. Strikingly, the results indicate that 
+
+additional resources enable BDOs to divide responsibilities, delegating micro-transactions to 
+
+their staff while the BDOs themselves focus on office-based planning and managerial activities. 
+
+According to our preferred estimates based on district fixed effects, a one standard deviation 
+
+improvement in resources is estimated to have increased the time spent on form-filing by 2.7 
+
+percentage points, time spent on office-based management of staff by 1.69 percentage points, 
+
+and time spent on office-based planning and budgeting by 1.19 percentage points. By contrast, 
+
+when BDOs have more resources, they spend less time on handling individualized micro­
+
+transactions with constituents. A one standard deviation improvement in resources reduces time 
+
+spent in the field by 2.14 percentage points, time spent handling individual complaints and 
+
+requests from citizens by 1.39 percentage points, and time spent handling individual complaints 
+
+and requests from politicians by 1.35 percentage points. While we only conducted the time-use 
+
+diaries with BDOs and not their staff, together with the prior results indicating improvements in
+
+24
+
+
+
+service delivery, we infer from these results that it is not that client-facing activities are being 
+
+abandoned altogether but that they are being delegated to the BDO’s staff.
+
+TABLE 4 ABOUT HERE
+
+Table 5 examines who BDOs report interacting with physically over the course of the work day. 
+
+The results reveal consistent changes in behavior when BDOs are provided with additional 
+
+personnel and staff. A one standard deviation improvement in resources, according to our 
+
+preferred specification based on district fixed effects, increases time spent alone by 1.8 
+
+percentage points and time spent with staff (though this is not statistically significant) by 1.34 
+
+percentage points. A one standard deviation improvement in resources reduces time spent with 
+
+other government officials (though this is not statistically significant) by 1.0 percentage points, 
+
+time spent with citizens by 2.06 percentage points, and time spent with politicians by 1.45 
+
+percentage points. This is consistent with a general pattern of results suggesting that additional 
+
+resources enable BDOs to specialize in managerial activities and delegate client-facing activities 
+
+to their staff. This organizational division of labor is associated with significant improvements in 
+
+bureaucratic effectiveness and service delivery.
+
+TABLE 5 ABOUT HERE
+
+25
+
+
+
+5. Why Do Politicians Under-invest in Local State Capacity?
+
+In some ways, the results should not be surprising. The division of labor and is a fundamental 
+
+principle of organizational effectiveness that has been recognized at least since Adam Smith and 
+
+that is implemented by virtually every major private sector organization (e.g. Stigler, 1951). 
+
+Weber famously argued that a quintessential feature of modern bureaucracy is organizational 
+
+differentiation and hierarchy, which permit bureaucrats to specialize in different types of 
+
+activities. Why then are local rural development bureaucracies in India chronically under­
+
+resourced relative to their responsibilities, inhibiting their ability to divide and specialize in tasks 
+
+and operate efficiently?
+
+One answer would be that perhaps politicians are making rational cost-benefit calculations. 
+
+However, this does appear to be the case. In the average block containing 150,000 residents, a 
+
+one standard deviation improvement in resources corresponded to roughly 37 additional full-time 
+
+employees. The preferred regression estimates suggest that this resulted in an additional 0.79 
+
+days of NREGA employment per capita or a net addition of 118,500 days of employment in the 
+
+average block per year. This implies that the “value added” of a single full-time employee is 
+
+roughly 3,203 additional days of employment per year under a single program (potentially 
+
+additional resources improved the performance of other programs as well). Conservatively 
+
+estimating that the daily wage under NREGA is 100 rupees (or roughly $2), this suggests that an 
+
+additional employee improves total wage disbursement by approximately 320,300 rupees (or 
+
+roughly ($6,406), an amount well in excess of the annual salary of a typical full-time employee. 
+
+NREGA funds come almost entirely from the central government, while state-level governments
+
+26
+
+
+
+are responsible for the salaries of block-level employees. It therefore appears that on average 
+
+state governments and the politicians which control them in India are failing to make rational 
+
+investments in state capacity from a net revenue perspective. This is particularly striking given 
+
+the absence of serious procedural barriers to improving staffing: across the blocks in our sample, 
+
+on average 48 percent of officially sanctioned full-time employee posts were vacant. If all of 
+
+these sanctioned but vacant positions were simply filled, our estimates suggest that the 
+
+performance of NREGA nationally would improve by approximately 10 percent in terms of 
+
+employment delivery.
+
+What explains the failure of politicians to make rational investments in local state capacity? One 
+
+answer is that, unlike firms, politicians are not usually driven by efficiency motives. Instead, they 
+
+possess asymmetrical electoral incentives which tend to result in an accumulation of bureaucratic 
+
+responsibilities without corresponding investments in capacity. The electoral returns to 
+
+announcing and inaugurating brand new, ambitious rural development programs are large and 
+
+clearly internalized by the politicians in control of state governments. This is partly responsible 
+
+for the ever-growing list of major rural development programs in India. However, the electoral 
+
+returns to investing in state capacity are far more diffuse and more difficult to internalize by 
+
+incumbent politicians and ruling parties at the state level. Hiring new employees may not 
+
+translate into improved program performance for several years, and the credit for these 
+
+improvements may well be claimed by political opponents. More broadly, filling large-scale 
+
+staffing vacancies and enacting bureaucratic reforms to ensure that staffing keeps pace with 
+
+growing populations requires significant collective political action, which may be under­
+
+provided as a result.
+
+27
+
+
+
+To assess some of these hypotheses, we now turn to examine the determinants of local 
+
+bureaucratic resources, as measured in terms of number of active full-time staff per 100,000 
+
+residents. We examine different political and non-political determinants of local bureaucratic 
+
+resources: political alignment, political fractionalization operationalized as one minus the 
+
+Herfindahl index of constituency-level candidate vote shares, remoteness as measured in terms 
+
+of driving time to the district headquarters according to Google maps, and rural population size 
+
+in 100,000s. As before, we examine cross-state, within-state, and within district patterns by 
+
+including no, state, and district fixed effects, respectively.
+
+TABLE 6 ABOUT HERE
+
+Table 6 reveals that BDOs located in opposition-party controlled constituencies report fewer 
+
+resources, plausibly because investments in state capacity would not be internalized by the state- 
+
+level ruling party in these areas. The estimates suggest that blocks in ruling-party constituencies 
+
+have on average 10 additional full-time employees per 100,000 rural residents, an effect that is 
+
+consistent across the inclusion of state and district fixed effects. In what way do ruling-party 
+
+politicians “internalize” the preferential investments in state capacity in their own 
+
+constituencies? One potential long-term benefit is the improved performance of rural 
+
+development programs that has already been established. Another more short-term benefit is that 
+
+politicians may receive kickbacks for providing employment (see e.g. Wade, 1982).
+
+28
+
+
+
+To gauge the prevalence of such kick-backs, we conducted a list experiment with BDOs to 
+
+estimate the extent of office-selling in local bureaucracy, randomly providing some BDOs with a 
+
+list of four items and other BDOs with a list of five items, including office selling, that BDOs 
+
+may have witnessed in the previous six months. The benefit of a list experiment is that it 
+
+statistically protects respondent anonymity, mitigating bias in answers to sensitive questions. The 
+
+difference in the average counts reported in the control and treatment and control conditions 
+
+represents the estimated share of BDOs who have witnessed office-selling in the previous 6 
+
+months. The overall estimate of office selling is 23.0 percent (standard error: 10.5 percent). 
+
+Estimating office-selling separately for opposition-party and ruling-party constituencies, we find 
+
+that estimated office-selling is entirely concentrated in ruling-party constituencies. In ruling party 
+
+constituencies, the estimate is 33.0 percent (standard error: 15.6 percent). In opposition party 
+
+constituencies, the estimate is -2.4 percent (standard error: 17.2 percent). The evidence is 
+
+consistent with an “efficient grease” channel in which ruling parties increase staffing in aligned 
+
+constituencies, which results in increased kick-backs to co-partisan politicians but also, perhaps 
+
+inadvertently, improves the performance of development programs by increasing bureaucratic 
+
+resources in these areas. The results strike a middle ground between studies which find that 
+
+political oversight, in this case exposure to a ruling-party politician, improves bureaucratic 
+
+service delivery (e.g. Gulzar and Pasquale, 2017), and studies which find that political oversight 
+
+increases rent extraction (e.g. Brierley, 2017).
+
+Additionally, there is evidence that blocks in more fractionalized constituencies tend to receive 
+
+lower investments in terms of bureaucratic resources. This is plausibly connected to the fact that 
+
+politicians in these constituencies have lower re-election probabilities and shorter time horizons,
+
+29
+
+
+
+diminishing their incentives to push for improvements in local staffing that may only deliver 
+
+results and therefore electoral benefits in the future (Chhibber and Nooruddin, 2004). However, 
+
+this effect fades with the inclusion of state and district fixed effects, suggesting that differences 
+
+in party system fragmentation across states, as opposed to more localized comparisons within 
+
+districts, drive these differences in bureaucratic resources. Surprisingly, remoteness as measured 
+
+in driving time to the district headquarters does not appear to have a negative impact upon 
+
+bureaucratic resources. However, blocks with larger rural populations tend to have lower 
+
+resources relative to the populations they serve. This suggests that resources and personnel are 
+
+not allocated in proportion to the differential population sizes of blocks, suggesting a significant 
+
+degree of administrative inertia or irrationality in staffing procedures.
+
+We interpret the results to support two systemic reasons that local bureaucracies tend to be 
+
+under-resources relative to their responsibilities. First, perverse electoral incentives arising from 
+
+the extent to which ruling parties can expect to internalize the benefits of investments in local 
+
+state capacity intensify the under-provision of resources in opposition constituencies and in 
+
+fragmented party systems. Second, there appears to be systemic inertia or irrationality in how 
+
+resources are allocated across blocks, with resource and personnel allocations failing to keep 
+
+pace with differences in rural population sizes and/or growth. Because politicians make the 
+
+decisions to allocate resources and responsibilities to local bureaucracies, on the basis of 
+
+electoral and other considerations, these choices tend to be made in ways that depart from 
+
+efficiency considerations, resulting in under-resources and over-burdened local bureaucracies 
+
+which are unable to divide and delegate tasks and operate efficiently.
+
+30
+
+
+
+6. Conclusion
+
+Existing public choice arguments attribute bureaucratic under-performance to weak performance 
+
+incentives (e.g. Tullock, 1965), while theories of state capacity blame an absence of 
+
+organizational autonomy from excess political interference (e.g. Migdal, 1988; Evans, 2012). 
+
+Drawing on a nationwide survey of the capacity and time usage of local rural development 
+
+officials in India, this paper provides evidence for a different pathology: local bureaucracies are 
+
+chronically under-resourced relative to their responsibilities because politicians make these 
+
+decisions (inefficiently).
+
+Drawing on regressions which look at how bureaucratic resources affect the performance of two 
+
+major rural development programs, we have provided evidence that: i) inadequate personnel and 
+
+resources force rural development officers to multi-task excessively; ii) this inability to 
+
+specialize has an adverse impact on the performance of development programs. The flip side of 
+
+this coin is that additional resources have large, positive impacts on public service delivery. The 
+
+implied returns to additional investments in bureaucratic resources are so large that they clearly 
+
+indicate that politicians in India are failing to make rational investments in local state capacity.
+
+We argue that the failure of politicians to make rational investments in local state capacity is 
+
+driven by a combination of perverse electoral incentives and more generalized administrative 
+
+inertia. Consistent with the former, we find that blocks in opposition-party constituencies and in 
+
+more electorally fractionalized regions tend to receive fewer personnel and resources. Consistent 
+
+with the latter, we find that blocks which are larger in terms of the rural populations they serve
+
+31
+
+
+
+do not receive commensurate resources and personnel. More generally, the results suggest that 
+
+while the electoral returns to enacting new rural development programs are large and easily 
+
+internalized by politicians, the electoral returns to investing in state capacity are far more diffuse 
+
+and uncertain. This is partly to blame for the chronic under-resourcing and over-burdening of 
+
+local bureaucracies, with negative consequences for local bureaucratic behavior and 
+
+effectiveness in India and beyond.
+
+32
+
+
+
+7. Bibliography
+
+Aiyar, Yamini, and Shrayana Bhattacharya. 2016. "The Post Office Paradox." Economic & 
+
+Political Weekly 51, no. 11: 61.
+
+Banerjee, Abhijit, and Esther Duflo. 2006. "Addressing Absence." The Journal o f Economic 
+
+Perspectives 20, no. 1: 117-132.
+
+Bertrand, M., Burgess, R., Chawla, A. and Xu, G., 2015. Determinants and Consequences o f 
+
+Bureaucrat Effectiveness: Evidence from the Indian Administrative Service. Working paper. 
+
+International Growth Centre.
+
+Besley, Timothy, and Torsten Persson. 2014. "Why Do Developing Countries Tax So Little?" 
+
+The Journal o f Economic Perspectives 28.4: 99-120.
+
+Bloom, Nicholas, Benn Eifert, Aprajit Mahajan, David McKenzie, and John Roberts. 2013. 
+
+"Does Management Matter? Evidence from India." Quarterly Journal o f Economics 128.1: 1-51.
+
+Brierley, Sarah. 2017."Unprincipled Principals: Co-opted Bureaucrats and Corruption in Local 
+
+Governments in Ghana." Working Paper, Washington University in St. Louis.
+
+Chhibber, Pradeep, and Irfan Nooruddin. 2004. "Do Party Systems Count? The Number of 
+
+Parties and Government Performance in the Indian states." Comparative Political Studies 37, no. 
+
+2: 152-187.
+
+33
+
+
+
+Dreze, Jean, and Reetika Khera. 2009. "The Battle for Employment Guarantee." Frontline 26.1 
+
+(2009): 3-16.
+
+Duflo, Esther, Rema Hanna, and Stephen P. Ryan. 2012. "Incentives Work: Getting Teachers to 
+
+Come to School." American Economic Review, 102(4): 1241-78.
+
+Evans, Peter B. 2012. Embedded Autonomy: States and Industrial Transformation. Princeton 
+
+University Press.
+
+Gulzar, Saad, and Benjamin J. Pasquale. 2017. "Politicians, Bureaucrats, and Development: 
+
+Evidence from India." American Political Science Review 111, no. 1: 162-183.
+
+Gupta, Akhil. 2012. Red tape: Bureaucracy, Structural Violence, and Poverty in India. Duke 
+
+University Press.
+
+Iyer, Lakshmi, and Anandi Mani. 2012. "Traveling Agents: Political Change and Bureaucratic 
+
+turnover in India." Review o f Economics and Statistics 94, no. 3: 723-739.
+
+Kohli, Atul. 2004. State-directed Development: Political Power and Industrialization in the 
+
+Global Periphery. Cambridge University Press, 2004.
+
+Lipsky, Michael. 2010. Street-level Bureaucracy, 30th ann. Ed.: Dilemmas o f the Individual in 
+
+Public Service. Russell Sage Foundation.
+
+34
+
+
+
+Mangla, Akshay. 2015. "Bureaucratic Norms and State Capacity in India." Asian Survey 55.5:
+
+882-908.
+
+Mathur, Nayanika. Paper Tiger: Law, Bureaucracy, and the Developmental State in Himalayan 
+
+India. Cambridge University Press, 2015.
+
+Migdal, Joel S. 1988. Strong societies and Weak States: State-society Relations and State 
+
+Capabilities in the Third World. Princeton University Press, 1988.
+
+O'Donnell, Guillermo. 1993. "On the State, Democratization and Some Conceptual Problems: A 
+
+Latin American View with Glances at some Post-Communist Countries." World Development 
+
+21, no. 8: 1355-1369.
+
+Pritchett, L. 2009. “Is India a Flailing State? Detours on the Four Lane Highway to 
+
+Modernization.” Working Paper. Harvard Kennedy School.
+
+Muralidharan, Karthik, and Venkatesh Sundararaman. 2011. "Teacher Performance Pay: 
+
+Experimental Evidence from India." Journal o f Political Economy 119.1: 39-77.
+
+Smith, Adam. 1776. The Wealth o f Nations.
+
+35
+
+
+
+Stigler, George J. 1951. "The Division of Labor is Limited by the Extent of the Market." Journal 
+
+o f Political Economy 59.3: 185-193.
+
+Tullock, Gordon. 1965. The Politics o f Bureaucracy. Public Affairs Press.
+
+Wade, Robert. 1982. “The System of Administrative and Political Corruption: Canal Irrigation in 
+
+South India.” The Journal o f Development Studies, 18(3), 287-328.
+
+Weber, Max. 1914. Bureaucracy.
+
+36
+
+
+
+Sh
+ar
+
+e 
+B
+
+D
+O
+
+s
+
+F ig u r e  1: B D O  T im e - U s e  D ia r ie s
+
+O J
+
+Activity-wise Time Allocation Physical Interaction-wise Time Allocation
+
+Notes: Each BDO was contacted once a week on three subsequent weeks to complete a time use diary for the preceding day. Outcome in left 
+panel is hour-wise share of BDOs indicating engagement in different activities: filing forms, managing office and staff, planning and budgeting 
+regarding schemes, field visits, handling individual complaints and requests from citizens, handling individual requests and complaints from village 
+politicians or MLA, unrelated duties, or other. Outcome in left panel is hour-wise share of BDOs indicating physical interaction with different types 
+of individuals: by self only, with block-level staff, with district or other government officials, with citizens, with village politicians or MLA, with other.
+
+
+
+Pe
+rc
+
+en
+ta
+
+ge
+F ig u r e  2: M e a s u r e  o f  R e s o u r c e s
+
+Staffing
+
+Active Staff per 100,000 Rural Residents
+
+Notes: BDOs were asked to indicate the number of full-time (as opposed to contract) Block-level employees. 
+This number was divided by rural population of the block as measured with census data.
+
+3 8
+
+
+
+Pe
+rc
+
+en
+ta
+
+ge
+F ig u r e  3: M e a s u r e  o f  C a r eer  I n c e n t iv e s
+
+If a BDO Works Hard is there a chance of Promotion?
+
+No Chance Unlikely Possible Somewhat Likely Very Likely
+
+Notes: BDOs were asked: “If a BDO works hard, is there a chance of promotion to a higher position over the 
+next 10 years? If so, what is the likely next post?". The response choice set was: Very Likely (10 out of 10 times), 
+Somewhat Likely (7-9 out of 10 times), Possibly (4-6 out of 10 times), Unlikely (1-3 out of 10 times), No chance 
+(0 out of 10 times).
+
+3 9
+
+
+
+P
+er
+
+ce
+nt
+
+ag
+e 
+
+in
+di
+
+ca
+tin
+
+g 
+th
+
+at
+ B
+
+D
+O
+
+ P
+re
+
+va
+ils
+
+F ig u r e  4: M e a s u r e  o f  A u t o n o m y
+
+In a conflict between the BDO and the following actors over where to allocate a project,
+who is likely to prevail in the end?
+
+o
+
+PRI Village Leader Block PRI leader Zilla PRI Leader Opposition MLA Ruling MLA
+
+Politician Type
+
+Notes: BDOs were asked who would prevail in a hypothetical dispute about where to allocate a project with 
+respect to 5 different types of local politicians: village-level (panchayat) elected leaders, elected leaders at 
+the level of block councils, elected leaders at the level of district councils, and a local elected state legislator 
+belonging either to the opposition party or to the ruling party.
+
+4 0
+
+
+
+Pe
+rc
+
+en
+ta
+
+ge
+F ig u r e  5: M e a s u r e  o f  F le x ib il ity
+
+If Sudden Monsoon Rains Prevent Building a Sanctioned NREGA Road, 
+What Would Your Course of Action Be?
+
+Unsure Cancel Delay Seek Advice Reallocate
+
+Notes: BDOs were asked to indicate their likely course of action in response to a vignette describing a hypothet­
+ical scenario in which a NREGA public works project has been rendered unfeasible due to monsoon rainfalls.
+
+41
+
+
+
+T a b le  1: C o r r e la t io n  M a tr ix
+
+Resources Incentives Autonomy Flexibility
+Resources 1.00 -0.02 0.04 0.02
+Incentives -0.02 1.00 0.03 0.04
+Autonomy 0.04 0.03 1.00 -0.02
+Flexibility 0.02 0.04 -0.02 1.00
+
+Variable Mean 24.48 0.51 0.36 0.23
+Variable SD 35.90 0.39 0.27 0.42
+
+Notes: Cells indicate correlation between different variables. Unit of analysis is rural development block. Re­
+sources is number of active full-time block staff per 100,000 rural residents. Incentives is perceived probability 
+of promotion linked to hard work. Autonomy is share of list of politicians BDO states he or she is likely to prevail 
+against in hypothetical project allocation dispute. Flexibility is indicator of adaptive response to hypothetical 
+unpredictable challenge vignette.
+
+4 2
+
+
+
+T a b le  2: V a r ia n c e  D e c o m p o s i t io n
+
+Cross-State Within-State Within-District
+Resources 100.00 80.06 58.51
+Incentives 100.00 85.25 45.62
+Autonomy 100.00 93.47 46.18
+Flexibility 100.00 93.78 48.55
+
+Notes: Cells decompose variation of different measures of state capacity into cross-state, within-state, and 
+within-district (cross-block) variation. Within-state variation is share of variance remaining after partialing 
+out state means. Within-district variation is share of variance remaining after partialing out district means.
+
+43
+
+
+
+T a b le  3: D e t e r m in a n t s  o f  B u r e a u c r a t ic  E f fe c t iv e n e s s
+
+NREGA Employment Swachh Bharat Toilets
+
+Cross-state
+
+(1)
+
+Within-state Within-district
+(2) (3)
+
+Cross-state
+(4)
+
+Within-state Within-district
+(5) (6)
+
+Resources 1.024*** 0.639** 0.793*** -72.827 75.115 120.679
+(0.118) (0.261) (0.217) (115.072) (102.971) (106.525)
+
+Autonomy -0.084 -0.118 -0.175 -42.391 96.560 -179.420
+(0.172) (0.113) (0.143) (154.264) (131.120) (251.699)
+
+Incentives 0.037 0.009 -0.078 -25.245 51.380 59.290
+(0.206) (0.136) (0.237) (137.629) (115.297) (215.137)
+
+Flexibility 0.324 0.396 0.745 3.969 92.126 448.630
+(0.482) (0.337) (0.524) (301.811) (280.156) (334.690)
+
+Block Controls Yes Yes Yes Yes Yes Yes
+Individual Controls Yes Yes Yes Yes Yes Yes
+Fixed Effects None State District None State District
+Outcome Mean 2.98 2.98 2.98 2890 2890 2890
+Clusters 158 158 158 158 158 158
+Observations 421 421 421 421 421 421
+
+Notes: Unit of analysis is rural development block. Outcome is total days of NREGA employment provided per rural capita in 2016-17 or Number 
+of Swachh Bharat toilets built per 100,000 residents in 2016-17. Resources is number of active block staff per 100,000 rural residents. Autonomy 
+is share of list of politicians BDO states he or she is likely to prevail against in hypothetical project allocation dispute. Incentives is perceived 
+probability of promotion as a resuR of hard work. Flexibility is indicator of adaptive response to hypothetical unpredictable challenge vignette. 
+To facilitate comparison, all variables are standardized by dividing by their in-sample standard deviation, except for Flexibility variable, which is a 
+binary indicator. Analysis estimated by OFS. Standard errors adjusted for clustering within districts. *p<0.1; **p<0.05; ***p<0.01.
+
+
+
+T a b le  4: I m p a c t  o n  T im e  A llo c a t io n  b y  A c tiv ity  T y p e
+
+Forms
+
+(1 )
+
+M anaging
+
+(2 )
+
+P lanning
+
+(3)
+
+Field
+
+(4)
+
+Citizens
+
+(5)
+
+Politicians
+
+(6 )
+
+Panel A: Cross-state
+Resources 2  7 7 4  *** 2.394*** 0.877 -1 .1 4 5 * -2 .0 1 5 *** -1 .1 2 5 **
+
+(0.852) (0.622) (0.742) (0.689) (0.709) (0.498)
+
+Autonom y 1.440 -0.430 -0.575 1.231 0.475 -0.199
+(0.930) (1.218) (1.059) (1.064) (1.113) (1 .2 2 0 )
+
+Incentives 0.679 -1.275 -0.499 -0.150 -0.822 0.124
+(1.093) (1.042) (1.148) (0.974) (1.173) (1.104)
+
+Flexibility -2.945 -2.347 2.849 4.144* 1.610 -0.290
+(2.082) (2.073) (2.658) (2.490) (3.557) (3.304)
+
+Panel B: Within-state
+Resources 3.250*** 2.298*** 1.129** -1.896*** -1 .1 5 8 * -0.920
+
+(0.925) (0.602) (0.552) (0.670) (0.672) (0.572)
+
+Autonom y 2.116** -0.333 -0.524 1.049 0.999 0.435
+(0.962) (0.969) (0.922) (1.077) (1.003) (0.973)
+
+Incentives 1.401 -1.083 0.027 0.317 0.491 1.489
+(0.992) (1.030) (1.083) (0.898) (0.973) (1.044)
+
+Flexibility -2.696 -1.793 1.917 2.946 2.368 -0.935
+(2.286) (2.007) (2.462) (2.170) (2.941) (3.179)
+
+Panel C: Within-district
+Resources 2.658*** 1.692*** 1.193* -2 .1 3 5 *** -1.392*** -1 .3 5 1 ***
+
+(1.004) (0.579) (0.698) (0.708) (0.533) (0.483)
+
+Autonom y - 0 . 1 2 2 - 0 . 1 2 1 0.765 - 0 . 2 1 0 -0.223 -0.974
+(1 .1 1 2 ) (1.084) (0.984) (1 .1 2 1 ) (0.975) (0.898)
+
+Incentives 0.451 -0.484 -0.914 -0.199 -0.344 -0.508
+(0.975) (1.024) (1.298) (1.451) (0.852) (0.877)
+
+Flexibility -2.652 -0.750 -1.399 0.360 -1.336 -1.941
+(1.971) (2 .2 0 0 ) (2.606) (3.045) (2.524) (2.504)
+
+Outcom e M ean 13.5 16.0 2 2 . 0 19.8 19.8 13.4
+Clusters 145 145 145 145 145 145
+O bservations 998 998 998 998 998 998
+
+Notes: Unit of analysis is BDO-day (each BDO was c^ ta cted  once a week on three subsequent weeks to com ­
+plete a time use diary for the preceding day). Outcome is percentage of hours between 10 am and 5 pm allo­
+cated to different types of activities: filing forms, managing office and staff, planning and budgeting regarding 
+schemes, field visits, handling individual complaints and requests from citizens, handling individual requests 
+and complaints from village politicians or MLA. Analysis estimated by OLS. Standard errors adjusted for clus­
+tering within districts. *p<0.1;**p<0.05;***p<0.01
+
+
+
+T a b le  5: I m p a c t  o n  T im e  A llo c a t io n  b y  P h y s ic a l  I n te r a c t io n s
+
+Self
+
+(1)
+
+Staff
+
+(2)
+
+Officials
+
+(3)
+
+Citizens
+
+(4)
+
+Politicians
+
+(5)
+
+Panel A: Cross-state
+Resources 2.343*
+
+(1.333)
+1.937**
+(0.856)
+
+-0.948
+(0.818)
+
+-1.762*
+(1.050)
+
+-0.472
+(0.745)
+
+Autonom y 2.438
+(2.192)
+
+1.864
+(1.678)
+
+2.397*
+(1.318)
+
+2.456**
+(1.234)
+
+1.706
+(1.291)
+
+Incentives 0.558
+(2.123)
+
+-0.889
+(1.553)
+
+-1.469
+(1.337)
+
+-0.350
+(1.204)
+
+0.646
+(1.124)
+
+Flexibility -2.421
+(4.677)
+
+-2.628
+(3.210)
+
+-4.298
+(2.769)
+
+-2.196
+(3.127)
+
+-5 .5 0 3 **
+(2.448)
+
+Panel B: Within-state
+Resources 2.947**
+
+(1.277)
+1.531
+
+(0.936)
+1 770 ***
+(0.683)
+
+-1.401
+(1.004)
+
+-0.848
+(0.843)
+
+Autonom y 2.397
+(2.089)
+
+2.955**
+(1.461)
+
+2.350*
+(1.264)
+
+3.212***
+(1.188)
+
+2.708***
+(1.029)
+
+Incentives 0.990
+(2.170)
+
+0.622
+(1.454)
+
+-1.052
+(1.261)
+
+0.975
+(1.207)
+
+2.035*
+(1.046)
+
+Flexibility -3.413
+(4.093)
+
+-2.992
+(3.398)
+
+-4 .4 4 3 *
+(2.649)
+
+-0.689
+(2.801)
+
+-4 .0 4 8 *
+(2.211)
+
+Panel C: Within-district
+Resources 1.804**
+
+(0.765)
+1.347
+
+(0.825)
+-1.002
+(0.732)
+
+-2 .0 6 0 **
+(0.814)
+
+-1.450**
+(0.599)
+
+Autonom y 1.465
+(1.367)
+
+1.620
+(1.409)
+
+1.973*
+(1.179)
+
+1.412
+(1.332)
+
+-1.450
+(1.253)
+
+Incentives -3 .1 9 2 *
+(1.718)
+
+-0.824
+(1.943)
+
+0.803
+(1.699)
+
+-0.640
+(1.437)
+
+2.382*
+(1.382)
+
+Flexibility 1.998
+(3.771)
+
+-4.334
+(3.494)
+
+-1.561
+(3.211)
+
+-0.975
+(3.658)
+
+-3.474
+(2.942)
+
+Outcom e M ean 30.0 49.2 24.9 23.0 20.0
+Clusters 145 145 145 145 145
+O bservations 998 998 998 998 998
+
+Notes: Unit of analysis is BDO-day (each BDO was qggtacted once a week on three subsequent weeks to com ­
+plete a time use diary for the preceding day). Outcome is percentage of hours between 10 am and 5 pm during 
+which BDO was physically interacting with different types of individuals: by self only, with block-level staff, 
+with district or other government officials, with citizens, with village politicians or MLA. Analysis estimated by 
+OLS. Standard errors adjusted for clustering within districts. *p<0.1;**p<0.05;***p<0.01.
+
+
+
+T a b le  6: D e t e r m in a n t s  o f  B u r e a u c r a t ic  P e r s o n n e l  a n d  R e s o u r c e s
+
+(1) (2) (3) (4)
+
+Panel A: Cross-state
+Ruling Party 9.734**
+
+(4.156)
+
+Vote Fractionalization -  61.122 *
+(32.656)
+
+Driving Time 2.751
+(2.611)
+
+Size 16.412***
+(4.339)
+
+Panel B: Within-state
+Ruling Party 7.964***
+
+(2.779)
+
+Vote Fractionalization -29.700**
+(13.931)
+
+Driving Time 1.236
+(2.033)
+
+Size -13 .195***
+(3.705)
+
+Panel C: Within-district
+Ruling Party 10.539**
+
+(4.317)
+
+Vote Fractionalization -18.345
+(20.407)
+
+Driving Time 0.556
+(3.141)
+
+Size -18 .562**
+(8.347)
+
+O utcom e M ean 24.5 24.5 24.5 24.5
+Clusters 158 158 158 158
+O bservations 421 421 421 421
+
+Notes: Unit of analysis is block. Outcome is is bureaucratic resources as proxied by the number of full-time 
+active block staff per 100,000 rural residents. Rulingparty is indicator of whether “main" state assembly con­
+stituency containing the block headquarters is controlled by a state-level ruling-party legislator. Vote Fraction­
+alization is one minus the Herfindahl index of candidate-wise vote shares at the constituency level. Driving 
+Time is estimated time in hours required to travel from Block centroid to the District headquarters according 
+to Google Maps. Size is block rural population in 100,000 residents. Analysis estimated by OLS. Standard errors 
+adjusted for clustering within districts. *p<0.1;**p<0.05; ***p<0.01
+
+

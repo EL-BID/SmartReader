@@ -1,0 +1,385 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3/19/2019 Artificial Intelligence, Robotics, and the Future of Work: Myths and Facts | ITIF
+
+https://itif.org/publications/2017/09/19/artificial-intelligence-robotics-and-future-work-myths-and-facts 1/5
+
+Artificial Intelligence, Robotics, and the
+
+Future of Work: Myths and Facts
+
+BY SEPTEMBER 19, 2017
+
+Editor’s note:Editor’s note: Atkinson spoke about opportunities and challenges associated with artificial
+intelligence on March 23, 2017 at a conference hosted in Brussels by Bruegel, a European
+economic think tank specializing in economics. This essay is adapted from his remarks
+(http://bruegel.org/events/artificial-intelligence-challenges-and-opportunities/).
+
+We are in the midst of an unprecedented 4th Industrial Revolution that according to Klaus
+
+Schwab, founder and chairman of the World Economic Forum (WEF), “will affect the very
+
+essence of our human experience.” Powered by artificial intelligence, autonomous vehicles,
+
+robots and other breakthroughs, these changes will come at us at rates that made the Industrial
+
+Revolution look like a period of stability. We are already seeing this shake the very foundations
+
+of our economies, with labor productivity growth rates skyrocketing, while rates of worker
+
+dislocation, the lion’s share powered by technology, is growing.
+
+And the pace of dislocation will only increase. One leading artificial intelligence scientist
+
+predicts that “in from three to eight years, we will have a machine with the general intelligence
+
+of an average human being.” AI scientist Nil Nilson warns that “We must convince our leaders
+
+that they should give up the notion of full employment. The pace of technical change is
+
+accelerating.” Labor economist Gail Garfield Schwartz predicts “With AI, perhaps as much as
+
+20 percent of the work force will be out of work in a generation.” Schwab’s WEF warns that 5
+
+million jobs will be eliminated worldwide by 2020 by robotics and AI. And Oxford researchers
+
+Osborne and Frey predict that 47 percent of U.S. jobs will be eliminated in 20 years. Some
+
+even warn that sex workers could be out of work as people prefer the intimacy (and lower price)
+
+of robots.
+
+ROBERT D. ATKINSON
+
+http://bruegel.org/events/artificial-intelligence-challenges-and-opportunities/
+https://itif.org/person/robert-d-atkinson
+
+
+3/19/2019 Artificial Intelligence, Robotics, and the Future of Work: Myths and Facts | ITIF
+
+https://itif.org/publications/2017/09/19/artificial-intelligence-robotics-and-future-work-myths-and-facts 2/5
+
+As a result, it is incumbent on policymakers to take two key steps: First, slow down to a more
+
+manageable pace of change by imposing a tax on robots. If robots do work, then make them pay
+
+Social Security taxes. This is an idea that has been championed by luminaries such as Bill
+
+Gates and French Socialist presidential candidate Benoit (http://www.apple.com/)Hamon
+
+(http://www.apple.com/), with Gates arguing, “You ought to be willing to raise the tax level and
+
+even slow down the speed” of automation and Hamon stating that, “When a worker is replaced
+
+by a machine the wealth creates benefits for the shareholders. I propose, therefore, to tax this
+
+wealth—by applying the social contributions on the whole of the added value and not just on
+
+the work.” And second, we need to institute a system of universal basic income for all adults so
+
+that the increasing share of people who will be unemployed will be able to sustain themselves.
+
+Okay, if you are a regular reader of ITIF’s work you are probably scratching your head in wonder
+
+(“what has gotten into these guys?”) or you are thinking rightly that we are just kidding. We are
+
+just kidding. Everything I wrote above is not just wrong, it’s really wrong and this kind of neo-
+
+Luddite scaremongering should be rejected root and branch.
+
+Let’s start with productivity rates. Actually, since 2008, U.S. productivity growth averaged 1.2
+
+percent, which was half the rate from 1995 to 2008. Similar slowdowns are going on around
+
+the world. And the risk of a U.S. worker losing their job from a shutdown or downsizing is the
+
+lowest it has been over last two decades, 20 percent lower than two decades ago. If there were a
+
+so-called 4th Industrial Revolution, then both rates would be up, not down.
+
+But what about these predictions by experts? Surely, they must be right. Well, not unless you
+
+think they just missed it by 40 years, since many of these “predictions” were made in the
+
+1970’s and 80’s. The machine with human intelligence within the next three to eight years’
+
+prediction was made by MIT scientist Marvin Minsky in 1970. The prediction about 20 percent
+
+of the workforce out of work was made in 1982. The call to give up on full employment was in
+
+1984.
+
+What about the more recent predictions, like WEF’s and Oxford’s? WEF’s predication of 5
+
+million jobs lost from robots is only scary if someone can’t distinguish between millions and
+
+billions. Given that there are 3.4 billion workers in the world, losing 5 million jobs means that,
+
+wait for it, a whopping 0.033 percent of jobs will be destroyed by technology every year, or 1
+
+out of every 3,003 workers. I’d have almost as much chance of winning the lottery as I’d have of
+
+losing my job to robots and AI. So, if I were you, I wouldn’t worry about robots, I’d worry that
+
+your CEO is incompetent. For the risk of losing your job from your firm going out of business or
+
+downsizing in the next five years is more like 1,500 times greater than losing it to a robot.
+
+Maybe robots replacing CEO’s is the answer to job security.
+
+But what about the Oxford study by Osborne and Frey that warns of 47 percent job loss from
+
+technology? That is recent and a big number. This study has such a big number (but not a
+
+number so big as to seem unreasonable) that it is quoted in virtually every story on robots and
+
+jobs. Here’s a test for you: Go to your favorite search engine and type in the news search
+
+category “robots and jobs” and see if the first article you find quotes them. I did it at 3:07 PM
+
+EST, August 28, 2017, and I won; the first article, “The Rise of the Machines
+
+(https://www.wired.com/brandlab/2015/04/rise-machines-future-lots-robots-jobs-humans/),” had
+
+http://www.apple.com/
+http://www.apple.com/
+https://www.wired.com/brandlab/2015/04/rise-machines-future-lots-robots-jobs-humans/
+
+
+3/19/2019 Artificial Intelligence, Robotics, and the Future of Work: Myths and Facts | ITIF
+
+https://itif.org/publications/2017/09/19/artificial-intelligence-robotics-and-future-work-myths-and-facts 3/5
+
+as its lead sentence the following: “Oxford University researchers have estimated that 47
+
+percent…” (Maybe this could be a good drinking game: Every time an article cites the Oxford
+
+study, you have to drink a shot of Jack Daniels.)
+
+Well, the first thing you have to know about coverage of the Oxford study is that I am willing to
+
+wager a bottle of Jack Daniels that no reporter has bothered to read the appendix. If they did,
+
+they’d say “what the *@#$X!?” For the authors, who didn’t submit their work for peer review,
+
+neglected to examine all 702 occupational categories and assess how likely it is that technology
+
+will substitute for a human worker in each case. Instead, they took a shortcut: They simply
+
+relied on task measures from the Department of Labor, which assessed occupations based on
+
+factors such as how much manual dexterity and social perceptiveness an occupation requires.
+
+And if the risk score of automation was above 0.7, ipso facto, the job was destined for the trash
+
+heap of techno-history. The only problem is that their methodology produces nonsense. Tell me
+
+how robots are going to send fashion models, manicurists, carpet installers, and barbers the way
+
+of the buggy whip maker, as they suggest. Is Versace really going dress up cute robots in his
+
+latest dresses and parade them down the runway? Are we going to be in a Jetsons world where
+you sit down in the magic robot chair and you get your hair cut automatically? When ITIF
+
+analyzed these 702 occupations manually, using a very generous assumption about how tech
+
+could eliminate jobs, we estimated (https://itif.org/publications/2017/08/07/unfortunately-
+
+technology-will-not-eliminate-many-jobs) that about 10 percent of jobs were at risk of
+
+automation, at most.
+
+So instead of fretting about tech killing jobs, we should instead be worrying about how the heck
+
+are we ever going to raise productivity growth rates, which have been at all-time lows over the
+
+last decade. Of the over 700 U.S. occupations, here’s a random selection of seven: brick
+
+masons and block masons; machinists; cartographers and photogrammetrists; dental laboratory
+
+technicians; social science research assistants; firefighters; and preschool teachers. Hard to see
+
+how robots are going to replace any of these jobs, with the possible exception of brick masons.
+
+So we should we all calm down and not panic over the robot assault. Here’s why: First,
+
+technological change has always been gradual and always will be. It’s not like we will wake up
+
+one day and robots will be able to do everything. As MIT professor and CEO of Rethink Robotics
+
+Rodney Brooks writes, “Misled by suitcase words, people are making category errors in
+
+fungibility of capabilities—category errors comparable to seeing the rise of more efficient
+
+internal combustion engines and jumping to the conclusion that warp drives are just around the
+
+corner.” Beam me up, Scotty.
+
+Second, most of these techno-utopians/dystopians base their “predictions” on the continuation
+
+of Moore’s law, the observation made by Intel’s co-founder over 50 years ago that computing
+
+power would double every 25 months or so. But Moore’s law is not a law. In fact, processor
+
+speed increases are slowing, while transistors able to be purchased per dollar are actually
+
+decreasing. Even Gordon Moore says his law “can't continue forever. The nature of exponentials
+
+is that you push them out and eventually disaster happens.” Disaster will happen long before we
+
+get to the alluring robot in Ex Machina.
+
+https://itif.org/publications/2017/08/07/unfortunately-technology-will-not-eliminate-many-jobs
+
+
+3/19/2019 Artificial Intelligence, Robotics, and the Future of Work: Myths and Facts | ITIF
+
+https://itif.org/publications/2017/09/19/artificial-intelligence-robotics-and-future-work-myths-and-facts 4/5
+
+There’s another reason to calm down.
+
+That is because, historically, there is
+
+no relationship between higher
+
+productivity and unemployment. This
+
+is pretty obvious if you just think about
+
+it. Productivity leads to lower prices
+
+and/or higher wages. This money gets
+
+spent. That spending creates jobs.
+
+Plus, lots of these technology
+
+applications won’t be to replace
+
+workers, but to augment them. AI will
+
+help doctors make better diagnoses
+
+and treatment decisions; it won’t
+
+replace doctors. AI will help executives
+
+save some time. But you won’t have
+
+the CEO of XYC corporation by Fred
+
+your friendly robot.
+
+So, if we are to panic, and panic can
+
+be a good thing, then we should be panicking THAT WE WONT HAVE ENOUGH PRODUCTIVITY.
+
+For given the massive retirement of baby boomers, we have to raise productivity growth rates if
+
+we don’t want a generational war where either the old people or the younger workers will win.
+
+For example, in Europe the ratio of working-age people to old people today is 3.5, and it is
+
+projected to drop to 2.2 by 2040. Productivity would have to increase 13 percent just to keep
+
+workers from seeing declines in after-tax incomes. And that doesn’t account for the need to
+
+keep increasing productivity to raise incomes.
+
+There is a final reason to relax, and it’s that human needs are far from being satisfied. Ask the
+
+average American household today if they would have any problem spending extra money if
+
+productivity gains increased their incomes from $60K to $240K, and I pretty much guarantee
+
+you that most, except for a few simple-living hippies, would say, “No problem, man.” People
+
+would go on more vacations, go to more concerts, afford better health care, eat out more, send
+
+their kids to college, pay more taxes so we can beautify our cities and towns and lower class size
+
+in schools. Our needs are very large and it is farfetched to think technology will eliminate the
+
+need for work.
+
+All this is not to say we can’t and shouldn’t do better to help workers adjust, for some workers
+
+will lose their jobs to technology. (It just won’t be overwhelming share.) We need better
+
+workforce training systems and worker adjustment programs (like unemployment insurance). But
+
+one innovation that is absolutely not needed is UBI (Universal Basic Income), which some have
+
+suggested as a response to technological progress, and which has to rank as one of the dumbest
+
+ideas of all time. The logic goes, “Let’s pay people not to work because we are afraid people
+
+won’t work.” Huh? Let’s instead keep the faith and support progress and technological change,
+
+especially with AI and robots, because without that our kids will be stuck with the same
+
+standards of living we have, not a materially improvement.
+
+
+
+3/19/2019 Artificial Intelligence, Robotics, and the Future of Work: Myths and Facts | ITIF
+
+https://itif.org/publications/2017/09/19/artificial-intelligence-robotics-and-future-work-myths-and-facts 5/5
+
+Related ITIF Content
+
+December 16, 2016
+
+How Artificial Intelligence Will Usher in the Next Stage of E-Government
+(/publications/2016/12/16/how-artificial-intelligence-will-usher-next-stage-e-government)
+
+October 10, 2016
+
+The Promise of Artificial Intelligence: 70 Real-World Examples
+(/publications/2016/10/10/promise-artificial-intelligence-70-real-world-examples)
+
+June 6, 2016
+
+"It's Going to Kill Us!" and Other Myths About the Future of Artificial Intelligence
+(/publications/2016/06/06/its-going-kill-us-and-other-myths-about-future-artificial-
+intelligence)
+
+https://itif.org/publications/2016/12/16/how-artificial-intelligence-will-usher-next-stage-e-government
+https://itif.org/publications/2016/10/10/promise-artificial-intelligence-70-real-world-examples
+https://itif.org/publications/2016/06/06/its-going-kill-us-and-other-myths-about-future-artificial-intelligence
+

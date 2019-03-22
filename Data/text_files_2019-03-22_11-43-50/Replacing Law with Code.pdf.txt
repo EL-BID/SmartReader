@@ -1,0 +1,1751 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Microsoft Word - Micheler and Whaley WPS.docx
+
+
+ Electronic copy available at: https://ssrn.com/abstract=3210962 
+
+This paper can be downloaded without charge from LSE Law, Society and Economy Working 
+Papers at: www.lse.ac.uk/collections/law/wps/wps.htm and the Social Sciences Research 
+Network electronic library at: http://ssrn.com/abstract=3210962. 
+©Eva Micheler and Anna Whaley. Users may download and/or print one copy to facilitate 
+their private study or for non-commercial research. Users may not engage in further 
+distribution of this material or use it for any profit-making activities or any other form of 
+commercial gain. 
+
+ 
+
+ 
+ 
+ 
+
+Regulatory Technology: 
+Replacing Law with Computer Code 
+
+ 
+ 
+ 
+
+Eva Micheler and Anna Whaley 
+ 
+ 
+ 
+
+LSE Law, Society and Economy Working Papers 14/2018 
+London School of Economics and Political Science 
+
+Law Department 
+
+
+
+ Electronic copy available at: https://ssrn.com/abstract=3210962 
+
+ 
+
+ 
+ 
+ 
+
+Regulatory Technology: 
+Replacing Law with Computer Code 
+
+ 
+ 
+ 
+
+Eva Micheler and Anna Whaley* 
+ 
+ 
+ 
+ 
+
+ 
+Abstract: Recently both the Bank of England and the Financial Conduct Authority have carried 
+out experiments using new digital technology for regulatory purposes. The idea is to replace rules 
+written in natural legal language with computer code and to use artificial intelligence for 
+regulatory purposes. This new way of designing public law is in line with the government’s vision 
+for the UK to become a global leader in digital technology. It is also reflected in the FCA’s 
+business plan. The article reviews the technology and the advantages and disadvantages of 
+combining the technology with regulatory law. It then informs the discussion from a broader 
+public law perspective. It analyses regulatory technology through criteria developed in the 
+mainstream regulatory discourse. It contributes to that discourse by anticipating problems that 
+will arise as the technology evolves. In addition, the hope is to assist the government in avoiding 
+mistakes that have occurred in the past and creating a better system from the start. 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+                                                
+* Eva Micheler is an Associate Professor of Law at LSE and Anna Whaley is an LLM candidate at LSE. 
+The authors are very grateful for comments to Robert Baldwin, Heikki Marjosola, Philip Treleaven, Mark 
+Staples and Don Syme. 
+
+
+
+ Electronic copy available at: https://ssrn.com/abstract=3210962 
+
+ 
+
+                       14/2018 
+ 
+
+ 2 
+
+I.INTRODUCTION 
+
+Technology changes society. Distributed ledger technology has been described as 
+having the potential to disrupt how and by whom financial and other services are 
+delivered and regulated.1 Artificial intelligence already does and will increasingly 
+shape our society in the future.2 The law needs to adapt to this change and can 
+benefit from it. 
+
+This is at present particularly true for financial regulation. Recent advances in 
+computer science could produce technological solutions that facilitate financial 
+regulation.3 Such solutions have been referred to as ‘regulatory technology’. 
+Regulatory technology has been described as a game changer.4 It is said to have the 
+potential to streamline compliance and increase efficiency for both the regulator and 
+the regulated entities in financial markets.5 It could enable the regulator to supervise 
+the entire population of regulated entities relying on deep evidence delivered in real 
+time. It could free up regulatory capital or remove the need for it altogether. Brexit 
+gives the UK greater freedom to develop a framework of its own. The government 
+is keen for the UK to become a global leader in digital technology.6 Now seems like 
+a good time to incorporate new digital technology into regulation.   
+
+A significant amount of academic work has been done on FinTech, the 
+combination of digital technology with the delivery of financial services.7 The use 
+
+                                                
+1 The Economist, ‘Hype springs eternal; The blockchain in finance’ The Economist (London, 19 March 
+2016) 73. 
+2 Two recent covers of The Economist focus on Artificial Intelligence: 4 January 2018: The Next Frontier 
+– When Thoughts Control Machines and 3 February 2018: Doctor You – A Revolution in Health Care is 
+Coming.  The issue of 14 February 2018 contains seven articles that use the term 'artificial intelligence': 
+pages 12, 30, 60, 68, 69, 78 and 79. 
+3 Financial Conduct Authority, ‘Call for Input: Supporting the Development and Adoption of RegTech’ 
+(23 November 2015), available at <https://www.fca.org.uk/news/news-stories/call-input-supporting-
+development-and-adoption-regtech> accessed 14 June 2018. 
+4 Douglas W Arner, Janos Barberis and Ross P Buckley, ‘FinTech, RegTech and the Reconceptualization 
+of Financial Regulation’ (2017) 37 Northwestern Journal of International Law and Business 371; Luca 
+Enriques, Financial Supervisors and Regtech: Four Roles and Four Challenges (2017) Revue Trimestrielle 
+de Droit Financier 53. 
+5 Veerle Colaert, ‘RegTech as a Response to Regulatory Expansion in the Financial Sector’ para 8 
+<https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2677116> accessed 14 June 2018; Nizan 
+Geslevich Packin, 'Regtech, Compliance and Technology Judgment Rule' (2018) 93 (1) Chicago-Kent 
+Law Review 193 at 206-207; Arner et al (n 4) 374-375 and 388-389; see also Douglas W Arner, Janos 
+Nathan Barberis and Ross P Buckley, ‘The Emergence of Regtech 2.0: ‘From Know Your Customer to 
+Know Your Data’ (2016) 44 Journal of Financial Transformation 79; Institute of International Finance, 
+‘RegTech in Financial Services: Solutions for Compliance and Reporting’ (March 2016) 2 
+<https://www.iif.com/publication/research-note/regtech-financial-services-solutions-compliance-and-
+reporting> accessed 14 June 2018. 
+6 Department for Business, Energy and Industrial Strategy, BEIS Digital, Data and Technology (DDaT) 
+Strategy 2017 – 2020 (November 2017) 
+<https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/6
+87480/BEIS_DDaT_Strategy.pdf> accessed 22 June 2018. 
+7 See for example most recently, Iris H-Y Chiu, ‘A Rational Regulatory Strategy for Governing Financial 
+Innovation’ (2017) 8 European Journal of Risk Regulation 743; for a general analysis of financial 
+innovation from a regulatory perspective see Emilios Evgoulas, ‘Regulating Financial Innovation’ in 
+Niamh Moloney, Eili ́s Ferran and Jennifer Payne (eds), The Oxford Handbook of Financial Regulation (OUP 
+2015) 660. 
+
+
+
+ Electronic copy available at: https://ssrn.com/abstract=3210962 
+
+ 
+ 
+Eva Micheler and Anna Whaley                   Regulatory Technology 
+ 
+
+ 3 
+
+of technology for the purpose of financial regulation has not yet received a 
+substantial amount of attention. This is not surprising as the process of integrating 
+digital technology into regulation is still in flux and so the discussion has focused on 
+the possibilities generated by and the risks associated with the technology. Recent 
+developments, however, indicate that regulatory technology has reached a stage in 
+its development where it benefits from broader analytical scrutiny. 
+
+An increasing number of technology focused start-ups are attempting to 
+develop regulatory technology.8 Regulated entities are interested because the 
+increase in regulatory requirements following the financial crisis has made 
+compliance costly.9 Regulators are interested because they too want to save money.10 
+They also would like to promote growth and support innovation.11 Both the 
+Financial Conduct Authority and the Bank of England have recently carried out 
+experiments involving the use of new digital technologies.  
+
+The aim of this article is to go beyond operational questions and inform the 
+discussion from a broader perspective. The article brings the area under the scrutiny 
+of the mainstream regulatory discourse. It also contributes to that discourse by 
+anticipating the problems that will arise as the technology evolves. In addition, the 
+hope is to assist the regulator and regulated entities in avoiding mistakes that have 
+occurred in the past and creating a better system right from the start.  
+
+In Section 2 the technology will be examined. After that two potential use cases 
+for regulatory technology and their effect on the regulatory landscape will be 
+discussed: digital reporting and artificial intelligence as a risk management tool. The 
+process of reporting individual data points could be organised through distributed 
+ledger technology and combined with artificial intelligence. In the future, artificial 
+intelligence could be incorporated into prudential regulation to monitor the records 
+of a broader range of transactions or perhaps even the entire IT system of regulated 
+entities (section 3). Then criteria that have been developed to scrutinise regulatory 
+quality will be mapped onto regulatory technology (section 4).  Section 5 will take 
+the analysis to a more particular level by examining how the challenges posed by the 
+integration of digital technology into regulation vary according to regulatory 
+strategy. The paper will discuss command regulation, self-regulatory models and 
+meta-regulation. Section 6 will conclude and make recommendations.   
+
+The main conclusion of the article is that regulatory technology poses different 
+challenges depending on the regulatory strategy adopted by the government. The 
+technology itself, however, serves those who pay for its development. It does not 
+deliver a silver bullet that will make it easier for regulated entities to align their 
+business interests with the public interest.  
+
+                                                
+8 Colaert (n 5) para 45; Arner et al (n 4) 381. 
+9 Colaert (n 5) para 8; Arner et al (n 4) 374-375 and 388-389. 
+10 Financial Conduct Authority, Business Plan 2018/19, 27 
+<https://www.fca.org.uk/publications/corporate-documents/our-business-plan-2018-19> accessed 16 
+April 2018.             
+11 Dirk A Zetzsche, Ross P Buckley, Douglas W Arner and Janos Nathan Barberis, ‘Regulating a 
+Revolution: From Regulatory Sandboxes to Smart Regulation’ (2017) 23 Fordham Journal of Corporate 
+and Financial Law 31 at 34. 
+
+
+
+ Electronic copy available at: https://ssrn.com/abstract=3210962 
+
+ 
+
+                       14/2018 
+ 
+
+ 4 
+
+Another important point is that the role of technology providers will have to 
+be kept under review. As regulatory technology is integrated into regulation the 
+providers of technology become positioned as gatekeepers but do not necessarily 
+have the right incentives to operate in the public interest. The problems that can 
+emerge are exacerbated by the fact that there is a potential for the oligopolistic 
+market that is currently dominating data analysis to move into the realm of 
+regulation. 
+
+If the regulator integrates new digital technologies it will need to retain a 
+substantial amount of oversight over its design to be able to retain democratic 
+legitimacy and accountability as well as operate on the basis of due process.  
+
+ 
+
+II. THE TECHNOLOGY 
+
+At present, neither the Financial Conduct Authority nor the Bank of England have 
+adopted or endorsed any particular technological solution.  They are, however, 
+holding themselves ready and are proactively engaging with market participants.  
+The FCA launched its ‘Project Innovate’ in October 2014.12 The project includes 
+regulatory technology.13 The Bank of England has created a Fintech Hub which 
+incorporates the work that the Bank has carried out in relation to integrating new 
+digital technologies into its own organisation.14 
+
+Because regulatory technology is in development it is worth considering more 
+broadly what those creating such tools are using for inspiration. There are a number 
+of new digital technologies which can support regulatory aims. These technologies 
+and their components will be introduced in this section. 
+ 
+1. DISTRIBUTED LEDGER TECHNOLOGY 
+ 
+
+Distributed ledger technology was developed for Bitcoin which is a form of 
+money that is not backed by the government of any state. It was designed as a peer-
+to-peer system that enabled individuals to transfer money without using banks. A 
+record of which individual owns how much money is shared publicly between the 
+participating individuals who each hold an identical copy of the entire record on 
+their own home computer. This record is referred to as a distributed ledger. 
+Participants are not identified by name but by a number which is referred to as 
+‘public key’. The ledger is updated by consensus of the participants. Each participant 
+has a passcode referred to as ‘private key’ to access their own money.  
+
+Distributed ledger technology can be combined with what is referred to as a 
+smart contract. This is a computer programme which runs on a distributed ledger 
+                                                
+12 <https://www.fca.org.uk/firms/fca-innovate> accessed 14 June 2018; see also FCA Feedback 
+Statement FS 16/4 to Call for input on supporting the development and adopters of RegTech (July 2016) 
+13 – 14, <https://www.fca.org.uk/publication/feedback/fs-16-04.pdf> accessed 5 March 2018.  
+13 <https://www.fca.org.uk/firms/regtech> accessed 14 June 2018. 
+14 <https://www.bankofengland.co.uk/research/fintech> accessed 14 June 2018. 
+
+
+
+ Electronic copy available at: https://ssrn.com/abstract=3210962 
+
+ 
+ 
+Eva Micheler and Anna Whaley                   Regulatory Technology 
+ 
+
+ 5 
+
+and automatically transfers money when certain pre-defined events occur. For 
+example, it pays out a certain sum at regular intervals or when an index reaches a 
+certain level.  
+
+Bitcoin started as a libertarian project but the technology also lends itself to 
+non-libertarian applications. The Bitcoin ledger itself has, since it first started, 
+developed into an intermediated system where those participants who maintain the 
+register are no longer individuals but have become similar to custodians.15  
+
+A distributed ledger could be used by banks or other financial services 
+providers.16 The Bank of England has, for example, conducted tests to determine if 
+the technology could be used for its inter-bank settlement system. It concluded that 
+at present the technology is not mature enough but is ensuring that its new RTGS 
+system will be compatible with the technology.17 
+
+The technology can also be used to record ownership of assets other than 
+money.18 The use of distributed ledger technology for assets is currently being 
+explored by start-ups as well as incumbent market participants. The FCA have 
+published a discussion paper in April 2017 and a feedback statement in December 
+2017.19 If market participants develop a DLT system through which they hold and 
+transfer financial assets, this could be connected with regulatory technology. The 
+regulator could become a participant enabling it to monitor, supervise and audit 
+trades including smart contracts.20 
+
+A distributed ledger can also be used to share information. This component of 
+the technology could be of interest for regulatory purposes. We will see below that 
+the FCA has conducted experiments to use the technology for regulatory reporting.  
+ 
+2.ARTIFICIAL INTELLIGENCE 
+ 
+
+It is difficult to define ‘intelligence’ and there is no generally accepted definition 
+of ‘artificial intelligence’.21 Artificial intelligence includes software that is able to play 
+
+                                                
+15 Eva Micheler and Luke von der Heyde, ‘Holding, clearing and settling securities through 
+blockchain/distributed ledger technology: creating an efficient system by empowering investors’ (2016) 
+31 (11) Butterworths Journal of International Banking and Financial Law, 631. 
+16 Philipp Paech, 'Blockchain Financial Networks', (2017) 80 (6) Modern Law Review 1073. 
+17 For more information see <https://www.bankofengland.co.uk/research/fintech/proof-of-concept> 
+accessed 14 June 2018. 
+18 Micheler et al (n 15); The Australian Stock Exchange has announced that it will operate its clearing and 
+settlement system using distributed ledger technology from 2020 (James Eyers, ‘ASX blockchain to go 
+live at the end of 2020’ Australian Financial Review 27 April 2018 
+<https://www.afr.com/technology/asx-blockchain-to-go-live-at-end-of-2020-20180427-h0zcgx> 
+accessed 4 July 2018; see also https://www.asx.com.au/services/chess-replacement.htm). 
+19 Financial Conduct Authority, Discussion Paper on Distributed Ledger Technology (DP17/3, April 2017), page 
+6 <https://www.fca.org.uk/publication/discussion/dp17-03.pdf> accessed 25 February 2018; Financial 
+Conduct Authority, Distributed Ledger Technology: Feedback Statement on Discussion Paper 17/03 (FS17/4, 
+December 2017), <https://www.fca.org.uk/publication/feedback/fs17-04.pdf> accessed 25 February 
+2018 
+20 Garrick Hileman and Michel Rauchs, 2017 Global Blockchain Benchmarking Study (22 September, 
+2017), <https://ssrn.com/abstract=3040224> page 64, accessed 25 February 2018. 
+21 Matthew U Scherer, 'Regulating Artificial Intelligence Systems: Risks, Challenges, Competencies, and 
+Strategies' (2016) 29 (2) Harvard Journal of Law & Technology 359; Kay Firth-Butterfield, Richard Brent and 
+Tony Grant, ‘The Future of Financial Crime: Virtual Currencies, Artificial Intelligence and Emerging 
+
+
+
+ Electronic copy available at: https://ssrn.com/abstract=3210962 
+
+ 
+
+                       14/2018 
+ 
+
+ 6 
+
+games such as chess or go calculating its way through potential combinations of 
+moves.22 It also includes software that perceives and reacts to the surrounding 
+environment enabling it to control cars autonomously.23 For the purposes of 
+financial regulation two applications of artificial intelligence are of interest: machine 
+learning and natural language processing.  
+ 
+2.1Machine Learning 
+
+Financial regulation could benefit from software that reviews large amounts of 
+data to identify patterns that may indicate unusual activity or previously unnoticed 
+correlations indicating that certain risks may have emerged. Such programmes are 
+already used for fraud prevention purposes where they monitor credit and debit 
+card transactions. They are sometimes referred to as machine learning.  
+
+Risk is also visible in communication patterns. In a recent study the authors 
+have, for example, analysed emails sent by 144 senior Enron employees in the lead 
+up to the company’s collapse. They found that in addition to certain terms that 
+appear in such emails and that indicate emerging problems, the length of emails and 
+their frequency are indicators of escalating problems.24 It would be possible to use 
+this form of analysis for regulatory purposes.  
+ 
+2.2 Transforming natural language into computer language 
+
+Connected with machine learning is a technique in computer science where 
+computers process speech or written text created by human beings. A type of this 
+form of technology is used by Google Translate and by digital assistants such as 
+Alexa, Google or Siri. It is also used by businesses to operate telephone systems or 
+customer service centres.  
+
+For financial regulation, similar technology can be used to read rules and 
+translate their content into computer programmes which then process data. At 
+present the software is not yet sufficiently advanced to adequately cope with the full 
+spectrum of subtleties used in human language. For this reason, a double translation 
+process is evolving. In a first step natural language is transformed into a machine-
+readable version. This is similar to the process of adapting natural speech to the 
+requirements of digital assistants or telephone operators. This machine-readable 
+version is then processed to create a programme that automates certain regulatory 
+tasks.25 We will see below that this technology has recently been used in experiments 
+carried out by the FCA. 
+
+                                                
+Legal Questions’ in William Blair, Richard Brent, Tony Grant and Andrew Bodnar (eds), Banks and 
+Financial Crime: The International Law of Tainted Money (2nd ed, OUP 2017) chapter 24. 
+22 Scherer (n 21) 361 and 364. 
+23 Firth-Butterfield et al (n 21). 
+24 Das Sanjiv Ranjan, Kim Seoyoung and Kothari Bhushan, ‘Zero-Revelation RegTech: Detecting Risk 
+through Linguistic Analysis of Corporate Emails and News’, <https://ssrn.com/abstract=2909380> 
+accessed 5 March 2018. 
+25 For an excellent explanation of this type of technology see <https://digital-legislation.net> accessed 4 
+July 2018; Tom Butler, Standard-based Semantic Technologies for Smart Regulation, White Paper, 
+Governance, Risk & Compliance Technology Centre, University of Cork (February 2017) 6-9 < 
+
+
+
+ Electronic copy available at: https://ssrn.com/abstract=3210962 
+
+ 
+ 
+Eva Micheler and Anna Whaley                   Regulatory Technology 
+ 
+
+ 7 
+
+ 
+ 
+III. COMBATING TECHNOLOGY WITH REGULATION 
+ 
+In the previous section, new digital technologies have been introduced. In this 
+section and in the remaining sections of this paper two potential ways of integrating 
+these technologies with financial regulation will be discussed. The first use case 
+builds on the computer science experiments currently carried out by the FCA. The 
+second use case takes the current experiments as a starting point but is, for the time 
+being, science fiction. It investigates the implications of using artificial intelligence 
+as a risk management tool.  
+ 
+1. DIGITAL REGULATORY REPORTING 
+ 
+
+The FCA are currently working with the Bank of England to explore whether 
+digital regulatory reporting could reduce the 'compliance burden’ affecting regulated 
+entities.26 In what are referred to as 'TechSprints' they explore using distributed 
+ledger and language processing technology for 'regulation, compliance procedures, 
+firms' policies and standards together with firm transactional applications and 
+databases.'27   
+
+At present the FCA and the Bank of England operate a database referred to as 
+Gabriel.28 Regulated entities collect their internal information, produce an electronic 
+report and submit it to Gabriel. This involves manual processes which take time and 
+are prone to mistakes. When the FCA receives the reports they verify completeness, 
+consistency and compliance with the requirements.29 Regulated entities as well as 
+the regulator believe that they would benefit from a system that removes manual 
+processes from regulatory reporting.30 Gabriel, which came live in 2011, is likely to 
+benefit from an upgrade in the not-so-distant future. Brexit means more freedom 
+for the UK to develop new ways of regulating financial services and the government 
+has a vision for the country to become a leader in digital technologies.31    
+
+Distributed ledger technology has shown ways of sharing information. A 
+distributed ledger could be created that contains the records for reportable 
+
+                                                
+http://www.grctc.com/wp-content/uploads/2017/06/GRCTC-Standards-based-Semantic-
+Technologies-for-Smart-Regulation-White-Paper-2017.pdf>. 
+26 FCA, Call for Input: Using technology to achieve smarter regulatory reporting (Febuary 2018) para 3.2-
+3.4 <https://www.fca.org.uk/publication/call-for-input/call-for-input-smarter-regulatory-reporting.pdf> 
+accessed 15 June 2018. 
+27 FCA, Model driven and machine executable reporting 
+<https://www.fca.org.uk/events/techsprints/model-driven-machine-executable-regulatory-reporting-
+techsprint> accessed 15 June 2018. 
+28 < https://gabriel.fca.org.uk/portal_authentication_service/appmanager/merportal/desktop>, 
+accessed 18 June 2018. 
+29 FCA (n 26) paras 3.2 - 3.5. 
+30 Institute of International Finance, ‘RegTech in Financial Services: Solutions for Compliance and 
+Reporting’ (March 2016) 5-7 <https://www.iif.com/publication/research-note/regtech-financial-services-
+solutions-compliance-and-reporting> accessed 14 June 2018. 
+31 Above (n 6). 
+
+
+
+ Electronic copy available at: https://ssrn.com/abstract=3210962 
+
+ 
+
+                       14/2018 
+ 
+
+ 8 
+
+transactions of all regulated entities. This ledger would serve as an internal booking 
+system as well as a reporting device. Regulated entities would record transactions as 
+they do now but instead of doing this on an internal database the record would be 
+made on a distributed ledger. The regulator would be supplied with direct access to 
+that ledger. Cryptography would ensure that while the records are visible to the 
+regulator other regulated entities do not have access to business sensitive 
+information from their competitors.  
+
+Language processing was used to develop software to run on such a ledger. It 
+translated the requirements for mortgage reporting contained in the FCA 
+Handbook (SUP 16.11) from English into computer code.32 It mapped the 
+'regulatory requirements directly to the data … creating the potential for automated, 
+straight-through-processing of regulatory returns.' The TechSprint was successful.  
+The conclusion was that, from a computer science perspective, it is possible to 
+translate rules on mortgage reporting written in English into a machine-readable 
+and executable form. This machine-readable version of English can be used to 
+create software. That software then retrieves data and creates a report for the 
+regulator from a distributed ledger. That software can also be updated reflecting 
+regulatory changes.33 
+
+In the future, the regulator and regulated entities could share the records of 
+reportable transactions enabling the regulator to access the information on these as 
+it is held directly with the regulated entities. Regulated entities no longer submit 
+reports. The regulator would help itself to data on transactions. It could even use 
+software with a ‘smart contract’ functionality that identifies breaches, makes 
+suggestions for sanctions or perhaps even automatically issues fines.34  
+ 
+2. MACHINE LEARNING AS A RISK MANAGEMENT TOOL 
+ 
+
+It would be possible to extend the access for regulatory software to more than 
+just specific transactions. Such software could access the records of all transactions 
+entered into by regulated entities. This could be combined with machine learning.35 
+Software could be developed that autonomously analyses transactions as they are 
+recorded by the regulated entity. The analysis could be extended to the entire 
+information system operated by a regulated entity. In addition to transaction records 
+regulatory software could monitor other data files, email and voice communication 
+
+                                                
+32 <https://www.fca.org.uk/events/techsprints/model-driven-machine-executable-regulatory-reporting-
+techsprint>, accessed 5 March 2918. 
+33 Ibid. 
+34 Financial Conduct Authority, RegTech Work Programme 
+<https://www.fca.org.uk/firms/regtech/our-work-programme> accessed 5 March 2018; Financial 
+Conduct Authority, Feedback Statement FS 16/4 to call for input on supporting the development and 
+adopters of RegTech, July 2016 pages 8-9 < https://www.fca.org.uk/publication/feedback/fs-16-
+04.pdf> accessed 5 March 2018; Philip Treleaven, ‘Financial Regulation of Fintech’ (2015) 3 (3) Journal of 
+Financial Perspectives <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3084015> accessed 3 July 
+2018. 
+35 Arner et al (n 4) 382. 
+
+
+
+ Electronic copy available at: https://ssrn.com/abstract=3210962 
+
+ 
+ 
+Eva Micheler and Anna Whaley                   Regulatory Technology 
+ 
+
+ 9 
+
+carried out by employees of regulated entities. This would be a step up from keeping 
+records of telephone conversations and email exchanges and would have to be done 
+through a form of analysis that is consistent with protecting the personal 
+information of individuals.36 
+
+The software could be taught to autonomously identify risk as it emerges. 
+Regulators and regulated entities would be able to locate and address problems at 
+an earlier stage than they are now. The software could be integrated into the 
+regulation of micro-prudential risk management as a tool helping to prevent 
+individual firms form failing.37 There is a suggestion that this might liberate 
+regulatory capital. Capital requirements could even be replaced with machine 
+learning analytics allowing a broader and deeper range of information to be 
+processed in the analysis of financial institutions.38 
+
+This could be combined with a smart contract functionality which, like in the 
+first use case, automates enforcement.  
+ 
+3. OPERATIONAL ADVANTAGES AND RISKS  
+ 
+
+In this sub-section, the operational advantages and risks associated with the 
+technology will be examined. Regulatory technology could make compliance easier 
+for regulated entities. It could make regulation more nimble and precise and supply 
+the regulator with more accurate and real time information. It could support 
+regulatory processes by informing them through data-based analysis. Levels of 
+standardisation may increase. Like any form of innovation, new technology is 
+associated with risks that are, for the time being, unknown. Regulatory technology 
+introduces a new type of service provider to the regulatory environment.  
+ 
+3.1 Making compliance easy  
+
+At present the FCA regulates the outcome, rather than process, in accordance 
+with the statutory objectives of ensuring consumer protection, market integrity and 
+competitive markets. The regulator acts on the basis of legislation. Based on their 
+mandate they write rules in the version of English that is customarily used in a legal 
+context and publish them. The FCA is neutral towards the technology used by the 
+entities it regulates.39 It does not matter how firms maintain records or organise 
+themselves as long as they produce the reports required and comply otherwise with 
+
+                                                
+36 Colaert (n 5) para 57. 
+37 Institute of International Finance (n 30) 11-13; more generally on the challenges of micro-prudential 
+regulation see Rosa Lastra, ‘Defining Forward-Looking Judgement Based Supervision’ (2013) 14 (3) 
+Journal of Banking Regulation 221; for the role of capital in micro-prudential regulation and also for 
+many see Alexander Kern, ‘The Role of Capital in Supporting Banking Stability’ in 
+Niamh Moloney, Eili ́s Ferran and Jennifer Payne (eds), The Oxford Handbook of Financial Regulation (OUP 
+2015) 335; see also Peter O Mülbert, ‘Managing Risk in the Financial System’ in Moloney et al, ibid 365 at 
+369-381.  
+38 Arner et al (n 4) 396; Institute of International Finance (n 30) 11-13. 
+39 FCA (n 26) para 2.6; FCA, Discussion Paper on Distributed Ledger Technology (DP17/3, April 2017) 
+accessible at: <https://www.fca.org.uk/publication/discussion/dp17-03.pdf>, page 5, accessed 5 March 
+2018. 
+
+
+
+ Electronic copy available at: https://ssrn.com/abstract=3210962 
+
+ 
+
+                       14/2018 
+ 
+
+ 10 
+
+rules contained in the Handbook and its underlying legislation. Regulated entities 
+carry the risk of interpreting the rules and putting in place a system that ensures that 
+they comply.40 They employ human beings who read and interpret these regulations.  
+Each entity takes a view on how to implement them including any technology that 
+is used to facilitate compliance. They may seek legal advice and/or liaise with the 
+regulator. Compliance is ultimately assessed by the courts. 
+
+Regulatory technology could make compliance easier. Rather than writing rules 
+in legal English the regulator could write rules in machine-readable English or 
+prescribe particular software applications. This would leave less room for regulated 
+entities taking the wrong approach.  
+
+Making compliance straightforward can help to increase levels of compliance.41 
+Realistically however, irrespective of the tools used for regulatory purposes 
+regulated entities have a choice. They can either observe regulatory requirements or 
+alternatively they can appear to be compliant by working out how to avoid detection 
+from the regulators including their technology.42 
+ 
+3.2 Making regulation nimble 
+
+At present when the rules are updated each entity reads the new regulations, 
+takes a view on how to implement them and updates their systems accordingly 
+adding data fields or making other modifications.43 This makes it hard to change 
+course. Regulatory software could simplify the process. Adapting to regulatory 
+change could become as simple as installing a software update.  
+
+Regulatory technology can also assist with adapting regulation to changes in 
+the market. Machine learning can help to analyse regulated entities and markets and 
+identify patterns that may indicate the emergence of risk requiring an update of 
+regulatory requirements. They may find, for example, that certain practices are 
+emerging and incorporate these into their monitoring activity.  
+ 
+3.3 Making regulation more precise  
+
+Computer code is more precise than natural language. The process of 
+translating legal English into machine-readable English and onwards into computer 
+code will make rules more precise.44 Replacing ambiguous legal terms with precise 
+computer code changes meaning. By becoming more precise the scope of a rule 
+narrows. Removing ambiguity can also cause meaning to shift away from its original 
+focus. In addition, computer code has its own albeit more limited ambiguities.  
+
+                                                
+40 FCA (n 26) para 3.3. 
+41 Arner et al (n 4) 375. 
+42 Packin (n 5) 212-215; see also Colaert (n 5) para 57 (in relation to technology that assists bank 
+employees to evaluate clients). 
+43 FCA (n 26) paras 3.2 - 3.5. 
+44 Andrew Burt, Jeremy Aron-Dine, Eugene Kim, Catherine Martinz and Xiangong (George) Wang, 
+‘2017 Model Driven and Machine Executable Regulations and Tech Sprint: Success Criteria and 
+Recommendations’, page 4, <https://www.immuta.com/download/recommendations-for-the-fca-and-
+boes-2017-model-driven-and-machine-executable-regulations-tech-sprint/> accessed 14 June 2018; 
+Colaert (n 5) paras 25-26. 
+
+
+
+ Electronic copy available at: https://ssrn.com/abstract=3210962 
+
+ 
+ 
+Eva Micheler and Anna Whaley                   Regulatory Technology 
+ 
+
+ 11 
+
+Coding is a process of working with the limitations of the respective programming 
+language.45 Creating regulatory software, while being an exciting exercise in 
+computer science, also involves policy choice.46 A decision needs to be made on 
+how individual terms are translated and also more broadly on which elements of the 
+regulatory framework will benefit from higher levels of precision. 
+ 
+3.4 More accurate and real-time information 
+
+Digital reporting would change what kind of and how quickly information is 
+available to the regulator. It could give the regulator access to information as it is 
+recorded internally by regulated entities. The regulator would receive more accurate 
+information than it does now. It would be supplied with better quality evidence for 
+its decision making. It would also be informed about transactions as soon as they 
+are booked on the shared record and thus receive a close to real-time picture on the 
+transactions entered into by regulated entities.47  
+ 
+3.5 Data-based analysis  
+
+The available evidence can be analysed through artificial intelligence.48 Machine 
+learning can process large amounts of information. It can help to identify risk in 
+data supplied by regulated entities. This can alert the regulator and regulated entities 
+to problems that appear to be emerging. It could also enable the regulator to closely 
+supervise the entire population of regulated entities rather than just a selected 
+number.49 This has been described as leading to a profound transformation of the 
+approach to regulation.50 This analysis also has the potential to be extended to reveal 
+macro-economic interconnectedness allowing for better monitoring of macro-
+prudential risks.51 
+
+There is a risk, however, that machine driven analysis of facts revealing 
+themselves in data becomes associated with an aura of objectivity and analytical 
+prowess that does not reflect the scope of the evidence the analysis is based on. The 
+problem is not the analysis but the underlying data set. It is easy to overlook the 
+limitations of data-based analysis. Diagnostic tools that were based on data collected 
+from male individuals can, for example, cause doctors to overlook female patients 
+presenting with heart attacks.52 In the context of regulation similar mistakes can 
+occur, leading the regulator and regulated entities into a false sense of security.  
+
+                                                
+45 Firas Al Khalil, Marcello Ceci, Leona O'Brien and Tom Butler, ‘A Solution for the Problems of 
+Translation and Transparency in Smart Contracts’ (February 2017) <http://www.grctc.com/wp-
+content/uploads/2017/06/GRCTC-Smart-Contracts-White-Paper-2017.pdf> accessed 5 March 2018. 
+46 See also Packin (n 5) 193 at 215-217. 
+47 Burt et al (n 44) 4; Arner et al (n 4) 371 at 382. 
+48 Packin (n 5) 193 at 207; Arner et al (n 4) 371 at 382. 
+49 Susan C Morse, ‘Government-Robot-Enforcement’, University of Texas Law Public Law Research 
+Paper No 696, 10-15 <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3143716> accessed 15 
+June 2018, (2019) University of Illinois Law Review, forthcoming. 
+50 Arner et al (n 4) 371 at 382-383. 
+51 Arner et al (n 4) 371 at 402. 
+52 Judith H Lichtman et al, ‘Sex Differences in the Presentation and Perception of Symptoms Among 
+Young Patients with Myocardial Infarction’, (2018) 137 (8) Circulation 781. 
+
+
+
+ Electronic copy available at: https://ssrn.com/abstract=3210962 
+
+ 
+
+                       14/2018 
+ 
+
+ 12 
+
+ 
+3.6 Standardisation and systemic risk 
+
+At the moment, each regulated entity develops its own understanding of how 
+to comply with regulatory requirements. The current rules allow for different 
+interpretations which are all equally lawful. This facilitates a variety of business 
+models within the financial services industry. If a highly standardised financial 
+technology is used across regulated entities the room for variety may be reduced.  
+This can facilitate herding. There is therefore a risk that regulated entities become 
+increasingly similar causing systemic problems to arise.53  
+ 
+3.7 Technological risks  
+
+Regulatory technology takes advantage of computer science tools that are 
+relatively new. Our knowledge and understanding of any new technology is initially 
+and invariably limited. In addition, it combines computer science with law. Those 
+trained in law do not normally know about the characteristics and limitations of 
+computer software. Those trained in computer science are not normally familiar 
+with the scope and subtleties of legal terms. Neither group is well placed to 
+anticipate problems that may arise when the two are combined. They may not even 
+be in a good position to appreciate what it is they do not know. This makes it 
+difficult for either group of experts to at least ask the right questions.   
+
+One example are potential errors in the software.54 Lawyers are not in a good 
+position to imagine fact patterns. Computer scientists can imagine much better what 
+could go wrong. But complex software tends to be opaque and it can be difficult 
+even for computer scientist to predict outputs.55 In particular, artificial intelligence 
+can operate in ways that are unforeseen by programmers.56 While being better 
+placed than lawyers to predict potential problems, computer scientists are, however, 
+not in a good position to imagine the implications of these problems for the legal 
+context.   
+
+Another example is discriminatory bias. Biases present in the existing data set 
+perhaps resulting from manual inspection regimes can easily be converted into 
+automated biases. Machine learning operates on the basis of black box decision 
+procedures which makes it very difficult to work out even for computer scientists 
+whether the outcome is biased and in what direction the bias is directed to.57  
+
+More generally it is impossible to predict how regulatory technology will 
+interact with the financial system. It may allow us to better manage risk leading to 
+more stable financial institutions or it may turn out to steer us in the wrong 
+direction. 
+
+                                                
+53 Jon Danielson, 'Artificial intelligence and the stability of financial markets', VOXEU, 15 November 
+2017 <https://voxeu.org/article/artificial-intelligence-and-stability-markets> accessed 5 March 2018; 
+Colaert (n 5) para 27 and 55. 
+54 Burt et al (n 44) 5. 
+55 Burt et al (n 44) 4; see also Scherer (n 21) 359. 
+56 Scherer (n 21) 359; Firth-Butterfield (n 21). 
+57 The author is very grateful to Mark Staples for this point.  
+
+
+
+ Electronic copy available at: https://ssrn.com/abstract=3210962 
+
+ 
+ 
+Eva Micheler and Anna Whaley                   Regulatory Technology 
+ 
+
+ 13 
+
+ 
+ 
+3.8 The role of technology providers 
+
+It is possible for the regulator and for regulated entities to develop their own 
+bespoke software. That is, however, not likely. Neither are necessarily interested in 
+or well-placed for becoming software developers. Pooling their resources, market 
+participants have tried to co-operate to develop distributed ledger technology. They 
+have set up R3. This has not had much success. The interests of industry participants 
+appear to be too diverse to allow for the development of common technology.58 
+
+It is more likely that regulatory technology will introduce a new type of 
+participant into the regulatory environment. It has been mentioned briefly at the 
+beginning of this article that there is, at present, a vibrant market of start-ups who 
+are developing regulatory software.59 RegTech events are populated by 
+representatives from these businesses.60 It has been recommended that these market 
+participants could be incentivised to engage in the development of regulatory 
+technology by allowing some providers preferential access if only for a limited 
+time.61  
+
+Special privileges for technology providers should be approached with caution. 
+Alongside a start-up community a small number of large companies currently 
+dominate the market for data analysis and artificial intelligence. They are potentially 
+also interested in serving the financial services industry. One of their strategies for 
+growth is to identify and acquire smaller technology companies.62 They bring 
+business interests of their own to the table which do not necessarily align with the 
+public interest.  
+
+More generally we should be mindful of the problems that have in the past 
+arisen in relation to credit rating agencies whose ability to act as gatekeepers was 
+severely affected by the business interests.63 We are seeing similar issues in relation 
+to auditors whose business model has made it difficult for them to keep up their 
+professional scepticism.64 
+
+IV. QUALITY OF REGULATION 
+
+In the previous section, the advantages and disadvantages of the technology have 
+been discussed. In this section, regulatory technology will receive scrutiny from a 
+
+                                                
+58 Jeff John Robertson, ‘Blockchain Firm R3 Is Running Out of Money, Sources Say’, Fortune Magazine 
+7 June 2018 <http://fortune.com/2018/06/07/blockchain-firm-r3-is-running-out-of-money-sources-
+say/> accessed 14 June 2018. 
+59 See above subsection 0; Colaert (n 5) para 45; Arner et al (n 4) 371 at 381. 
+60 See for example the list of speakers and sponsors at the London FinTech Week 2018 
+(https://www.fintechweek.com/home) or at the London FinTech Summit 2018 
+(https://ifgs.innovatefinance.com/agenda-2018/). 
+61 Burt et al (n 44) 8; Zetzsche et al (n 11) 31 at 98. 
+62 Scherer (n 21) 359 at 374-375. 
+63 Jennifer Payne, ‘The Role of Gatekeppers’ in Moloney et al (n 37) 254; see also Colaert (n 5) para 5-6. 
+64 Andrea Mennicken and Michael Power, ‘Auditing and Corporate Governance’ in Mike Wright, Donald 
+S. Siegel, Kevin Keasey and Igor Filatotchev, The Oxford Handbook of Corporate Governance (OUP 2013) 308. 
+
+
+
+ Electronic copy available at: https://ssrn.com/abstract=3210962 
+
+ 
+
+                       14/2018 
+ 
+
+ 14 
+
+broader analytical framework. When considering how new technologies could be 
+integrated into regulation a natural starting point is to revert to criteria that have 
+been developed to evaluate the quality of regulation. Professor Robert Baldwin et al 
+have identified five criteria that good quality regulation should meet.65 These are 
+democratic legitimacy, accountability of the regulator, fair, accessible and open 
+procedures, expertise and efficiency. In addition, Professor Julia Black has pointed 
+out that good regulation focuses on achieving outcomes rather than technical 
+compliance. In the following sub-section the use cases for regulatory technology 
+highlighted in this paper will be analysed against these six criteria.   
+ 
+1.DEMOCRATIC LEGITIMACY AND ACCOUNTABILITY.  
+ 
+
+First, regulation should be supported by legislative authority. The acts of the 
+regulator need to be legitimised by a mandate from a democratically elected 
+parliament. The requirement for democratic legitimacy also affects the breadth of 
+the mandate. For example, a statute that requires a regulator to collect reporting 
+information on mortgages to ensure lending is being carried out in accordance with 
+capital and other regulatory requirements, gives more specific legitimacy to the 
+regulator than a statute which simply instructs the regulator to 'promote financial 
+stability'.66  
+
+Second, there should be an appropriate scheme of accountability. This criterion 
+is connected with democratic legitimacy. If a regulator has a wide mandate involving 
+a significant amount of discretion, it is all the more important for its decision making 
+to be subject to oversight from democratically legitimated institutions. 
+Accountability may be established by involving a parliament or other democratically 
+elected body in the appointment or removal of leading decision makers working for 
+the regulator. It may also be effected through the judiciary.67   
+
+The creation of software that automates the reporting of specific data points 
+involves technology providers making a decision on the scope of terms that have 
+been expressed in natural language. This does not create problems for democratic 
+legitimacy or accountability if the onus of identifying a particular programme 
+remains with regulated entities. They would do so at their own risk. At present, they 
+instruct lawyers and programmers to assist with developing a compliant IT solution. 
+Regulatory software can help both types of service providers or perhaps even 
+replace some of their work.  
+
+Democratic legitimacy and regulatory accountability need to inform, however, 
+the extent to which the regulator can out-source rule-making to technology 
+providers. If the regulator decides, for example, to issue or endorse regulation in 
+
+                                                
+65 Robert Baldwin, Martin Cave and Martin Lodge, Understanding Regulation: Theory, Strategy and Practice (2nd 
+ed, OUP 2012) 25; see also Eilis Ferran, ‘Institutional Design: The Choices for National Systems’ in 
+Moloney et al (n 37) 98 at 115-124 and John Armour, Dan Awrey, Paul Davies, Luca Enriques, Jeffrey N 
+Gordon, Colin Mayer and Jennifer Payne, Principles of Financial Regulation (OUP 2016) 556-575. 
+66 Baldwin et al (n 65) 143. 
+67 Baldwin et al (n 65) 143. 
+
+
+
+ Electronic copy available at: https://ssrn.com/abstract=3210962 
+
+ 
+ 
+Eva Micheler and Anna Whaley                   Regulatory Technology 
+ 
+
+ 15 
+
+machine readable natural language or in computer code, it needs to keep in mind 
+that democratic legitimacy and accountability limit its ability to delegate the 
+judgement involved in the translation process to third party providers. In particular, 
+the potential involvement of large multinational technology providers in writing 
+financial regulation will require special attention.  
+
+Moreover, regulators need to be acutely aware that the limitations of data 
+driven analysis is easily overlooked. Overlooking these may not only cause them to 
+overlook problems. It may also cloud their ability to exercise judgement in 
+accordance with democratically legitimated rules. Regulatory software should 
+therefore be incorporated into the procedures operated by the regulator in a way 
+that enables and encourages decision-makers to understand the scope of the data 
+on which the analysis is based and preserves their ability to act in line with their 
+democratic mandate exercising independent and accountable judgement. 
+
+Likewise, functionalities automating enforcement based on data-driven analysis 
+need to be carefully designed ensuring that the regulator remains in control of the 
+process.  
+ 
+2. FAIR, ACCESSIBLE AND OPEN PROCEDURES.  
+ 
+
+A regulator may also claim legitimacy if it uses fair, accessible and open 
+procedures. Due process is recommended both at the point of setting policy and 
+writing regulation and at the point of enforcement.  
+
+For policy setting and for the writing of regulation, trade-offs need to be made 
+between allowing affected parties to participate and implementing the legislative 
+mandate. Regulators operate in a polycentric environment. The different 
+participants have different claims to legitimacy and engage in variety of regulatory 
+conversations. There are conflicting demands that are difficult to reconcile.68  
+Consultation is important. Regulation is the product of a regulatory conversation 
+that allows the different constituencies to articulate their concerns and interests. 
+Too much participation, however, may lead to less effective policy-making and 
+eventually a stagnation of the regulatory system.69  
+
+In relation to regulatory technology the FCA is carrying out a public 
+consultation at the moment. With any consultation, the problem arises that better 
+funded market participants are better able to participate actively in this process.70 
+The regulator needs to ensure that this does not lead to regulatory capture. Capture 
+occurs when the regulator prioritises the interests of regulated entities over the 
+public interest.71  
+
+For regulatory technology, the setting of policy and the writing of rules is 
+intertwined with computer science. The technology has not settled yet and its 
+
+                                                
+68 Julia Black, ‘Constructing and Contesting Legitimacy and Accountability in Polycentric Regulatory 
+Regimes’ (2008) Regulation and Governance 137; see also Armour et al (n 65) 556-560. 
+69 Baldwin et al (n 65) 29. 
+70 Armour et al (n 65) 558-560. 
+71 Baldwin et al (n 65) 36; see also Armour et al (n 65) 560-562. 
+
+
+
+ Electronic copy available at: https://ssrn.com/abstract=3210962 
+
+ 
+
+                       14/2018 
+ 
+
+ 16 
+
+development costs money. Those who fund the development of the technology 
+make the design choices. This gives a significant advantage to well-funded regulated 
+entities enabling them to influence the process in a way which is hard to perceive. 
+It is difficult to determine from the outside if particular functionalities reflect 
+business reasons of the entities who provided the funding or are requirements 
+rooted in the underlying computer science. The regulator therefore needs to be 
+particularly careful to remain objective when integrating regulatory technology.  
+
+Fair, accessible and open procedures also matter for enforcement. The 
+requirements of due process need to inform functionalities that automate 
+enforcement. This applies to regulatory technology reviewing individual data points 
+as well as regulatory technology that selects and analyses data autonomously. If the 
+analytical function of the technology is connected to an automated enforcement 
+mechanism such as a ‘smart contract’ regulated entities need to be provided with 
+procedures that enable them to set aside enforcement action.  
+ 
+3. EXPERTISE  
+
+ 
+The third criterion against which regulation can be evaluated is expert 
+
+judgement. It is possible to justify regulatory intervention on the basis that a decision 
+maker possesses expert judgement. Expertise can be a basis on which the public can 
+be expected to have trust in regulatory decisions. It can justify supplying the 
+regulator with a broader range of discretion.72  
+
+Regulatory technology can generate high quality analysis. Machine learning can 
+identify fact patterns in data that human analysts would take much longer to identify. 
+This could inspire significant levels of reliance on regulatory technology to supervise 
+regulated entities. An argument could be made that the deeper and broader analysis 
+that can be achieved through artificial intelligence amounts to expert judgment, 
+which justifies removing discretion from human decision makers.  
+
+That would be a mistake. The technology is new and we do not yet fully 
+understand all the possible implications. More generally, while the process of 
+identifying risk that justifies regulatory intervention can be assisted by quantitative 
+mechanisms, risk cannot be predicted with scientific certainty. Decisions about 
+identifying risk and acting on such identification involve judgement and should be 
+subject to accountability.73 
+
+Moreover, problems of regulatory capture may arise also in relation to 
+expertise. The FCA and the Bank of England have set up special units for regulatory 
+technology.74 These are intended to work closely with regulated entities. Regulators 
+have governance mechanisms in place to ensure that those setting policy are 
+removed from close interaction with regulated entities. But at the moment there is 
+
+                                                
+72 Baldwin et al (n 65) 29-30. 
+73 Julia Black, ‘The emergence of risk-based regulation and the new public risk management in the United 
+Kingdom’ (2005) Public Law 512. 
+74 See above section 0. 
+
+
+
+ Electronic copy available at: https://ssrn.com/abstract=3210962 
+
+ 
+ 
+Eva Micheler and Anna Whaley                   Regulatory Technology 
+ 
+
+ 17 
+
+a knowledge gap. Those setting policy at senior levels do not necessarily have 
+technological expertise enabling them to critically evaluate the information they are 
+presented with. The regulator needs to be sure that its senior decision makers have 
+access to expertise enabling them to exercise professional judgement from the 
+perspective of its democratic mandate and the public interest.75  
+ 
+4. EFFICIENCY  
+
+ 
+The fourth criterion against which regulation can be assessed is efficiency.  
+
+Efficiency can be determined by reference to the implementation of the legislative 
+mandate. Another way of assessing efficiency would be by reference to the results 
+delivered by the regulatory process.  Either way efficiency often conflicts with social 
+aims of regulation which are difficult to quantify and is therefore a contested 
+criterion.76   
+
+In relation to regulatory technology both the regulator and regulated entities 
+are engaging in the process because they expect cost savings.77 At present there have 
+only been experiments which have shown that a type of software that writes 
+programmes that automate the reporting of one data point works. Nevertheless, the 
+use of regulatory technology is in the FCA's business plan.78  
+
+Time will tell if the savings delivered by regulatory technology outperform the 
+cost involved in setting up and overseeing the mechanism that will evolve going 
+forward. It is, for example, not yet clear how easy it will be to connect existing IT 
+systems to new regulatory software. It is possible that regulated entities will need to 
+spend significant amounts of money to make their legacy systems compatible with 
+any new mechanism. An additional problem arises because such investments can be 
+more challenging for smaller than for larger market participants.79  
+ 
+5. PRECISION V FLEXIBILITY  
+ 
+
+To determine efficiency the cost and the output of regulatory regimes are 
+expressed in monetary terms and compared. Connected to this is the question of 
+which type of rules best serves the respective aims of regulation. For regulatory 
+technology, this aspect of designing regulation deserves a heading of its own. 
+
+There is a choice between granular rules and general principles or standards. 
+Granular rules are more certain, but inflexible.80 This can strangle competition and 
+
+                                                
+75 See also Chiu (n 7) 763. 
+76 Baldwin et al (n 65) 31. 
+77 Colaert (n 5) paras 43 and 178; Packin (n 5) 193 at 207. 
+78 Financial Conduct Authority, Business Plan 2018/19, page 27 
+https://www.fca.org.uk/publications/corporate-documents/our-business-plan-2018-19 accessed 16 
+April 2018.             
+79 Financial Conduct Authority, Feedback Statement FS 16/4 to Call for input on supporting the 
+development and adopters of RegTech (July 2016 page 11 and 14 
+<https://www.fca.org.uk/publication/feedback/fs-16-04.pdf> accessed 5 March 2018; Colaert (n 5) 
+pages or paras 3-4. 
+80 Colin S Diver, 'The Optimal Precision of Administrative Rules' (1983) 93 (1) Yale Law Journal 65. 
+
+
+
+ Electronic copy available at: https://ssrn.com/abstract=3210962 
+
+ 
+
+                       14/2018 
+ 
+
+ 18 
+
+stunt enterprise and growth.81 Granular rules can also encourage box ticking.82 
+Principles and standards are flexible but come at the price of ambiguity which 
+creates uncertainty.  
+
+A hallmark of good regulation is the extent to which a regulator focuses on 
+outcomes rather than on technical compliance.83 Following the financial crisis trust 
+in the ability of regulated entities to align their business interests with regulatory 
+aims has diminished. Regulators have become more interventionist. This, however, 
+has not harmed the firm belief that ‘conduct should be in accordance with the 
+principles and purposes of the rules, not the letter’.84 A good quality regulatory 
+regime achieves more than technical compliance.   
+
+We have seen that regulatory technology has been said to be capable of 
+delivering more precise and certain rules.85 The capability of software to operate to 
+high levels of precision is, however, also a limitation. Software is at present not as 
+capable as natural language to operate flexibly. This may be a temporary issue that 
+will be solved by computer scientists in the future.  
+
+For the time being however, policy makers need to determine for which 
+context high levels of precision are desirable. For the reporting of individual data 
+points the current framework already operates at a high level of granularity. Creating 
+software that automates this process through technology does not change this.  
+
+It is nevertheless possible for unintended consequences to arise.86 For example, 
+at present regulators receive transactions reports with a delay in time. If they identify 
+problems regulated entities are able to make the point that these have been resolved. 
+When the regulator receives real-time transactional information its systems can 
+respond in real-time. There is a risk that this encourages regulated entities to orient 
+themselves towards impressing the regulator in real-time. They could become too 
+focused on real-time reporting, orient their business model accordingly and 
+inadvertently overlook longer-term risks.  
+
+This could have the same unwelcome effect that was generated by the 
+requirements for quarterly reports for listed companies. In the post-mortem 
+following the financial crisis it emerged that these reporting requirements caused 
+companies to focus on generating positive short-term metrics and steered them 
+away from making adequate provisions for long-term risks.87 
+
+For assessments that are currently carried out using general principles or 
+standards the use of regulatory software would change the regulatory design to a 
+
+                                                
+81 Ibid.  
+82 Better Regulation Task Force, ‘Imaginative Thinking for Better Regulation’ (Cabinet Office, 2003) 
+<http://webarchive.nationalarchives.gov.uk/20100812083626/http://archive.cabinetoffice.gov.uk/brc/
+upload/assets/www.brc.gov.uk/imaginativeregulation.pdf> accessed 25 February 2018, page 16. 
+83 Julia Black, ‘Regulatory Styles and Supervisory Strategies’, in Moloney et al (n 37) 218 at 245. 
+84 Black, ibid 218 at 240; see also Armour et al (n 65) 551. 
+85 Subsection Error! Reference source not found. above. 
+86 Ibid; Burt et al (n 44) 5, see reference to the risk of 'incorrect disambiguation'. 
+87 John Kay, The Kay Review of UK Equity Markets and Long-term Decision Making, Final Report (July 
+2012) paras 10.20-10.21 and Interim Report (February 2012) paras 4.14-4.15 
+<http://webarchive.nationalarchives.gov.uk/20121204121011/http://www.bis.gov.uk/policies/business
+-law/corporate-governance/kay-review> accessed 18 June 2018. 
+
+
+
+ Electronic copy available at: https://ssrn.com/abstract=3210962 
+
+ 
+ 
+Eva Micheler and Anna Whaley                   Regulatory Technology 
+ 
+
+ 19 
+
+more granular level. This may be desirable. The effect of increased levels of 
+precision should nevertheless be the result of a deliberate decision in the respective 
+context rather than an unintended effect using new digital technology.  
+
+ 
+V. STRATEGIES FOR REGULATION 
+
+In Section 4 we saw that delivering and claiming quality presents special challenges 
+to integrating regulatory technology into regulation. Section 5 takes that broad 
+argument to a more particular level by analysing how those challenges vary 
+according to the regulatory strategy being put into effect. There are a variety of 
+regulatory strategies available for financial regulation.88 The choice lies somewhere 
+between control and freedom. Governments can either impose rules backed by 
+sanctions or leave businesses to their own devices.89 Three principled options will 
+be examined here: command regulation, a self-regulatory approach and meta-
+regulation. We will see that different advantages and problems arise when 
+technology is integrated into a command as compared to a meta-regulatory or self-
+regulatory approach. It will also be shown that technology is not neutral. Its 
+availability does not supply regulated entities with greater ability to make their 
+business decisions align with the public interest.  
+ 
+
+1. COMMAND REGULATION  
+ 
+
+The essence of a command regulatory strategy is in its control of the 
+achievement of certain outcomes by imposing sanctions where outcomes are not 
+met. The government is in charge. It writes rules and designs sanctions through 
+primary or secondary legislation and a regulatory body enforces them.90 The regime 
+that was put in place after the financial crisis can in large parts be characterised as a 
+command regime.   
+
+A command approach could integrate regulatory technology.  The government 
+could control the development, its maintenance and updates of the technology.91 It 
+could issue software requiring regulated entities to run that software on their 
+systems.  
+
+This would address the problem that the coding involves policy choices.  
+Making these choices would remain with the government or the regulator.  
+
+Command regulation is generally associated with a preference for granular 
+rules.92 This fits with the characteristics that are ascribed to digital technology which 
+
+                                                
+88 Black (n 83) 218; Baldwin et al (n 65) 34. 
+89 Cary Coglianese and Evan Mendelson, ‘Meta-Regulation and Self-Regulation’ in Robert Baldwin, 
+Martin Cave, and Martin Lodge (eds.), The Oxford Handbook on Regulation (Oxford, 2010) 146. 
+90 Baldwin et al (n 65) 106. 
+91 Enriques (n 4) 5. 
+92 Baldwin et al (n 65) 108-109. 
+
+
+
+ Electronic copy available at: https://ssrn.com/abstract=3210962 
+
+ 
+
+                       14/2018 
+ 
+
+ 20 
+
+generally struggles to integrate ambiguous terms.93 Using a more precise tool the 
+regulator would be able to create a more certain framework. There is, however, a 
+risk that a regulator with a preference for granularity overuses an instrument that 
+can only operate to high levels of precision and produces a framework that suffers 
+from inflexibility. This could make it difficult for different business models to thrive 
+and creates a source for systemic risk.94  
+
+Command regulation is said to be expensive for both the government and for 
+regulated entities. The government needs to both write appropriate rules and 
+develop an enforcement mechanism.95 In our context an additional cost factor is 
+that a regulator who designs technology at an operational level would also have to 
+assume a significant part of the technological risk.96  
+
+If the regulator developed regulatory software the regulated entities would save 
+the money they currently spend to design compliance solutions. They would, 
+however, have to absorb the cost of connecting their existing IT systems with that 
+software.  
+
+It has already been mentioned that regulatory technology is particularly 
+susceptible to capture. The line between policy decisions and computer science 
+requirements is not a bright one and, in any event, not visible for non-experts. The 
+regulators’ technology teams are necessarily closely involved with regulated entities. 
+Senior decision makers are further removed but suffer from a knowledge gap. Under 
+a command approach the risk of capture is particularly acute. This is because the 
+regulator needs to rely on information provided by the industry to write rules. In 
+giving information to the regulator, entities can exercise a 'degree of leverage over 
+regulatory procedures', which can, over time, produce capture.97 If the regulator 
+decides to integrate regulatory technology into a command framework robust 
+governance mechanisms would have to be put in place to avoid the problem of 
+capture.   
+
+From the perspective of a potentially closed market of technology providers 
+there are advantages associated with keeping its development close to the 
+government which has significant bargaining power allowing it to exercise control 
+over its content. This, however, comes at a price. The regulator needs to have 
+sufficient resources to be able to have the expertise required to adequately oversee 
+the operational aspects of the process. 
+ 
+ 
+ 
+ 
+
+                                                
+93 Subsection Error! Reference source not found. above.  
+94 Jon Danielson, 'Artificial intelligence and the stability of financial markets', VOXEU, 15 November 
+2017 <https://voxeu.org/article/artificial-intelligence-and-stability-markets> accessed 5 March 2018; 
+Colaert (n 5) para 27. 
+95 Baldwin et al (n 65) 110-111; see also Burt et al (n 44) 8. 
+96 Colaert (n 5) para 51. 
+97 Baldwin et al (n 65) 108. 
+
+
+
+ Electronic copy available at: https://ssrn.com/abstract=3210962 
+
+ 
+ 
+Eva Micheler and Anna Whaley                   Regulatory Technology 
+ 
+
+ 21 
+
+ 2. SELF-REGULATORY APPROACHES  
+ 
+
+This approach to regulation relies on market mechanisms. The idea is that 
+regulated entities have a business incentive to abide by certain standards.98 They 
+want to impress their customers. These are sensitive to poor practices and this will 
+ensure that appropriate standards are developed and observed.  
+
+Self-regulatory approaches normally have some form of a statutory backing.99 
+Self-regulation with a statutory mandate was the approach adopted in the UK 
+between 1986 and 1998.100 It has since been discredited culminating in a statement 
+by Joseph Stiglitz who referred to the idea that markets can self-regulate as an 
+oxymoron.101 Following the financial crisis, self-regulation has been described as a 
+model 'in retreat'.102   
+
+An analysis of the advantages and disadvantages of self-regulatory approaches 
+is nevertheless useful here. As the memory of the financial crisis fades the financial 
+services industry is likely to assert its influence over the policymaking process 
+pushing for de-regulation.103 The current interest in regulatory technology is 
+motivated by the perceived burden created by post-crises regulation and could be 
+characterised as move in that direction.  
+
+Self-regulatory approaches are likely to resurface particularly for regulatory 
+technology. An argument could be made that the availability of new technological 
+tools makes it possible for the regulator to step back and leave it to the market, now 
+equipped with regulatory technology, to create appropriate frameworks.  
+
+Under a self-regulatory approach the regulator would forget about regulatory 
+reporting and would not get involved in participating in a distributed ledger. It could 
+appoint an industry association and instruct it to develop risk-managing technology. 
+Alternatively, it could require individual firms to adopt appropriate regulatory 
+technology. For both approaches the government would endorse the technology at 
+some high level but would not get involved in writing rules either in legal or 
+machine-readable English or in computer code. It would stand back and let 
+individual firms or their associations develop appropriate practices.   
+
+Self-regulatory forms of regulation have been credited with advantages. The 
+government does not pay for the design of the standards or for their enforcement.104 
+Specialised knowledge can be built into regulation.105 Rules can be tailored to 
+individual companies or sectors to higher degree than under a meta-regulatory 
+
+                                                
+98 Armour et al (n 65) 546. 
+99 Baldwin et al (n 65) 137-139; Armour et al (n 65) 545-551. 
+100 Black (n 83) 219-221. 
+101 Eilis Ferran, ‘Institutional Design: the Choices for National Systems’ in Moloney et al (n 37) 98 at 110; 
+Simon Deakin, ‘The Evolution of Theory and Method in Law and Finance’ in Moloney et al (n 37) 14; 
+see also Anthony Ogus, ‘Rethinking Self-Regulation’ (1995) 15 Oxford Journal of Legal Studies 97; Julia 
+Black, ‘Decentring Regulation: Understanding the Role of Regulation and Self-Regulation in a “Post-
+Regulatory” World’ (2001) 54 Current Legal Problems 103. 
+102 Ferran (n 101) 98 at 110. 
+103 Armour et al (n 65) 554; Deakin (n 101) 14 at 34-55. 
+104 Baldwin et al (n 65) 140; Ogus (n 101) 97; Ferran (n 101) 98 at 110-111 and Burt et al (n 44). 
+105 Ferran (n 101) 98 at 110; Baldwin et al (n 65) 139; Armour et al (n 65) 545-546. 
+
+
+
+ Electronic copy available at: https://ssrn.com/abstract=3210962 
+
+ 
+
+                       14/2018 
+ 
+
+ 22 
+
+model. This can facilitate regulatory innovation.106 Further, it has been suggested 
+that regulated entities are more likely to comply with rules they have created 
+themselves and that such rules would be more targeted making it easier to enforce 
+them.107 Enforcement can moreover be delegated to specialist bodies which are able 
+to impose industry appropriate, and thus more effective, sanctions.108 
+
+There are also disadvantages associated with a self-regulatory approach. There 
+are concerns about democratic legitimacy and accountability when rules are made 
+by self-regulatory bodies that are not bound by legislation or accountable to the 
+government.109 The same problem arises in relation to enforcement. If a self-
+regulatory body is more accountable to its members than general public, this is likely 
+to prompt trust issues.110 It may find it difficult to enforce regulation where it would 
+negatively affect its members’ business or reputation.111 Self-regulatory bodies can 
+have a tendency to act anti-competitively by setting access requirements or prices 
+that suit the interests of their members rather than the general public.112 This may 
+stifle competition.  
+
+Moreover, it would not be easy for industry associations to develop a common 
+framework. Regulated entities can pool resources to fund technological 
+development only in so far as they have overlapping interests. This makes it difficult 
+for them to co-operate. For technology, finding common ground is particularly 
+difficult not only because there are competing business interests but also because 
+different entities have different legacy systems. Entities that have formed as a result 
+of corporate restructuring sometimes operate more than one IT system because it 
+has proven to be too difficult to connect them domestically. 
+
+There is also a concern that regulated entities are unable to find much common 
+ground between their interests and the public interest. They will then focus on being 
+seen to be compliant rather than on ensuring that they actually meet the standards.  
+Self-regulatory systems are said to be susceptible to gaming because there is no 
+independent regulator monitoring compliance. 
+
+The regulator could decide to use the availability of regulatory technology as 
+an opportunity to review the interventionist approach that was adopted after the 
+financial crises. It could take the view that the reforms have proven to be too 
+expensive and limiting. It could modify its regulatory strategy. That is a matter for 
+policy choice and weighing up the advantages and disadvantages of the various 
+regulatory models.   
+
+                                                
+106 Ibid, page 111. 
+107 Baldwin et al (n 65) 139; Ferran (n 101) 98 at 110. 
+108 Baldwin et al (n 65) 140; Better Regulation Task Force, ‘Imaginative Thinking for Better Regulation’ 
+(Cabinet Office, 2003) 46 
+<http://webarchive.nationalarchives.gov.uk/20100812083626/http://archive.cabinetoffice.gov.uk/brc/
+upload/assets/www.brc.gov.uk/imaginativeregulation.pdf> accessed 25 February 2018. 
+109 See for example Baldwin et al (n 65) 141-146, and Ogus (n 101) 97, 98. 
+110 Baldwin et al (n 65) 143; Ferran (n 101) 98 at 111. 
+111 Armour et al (n 65) 546. 
+112 Baldwin et al (n 65) 143, discussing S. Domberger and A. Sherr, ‘The Impact of Competition on 
+Pricing and Quality of Legal Services’ (1989) 9 International Review of Law and Economics 41; A Shaked and J. 
+Sutton, ‘The Self-Regulating Profession’ (1981) 47 Review of Economic Studies 217. 
+
+
+
+ Electronic copy available at: https://ssrn.com/abstract=3210962 
+
+ 
+ 
+Eva Micheler and Anna Whaley                   Regulatory Technology 
+ 
+
+ 23 
+
+The availability of new technological tools is, however, no reason to change 
+gear. Technology does not change the fact that self-regulation relies on trusting 
+regulated entities to adopt robust mechanisms. Both the advantages and the 
+disadvantages of self-regulation apply for regulatory technology. The technology is 
+not neutral. It serves those who develop it. It would be wrong to assume that any 
+form of technology will allow us to have greater faith in the ability of regulated 
+entities to align their business interest with the public interest. 
+
+If anything, technology adds a level of complexity that has to inform regulatory 
+decision making. For a self-regulatory model and perhaps more so than any other 
+approach, the problem arises that the market for technology providers of data 
+analysis has its own business models and has the potential to become quite 
+concentrated. Technology providers and their business model could steer the design 
+of the technology further away from the public interest.  
+ 
+3. META-REGULATION  
+ 
+
+Meta-regulation has been described as 'the state’s oversight of self-regulatory 
+arrangements',113 and also as 'interactions between different regulatory actors or 
+levels of regulation.'114 It occupies a middle ground somewhere between command 
+regulation with a high level of government involvement and self-regulation with a 
+minimal amount of government involvement. The regulator delegates risk control 
+to the regulated entities themselves, giving them primary responsibility for the risk 
+management systems, while the regulator audits, monitors and incentivises the 
+systems. The regulator steers, the regulated entities row.115 
+
+The regulator would not design or maintain regulatory software itself but 
+oversee and validate its production. The regulator could specify requirements 
+leading to the creation of a distributed reporting ledger leaving the development and 
+maintenance of the system to regulated entities or their providers. The regulator 
+could issue a machine-readable version of the rules for reporting specific data 
+points. It could also issue technical specifications setting out some common 
+operational standards but would refrain from developing particular software 
+applications.116  
+
+In the future, the regulator could step back from specifying which data is to be 
+submitted or analysed leaving it to autonomous algorithms to work out patterns and 
+information that is relevant for measuring risk. It would nevertheless remain 
+involved in writing specifications for and in validating software that is used for these 
+purposes.117  
+                                                
+113 Bridget Hutter, ‘Risk, Regulation and Management’, in Peter Taylor-Gooby and Jens Zinn (eds.), Risk 
+in Social Science, (Oxford University Press, 2006) 215. 
+114 Coglianese et al (n 89) 147.  
+115 Baldwin et al (n 65) 147. 
+116 FCA Feedback Statement FS 16/4 to Call for input on supporting the development and adopters of 
+RegTech (July 2016 page 12 <https://www.fca.org.uk/publication/feedback/fs-16-04.pdf> accessed 5 
+March 2018. 
+117 An example of such an approach of integrating technology into regulation can be found in the US 
+Code of Federal Regulations (<https://www.gpo.gov/fdsys/granule/CFR-2017-title17-vol1/CFR-2017-
+
+
+
+ Electronic copy available at: https://ssrn.com/abstract=3210962 
+
+ 
+
+                       14/2018 
+ 
+
+ 24 
+
+Keeping in mind that coding involves policy choices and that data generates a 
+limited picture, the regulator would be able to set its level of involvement in a way 
+that preserves democratic legitimacy and regulatory accountability. Moreover, 
+procedural requirements could be prescribed such that the technology operates in a 
+fair, accessible and open manner. 
+
+Meta-regulation has been credited with the ability to generate a positive 
+compliance culture, 'as firms are asked to think for themselves about the challenges 
+of controlling' particular risks.118 For this benefit to materialise, however, firms must 
+have both the 'capacity for self-regulation' and the 'internal resolve to self-
+regulate'.119 Like principled-based regulation, which assumes that regulated entities 
+are able to abide by certain principles,120 meta-regulation can fail when firms do not 
+adopt appropriate rules or, for our context, appropriate technology because they are 
+uninformed, ill-intentioned or give priority to business considerations.121  
+
+Further, meta-regulation has been credited with low cost for the regulator.122 
+From the perspective of the regulator, writing specifications and validating 
+applications is cheaper than being involved in writing software applications. The 
+regulator would have to invest to develop and preserve its ability to write 
+appropriate specifications and approve the applications based on these, but it would 
+not have to fund the full cost of developing regulatory software. These would be 
+borne by regulated entities. By not involving itself at the operational level the 
+regulator would also avoid responsibility for technological risk. These would have 
+to be resolved between regulated entities and their service providers.  
+
+From the perspective of regulated entities the cost of complying with meta-
+regulation is also thought to be lower than the cost of complying with command 
+regulation.123 By automating certain processes regulatory software could indeed 
+make compliance cheaper for regulated entities. The initial cost of developing new 
+digital technology that integrates into existing systems could, however, be 
+significant.  
+
+A meta-regulation model can facilitate the emergence of firm-specific rules.124 
+Involving the regulator at a higher level of abstraction would make it possible for 
+different firms to develop different types of regulatory software which fit both the 
+regulatory specifications and their respective business models. This might help to 
+alleviate concerns about systemic risk.  
+
+                                                
+title17-vol1-sec23-155/content-detail.html> accessed 22 June 2018). Title 17 part 23 rule 155 concerns 
+the requirements for the calculation of margin requirements for swaps. Rather than receiving reports of 
+individual data points the SEC sets requirements for and approves the methodology to be used by 
+regulated entities. 
+118 Ibid 148. 
+119 Ibid, page 149. 
+120 Black (n 83) 238-239; Armour (n 65) 549-551. 
+121 Ian Ayers and John Braithwaite, Responsive Regulation (Oxford 1992) 120-128; Julia Black, ‘Talking 
+About Regulation’ [1998] Public Law 77; see also Baldwin et al (n 65) 156-157. 
+122 Ibid 147. 
+123 Ibid 148. 
+124 Baldwin et al (n 65) 147. 
+
+
+
+ Electronic copy available at: https://ssrn.com/abstract=3210962 
+
+ 
+ 
+Eva Micheler and Anna Whaley                   Regulatory Technology 
+ 
+
+ 25 
+
+Finally like for command and for self-regulation it remains to be seen how a 
+meta-regulatory model will cope with the introduction of technology providers into 
+the regulatory space.125 The regulator will have to develop an understanding of the 
+business model of the technology providers and determine its level of oversight 
+accordingly with a view to preserving the public interest. To be able to act as an 
+effective monitor of software developed by an oligopolistic market will require a 
+robust amount of expertise.  
+ 
+4. CONCLUSIONS  
+ 
+
+Regulatory technology is no silver bullet. It does not allow the regulator to have 
+more faith in the ability of a regulated entity to align their profit-making goals with 
+the public interest. The choice of regulatory strategy should not be affected by the 
+availability of regulatory technology. For all three approaches discussed in this 
+section, the role of the providers of regulatory technology needs to be addressed. 
+This is most easily done for a command approach and quite difficult in a self-
+regulatory model. If regulatory technology is integrated into a command approach, 
+however, the problem could arise that requirements become increasing granular and 
+inflexible which would stifle innovation and growth and could also increase levels 
+of systemic risk. It would seem that a meta-regulatory model that preserves the 
+regulator’s democratic mandate and accountability as well as procedural fairness 
+would be a suitable way to integrate new digital technologies into regulation. Either 
+way, the regulator will need robust technological expertise to make the technology 
+work in the public interest.  
+
+ 
+VI.CONCLUSIONS 
+
+The article examined the use of new digital technologies for regulatory purposes. 
+The analysis covered distributed ledger technology and two aspects of artificial 
+intelligence: natural language processing and machine learning. To focus the 
+discussion two potential use cases were examined in more depth: the use of 
+distributed ledger technology and machine learning software to automate regulatory 
+reporting requirements and the use of machine learning as a risk management tool.  
+
+At an operational level these technologies could make compliance easier. They 
+could make regulation more precise and supply the regulator with more accurate 
+and real time information. The regulator could be enabled to supervise the whole 
+population of regulated entities benefitting from granular evidence supplied in real 
+time. The technologies could also assist the regulator and regulated entities in 
+analysing this evidence allowing them to identify risk as it emerges. A natural starting 
+point to evaluate regulatory technology is to review it against analytical criteria that 
+
+                                                
+125 See section 0. 
+
+
+
+ Electronic copy available at: https://ssrn.com/abstract=3210962 
+
+ 
+
+                       14/2018 
+ 
+
+ 26 
+
+have evolved in the mainstream regulatory discourse. A number of points emerge 
+from this analysis.  
+
+Regulatory technology integrates policy choice with coding software. 
+Considerations of democratic legitimacy and accountability therefore limit the 
+extent to which the regulator can leave the translation of regulation into software to 
+third party technology providers.  
+
+The regulator needs to avoid the temptation of over-estimating the scope of 
+the evidence and analysis generated by new digital technologies. Data is a good and 
+an objective source of information. Algorithms find patterns that humans overlook. 
+But data is never complete. Regulatory legitimacy would be seriously undermined 
+by an approach that fails to ensure that the scope of the evidence underlying data-
+driven analysis is robustly communicated to the decision makers who rely on 
+regulatory technology.  
+
+Functionalities that automate enforcement need to incorporate requirements 
+of due process.  
+
+There is significant risk of regulatory capture. Policy decisions are connecting 
+with coding decisions. The line between policy choice and computer science 
+requirements is not a bright one and not visible to non-experts. The technology 
+teams of the regulators are close to regulated entities and this may compromise their 
+professional scepticism. Senior decision makers suffer from a knowledge gap. The 
+regulator needs to invest in expertise.  
+
+Unintended consequences can emerge. Real-time reporting could lead to short 
+term thinking. Regulatory technology could cause regulation to become more 
+granular, leading to inflexibility, technical rather than functional compliance and 
+increasing standardisation. This could generate systemic risk.The providers of 
+technology will play a significant role. They are for the time being small start-up 
+enterprises. But the more the regulators rely on new digital technology the more 
+attractive the market for regulatory technology will become for the handful of 
+existing providers of data analysis. Their involvement in writing software that 
+monitors risk may become similar to the role performed by credit rating agencies or 
+auditors. This will bring with it the same difficult task of ensuring that the 
+monitoring device that emerges serves the public interest.  
+
+Regulatory technology is said to help deliver better quality compliance and 
+regulation for less money. Time will tell if savings arising from automating processes 
+and mechanising analysis will outperform the cost involved in developing, 
+connecting and maintaining the technology on the existing legacy systems.  
+
+In terms of identifying a suitable regulatory strategy the regulator has a number 
+of options available. It could develop regulatory software exercising full control of 
+its maintenance and update at an operational level. It could step back and appoint 
+an industry association or leave regulated entities to create software that manages 
+risk. The regulator would endorse this self-regulatory mechanism at a high level of 
+abstraction but would not proactively involve itself in its development. It could 
+adopt a meta-regulatory approach overseeing the development and maintenance of 
+
+
+
+ Electronic copy available at: https://ssrn.com/abstract=3210962 
+
+ 
+ 
+Eva Micheler and Anna Whaley                   Regulatory Technology 
+ 
+
+ 27 
+
+regulatory software by private providers without having full control at an 
+operational level. 
+
+All types of regulation have advantages and disadvantages. In most regulatory 
+contexts, a combination of various strategies of regulation are employed.126 The 
+characteristics of regulatory technology will play out in different ways for each of 
+these strategies and need to be accommodated accordingly. But technology is not 
+neutral. It is programmed to reflect the preferences of those who oversee its 
+development. While regulatory technology can change the game, it will not be able 
+to change the fact that business interests do not always align with the interests that 
+the regulator has been set up to serve. It would be wrong to assume that regulatory 
+technology is a silver bullet that will make it easier for regulated entities to align their 
+interests with regulatory standards.  
+ 
+ 
+
+                                                
+126 Baldwin et al (n 65) 132. 
+
+

@@ -1,0 +1,364 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+P O L I C Y  B R I E F  O N  T H E  F U T U R E  O F  W O R K  
+
+-
+
+May 2017 www.oecd.org/employment/future-of-work.htm 
+ 
+
+An old idea attracting renewed attention 
+
+Figure 1. Existing cash support can be patchy and is not always tightly targeted to the poor 
+
+Transfers received by working-age individuals in low and high-income groups, 2013 or latest year available 
+
+ 
+
+Note: Age group 18-65, 18-62 in France. Public social cash transfers at the household level, adjusted for household size. Income groups refer to disposable incomes. 
+
+Additional data provided by France show that, without counting old-age and disability pensions, the bottom 20% in France receive about three times as much as the top 20%.  
+
+Source: Calculations based on the OECD Income Distribution Database. 
+
+http://www.oecd.org/employment/future-of-work.htm
+http://oe.cd/fdb
+http://oe.cd/pag
+http://www.oecd.org/social/inequality-and-poverty.htm
+http://www.oecd.org/employment/future-of-work.htm
+http://www.oecd-ilibrary.org/social-issues-migration-health/the-risk-of-automation-for-jobs-in-oecd-countries_5jlz9h56dvq7-en
+http://www.oecd-ilibrary.org/social-issues-migration-health/the-risk-of-automation-for-jobs-in-oecd-countries_5jlz9h56dvq7-en
+http://oe.cd/sag
+http://oe.cd/idd
+
+
+ 
+
+
+
+-
+
+What would be a realistic basic income amount? 
+
+Financing the costs 
+
+Figure 2. At current spending levels, a basic income would be well below the poverty line 
+
+Non-elderly benefit spending per capita and guaranteed minimum income (GMI) level as a percentage of the poverty line, 2013 
+
+ 
+
+ 
+Note: Poverty thresholds are 50% of median disposable household income. Per-capita spending is in gross terms and refers to total cash transfer except old-age 
+
+and survivor pensions, but including early-retirement benefits where these can be identified, divided by the number of residents aged below 65 (62 in France). Where 
+
+receipt of old-age pensions among working-age individuals is relatively common (e.g. in France), true per-capita amounts of all “non-elderly” benefits is significantly 
+
+higher. Some countries (e.g. Luxembourg) pay significant amounts of benefits to non-residents; dividing total expenditure by the resident populations only 
+
+overestimates true per-capita amounts in these cases. Social assistance amounts refer to the main means-tested safety-net benefit available for working-age people 
+
+and do not include cash housing benefits that may be available separately. No nationally applicable general GMI entitlements existed in Greece and Turkey. Social 
+
+Assistance in Italy refers to the Sostegno per l'inclusione attiva GMI programme that started being rolled out nationally in 2016; no nationally applicable GMI 
+
+programme existed prior to that. 
+
+Source: OECD Social Expenditure, Income Distribution, and Tax-Benefit Policy database.  
+
+0%
+
+20%
+
+40%
+
+60%
+
+80%
+
+100%
+
+% of poverty line Per-capita benefit spending Social assistance benefit level (single-person household)
+
+http://oe.cd/socx
+http://oe.cd/idd
+http://www.oecd.org/social/benefits-and-wages.htm
+
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Table 1. Monthly BI amounts that would cost the same  
+as existing benefits and tax-free allowances 
+
+ 
+Adult Child (<18) Poverty line 
+
+for single 
+
+person 
+
+Finland EUR 527 EUR 316 EUR 1074 
+
+France EUR 456 EUR 100 EUR 909 
+
+Italy EUR 158 EUR 158 EUR 737 
+
+United Kingdom GBP 230 GBP 189 GBP 702 
+
+Note: Hypothetical reform where a basic income would replace most existing 
+working-age benefits, as well as the tax-free allowance. See Box 2 for details. BI 
+amounts are shown after tax and are 9% higher than existing single-person GMI in 
+Finland and as much as 97% higher in Italy. In France, the budget-neutral BI amount 
+would be 2% below current GMI levels and in the United Kingdom, the budgetary 
+neutral BI amount would be 28% below current GMI levels. Poverty line is 50% of 
+median household income adjusted for household size using square root of 
+household size. 
+
+Source: Secretariat calculations using EUROMOD.    
+
+https://www.euromod.ac.uk/
+
+
+-
+
+Gainers and losers of a comprehensive basic income Figure 3. Few people would see their incomes unaffected  
+
+by a basic income  
+
+Gainers and loser, in % of individuals in working-age households 
+
+ Note: Working-age households are those with at least one working-age individual. 
+
+Hypothetical budget-neutral reform where a basic income would replace most 
+
+existing working-age benefits, as well as the main tax-free allowance. See main text 
+
+and Box 2 for details. 
+
+Source: Secretariat calculations using EUROMOD. 
+
+ 
+
+0%
+
+10%
+
+20%
+
+30%
+
+40%
+
+50%
+
+60%
+
+70%
+
+80%
+
+90%
+
+100%
+
+Finland France Italy United
+Kingdom
+
+Gain more
+than 10%
+
+Gain 5-10%
+
+Gain 1-5%
+
+Within 1%
+
+Lose 1-5%
+
+Lose 5-10%
+
+Lose more
+than 10%
+
+http://www.oecd.org/social/benefits-and-wages.htm
+
+
+Would a basic income reduce poverty? 
+
+Figure 4. Early retirees would lose out when existing 
+
+benefits are replaced with a modest BI  
+
+Panel A: Percentage gaining, by age 
+
+Panel B: Percentage losing, by age 
+
+Note and Source: See Figure 3. Gains and losses each refer to income changes of 
+
+1% or more.  
+
+Table 2. A comprehensive basic income would change the 
+
+distribution of poverty risks … 
+
+Note and Source: See Figure 3. Poverty line is 50% of median household income 
+
+adjusted for household size using square root of household size. Cells shaded in 
+
+green (red) show shares of people moving out of (into) poverty following the BI 
+
+reform.
+
+Figure 5. Low-income households currently receiving a 
+
+benefit would often be worse off under a BI 
+
+Panel A: Percentage gaining, by income group 
+
+Panel B: Percentage losing, by income group 
+
+Note and Source as in Figure 4. 
+
+ 
+
+Figure 6. … but it would often not lower poverty overall 
+
+Poverty rates under existing systems, and a BI 
+
+ 
+
+ 
+Note and Source: See Figure 3 and Table 2. Poverty rates are relative to the 
+
+number of people living in working-age households.
+
+UK: 83% Finland: 90% UK: 7% Finland: 3%
+
+France: 89% Italy: 83% France: 5% Italy: 4%
+
+UK: 2% Finland: 2% UK: 8% Finland: 5%
+
+France: 2% Italy: 4% France: 4% Italy: 9%
+
+In poverty 
+
+under 
+
+existing 
+
+system?
+
+In poverty under basic income?
+No Yes
+
+No 
+
+Yes
+
+0%
+
+5%
+
+10%
+
+15%
+
+20%
+
+Finland France Italy United Kingdom
+
+With existing benefits With a basic Income
+
+
+
+-
+
+Simple, but not without problems 
+
+http://izajolp.springeropen.com/articles/10.1186/2193-9004-1-9
+http://izajolp.springeropen.com/articles/10.1186/2193-9004-1-9
+http://onlinelibrary.wiley.com/doi/10.1111/j.1467-923X.1996.tb01568.x/epdf
+
+
+What role for BI in making social protection more 
+
+accessible? Options and drawbacks 
+
+Further reading Note  
+
+Citation  
+
+Contacts 
+
+ 
+
+ 
+
+http://www.oecd.org/employment/future-of-work.htm
+http://www.oecd.org/employment/future-of-work.htm
+http://www.oecd.org/employment/future-of-work.htm
+http://dx.doi.org/10.1787/5jxrcmgpc6mn-en
+http://dx.doi.org/10.1787/5jxrcmgpc6mn-en
+http://dx.doi.org/10.1787/5jxrcmgpc6mn-en
+http://www.oecd.org/employment/Automation-and-independent-work-in-a-digital-economy-2016.pdf
+http://www.oecd.org/employment/Automation-and-independent-work-in-a-digital-economy-2016.pdf
+http://www.oecd.org/els/soc/OECD2016-Social-Expenditure-Update.pdf
+http://www.oecd.org/els/soc/OECD2016-Social-Expenditure-Update.pdf
+http://oe.cd/idd
+http://www.oecd.org/employment/future-of-work.htm
+mailto:Herwig.Immervoll@oecd.org
+mailto:James.Browne@oecd.org
+

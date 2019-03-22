@@ -1,0 +1,285 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Gartner Says By 2020, Artificial Intelligence Will Create More Jobs Than It Eliminates
+
+
+Newsroom (/newsroom/)
+
+Share:
+
+View All Press Releases (/newsroom/archive/)
+
+Press Release
+
+Tweet
+
+STAMFORD, Conn., December 13, 2017
+
+Gartner Says By 2020, Artificial Intelligence Will Create More
+Jobs Than It Eliminates
+AI Will Create 2.3 Million Jobs in 2020, While Eliminating 1.8 Million
+
+2020 will be a pivotal year in AI-related employment dynamics, according to Gartner, Inc., as artificial
+
+intelligence (https://www.gartner.com/smarterwithgartner/use-artificial-intelligence-where-it-matters/) (AI) will
+
+become a positive job motivator.
+
+The number of jobs affected by AI will vary by industry; through 2019, healthcare, the public sector and
+
+education will see continuously growing job demand while manufacturing will be hit the hardest. Starting in
+
+2020, AI-related job creation will cross into positive territory, reaching two million net-new jobs in 2025.
+
+"Many significant innovations in the past have been associated with a transition period of temporary job loss,
+
+followed by recovery, then business transformation and AI will likely follow this route," said Svetlana Sicular
+
+(https://www.gartner.com/analyst/40906/Svetlana-Sicular), research vice president at Gartner. AI will improve
+
+the productivity of many jobs, eliminating millions of middle- and low-level positions, but also creating millions
+
+more new positions of highly skilled, management and even the entry-level and low-skilled variety.
+
+"Unfortunately, most calamitous warnings of job losses confuse AI with automation — that overshadows the
+
+greatest AI benefit — AI augmentation (https://www.gartner.com/smarterwithgartner/cultivate-enterprise-
+
+intelligence-with-ai/) — a combination of human and artificial intelligence, where both complement each
+
+other."
+
+IT leaders should not only focus on the projected net increase of jobs. With each investment in AI-enabled
+
+technologies (https://www.gartner.com/smarterwithgartner/the-cios-journey-to-artificial-intelligence/), they
+
+must take into consideration what jobs will be lost, what jobs will be created, and how it will transform how
+
+workers collaborate with others, make decisions and get work done.
+
+"Now is the time to really impact your long-term AI direction," said Ms. Sicular. "For the greatest value, focus
+
+on augmenting people with AI (https://www.gartner.com/smarterwithgartner/the-disruptive-power-of-artificial-
+
+intelligence/). Enrich people's jobs, reimagine old tasks and create new industries. Transform your culture to
+
+make it rapidly adaptable to AI-related opportunities or threats."
+
+Gartner identified additional predictions related to AI’s impact on the workplace:
+
+AI (https://www.gartner.com/smarterwithgartner/artificial-intelligence-and-the-enterprise/) has already been
+
+Share 320 Share
+
+Gartner Says By 2020, Artificial Intelligence Will Create More Jobs Than... https://www.gartner.com/newsroom/id/3837763
+
+1 of 4 6/17/2018, 10:58 PM
+
+
+
+applied to highly repeatable tasks where large quantities of observations and decisions can be analyzed for
+
+patterns. However, applying AI to less-routine work that is more varied due to lower repeatability will soon
+
+start yielding superior benefits. AI applied to nonroutine work is more likely to assist humans than replace
+
+them as combinations of humans and machines will perform more effectively than either human experts or AI-
+
+driven machines working alone will.
+
+By 2022, one in five workers engaged in mostly nonroutine tasks will rely on AI to do a job.
+
+"Using AI to auto-generate a weekly status report or pick the top five emails in your inbox doesn't have the
+
+same wow factor as, say, curing a disease would, which is why these near-term, practical uses go unnoticed,"
+
+said Craig Roth (https://www.gartner.com/analyst/37114/Craig-Roth), research vice president at Gartner.
+
+"Companies are just beginning to seize the opportunity to improve nonroutine work through AI by applying it
+
+to general-purpose tools. Once knowledge workers incorporate AI into their work processes as a virtual
+
+secretary or intern, robo-employees will become a competitive necessity."
+
+Leveraging technologies such as AI and robotics (https://www.gartner.com/smarterwithgartner/the-rise-of-the-
+
+chief-robotics-officer/), retailers will use intelligent process automation to identify, optimize and automate
+
+labor-intensive and repetitive activities that are currently performed by humans, reducing labor costs through
+
+efficiency from headquarters to distribution centers and stores. Many retailers are already expanding
+
+technology use to improve the in-store check-out process.
+
+Through 2022, multichannel retailer efforts to replace sales associates through AI will prove
+
+unsuccessful, although cashier and operational jobs will be disrupted.
+
+However, research suggests that many consumers still prefer to interact with a knowledgeable sales
+
+associate when visiting a store, particularly in specialized areas such as home improvement, drugstores and
+
+cosmetics, where informed associates can make a significant impact on customer satisfaction. Though they
+
+will reduce labor used for check-out and other operational activities, retailers will find it difficult to eliminate
+
+traditional sales advisers.
+
+"Retailers will be able to make labor savings by eliminating highly repetitive and transactional jobs, but will
+
+need to reinvest some of those savings into training associates who can enhance the customer experience,"
+
+said Robert Hetu (https://www.gartner.com/analyst/39797/Robert-Hetu), research director at Gartner "As such
+
+most retailers will come to view AI as a way to augment customer experiences rather than just removing
+
+humans from every process."While many industries will receive growing business value from AI,
+
+manufacturing is one that will receive a massive share of the business value opportunity. Automation will lead
+
+to cost savings, while the removal of friction in value chains will increase revenue further, for example, in the
+
+optimization of supply chains and go-to-market activities.
+
+In 2021, AI augmentation will generate $2.9 trillion in business value and recover 6.2 billion hours of
+
+worker productivity.
+
+However, some industries, such as outsourcing, are seeing a fundamental change in their business models,
+
+whereby the cost reduction from AI and the resulting productivity improvement must be reinvested to allow
+
+reinvention and the perusal of new business model opportunities.
+
+"AI can take on repetitive and mundane tasks, freeing up humans for other activities, but the symbiosis of
+
+humans with AI will be more nuanced and will require reinvestment and reinvention instead of simply
+
+automating existing practices," said Mike Rollings (https://www.gartner.com/analyst/37069/Mike-Rollings),
+
+research vice president at Gartner. "Rather than have a machine replicating the steps that a human performs
+
+Gartner Says By 2020, Artificial Intelligence Will Create More Jobs Than... https://www.gartner.com/newsroom/id/3837763
+
+2 of 4 6/17/2018, 10:58 PM
+
+
+
+to reach a particular judgment, the entire decision process can be refactored to use the relative strengths and
+
+weaknesses of both machine and human to maximize value generation and redistribute decision making to
+
+increase agility."
+
+Gartner clients can learn more in the report: "Predicts 2018: AI and the Future of Work."
+
+(https://www.gartner.com/document/3833572) More analysis on AI is available in the Gartner Special Report
+
+"Applying Artificial Intelligence to Drive Business Transformation." (http://www.gartner.com/technology
+
+/research/artificial-intelligence/?cm_sp=swg-_-cta-_-AI) This collection of research shows the way for
+
+organizations to begin, right now, to make sense of the AI opportunity for digital business and to take practical
+
+steps to realize it.
+
+Contacts
+
+Rob van der Meulen
+
+Gartner
+
+rob.vandermeulen@gartner.com (mailto:rob.vandermeulen@gartner.com)
+
+Christy Pettey
+
+Gartner
+
+christy.pettey@gartner.com (mailto:christy.pettey@gartner.com)
+
+About Gartner
+
+Gartner, Inc. (NYSE: IT), is the world's leading research and advisory company and a member of the S&P
+
+500. We equip business leaders with indispensable insights, advice and tools to achieve their mission-critical
+
+priorities and build the successful organizations of tomorrow.
+
+Our unmatched combination of expert-led, practitioner-sourced and data-driven research steers clients toward
+
+the right decisions on the issues that matter most. We're trusted as an objective resource and critical partner
+
+by more than 15,000 organizations in more than 100 countries—across all major functions, in every industry
+
+and enterprise size.
+
+To learn more about how we help decision makers fuel the future of business, visit www.gartner.com
+
+(//www.gartner.com/technology/home.jsp).
+
+Gartner Says By 2020, Artificial Intelligence Will Create More Jobs Than... https://www.gartner.com/newsroom/id/3837763
+
+3 of 4 6/17/2018, 10:58 PM
+
+
+
+Careers (https://jobs.gartner.com/?utm_source=gartner.com&utm_medium=referral)
+
+Contact (https://www.gartner.com/technology/contact/contact_gartner.jsp)
+
+Gartner Blog Network (//blogs.gartner.com/) IT Glossary (https://www.gartner.com/it-glossary/)
+
+Newsroom (https://www.gartner.com/newsroom/) Peer Insights (https://www.gartner.com/reviews/home)
+
+Policies (https://www.gartner.com/technology/about/policies/guidelines_ov.jsp)
+
+Privacy (https://www.gartner.com/privacy/) Site Index (https://www.gartner.com/technology/site-index.jsp)
+
+Webinars (https://www.gartner.com/technology/webinars/)
+
+ (https://www.gartner.com)
+
+© 2018 Gartner, Inc. and/or its Affiliates. All Rights Reserved.
+
+Gartner Says By 2020, Artificial Intelligence Will Create More Jobs Than... https://www.gartner.com/newsroom/id/3837763
+
+4 of 4 6/17/2018, 10:58 PM
+
+

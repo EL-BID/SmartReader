@@ -1,0 +1,165 @@
+ Modeling Automation 48 AEA Papers and Proceedings 2018, 108: 48–53 https://doi.org/10.1257/pandp.20181020 Computer-assisted machines, robotics, and artificial intelligence (AI) have already spread in many industries and automated several parts of the production process.
+However, we are far from a consensus on how automation should be conceptualized and modeled.
+Most economic models formalize technolog- ical change as factor augmenting (meaning that technological progress acts as if it increased the effective units of one of the factors of production) or as Hicks neutral (which leads to a proportion- ate increase in the output obtained from any input combination).
+Several authors, including Sachs and Kotlikoff (2012), Graetz and Michaels (2015), and Nordhaus (2015), also model auto- mation as capital-augmenting technological change, which assumes that automation should be thought of as embodied in more productive (or cheaper) capital, which will then substitute for labor in a process governed by the elastic- ity of substitution.
+Bessen (2017), on the other hand, argues that automation mostly increases the productivity of labor and models automation as labor-augmenting technological change.
+We argue that these approaches miss a distinc- tive feature of automation: the use of machines to substitute for human labor in a widening range of tasks (Acemoglu and Restrepo, forthcom- ing, 2018—henceforth, AR).
+Partly as a result, factor-augmenting technologies have a limited scope to reduce the demand for labor (this never happens with capital-augmenting technologies, and can only happen with labor-augmenting technologies for unrealistic parameter values).
+In addition, these approaches relate the impact of technology on the labor share to the elasticity Modeling Automation† By Daron Acemoglu and Pascual Restrepo* * Acemoglu: Massachusetts Institute of Technology (email: daron@mit.edu); Restrepo: Boston University (email: pascual@bu.edu).
+We gratefully acknowledge finan- cial support from Google, Microsoft, the Sloan Foundation, and the Toulouse Network on Information Technology.
+† Go to https://doi.org/10.1257/pandp.20181020 to visit the article page for additional materials and author disclo- sure statement(s).
+of substitution between capital and labor—an object that plays a different role and governs how factor prices affect the use of capital and labor.
+In contrast, in a task-based framework, auto- mation, conceptualized as the expansion of the set of tasks that can be produced by machines, has very different effects.
+It always reduces the labor share and it reduces labor demand and the equilibrium wage unless the productivity gains from automation are sufficiently large.
+A task-based approach to modeling automa- tion also brings new ideas to the table.
+First, it clarifies that the technologies most threatening to labor are not those that are major breakthroughs increasing productivity greatly, but those that are “ so-so”—good enough to be adopted but not so good that they increase productivity by much.
+Second, it highlights the important role of new tasks in which labor has a comparative advantage in counterbalancing the effects of automation.
+Third, it enables a discussion of the implications of deepening of automation, meaning an improvement in the productivity of machines in tasks that have already been auto- mated.
+Fourth, it clarifies that the role of capital accumulation is distinct from the effects of auto- mation on the labor share and implies that capi- tal accumulation dampens the negative effects of automation on wages (if there are such negative effects) and the labor share (if the elasticity of substitution is less than one).
+Finally, this frame- work can be generalized to study the implica- tions of shortages of different types of skills and the conditions under which there may be exces- sive automation.
+I. Factor-Augmenting Technologies Suppose aggregate output is given by Y = F( A K K, A L L ), where K denotes capital, L is labor, and A K and A L denote capital-augmenting and VOL.
+108 49MODELING AUTOMATION labor-augmenting technology, respectively.
+We assume throughout that F is continuously differ- entiable, concave, and exhibits constant returns to scale.
+Let F K and F L denote the derivatives of F with respect to capital and labor.
+We focus on competitive labor markets, which implies that the equilibrium wages are equal to the marginal product of labor, W = A L F L ( A K K, A L L ).
+The labor share in national income is given by s L = WL _ Y , and because of constant returns to scale, the cap- ital share is s K = 1 − s L .
+A. Capital-Augmenting Technological Change Suppose first that we model automation as capital-augmenting technological change.
+The impact of this type of technological change on the equilibrium wage is given by (1) d ln W _ d ln A K = s K _ ε KL > 0, where (2) ε KL = − d ln (K / L) ___________ d ln ( F K / F L ) > 0 is the elasticity of substitution between cap- ital and labor.1 Thus, capital-augmenting technology always increases labor demand and the equilibrium wage.
+1 Let us rewrite (2) as ε KL (d ln F K − d ln F L ) = − [d ln ( A K K ) − d ln ( A L L )] .
+Then using the facts that d ln R = d ln F K + d ln A K ; d ln W = d ln F L + d ln A L ; d ln K = d ln L = 0 (because of inelastic supplies); and d ln A L = 0 (because technological change is capital augmenting), we obtain ε KL (d ln W − d ln R ) = (1 − ε KL ) d ln A K .
+Also, because F exhibits constant returns to scale, we have Y = RK + WL .
+Log differentiating this equation, we obtain s K d ln A K = s K d ln R + s L d ln W. Combining these two equations yields (1).
+Mathematically, this result follows because of constant returns to scale.
+Economically, constant returns to scale imposes that capital and labor are q -complements, and anything that increases the productivity of capital or makes capital effectively more abundant increases the marginal product of labor.
+The effect of capital-augmenting technologi- cal change on the labor share is in turn given by d ln s L _ d ln A K = s K ( 1 _ ε KL − 1) , which is negative if and only if ε KL > 1 .2 Thus, capital-augmenting technology reduces the labor share only if the elasticity of substitution between capital and labor is greater than one.
+There is a debate on whether we should view the elasticity of substitution between capital and labor as less than or greater than one.
+Recent estimates that exploit cross-country differences put it to be greater than one (Karabarbounis and Neiman 2014), while the bulk of the evi- dence in the literature places it to be between 0.5 and 1 (see Oberfield and Raval 2014 and the references therein).
+If we follow this broad consensus in the literature, capital-augmenting technological progress increases the labor share.
+In summary, if automation were to be con- ceptualized as capital-augmenting technological change, it would never reduce labor demand or the equilibrium wage, and it would increase the labor share—two predictions that are neither intuitively appealing nor always consistent with the evidence (see, e.g., AR 2017, for evidence that robots have a negative impact on local employment and wages).
+B. Labor-Augmenting Technological Change Let us next turn to the implications of labor-augmenting technologies, A L .
+We have (3) d ln W _ d ln A L = 1 − s K _ ε KL , 2 Since labor is supplied inelastically, we have d ln s L _ d ln A K = d ln W _ d ln A K − d ln Y _ d ln A K .
+The result is obtained by observing that d ln Y _ d ln A K = s K and combining this with (1).
+MAY 201850 AEA PAPERS AND PROCEEDINGS which is positive provided that ε KL > s K .3 Thus, labor-augmenting technological change increases the equilibrium wage unless the elas- ticity of substitution between capital and labor is very low.
+If we take the consensus range for the elasticity of substitution between 0.5 and 1, and a capital share in the range 0.
+3–0.4, labor-augmenting technology increases labor demand and the equilibrium wage.
+The effect of labor-augmenting technology on the labor share is in turn given by d ln s L _ d ln A L = s K (1 − 1 _ ε KL ) , which is negative if and only if ε KL < 1 .
+In summary, labor-augmenting technological change reduces the labor share for realistic parameter values, but always increases labor demand and the equilibrium wage, which is again not consistent with recent empirical evi- dence on the effects of automation on labor demand.
+In addition, modeling automation as directly increasing the productivity of labor is not fully satisfactory since automation also substitutes capital for labor in tasks previously performed by workers (so at the very least it would have to change the form of the produc- tion function).
+II.
+A Task-Based Approach Let us next consider an alternative approach based on AR (forthcoming) who in turn build on Zeira (1998), Acemoglu and Zilibotti (2001), and Acemoglu and Autor (2011).
+Suppose that aggregate output is produced by combining the services of a range of tasks.
+We take this com- bination to be given by a constant elasticity of substitution (CES) aggregate and the range of tasks to be represented by a continuum.
+Then (4) Y = ( ∫ N−1 N y (i) σ−1 _ σ di) σ _ σ−1 , where σ is the elasticity of substitution between tasks and the integration between N − 1 and N 3 The derivation is similar to the one in foot- note 1.
+Differentiating Y = RK + WL , we obtain s L d ln A L = s K d ln R + s L d ln W .
+Combining this with ε KL (d ln W − d ln R ) = ( ε KL − 1 ) d ln A L , which again fol- lows from (2), yields (3).
+ensures that the measure of tasks is normalized to 1, simplifying the discussion.
+Suppose that tasks i > I are technologically non-automated and have to be produced by labor with the production function (5) y(i ) = γ (i ) l(i ) , where γ (i) denotes the productivity of labor in task i .
+In contrast, tasks i ≤ I are technologi- cally automated and can be produced by either labor or capital, that is, (6) y(i ) = η(i ) k(i ) + γ (i ) l(i ) , where η(i) is the productivity of capital in task i .
+The fact that the output of task i is given by the sum of two terms, one with capital and the other one with labor, reflects the key aspect of this approach—in technologically automated tasks, capital and labor are perfect substitutes.
+We assume that labor has a comparative advantage in higher-indexed tasks, that is, γ (i) / η(i) is strictly increasing in i .
+We also assume that (A1) γ (I ) _ η(I ) < W _ R , so that it is strictly cheaper to produce tasks in [0, I ] using capital.
+AR (forthcoming) show that this assumption is equivalent to the capital per worker, K / L , or equivalently the capital-output ratio, K / Y , being above a certain threshold, κ ̅ L or κ ̅ Y .
+These assumptions imply that the tasks in the range [0, I ] will be produced with capi- tal, and the tasks in (I, N ] will be produced with labor.
+We model automation as an increase in I .
+This choice makes it clear that automation corre- sponds to an expansion of the set of tasks where machines can substitute for labor.
+The following results are established in AR (forthcoming).
+(i) Aggregate output is given by a CES aggre- gate of capital and labor, (7) Y = ( ( ∫ N−1 I η (i) σ−1 di) 1 _ σ K σ−1 _ σ + ( ∫ I N γ (i) σ−1 di) 1 _ σ L σ−1 _ σ ) σ _ σ−1 , VOL.
+108 51MODELING AUTOMATION where the elasticity of substitution between cap- ital and labor is given by σ .
+(ii) Under Assumption A1, automation increases productivity and aggregate output per worker.
+In particular, (8) d ln Y ____ dI = 1 ____ 1 − σ [ ( W ___ γ(I ) ) 1−σ − ( R ___ η(I ) ) 1−σ ] > 0.
+Intuitively, Assumption A1 implies that it is cheaper to produce tasks in the neighborhood of I with capital rather than labor.
+Thus an expan- sion of the set of tasks that can be produced with capital raises productivity.
+(iii) Automation changes the share parameters of the CES in equation (7).
+As a consequence, automation does not map to a combination of factor-augmenting technological improvements, and always makes production less labor inten- sive and reduces the labor share.
+Namely, the labor share in this case is s L = 1 ______________________ 1 + ( ∫ N−1 I η (i) σ−1 di) 1 _ σ K σ−1 _ σ ___________________ ( ∫ I N γ (i) σ−1 di) 1 _ σ L σ−1 _ σ , which is strictly decreasing in I regardless of the value of the elasticity of substitution between capital and labor.
+Thus the effect of automation on the labor share, when modeled in this fash- ion, is entirely distinct from the effect of capital accumulation whose impact on the labor share depends on the elasticity of substitution.
+(iv) Automation can reduce the equilibrium wage, even though it increases productivity.
+The impact of automation on the wage is given by d ln W _ dI = 1 _ σ d ln Y _ dI − 1 _ σ γ (I ) σ−1 ___________ ∫ I N γ (i) σ−1 di .
+The first term is the productivity effect, which results from the increase in aggregate out- put from automation; it is given by (8) and is positive.
+The second term is the displacement effect, which is always negative.
+To see that for realistic parameter values the displacement effect can dominate it suffices to return to (8) and note that it becomes very small when γ (I ) / η(I ) ≃ W / R .
+This condition in turn holds when the capital-output ratio, K / Y , is close to the threshold κ ̅ Y .4 (v) Automation increases the demand for cap- ital and the equilibrium rental rate; that is, d ln R _ dI = 1 _ σ d ln Y _ dI + 1 _ σ η (I) σ−1 ___________ ∫ 0 I η (i) σ−1 di > 0.
+It is also useful to note that this approach further provides a micro-foundation for several models that consider technological changes that directly alter the exponents of capital and labor in a Cobb-Douglas production function (e.g., Zuleta 2008, and Peretto and Seater 2013).
+In particular, consider the special case of our model where N = 1 and σ = 1 .
+Then,5 Y = B ( K _ I ) I ( L _ 1 − I ) 1−I .
+It is also useful to return to Assumption A1.
+If in contrast to this assumption we had γ (I ) / η(I ) > W / R , then tasks near I would not be produced with machines, because the effec- tive cost of doing so would be greater than pro- ducing them with labor.
+In this case, all tasks in [0, I ̃ ] for some I ̃ < I would be produced with capital, and all remaining tasks with labor.
+In this case, an increase in I would not affect the allocation of tasks to factors.
+In addition, other changes, for example, an increase in the function η(i) , would impact the threshold task I ̃ , though this endogenous change in the set of tasks pro- duced with capital would have different implica- tions than an increase in I under Assumption A1.
+For example, a rise in I ̃ triggered by an increase in η(i) would only have a second-order effect on aggregate output, and the equilibrium wage 4 It is easy to construct examples for which the dis- placement effect dominates the productivity effect.
+If we take σ = 0.7 (the midpoint of most estimates), and set γ (i ) = η(i ) = 0.2 for all i ∈ [0, 1] , we obtain that the threshold κ ̅ Y is 2 , and the displacement effect dominates when the capital to output ratio satisfies K / Y ∈ (2, 6.5) .
+This interval comfortably includes the US capital-output ratio which is approximately 3.
+5 Here B = exp ( ∫ 0 I ln γ (i ) di + ∫ I 1 ln η(i ) di) .
+MAY 201852 AEA PAPERS AND PROCEEDINGS would strictly increase because of the direct effect of higher η(i) .
+This discussion explains why we conceptualized automation as a tech- nological change expanding the set of tasks that can be (productively) performed by capital.
+III.
+New Ideas from the Task-Based Approach We conclude by emphasizing several ideas that are highlighted by our task-based approach.
+The Productivity Effect.—Our analysis stressed the central role of the productivity effect.
+Whether automation increases or reduces the equilibrium wage depends on how power- ful the productivity effect is.
+This observation implies that, in contrast to some popular dis- cussions, the automation technologies that are more likely to reduce the demand for labor are not those that are “brilliant” and highly produc- tive, but those that are “ so-so”—just productive enough to be adopted but not much more pro- ductive or cost-saving than the production tech- niques that they are replacing (see AR 2018).
+New Tasks.—This approach highlights the role of the creation of new tasks in which labor has a comparative advantage—as captured by an increase in N in our model.
+Under natural assumptions, new tasks increase productiv- ity, the demand for labor, and the labor share.
+Our framework clarifies that a balanced growth process where the labor share remains constant depends on the simultaneous expansion of auto- mated and new tasks (see AR forthcoming).
+Deepening of Automation.—In our model, we can think of increases in I as capturing “auto- mation at the extensive margin”—meaning extending the set of tasks that can be produced by capital.
+The alternative is “automation at the intensive margin” or “deepening of automa- tion”—meaning increasing the productivity of machines in tasks that are already automated, which corresponds to an increase in η(i) in tasks i ≤ I .
+The deepening of automation is equivalent to capital-augmenting technologi- cal change; it always increases the demand for labor, though its impact on the share of labor, for the same reasons as we have emphasized so far, depends on the elasticity of substitution between capital and labor.
+Automation and Capital Accumulation.— Because automation increases the demand for capital and the rental rate, it encourages capital accumulation.
+It is thus possible to have periods of fast automation during which the labor share declines and capital accumulation accelerates even if the elasticity of substitution between capital and labor is less than one.
+This perspec- tive also implies that rather than being the cause of the decline in the labor share (as argued by Piketty 2014), capital accumulation may be a response to automation and lessen its negative impact on the labor share (when the elasticity of substitution is less than one).
+The Role of Skills.—A version of this frame- work with workers with heterogeneous skills specializing in different types of tasks can be used to study the implications of automation on wage inequality as well as the role of a shortage of certain types of skills in shaping the impact of automation on productivity gains and inequality (see AR forthcoming, 2018).
+Excessive Automation.—It is difficult to ana- lyze the issue of excessive automation with factor-augmenting technologies.
+Modeling automation as the substitution of machines for tasks previously performed by labor, on the other hand, shows that there may be excessive automation because of subsidies to capital or a divergence between the equilibrium wage rate and the social opportunity cost of labor (AR forthcoming, 2018).
+REFERENCES Acemoglu, Daron, and David Autor.
+2011.
+“Skills, Tasks and Technologies: Implications for Employment and Earnings.” In Handbook of Labor Economics, Vol.
+4, edited by David Card and Orley Ashenfelter, 1043–171.
+Amsterdam: Elsevier.
+Acemoglu, Daron, and Pascual Restrepo.
+2017.
+“Robots and Jobs: Evidence from US Labor Markets.” National Bureau of Economic Research Working Paper 23285.
+Acemoglu, Daron, and Pascual Restrepo.
+2018.
+“Artificial Intelligence, Automation and Work.” National Bureau of Economic Research Work- ing Paper 24196.
+Acemoglu, Daron, and Pascual Restrepo.
+Forth- coming.
+“The Race between Machine and VOL.
+108 53MODELING AUTOMATION Man: Implications of Technology for Growth, Factor Shares and Employment.” American Economic Review.
+Acemoglu, Daron, and Fabrizio Zilibotti.
+2001.
+“Productivity Differences.” Quarterly Journal of Economics 116 (2): 563–606.
+Bessen, James E. 2017.
+“Automation and Jobs: When Technology Boost Employment.” Bos- ton University Law and Economics Research Paper 17–09.
+Graetz, Georg, and Guy Michaels.
+2015.
+“Robots at Work.” Centre for Economic Performance Discussion Papers 1335.
+Karabarbounis, Loukas, and Brent Neiman.
+2014.
+“The Global Decline of the Labor Share.” Quarterly Journal of Economics 129 (1): 61–103.
+Nordhaus, William D. 2015.
+“Are We Approach- ing an Economic Singularity?
+Information Technology and the Future of Economic Growth.” National Bureau of Economic Research Working Paper 21547.
+Oberfield, Ezra, and Devesh Raval.
+2014.
+“Micro Data and Macro Technology.” National Bureau of Economic Research Working Paper 20452.
+Peretto, Pietro F., and John J. Seater.
+2013.
+“Fac- tor-Eliminating Technical Change.” Journal of Monetary Economics 60 (4): 459–73.
+Piketty, Thomas.
+2014.
+“Capital in the Twen- ty-First Century.” Cambridge, MA: Belknap Press.
+Sachs, Jeffrey D., and Laurence J. Kotlikoff.
+2012.
+“Smart Machines and Long-Term Misery.” National Bureau of Economic Research Work- ing Paper 18629.
+Zeira, Joseph.
+1998.
+“Workers, Machines, and Economic Growth.” Quarterly Journal of Eco- nomics 113 (4): 1091–1117.
+Zuleta, Hernando.
+2008.
+“Factor Saving Innova- tions and Factor Income Shares.” Review of Economic Dynamics 11 (4): 836–51.
+Modeling Automation I.
+­Factor-Augmenting Technologies A.
+­Capital-Augmenting Technological Change B.
+­Labor-Augmenting Technological Change II.
+A ­Task-Based Approach III.
+New Ideas from the ­Task-Based Approach REFERENCES

@@ -1,0 +1,2 @@
+De Soto is now part of a new initiative to use the "blockchain," the technology that undergirds the digital currency Bitcoin, to solve the dead capital problem.
+Yet uploading actual land titles to a blockchain is impractical because these distributed databases aren't designed to hold very much information. So companies in this space are devising elegant ways to anchor large data sets to the blockchain in ways that piggyback on its security and immutability, even when the specific information itself is stored elsewhere.

@@ -32,7 +32,12 @@ def score_doc(model, doc):
 	generating a list of paragraphs per document. len(texts) 
 	returns the number of paragraphs in a document
 	'''
+	# start new code
 	texts = [par.text for par in doc.paragraphs]
+	with open('your_file.txt', 'w') as f:
+		for item in texts:
+        	f.write("%s\n" % item)
+    # end new code
 
 	for topic in model:
 		'''

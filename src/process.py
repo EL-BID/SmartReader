@@ -67,7 +67,7 @@ def consolidate_data(dataset, model):
 	global para_g
 	print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
 	print(str(dataset))
-	print(dataset.size)
+	print(len(dataset))
 
 	for doc in dataset:
 		for para in doc.paragraphs:
@@ -83,6 +83,8 @@ def consolidate_data(dataset, model):
 def create_summary(dataset_location, model_name):
 	model_name = "models/" + model_name
 	dataset = dataset_reader.read_dataset_text(dataset_location)
+	print("Type of data: ",type(dataset))
+	print("Content: ", str(dataset))
 	model = create_model.load_model(model_name)
 	for doc in dataset:
 		print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxx', doc)

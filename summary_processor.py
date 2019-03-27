@@ -25,9 +25,19 @@ def updateJobStatus(jobid, status):
 
 def run_job(job):
     jobid = ""
+    '''
+    A document is an object of this form:
+    {'_id': ObjectId('5c9b842ea1c0a02dea101856'), 
+    'file_path': '/app/AIResearchHelper/SmartReader/Data/text_files_2019-03-27_10-09-50',
+    'summary_filename': 'summary_json_2019-03-27_10-09-50.json',
+    'model_name': 'test_1', 'model_file_name': 'model_Artificial_Intelligence_2019-03-25_14_38_33.pkl',
+    'status': 'Queued', 'timestamp': datetime.datetime(2019, 3, 27, 10, 9, 50, 24000)}
+    '''
     for document in job:
         print('DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD')
         print(document)
+
+
         try:
             jobid = document["_id"]
             updateJobStatus(jobid, "Processing")

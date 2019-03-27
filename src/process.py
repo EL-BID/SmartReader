@@ -40,26 +40,34 @@ def score_doc(model, doc):
 		the model with its corresponding parameters
 		'''
 		vec = topic['vectorizer']
-		
-
 		'''
 		transforming the documents(text) to a
 		document-term matrix. It returns X which
 		is a sparse matrix, [n_samples, n_features]
 		'''
 		X = vec.transform(texts)
-		print("XXXXXXXXXXXXXXXXXXX", X)
 
 		feature_indices = topic["feature_indices"]
-		for i in range(X.shape[0]):#X.shape[0] is the number of rows, e.g.: 126 rows or paragraphs. From now, "topic" refers to the information in the model and "X" refers to text file
-			score = 0#scores[i, 0]
+		'''
+		X.shape[0] is the number of rows, e.g.: 126 rows or 
+		paragraphs. From now, "topic" refers to the information 
+		in the model and "X" refers to text file
+		'''
+		for i in range(X.shape[0]):
+			#scores[i, 0]
+			score = 0
 			hits = []
-			for feat in feature_indices:#feat returns the keyword itself
-				j = feature_indices[feat]#j returns the index of the keyword
-				if feat in topic["keywords"] and X[i,j] > 0:#Calculating the score of each feature
+			#feat returns the keyword itself
+			for feat in feature_indices:
+				#j returns the index of the keyword
+				j = feature_indices[feat]
+				#Calculating the score of each feature
+				if feat in topic["keywords"] and X[i,j] > 0:
 					sc = (X[i,j] * topic["keywords"][feat])
 					hits.append( {"keyword":feat, "count": sc } )
 					score = score + sc
+
+					print("score: ", score)
 			doc.paragraphs[i].classification[ topic["topic"] ] = score
 			doc.paragraphs[i].topic_keywords[topic["topic"]] = hits
 

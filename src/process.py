@@ -117,8 +117,11 @@ def create_summary(dataset_location, model_name):
 		score_doc(model, doc)
 	#storing paragraphs and scores in descending order
 	output = consolidate_data(dataset, model)
-
-	print("HHHHHHHHHHHHHHHHHH", type(output))
+	# start new code
+	with open('output.txt', 'w') as f:
+		for item in output:
+			f.write("%s\n" % item)
+    # end new code
 	pickle.dump(output, open("prelim_output_informal_economy_new.bin", "wb")) #serializing output
 
 	get_lat_lng = False

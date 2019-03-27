@@ -68,17 +68,12 @@ def consolidate_data(dataset, model):
 	#dataset is of type list
 	for doc in dataset:
 		for para in doc.paragraphs:
-			print("XXXXXXXXXXXXXXXXXXXXXX")
-			print("paragraph type: ",type(para))
-			print("paragraph text: ", para)
 			para_g = para
 			best_topic = max( para.classification, key=para.classification.get )
 			output_prelim[best_topic].append( { "para":para, "score":para.classification[best_topic] } )
 	output = []
 	for topic in output_prelim:
 		d = {"topic":topic, "paragraphs": sorted( output_prelim[topic]  , key=lambda x:-x[ "score" ]) }
-		print("WWWWWWWWWWWWWWWWWWWWWWWW")
-		print(str(d))
 		output.append(d)
 	return output
 
@@ -87,11 +82,10 @@ def create_summary(dataset_location, model_name):
 	dataset = dataset_reader.read_dataset_text(dataset_location)
 	model = create_model.load_model(model_name)
 	for doc in dataset:
-		print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxx', doc)
 		score_doc(model, doc)
-
 	#storing paragraphs and scores in descending order
 	output = consolidate_data(dataset, model)
+	print("XXXXXXXXXXXXXXXXXX: ", str(output))
 	pickle.dump(output, open("prelim_output_informal_economy_new.bin", "wb")) #serializing output
 
 	get_lat_lng = False

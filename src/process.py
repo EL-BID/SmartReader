@@ -28,7 +28,13 @@ def get_entities(nlp, text):
 	return entities
 
 def score_doc(model, doc):
-	texts = [par.text for par in doc.paragraphs]#generating a list of paragraphs per document. len(texts) returns the number of paragraphs in a document
+	'''
+	generating a list of paragraphs per document. len(texts) 
+	returns the number of paragraphs in a document
+	'''
+	texts = [par.text for par in doc.paragraphs]
+	print("GGGGGGGGGGGGGGGGGGGGGGGGGGG")
+	print(texts)
 	for topic in model:
 		vec = topic['vectorizer']#storing the TfidfVectorizer function of the model with its corresponding parameters
 		X = vec.transform(texts)#transforming the documents(text) to a document-term matrix. It returns X which is a sparse matrix, [n_samples, n_features]
@@ -85,7 +91,6 @@ def create_summary(dataset_location, model_name):
 		score_doc(model, doc)
 	#storing paragraphs and scores in descending order
 	output = consolidate_data(dataset, model)
-	print("XXXXXXXXXXXXXXXXXX: ", str(output))
 	pickle.dump(output, open("prelim_output_informal_economy_new.bin", "wb")) #serializing output
 
 	get_lat_lng = False

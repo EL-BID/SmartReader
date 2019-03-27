@@ -68,6 +68,7 @@ def consolidate_data(dataset, model):
 	#dataset is of type list
 	for doc in dataset:
 		for para in doc.paragraphs:
+			print("XXXXXXXXXXXXXXXXXXXXXX")
 			print("paragraph type: ",type(para))
 			print("paragraph text: ", para)
 			para_g = para
@@ -76,14 +77,14 @@ def consolidate_data(dataset, model):
 	output = []
 	for topic in output_prelim:
 		d = {"topic":topic, "paragraphs": sorted( output_prelim[topic]  , key=lambda x:-x[ "score" ]) }
+		print("WWWWWWWWWWWWWWWWWWWWWWWW")
+		print(str(d))
 		output.append(d)
 	return output
 
 def create_summary(dataset_location, model_name):
 	model_name = "models/" + model_name
 	dataset = dataset_reader.read_dataset_text(dataset_location)
-	print("Type of data: ",type(dataset))
-	print("Content: ", str(dataset))
 	model = create_model.load_model(model_name)
 	for doc in dataset:
 		print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxx', doc)

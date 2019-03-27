@@ -33,10 +33,11 @@ def score_doc(model, doc):
 	returns the number of paragraphs in a document
 	'''
 	texts = [par.text for par in doc.paragraphs]
+
 	# start new code
-	with open('your_file.txt', 'w') as f:
-		for item in texts:
-			f.write("%s\n" % item)
+	# with open('sentences.txt', 'w') as f:
+	# 	for item in texts:
+	# 		f.write("%s\n" % item)
     # end new code
 
 	for topic in model:
@@ -72,8 +73,7 @@ def score_doc(model, doc):
 					hits.append( {"keyword":feat, "count": sc } )
 					score = score + sc
 
-					print("score: ", score)
-			doc.paragraphs[i].classification[ topic["topic"] ] = score
+			doc.paragraphs[i].classification[topic["topic"]] = score
 			doc.paragraphs[i].topic_keywords[topic["topic"]] = hits
 
 			entities = get_entities(nlp, u'%s' % texts[i])
@@ -93,6 +93,7 @@ def score_doc(model, doc):
 			doc.paragraphs[i].classification[topic_name] /= sm
 
 para_g = None
+
 def consolidate_data(dataset, model):
 	output_prelim = defaultdict(lambda:[])
 	global para_g
@@ -101,7 +102,7 @@ def consolidate_data(dataset, model):
 		for para in doc.paragraphs:
 			para_g = para
 			best_topic = max( para.classification, key=para.classification.get )
-			output_prelim[best_topic].append( { "para":para, "score":para.classification[best_topic] } )
+			output_prelim[best_topic].append({"para": para, "score": para.classification[best_topic]})
 	output = []
 	for topic in output_prelim:
 		d = {"topic":topic, "paragraphs": sorted( output_prelim[topic]  , key=lambda x:-x[ "score" ]) }
@@ -116,6 +117,8 @@ def create_summary(dataset_location, model_name):
 		score_doc(model, doc)
 	#storing paragraphs and scores in descending order
 	output = consolidate_data(dataset, model)
+
+	print("HHHHHHHHHHHHHHHHHH", type(output))
 	pickle.dump(output, open("prelim_output_informal_economy_new.bin", "wb")) #serializing output
 
 	get_lat_lng = False

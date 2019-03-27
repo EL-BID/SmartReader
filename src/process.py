@@ -118,11 +118,13 @@ def create_summary(dataset_location, model_name):
 	#storing paragraphs and scores in descending order
 	output = consolidate_data(dataset, model)
 	# start new code
-	with open('output.txt', 'w') as f:
-		for item in output:
-			f.write("%s\n" % item)
+	# with open('output.txt', 'w') as f:
+	# 	for item in output:
+	# 		f.write("%s\n" % item)
     # end new code
-	pickle.dump(output, open("prelim_output_informal_economy_new.bin", "wb")) #serializing output
+
+    #serializing output
+	pickle.dump(output, open("prelim_output_informal_economy_new.bin", "wb"))
 
 	get_lat_lng = False
 	location_history = {}
@@ -131,17 +133,27 @@ def create_summary(dataset_location, model_name):
 		topic_name = topic["topic"]
 		d = {"topic":topic_name}
 
-		all_keywords = defaultdict(lambda:0) #creating dictionary
-		all_locations = defaultdict(lambda:0) #creating dictionary
-		all_entities = defaultdict(lambda:0) #creating dictionary
-		all_entities_type = defaultdict(lambda:0) #creating dictionary
+		#creating dictionary
+		all_keywords = defaultdict(lambda:0)
+		#creating dictionary
+		all_locations = defaultdict(lambda:0)
+		#creating dictionary
+		all_entities = defaultdict(lambda:0)
+		#creating dictionary
+		all_entities_type = defaultdict(lambda:0)
 		summary_points = []
 		paragraphs = topic["paragraphs"]
-		for p in paragraphs[0:50]:#iterating through the 50 most relevant paragraphs
+		#iterating through the 50 most relevant paragraphs
+		for p in paragraphs[0:50]:
 			try:
-				full_text = p["para"].text#storing the paragraph
-				sentences = sent_tokenize(full_text)#storing the tokenized paragraph
-				summary = get_summary(full_text, 1, len(sentences))[0] #storing the most revelant sentence in paragraph
+				#storing the paragraph
+				full_text = p["para"].text
+				#storing the tokenized paragraph
+				sentences = sent_tokenize(full_text)
+				print("XXXXXXXXXXXXXXXXXXXXXXxx", type(sentences))
+
+				#storing the most revelant sentence in paragraph
+				summary = get_summary(full_text, 1, len(sentences))[0]
 				original_sentence = summary
 				summary_index = sentences.index(summary)
 				summary = spell_check.check_spelling(summary)
@@ -183,7 +195,7 @@ def create_summary(dataset_location, model_name):
 							l["lng"] = latlng.longitude
 					except:
 						pass
-		d["entities"] = [ {"keyword":k, "count":all_entities[k] , "type":all_entities_type[k]} for k in all_entities if len(k) > 1]
+		d["entities"] = [{"keyword":k, "count":all_entities[k] , "type":all_entities_type[k]} for k in all_entities if len(k) > 1]
 		d["folder"] = dataset_location
 		d["folder_name"] = dataset_location.split("/")[-1]
 		print (d["folder_name"])

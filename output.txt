@@ -1,1 +1,0 @@
-The use of big data is afforded by one of the chief comparative advantages of computers relative to human labor: scalability.

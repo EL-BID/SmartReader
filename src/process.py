@@ -143,15 +143,23 @@ def create_summary(dataset_location, model_name):
 		all_entities_type = defaultdict(lambda:0)
 		summary_points = []
 		paragraphs = topic["paragraphs"]
+
+		# start new code
+		with open('paragraphs.txt', 'w') as f:
+			for item in paragraphs:
+				f.write("%s\n Daniela" % item)
+		# end new code
+
 		#iterating through the 50 most relevant paragraphs
 		for p in paragraphs[0:50]:
 			try:
 				#storing the paragraph
 				full_text = p["para"].text
+
 				#storing the tokenized paragraph
 				sentences = sent_tokenize(full_text)
 				# start new code
-				with open('output.txt', 'w') as f:
+				with open('sentences.txt', 'w') as f:
 					for item in sentences:
 						f.write("%s\n" % item)
 			    # end new code

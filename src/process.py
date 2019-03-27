@@ -65,8 +65,11 @@ para_g = None
 def consolidate_data(dataset, model):
 	output_prelim = defaultdict(lambda:[])
 	global para_g
+	print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+	print(str(dataset))
+	print(dataset.size)
+
 	for doc in dataset:
-		print("MMMMMMMMMMMMMMMMMMMMMMMMMMMM", doc)
 		for para in doc.paragraphs:
 			para_g = para
 			best_topic = max( para.classification, key=para.classification.get )

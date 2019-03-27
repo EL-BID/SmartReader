@@ -65,12 +65,11 @@ para_g = None
 def consolidate_data(dataset, model):
 	output_prelim = defaultdict(lambda:[])
 	global para_g
-	print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-	print("Type of dataset: ",type(dataset))
+	#dataset is of type list
 	for doc in dataset:
-		print("doc: ", doc)
-		print("type of doc: ", type(doc))
 		for para in doc.paragraphs:
+			print("paragraph type: ",type(para))
+			print("paragraph text: ", para)
 			para_g = para
 			best_topic = max( para.classification, key=para.classification.get )
 			output_prelim[best_topic].append( { "para":para, "score":para.classification[best_topic] } )

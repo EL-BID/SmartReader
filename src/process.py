@@ -35,6 +35,7 @@ def score_doc(model, doc):
 	texts = [par.text for par in doc.paragraphs]
 	
 	# starts new code
+	print("Length of list: ", len(texts))
 	my_str = ''.join(texts)
 	with open("my_list.txt", "w", encoding="utf-8") as f:
 		f.write(my_str)

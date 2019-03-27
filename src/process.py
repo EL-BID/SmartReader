@@ -66,6 +66,7 @@ def consolidate_data(dataset, model):
 	output_prelim = defaultdict(lambda:[])
 	global para_g
 	for doc in dataset:
+		print("MMMMMMMMMMMMMMMMMMMMMMMMMMMM", doc)
 		for para in doc.paragraphs:
 			para_g = para
 			best_topic = max( para.classification, key=para.classification.get )
@@ -84,7 +85,8 @@ def create_summary(dataset_location, model_name):
 		print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxx', doc)
 		score_doc(model, doc)
 
-	output = consolidate_data(dataset, model) #storing paragraphs and scores in descending order
+	#storing paragraphs and scores in descending order
+	output = consolidate_data(dataset, model)
 	pickle.dump(output, open("prelim_output_informal_economy_new.bin", "wb")) #serializing output
 
 	get_lat_lng = False

@@ -33,8 +33,13 @@ def score_doc(model, doc):
 	returns the number of paragraphs in a document
 	'''
 	texts = [par.text for par in doc.paragraphs]
-	print("GGGGGGGGGGGGGGGGGGGGGGGGGGG")
-	print(texts)
+	
+	# starts new code
+	my_str = ''.join(list)
+	with open("my_list.txt", "w", encoding="utf-8") as f:
+		f.write(my_str)
+		f.close()
+	# ends new code
 	for topic in model:
 		vec = topic['vectorizer']#storing the TfidfVectorizer function of the model with its corresponding parameters
 		X = vec.transform(texts)#transforming the documents(text) to a document-term matrix. It returns X which is a sparse matrix, [n_samples, n_features]

@@ -150,7 +150,11 @@ def create_summary(dataset_location, model_name):
 				full_text = p["para"].text
 				#storing the tokenized paragraph
 				sentences = sent_tokenize(full_text)
-				print("XXXXXXXXXXXXXXXXXXXXXXxx", type(sentences))
+				# start new code
+				with open('output.txt', 'w') as f:
+					for item in sentences:
+						f.write("%s\n" % item)
+			    # end new code
 
 				#storing the most revelant sentence in paragraph
 				summary = get_summary(full_text, 1, len(sentences))[0]

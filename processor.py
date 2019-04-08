@@ -9,7 +9,10 @@ cursor = collection.find()
 for document in cursor:
     print ("this is the status", document["status"])
 def getJob():
-    result = collection.find( { 'status': "Queued" } ).limit(1)#retrieving what is in the database with the status 'Queued'. e.g.: topics, subtopics, model_name, ect. result is a dictionary
+    # retrieving what is in the database with the status 
+    # 'Queued'. e.g.: topics, subtopics, model_name, ect. 
+    # result is a dictionary
+    result = collection.find( { 'status': "Queued" } ).limit(1)
     return result
 
 def updateJobStatus(jobid, status):

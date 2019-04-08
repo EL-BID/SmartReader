@@ -1,1 +1,6 @@
-Food processing, wood working, garment workers
+ In their view, stagnant median wages and the falling labour share of income can be explained by rapid capital for labour substitution, induced by cheaper and better digital technologies.
+An empirical puzzle is therefore that productivity growth recently has faltered.
+Regardless of whether new technologies are complementing the skills of workers or substituting for them, a surge in productivity should follow.
+While various explanations for this productivity puzzle have been proposed, there is little consensus in the literature.
+According to Gordon (2012), sluggish productivity growth is the result of less rapid technological progress, implying that the anecdotal evidence exaggerate the employment effects of digital technology.
+Brynjolfsson and McAfee (2014), on the other hand, suggest that the productivity statistics inadequately capture the rise of the sharing economy and the plethora of cheap or free digital services such as Google, Skype, and Wikipedia.

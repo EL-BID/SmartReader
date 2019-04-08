@@ -39,7 +39,14 @@ def generate_search_query(topic_names, keywords):
         #concatenating the keywords with 'or'
         query = query + keywords[i].lower() + " or "
     query = query + keywords[len(keywords)-1].lower() + ") and ("
-    print(query)
+    # print(query)
+    try:
+        with open('./models/' + "query_"+datetime.now().strftime('%Y-%m-%d_%H_%M_%S')+".txt", "w", encoding="utf-8") as f:
+            f.write(query)
+            f.close()
+    except:
+        print("An exception occured")
+
 
     for i in range(len(topic_names)-1):
         query = query + topic_names[i].lower() + " or "

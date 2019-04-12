@@ -1,5 +1,6 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 import pickle
+import logging
 from src.LemmaTokenizer import *
 
 def get_topic_keywords(features, X):
@@ -22,6 +23,7 @@ def create_and_save_model(subtopics, output_file):
 	for topic in subtopic_names:
 		text = subtopics[topic]
 		print("XXXXXXXXXXXXXXXXXXXXXX", text)
+		logging.debug(text)
 		if len(text.strip()) >0 :
 			all_texts.append(text)
 		else:

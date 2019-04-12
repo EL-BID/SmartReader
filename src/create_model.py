@@ -21,6 +21,7 @@ def create_and_save_model(subtopics, output_file):
 	no_data_subtopic_names = []
 	for topic in subtopic_names:
 		text = subtopics[topic]
+		print("XXXXXXXXXXXXXXXXXXXXXX", text)
 		if len(text.strip()) >0 :
 			all_texts.append(text)
 		else:

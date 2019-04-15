@@ -23,7 +23,7 @@ def create_and_save_model(subtopics, output_file):
 	for topic in subtopic_names:
 		text = subtopics[topic]
 		'''Starts new code'''
-		logging.basicConfig(filename='log_SM.txt', filemode='w', level=logging.DEBUG)
+		logging.basicConfig(filename='./log/text_topic.txt', filemode='w', level=logging.DEBUG)
 		logging.debug("Text:")
 		logging.debug(text)
 

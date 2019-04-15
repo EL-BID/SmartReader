@@ -23,12 +23,8 @@ def create_and_save_model(subtopics, output_file):
 	for topic in subtopic_names:
 		text = subtopics[topic]
 		'''Starts my code'''
-		for handler in logging.root.handlers[:]:
-			logging.root.removeHandler(handler)
-
-		logging.basicConfig(filename='example.log', filemode='w', level=logging.DEBUG)
-		print("XXXXXXXXXXXXXXXXXXXXXX", text)
-		logging.debug(text)
+		logging.basicConfig(filename='test.log', filemode='w', level=logging.DEBUG)
+		logging.debug('This message should go to the log file')
 		'''Ends my code'''
 
 		if len(text.strip()) >0 :

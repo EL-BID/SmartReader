@@ -23,8 +23,10 @@ def create_and_save_model(subtopics, output_file):
 	for topic in subtopic_names:
 		text = subtopics[topic]
 		'''Starts my code'''
-		logging.basicConfig(filename='test.log', filemode='w', level=logging.DEBUG)
+		logging.basicConfig(filename='log_SM.log', filemode='w', level=logging.DEBUG)
 		logging.debug('This message should go to the log file')
+		logging.debug(text)
+		
 		'''Ends my code'''
 
 		if len(text.strip()) >0 :

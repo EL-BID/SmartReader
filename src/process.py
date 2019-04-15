@@ -145,9 +145,9 @@ def create_summary(dataset_location, model_name):
 		paragraphs = topic["paragraphs"]
 
 		# start new code
-		with open('paragraphs.txt', 'w') as f:
-			for item in paragraphs:
-				f.write("%s\n Daniela" % item)
+		# with open('paragraphs.txt', 'w') as f:
+		# 	for item in paragraphs:
+		# 		f.write("%s\n Daniela" % item)
 		# end new code
 
 		#iterating through the 50 most relevant paragraphs
@@ -159,9 +159,9 @@ def create_summary(dataset_location, model_name):
 				#storing the tokenized paragraph
 				sentences = sent_tokenize(full_text)
 				# start new code
-				with open('sentences.txt', 'w') as f:
-					for item in sentences:
-						f.write("%s\n" % item)
+				# with open('sentences.txt', 'w') as f:
+				# 	for item in sentences:
+				# 		f.write("%s\n" % item)
 			    # end new code
 
 				#storing the most revelant sentence in paragraph

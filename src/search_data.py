@@ -41,9 +41,9 @@ def generate_search_query(topic_names, keywords):
         query = query + keywords[i].lower() + " or "
     query = query + keywords[len(keywords)-1].lower() + ") and ("
     '''Starts new code'''
-    logging.basicConfig(filename='./log/query.txt', filemode='w', level=logging.DEBUG)
-    logging.debug("Query:")
-    logging.debug(query)
+    # logging.basicConfig(filename='./log/query.txt', filemode='w', level=logging.DEBUG)
+    # logging.debug("Query:")
+    # logging.debug(query)
     '''Ends new code'''
 
     for i in range(len(topic_names)-1):

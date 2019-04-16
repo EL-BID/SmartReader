@@ -1,6 +1,6 @@
+import logging
 from sklearn.feature_extraction.text import TfidfVectorizer
 import pickle
-import logging
 from src.LemmaTokenizer import *
 
 def get_topic_keywords(features, X):
@@ -22,12 +22,17 @@ def create_and_save_model(subtopics, output_file):
 	no_data_subtopic_names = []
 	for topic in subtopic_names:
 		text = subtopics[topic]
-		logging.basicConfig(level=logging.INFO,\
-							filename='./log/text.txt',\
-							filemode='w', level=logging.DEBUG)
-		logger = logging.get_logger()
-		logging.debug("Text:")
-		logging.debug(text)
+		'''Starts new code'''
+		with open('.log/text.txt', 'w') as f:
+			for item in paragraphs:
+				f.write(text)
+
+		# set logging
+		logging.basicConfig(filename='.log/log.txt',level=logging.INFO, format='%(asctime)s >> %(levelname)s >> %(message)s')
+		logging.DEBUG(text)
+		logging.shutdown()
+		'''Ends new code'''
+		
 
 		if len(text.strip()) >0 :
 			all_texts.append(text)

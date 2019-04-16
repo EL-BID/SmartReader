@@ -22,13 +22,9 @@ def create_and_save_model(subtopics, output_file):
 	no_data_subtopic_names = []
 	for topic in subtopic_names:
 		text = subtopics[topic]
-		'''Starts new code'''
 		logging.basicConfig(filename='./log/text.txt', filemode='w', level=logging.DEBUG)
+		logging.debug("Text:")
 		logging.debug(text)
-
-		# logging.debug("Topic:")
-		# logging.debug(topic)
-		'''Ends new code'''
 
 		if len(text.strip()) >0 :
 			all_texts.append(text)

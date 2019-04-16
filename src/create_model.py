@@ -29,11 +29,9 @@ def create_and_save_model(subtopics, output_file):
 		# 		f.write(text)
 
 		# set logging
-		# logging.basicConfig(filename='log/log.txt',level=logging.INFO, \
-		# 	format='%(asctime)s >> %(levelname)s >> %(message)s', \
-		# 	filemode='a')
-		# logging.DEBUG(text)
-		# logging.shutdown()
+		logging.basicConfig(filename='log/log.txt', format='%(asctime)s >> %(levelname)s >> %(message)s', filemode='a')
+		logging.debug(text)
+		logging.shutdown()
 		'''Ends new code'''
 		
 

@@ -23,9 +23,9 @@ def create_and_save_model(subtopics, output_file):
 	for topic in subtopic_names:
 		text = subtopics[topic]
 		'''Starts new code'''
-		with open('.log/text.txt', 'w') as f:
-			for item in paragraphs:
-				f.write(text)
+		# with open('.log/text.txt', 'w') as f:
+		# 	for item in paragraphs:
+		# 		f.write(text)
 
 		# set logging
 		logging.basicConfig(filename='.log/log.txt',level=logging.INFO, format='%(asctime)s >> %(levelname)s >> %(message)s')

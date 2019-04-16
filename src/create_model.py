@@ -22,23 +22,18 @@ def create_and_save_model(subtopics, output_file):
 	no_data_subtopic_names = []
 	for topic in subtopic_names:
 		text = subtopics[topic]
-		print(type(text))
-		'''Starts new code'''
-		# with open('.log/text.txt', 'w') as f:
-		# 	for item in paragraphs:
-		# 		f.write(text)
-
-		# set logging
-		logging.basicConfig(filename='log/log.txt', format='%(asctime)s >> %(levelname)s >> %(message)s', filemode='a')
-		logging.debug(text)
-		logging.shutdown()
-		'''Ends new code'''
-		
 
 		if len(text.strip()) >0 :
 			all_texts.append(text)
 		else:
 			no_data_subtopic_names.append(topic)
+			
+	# set logging
+	logging.basicConfig(filename='log/log.txt', format='%(asctime)s >> %(levelname)s >> %(message)s', filemode='a')
+	logging.debug(text)
+	logging.shutdown()
+	'''Ends new code'''
+
 	X = vec.fit_transform(all_texts)
 	global gX
 	gX = X

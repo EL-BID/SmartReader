@@ -32,7 +32,7 @@ def create_and_save_model(subtopics, output_file):
 	# set logging
 	logging.basicConfig(filename='log/log.txt', format='%(asctime)s >> %(levelname)s >> %(message)s', filemode='a')
 	logging.debug(all_texts)
-	logging.shutdown()
+	# logging.shutdown()
 	'''Ends new code'''
 
 	X = vec.fit_transform(all_texts)

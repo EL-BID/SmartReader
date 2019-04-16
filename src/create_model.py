@@ -22,7 +22,10 @@ def create_and_save_model(subtopics, output_file):
 	no_data_subtopic_names = []
 	for topic in subtopic_names:
 		text = subtopics[topic]
-		logging.basicConfig(filename='./log/text.txt', filemode='w', level=logging.DEBUG)
+		logging.basicConfig(level=logging.INFO,\
+							filename='./log/text.txt',\
+							filemode='w', level=logging.DEBUG)
+		logger = logging.get_logger()
 		logging.debug("Text:")
 		logging.debug(text)
 

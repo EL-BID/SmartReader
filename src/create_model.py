@@ -1,4 +1,4 @@
-import logging
+# import logging
 from sklearn.feature_extraction.text import TfidfVectorizer
 import pickle
 from src.LemmaTokenizer import *
@@ -31,10 +31,10 @@ def create_and_save_model(subtopics, output_file):
 
 	# set logging
 	# logging.basicConfig(format='%(asctime)s >> %(levelname)s >> %(message)s')
-	#logging.debug(all_texts)
+	# logging.debug(all_texts)
 	# logging.shutdown()
-	with open('log/log.txt','w') as f:
-		print('text: ', text, file=f)
+	with open('log/log.txt','a') as f:
+		print('text: ', text, file=f)
 		print('all_texts: ', ", ".join(all_texts)) 
 	'''Ends new code'''
 

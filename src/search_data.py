@@ -2,7 +2,7 @@ from _google_ import search
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import re
-import logging
+# import logging
 
 
 def get_text_from_url(response):

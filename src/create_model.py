@@ -16,20 +16,16 @@ def get_topic_keywords(features, X):
 
 
 def create_and_save_model(subtopics, output_file):
-	print('XXXXXXXXXXXXXXXXXXX')
-	print(type(subtopics))
+	'''
+	Starts New Code
+	'''
 	if not os.path.isdir('./log'):
 		os.mkdir('./log')
-
-	with open('./log/test.json','w',encoding='utf-8') as f:
+	with open('./log/subtopics_with_text_from_google.json','w',encoding='utf-8') as f:
 		json.dump(subtopics,f,ensure_ascii=False)
-	# for i in subtopics:
-		# print(i)
-		# for j in subtopics[i]:
-		# 	print(j,":", subtopics[i][j])
-	# print(str(subtopics))
-	# print(type(output_file))
-	# print(output_file)
+	'''
+	Ends New Code
+	'''
 
 	data = []
 	output = ()
@@ -38,26 +34,20 @@ def create_and_save_model(subtopics, output_file):
 	subtopic_names = list(subtopics.keys())
 	no_data_subtopic_names = []
 	
-	# f = open('log/create_model_log.txt','w')
 	for topic in subtopic_names:
-		text = subtopics[topic]
+		text = subtopics[topic]	
 
 		if len(text.strip()) >0 :
 			all_texts.append(text)
 		else:
 			no_data_subtopic_names.append(topic)
-		# f.write('text: ' + text + '\n')
-		# print(type(subtopic_names))
-		# f.write('type of no_data_subtopic_names: ' + type(subtopic_names) + '\n')
-	# f.write('subtopic_names: ' + str(subtopic_names) + '\n')
-	# f.close()
-	
-
 
 	X = vec.fit_transform(all_texts)
 	global gX
 	gX = X
 	features = vec.get_feature_names()
+	print('XXXXXXXXXXXXXXXXXXXXXXXXX')
+	print(type(features))
 	for i in range(len(subtopic_names)):
 		if subtopic_names[i] not in no_data_subtopic_names:
 			Xi = X[i, :]

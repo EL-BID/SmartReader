@@ -42,12 +42,13 @@ def create_and_save_model(subtopics, output_file):
 		else:
 			no_data_subtopic_names.append(topic)
 
+	# X is a sparse term-document matrix of the learned vocabulary and idf
 	X = vec.fit_transform(all_texts)
 	global gX
 	gX = X
 	print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-	print(type(X))
-	
+	print(X.todense())
+
 	# list of unigrams, bigrams and trigrams of all text
 	features = vec.get_feature_names()
 

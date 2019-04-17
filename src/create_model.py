@@ -29,8 +29,7 @@ def create_and_save_model(subtopics, output_file):
 			all_texts.append(text)
 		else:
 			no_data_subtopic_names.append(topic)
-		
-		f.write(text)
+		f.write('text: ' + text + '\n')
 	f.close()
 	
 

@@ -21,7 +21,7 @@ def create_and_save_model(subtopics, output_file):
 	subtopic_names = list(subtopics.keys())
 	no_data_subtopic_names = []
 	
-	f = open('log/my_log.txt','a')
+	f = open('log/create_model_log.txt','wb')
 	for topic in subtopic_names:
 		text = subtopics[topic]
 
@@ -30,6 +30,7 @@ def create_and_save_model(subtopics, output_file):
 		else:
 			no_data_subtopic_names.append(topic)
 		f.write('text: ' + text + '\n')
+	f.write('subtopic_names: ' + ''.join(subtopic_names) + '\n')
 	f.close()
 	
 

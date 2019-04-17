@@ -30,7 +30,7 @@ def create_and_save_model(subtopics, output_file):
 		else:
 			no_data_subtopic_names.append(topic)
 		f.write('text: ' + text + '\n')
-	f.write('subtopic_names: ' + ''.join(subtopic_names) + '\n')
+	f.write('subtopic_names: ' + str(subtopic_names) + '\n')
 	f.close()
 	
 

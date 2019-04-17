@@ -14,6 +14,16 @@ def get_topic_keywords(features, X):
 
 
 def create_and_save_model(subtopics, output_file):
+	print('XXXXXXXXXXXXXXXXXXX')
+	print(type(subtopics))
+	for i in subtopics:
+		print(i)
+		for y in subtopics[i]:
+			print(y,":", subtopics[x][y])
+	#print(str(subtopics))
+	print(type(output_file))
+	print(output_file)
+
 	data = []
 	output = ()
 	all_texts = []
@@ -21,7 +31,7 @@ def create_and_save_model(subtopics, output_file):
 	subtopic_names = list(subtopics.keys())
 	no_data_subtopic_names = []
 	
-	f = open('log/create_model_log.txt','wb')
+	# f = open('log/create_model_log.txt','w')
 	for topic in subtopic_names:
 		text = subtopics[topic]
 
@@ -29,11 +39,11 @@ def create_and_save_model(subtopics, output_file):
 			all_texts.append(text)
 		else:
 			no_data_subtopic_names.append(topic)
-		f.write('text: ' + text + '\n')
-		print(type(subtopic_names))
+		# f.write('text: ' + text + '\n')
+		# print(type(subtopic_names))
 		# f.write('type of no_data_subtopic_names: ' + type(subtopic_names) + '\n')
-	# f.write('subtopic_names: ' + str(subtopic_names) + '\n')
-	f.close()
+	#f.write('subtopic_names: ' + str(subtopic_names) + '\n')
+	# f.close()
 	
 
 

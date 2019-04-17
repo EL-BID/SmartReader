@@ -1,4 +1,6 @@
 # import logging
+import json
+import os
 from sklearn.feature_extraction.text import TfidfVectorizer
 import pickle
 from src.LemmaTokenizer import *
@@ -16,8 +18,13 @@ def get_topic_keywords(features, X):
 def create_and_save_model(subtopics, output_file):
 	print('XXXXXXXXXXXXXXXXXXX')
 	print(type(subtopics))
-	for i in subtopics:
-		print(type(i))
+	if not os.path.isdir('./log'):
+		os.mkdir('./log')
+
+	with open('./log/test.json','w',encoding='utf-8') as f:
+		json.dump(subtopics,f,ensure_ascii=False)
+	# for i in subtopics:
+		# print(i)
 		# for j in subtopics[i]:
 		# 	print(j,":", subtopics[i][j])
 	# print(str(subtopics))

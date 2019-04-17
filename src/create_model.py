@@ -20,10 +20,10 @@ def create_and_save_model(subtopics, output_file):
 	vec = TfidfVectorizer(ngram_range=(1,3), stop_words="english")
 	subtopic_names = list(subtopics.keys())
 	no_data_subtopic_names = []
+	
+	f = open('log/log.txt','wb')
 	for topic in subtopic_names:
 		text = subtopics[topic]
-		with open('log/log.txt','a') as f:
-			print('text: ', text, file=f)
 
 		if len(text.strip()) >0 :
 			all_texts.append(text)
@@ -31,8 +31,9 @@ def create_and_save_model(subtopics, output_file):
 				print('all_texts: ', ", ".join(all_texts),file=f)
 		else:
 			no_data_subtopic_names.append(topic)
-
-
+		
+		f.write(text)
+	f.close()
 	
 
 

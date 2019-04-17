@@ -46,8 +46,17 @@ def create_and_save_model(subtopics, output_file):
 	X = vec.fit_transform(all_texts)
 	global gX
 	gX = X
+
+	'''
+	Start New Code
+	'''
+	a = X.todense()
 	print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-	print(X.todense())
+	print(type(a))
+	'''
+	End New Code
+	'''
+
 
 	# list of unigrams, bigrams and trigrams of all text
 	features = vec.get_feature_names()

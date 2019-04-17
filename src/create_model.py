@@ -35,7 +35,7 @@ def create_and_save_model(subtopics, output_file):
 	# logging.shutdown()
 	with open('log/log.txt','a') as f:
 		print('text: ', text, file=f)
-		print('all_texts: ', ", ".join(all_texts)) 
+		print('all_texts: ', ", ".join(all_texts),file=f) 
 	'''Ends new code'''
 
 	X = vec.fit_transform(all_texts)

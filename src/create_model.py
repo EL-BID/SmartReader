@@ -18,11 +18,11 @@ def create_and_save_model(subtopics, output_file):
 	print(type(subtopics))
 	for i in subtopics:
 		print(i)
-		for y in subtopics[i]:
-			print(y,":", subtopics[x][y])
-	#print(str(subtopics))
-	print(type(output_file))
-	print(output_file)
+		for j in subtopics[i]:
+			print(j,":", subtopics[i][j])
+	# print(str(subtopics))
+	# print(type(output_file))
+	# print(output_file)
 
 	data = []
 	output = ()
@@ -42,7 +42,7 @@ def create_and_save_model(subtopics, output_file):
 		# f.write('text: ' + text + '\n')
 		# print(type(subtopic_names))
 		# f.write('type of no_data_subtopic_names: ' + type(subtopic_names) + '\n')
-	#f.write('subtopic_names: ' + str(subtopic_names) + '\n')
+	# f.write('subtopic_names: ' + str(subtopic_names) + '\n')
 	# f.close()
 	
 

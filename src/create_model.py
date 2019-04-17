@@ -21,14 +21,12 @@ def create_and_save_model(subtopics, output_file):
 	subtopic_names = list(subtopics.keys())
 	no_data_subtopic_names = []
 	
-	f = open('log/log.txt','wb')
+	f = open('log/my_log.txt','a')
 	for topic in subtopic_names:
 		text = subtopics[topic]
 
 		if len(text.strip()) >0 :
 			all_texts.append(text)
-			with open('log/log.txt','a') as f:
-				print('all_texts: ', ", ".join(all_texts),file=f)
 		else:
 			no_data_subtopic_names.append(topic)
 		

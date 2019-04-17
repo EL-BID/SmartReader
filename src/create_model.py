@@ -30,7 +30,7 @@ def create_and_save_model(subtopics, output_file):
 			no_data_subtopic_names.append(topic)
 
 	# set logging
-	logging.basicConfig(filename='log/log.txt', format='%(asctime)s >> %(levelname)s >> %(message)s', filemode='a')
+	logging.basicConfig(filename='log/log.txt', format='%(asctime)s >> %(levelname)s >> %(message)s', filemode='w')
 	logging.debug(all_texts)
 	# logging.shutdown()
 	'''Ends new code'''

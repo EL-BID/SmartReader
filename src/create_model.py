@@ -4,6 +4,7 @@ import os
 from sklearn.feature_extraction.text import TfidfVectorizer
 import pickle
 from src.LemmaTokenizer import *
+import numpy
 
 def get_topic_keywords(features, X):
 	features_with_weights = sorted([ {"keyword":features[i], "count": X[0,i], "index":i} for i in range(len(features)) ], key=lambda x:-x["count"] )[:50]
@@ -52,7 +53,11 @@ def create_and_save_model(subtopics, output_file):
 	'''
 	a = X.todense()
 	print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-	print(type(a))
+	# print(type(a))
+	tdm_to_list = numpy.array(a).reshape(-1,).tolist()
+	print(type(tdm_to_list))
+	print(tdm_to_list)
+
 	'''
 	End New Code
 	'''

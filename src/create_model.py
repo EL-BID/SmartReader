@@ -56,7 +56,11 @@ def create_and_save_model(subtopics, output_file):
 	# print(type(a))
 	tdm_to_list = numpy.array(a).reshape(-1,).tolist()
 	print(type(tdm_to_list))
-	print(tdm_to_list)
+	# print(tdm_to_list)
+
+	with open('./log/list_tdm.txt','w',encoding='utf-8') as f:
+		f.write(str(tdm_to_list))
+
 
 	'''
 	End New Code

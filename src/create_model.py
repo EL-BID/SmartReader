@@ -69,6 +69,8 @@ def create_and_save_model(subtopics, output_file):
 	'''
 	Start New Code
 	'''
+	python("YYYYYYYYYYYYYYYYYYYYYYYYY")
+	python(len(features))
 	if not os.path.isdir('./log'):
 		os.mkdir('./log')
 	with open('./log/features.txt','w',encoding='utf-8') as f:

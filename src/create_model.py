@@ -76,14 +76,15 @@ def create_and_save_model(subtopics, output_file):
 				"keywords":features_with_weights, \
 				"vectorizer":vec, \
 				"feature_indices":feature_indices})
+			
 			# model_to_print is of type list
 			model_to_print.append({"subtopic":subtopic_names[i], \
 				"keywords":features_with_weights, \
 				"feature_indices":feature_indices})
 			#print('XXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 			#print(type(model_to_print))
-			for i in model_to_print:
-				print(i)
+			#for i in model_to_print:
+				#print(str(i))
 			#print(model_to_print[0])
 			#print(model_to_print)
 			# try:

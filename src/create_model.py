@@ -32,8 +32,8 @@ def create_and_save_model(subtopics, output_file):
 	output = ()
 	all_texts = []
 	vec = TfidfVectorizer(ngram_range=(1,3), stop_words="english")
-	print("XXXXXXXXXXXXXXXXXXXXXXXXXXX")
-	print(type(vec))
+	#print("XXXXXXXXXXXXXXXXXXXXXXXXXXX")
+	#print(type(vec))
 	subtopic_names = list(subtopics.keys())
 	no_data_subtopic_names = []
 	
@@ -53,13 +53,18 @@ def create_and_save_model(subtopics, output_file):
 	'''
 	Start New Code
 	'''
-	a = X.todense()
-	tdm_to_list = numpy.array(a).reshape(-1,).tolist()
-	print('XXXXXXXXXXXXXXXXXXXXXX')
-	print(len(tdm_to_list))
+	#a = X.todense()
+	#tdm_to_list = numpy.array(a).reshape(-1,).tolist()
+	#print('XXXXXXXXXXXXXXXXXXXXXX')
+	#print(len(tdm_to_list))
+	idf = vec.idf_
+	#print(dict(zip(vec.get_feature_names(),idf)))
 
-	with open('./log/list_tdm.txt','w',encoding='utf-8') as f:
-		f.write(str(tdm_to_list))
+	with open('./log/idf.json','w',encoding='utf-8') as f:
+		json.dump(dict(zip(vec.get_feature_names(),idf)),f,ensure_ascii=False)	
+
+	#with open('./log/list_tdm.txt','w',encoding='utf-8') as f:
+		#f.write(str(tdm_to_list))
 	'''
 	End New Code
 	'''
@@ -71,8 +76,8 @@ def create_and_save_model(subtopics, output_file):
 	'''
 	Start New Code
 	'''
-	print("YYYYYYYYYYYYYYYYYYYYYYYYY")
-	print(len(features))
+	#print("YYYYYYYYYYYYYYYYYYYYYYYYY")
+	#print(len(features))
 	if not os.path.isdir('./log'):
 		os.mkdir('./log')
 	with open('./log/features.txt','w',encoding='utf-8') as f:

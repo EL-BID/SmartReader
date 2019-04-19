@@ -32,6 +32,8 @@ def create_and_save_model(subtopics, output_file):
 	output = ()
 	all_texts = []
 	vec = TfidfVectorizer(ngram_range=(1,3), stop_words="english")
+	print("XXXXXXXXXXXXXXXXXXXXXXXXXXX")
+	print(type(vec))
 	subtopic_names = list(subtopics.keys())
 	no_data_subtopic_names = []
 	

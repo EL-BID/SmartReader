@@ -76,8 +76,11 @@ def create_and_save_model(subtopics, output_file):
 				"keywords":features_with_weights, \
 				"vectorizer":vec, \
 				"feature_indices":feature_indices})
-			print('XXXXXXXXXXXXXXXXXXX')
-			print(data)
+			#print('XXXXXXXXXXXXXXXXXXX')
+			#print(data)
+
+			with open('./log/data.txt','w',encoding='utf-8') as j:
+				j.write(data)
 			
 			# model_to_print is of type list
 			# model_to_print.append({"subtopic":subtopic_names[i], \

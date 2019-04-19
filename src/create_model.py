@@ -71,43 +71,16 @@ def create_and_save_model(subtopics, output_file):
 	for i in range(len(subtopic_names)):
 		if subtopic_names[i] not in no_data_subtopic_names:
 			Xi = X[i, :]
+			print(type(Xi))
 			features_with_weights, feature_indices = get_topic_keywords(features, Xi)
 			data.append({"subtopic":subtopic_names[i], \
 				"keywords":features_with_weights, \
 				"vectorizer":vec, \
 				"feature_indices":feature_indices})
-			#print('XXXXXXXXXXXXXXXXXXX')
-			#print(data)
+
 			with open('./log/data.txt','w',encoding='utf-8') as j:
 				j.write(str(data))
-			
-			# model_to_print is of type list
-			# model_to_print.append({"subtopic":subtopic_names[i], \
-			# 	"keywords":features_with_weights, \
-			# 	"feature_indices":feature_indices})
-			#print('XXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-			#print(type(model_to_print))
-			#for i in model_to_print:
-				#print(str(i))
-			#print(model_to_print[0])
-			#print(model_to_print)
-			# try:
-			# 	print(len(model_to_print))
-			# except OSError as err:
-			# 	print('OS error: {0}'.format(err))
-			# except ValueError:
-			# 	print("Could not print the length of this list")
-			# except:
-			# 	print("Unexpected error:",sys.exc_info()[0])
-			# 	raise
 
-				
-	#print(model_to_print)
-	#print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-	#print(type(model_to_print))
-	#with open('./log/model.json','w',encoding='utf-8') as j:
-		#json.dump(model_to_print,j,ensure_ascii=False)
-			
 			# output["keywords"] = features_with_weights
 			# print(features_with_weights)
 			# print(type(features_with_weights))

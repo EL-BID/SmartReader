@@ -77,8 +77,8 @@ def create_and_save_model(subtopics, output_file):
 				"feature_indices":feature_indices})
 			#print('*******************************')
 			#print(type(data))
-			# print(str(data))
-	print(data.shape)
+			print(len(data))
+	#print(data.shape)
 			# output["keywords"] = features_with_weights
 			# print(features_with_weights)
 			# print(type(features_with_weights))

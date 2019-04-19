@@ -25,6 +25,7 @@ def create_and_save_model(subtopics, output_file):
 	# End New Code
 
 	data = []
+	model_to_print = []
 	output = ()
 	all_texts = []
 	vec = TfidfVectorizer(ngram_range=(1,3), stop_words="english")
@@ -71,18 +72,17 @@ def create_and_save_model(subtopics, output_file):
 		if subtopic_names[i] not in no_data_subtopic_names:
 			Xi = X[i, :]
 			features_with_weights, feature_indices = get_topic_keywords(features, Xi)
-			# data.append({"subtopic":subtopic_names[i], \
-			# 	"keywords":features_with_weights, \
-			# 	"vectorizer":vec, \
-			# 	"feature_indices":feature_indices})
-
 			data.append({"subtopic":subtopic_names[i], \
 				"keywords":features_with_weights, \
+				"vectorizer":vec, \
 				"feature_indices":feature_indices})
-			#print('*******************************')
-			#print(type(data))
-			print(type(data))
-	#print(data.shape)
+
+			model_to_print.append({"subtopic":subtopic_names[i], \
+				"keywords":features_with_weights, \
+				"feature_indices":feature_indices})
+	with open('./log/model.txt','w',encoding='utf-8') as f:
+		f.write(str(model_to_print))
+			
 			# output["keywords"] = features_with_weights
 			# print(features_with_weights)
 			# print(type(features_with_weights))

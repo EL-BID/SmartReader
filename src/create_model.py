@@ -80,7 +80,16 @@ def create_and_save_model(subtopics, output_file):
 			model_to_print.append({"subtopic":subtopic_names[i], \
 				"keywords":features_with_weights, \
 				"feature_indices":feature_indices})
-			print(len(model_to_print))
+			try:
+				print(len(model_to_print))
+			except OSError as err:
+				print('OS error: {0}'.format(err))
+			except ValueError:
+				print("Could not print the length of this list")			except:
+				print("Unexpected error:",sys.exc_info()[0])
+				raise
+
+				
 	#print(model_to_print)
 	#print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 	#print(type(model_to_print))

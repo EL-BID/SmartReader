@@ -50,6 +50,12 @@ def create_and_save_model(subtopics, output_file):
 	gX = X
 
 	# Start New Code
+	a = X.todense()
+	tdm_to_list = numpy.array(a).reshape(-1,).tolist()
+	with open('./log/list_tdm.txt','w',encoding='utf-8') as f:
+		f.write(str(tdm_to_list))
+
+
 	idf = vec.idf_
 	with open('./log/idf.json','w',encoding='utf-8') as f:
 		json.dump(dict(zip(vec.get_feature_names(),idf)),f,ensure_ascii=False)
@@ -71,7 +77,7 @@ def create_and_save_model(subtopics, output_file):
 	for i in range(len(subtopic_names)):
 		if subtopic_names[i] not in no_data_subtopic_names:
 			Xi = X[i, :]
-			print(Xi)
+			# print(Xi)
 			features_with_weights, feature_indices = get_topic_keywords(features, Xi)
 			data.append({"subtopic":subtopic_names[i], \
 				"keywords":features_with_weights, \

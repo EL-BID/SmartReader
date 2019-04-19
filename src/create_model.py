@@ -80,9 +80,12 @@ def create_and_save_model(subtopics, output_file):
 			model_to_print.append({"subtopic":subtopic_names[i], \
 				"keywords":features_with_weights, \
 				"feature_indices":feature_indices})
-			print('XXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-			print(type(model_to_print[0]))
-			print(model_to_print[0])
+			#print('XXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+			#print(type(model_to_print))
+			for i in model_to_print:
+				print(i)
+			#print(model_to_print[0])
+			#print(model_to_print)
 			# try:
 			# 	print(len(model_to_print))
 			# except OSError as err:

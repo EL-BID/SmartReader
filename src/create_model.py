@@ -80,8 +80,12 @@ def create_and_save_model(subtopics, output_file):
 			model_to_print.append({"subtopic":subtopic_names[i], \
 				"keywords":features_with_weights, \
 				"feature_indices":feature_indices})
-	with open('./log/model.txt','w',encoding='utf-8') as f:
-		f.write(str(model_to_print))
+		
+	print(model_to_print)
+	print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+	print(type(model_to_print))
+	with open('./log/model.json','w',encoding='utf-8') as j:
+		json.dump(model_to_print,j,ensure_ascii=False)
 			
 			# output["keywords"] = features_with_weights
 			# print(features_with_weights)

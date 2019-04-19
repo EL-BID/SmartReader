@@ -71,7 +71,7 @@ def create_and_save_model(subtopics, output_file):
 	for i in range(len(subtopic_names)):
 		if subtopic_names[i] not in no_data_subtopic_names:
 			Xi = X[i, :]
-			print(type(Xi))
+			print(Xi)
 			features_with_weights, feature_indices = get_topic_keywords(features, Xi)
 			data.append({"subtopic":subtopic_names[i], \
 				"keywords":features_with_weights, \

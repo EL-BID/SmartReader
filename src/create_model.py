@@ -17,26 +17,24 @@ def get_topic_keywords(features, X):
 
 
 def create_and_save_model(subtopics, output_file):
-	'''
-	Start New Code
-	'''
+	# Start New Code
 	if not os.path.isdir('./log'):
 		os.mkdir('./log')
 	with open('./log/subtopics_with_text_from_google.json','w',encoding='utf-8') as f:
 		json.dump(subtopics,f,ensure_ascii=False)
-	'''
-	End New Code
-	'''
+	# End New Code
 
 	data = []
 	output = ()
 	all_texts = []
 	vec = TfidfVectorizer(ngram_range=(1,3), stop_words="english")
-	#print("XXXXXXXXXXXXXXXXXXXXXXXXXXX")
-	#print(type(vec))
+
+	# list with subtopics e.g: (Automation, Productivity and Skills)
+	# and their corresponding retrieved text from Google
 	subtopic_names = list(subtopics.keys())
 	no_data_subtopic_names = []
 	
+
 	for topic in subtopic_names:
 		text = subtopics[topic]	
 
@@ -50,47 +48,35 @@ def create_and_save_model(subtopics, output_file):
 	global gX
 	gX = X
 
-	'''
-	Start New Code
-	'''
-	#a = X.todense()
-	#tdm_to_list = numpy.array(a).reshape(-1,).tolist()
-	#print('XXXXXXXXXXXXXXXXXXXXXX')
-	#print(len(tdm_to_list))
+	# Start New Code
 	idf = vec.idf_
-	#print(dict(zip(vec.get_feature_names(),idf)))
-
 	with open('./log/idf.json','w',encoding='utf-8') as f:
-		json.dump(dict(zip(vec.get_feature_names(),idf)),f,ensure_ascii=False)	
-
-	#with open('./log/list_tdm.txt','w',encoding='utf-8') as f:
-		#f.write(str(tdm_to_list))
-	'''
-	End New Code
-	'''
-
+		json.dump(dict(zip(vec.get_feature_names(),idf)),f,ensure_ascii=False)
+	# End New Code
 
 	# list of unigrams, bigrams and trigrams of all text
 	features = vec.get_feature_names()
 
-	'''
-	Start New Code
-	'''
-	#print("YYYYYYYYYYYYYYYYYYYYYYYYY")
-	#print(len(features))
+	# Start New Code
 	if not os.path.isdir('./log'):
 		os.mkdir('./log')
 	with open('./log/features.txt','w',encoding='utf-8') as f:
 		f.write(str(features))
-	'''
-	End New Code
-	'''
+	# End New Code
 
+	# range(len(subtopic_names)) puede ser entre 1 o más de 3
+	# dependiendo de la cantidad de subtópicos que el usuario
+	# haya ingresado
 	for i in range(len(subtopic_names)):
 		if subtopic_names[i] not in no_data_subtopic_names:
 			Xi = X[i, :]
 			features_with_weights, feature_indices = get_topic_keywords(features, Xi)
-			data.append( {"topic":subtopic_names[i], "keywords":features_with_weights, "vectorizer":vec, "feature_indices":feature_indices} )
+			data.append( {"subtopic":subtopic_names[i], \
+				"keywords":features_with_weights, \
+				"vectorizer":vec, \
+				"feature_indices":feature_indices})
+			print('*******************************')
+			print(type(data))
 			# output["keywords"] = features_with_weights
 			# print(features_with_weights)
 			# print(type(features_with_weights))

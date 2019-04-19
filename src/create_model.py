@@ -85,7 +85,8 @@ def create_and_save_model(subtopics, output_file):
 			except OSError as err:
 				print('OS error: {0}'.format(err))
 			except ValueError:
-				print("Could not print the length of this list")			except:
+				print("Could not print the length of this list")
+			except:
 				print("Unexpected error:",sys.exc_info()[0])
 				raise
 

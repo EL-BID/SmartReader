@@ -114,6 +114,7 @@ def create_summary(dataset_location, model_name):
 	dataset = dataset_reader.read_dataset_text(dataset_location)
 	model = create_model.load_model(model_name)
 	for doc in dataset:
+		print(type(doc))
 		score_doc(model, doc)
 	#storing paragraphs and scores in descending order
 	output = consolidate_data(dataset, model)

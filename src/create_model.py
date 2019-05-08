@@ -18,10 +18,10 @@ def get_topic_keywords(features, X):
 
 def create_and_save_model(subtopics, output_file):
 	# Start New Code
-	if not os.path.isdir('./log'):
-		os.mkdir('./log')
-	with open('./log/subtopics_with_text_from_google.json','w',encoding='utf-8') as f:
-		json.dump(subtopics,f,ensure_ascii=False)
+	# if not os.path.isdir('./log'):
+	# 	os.mkdir('./log')
+	# with open('./log/subtopics_with_text_from_google.json','w',encoding='utf-8') as f:
+	# 	json.dump(subtopics,f,ensure_ascii=False)
 	# End New Code
 
 	data = []
@@ -50,25 +50,25 @@ def create_and_save_model(subtopics, output_file):
 	gX = X
 
 	# Start New Code
-	a = X.todense()
-	tdm_to_list = numpy.array(a).reshape(-1,).tolist()
-	with open('./log/list_tdm.txt','w',encoding='utf-8') as f:
-		f.write(str(tdm_to_list))
+	# a = X.todense()
+	# tdm_to_list = numpy.array(a).reshape(-1,).tolist()
+	# with open('./log/list_tdm.txt','w',encoding='utf-8') as f:
+	# 	f.write(str(tdm_to_list))
 
 
-	idf = vec.idf_
-	with open('./log/idf.json','w',encoding='utf-8') as f:
-		json.dump(dict(zip(vec.get_feature_names(),idf)),f,ensure_ascii=False)
+	# idf = vec.idf_
+	# with open('./log/idf.json','w',encoding='utf-8') as f:
+	# 	json.dump(dict(zip(vec.get_feature_names(),idf)),f,ensure_ascii=False)
 	# End New Code
 
 	# list of unigrams, bigrams and trigrams of all text
 	features = vec.get_feature_names()
 
 	# Start New Code
-	if not os.path.isdir('./log'):
-		os.mkdir('./log')
-	with open('./log/features.txt','w',encoding='utf-8') as f:
-		f.write(str(features))
+	# if not os.path.isdir('./log'):
+	# 	os.mkdir('./log')
+	# with open('./log/features.txt','w',encoding='utf-8') as f:
+	# 	f.write(str(features))
 	# End New Code
 
 	# range(len(subtopic_names)) puede ser entre 1 o más de 3
@@ -79,13 +79,13 @@ def create_and_save_model(subtopics, output_file):
 			Xi = X[i, :]
 			# print(Xi)
 			features_with_weights, feature_indices = get_topic_keywords(features, Xi)
-			data.append({"subtopic":subtopic_names[i], \
-				"keywords":features_with_weights, \
-				"vectorizer":vec, \
+			data.append({"subtopic":subtopic_names[i],
+				"keywords":features_with_weights,
+				"vectorizer":vec, 
 				"feature_indices":feature_indices})
 
-			with open('./log/data.txt','w',encoding='utf-8') as j:
-				j.write(str(data))
+			# with open('./log/data.txt','w',encoding='utf-8') as j:
+			# 	j.write(str(data))
 
 			# output["keywords"] = features_with_weights
 			# print(features_with_weights)

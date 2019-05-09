@@ -79,7 +79,7 @@ def create_and_save_model(subtopics, output_file):
 			Xi = X[i, :]
 			# print(Xi)
 			features_with_weights, feature_indices = get_topic_keywords(features, Xi)
-			data.append({"subtopic":subtopic_names[i],
+			data.append({"topic":subtopic_names[i],
 				"keywords":features_with_weights,
 				"vectorizer":vec, 
 				"feature_indices":feature_indices})

@@ -1,0 +1,3 @@
+We analyze the effects of declining population growth on automation. A simple theoretical model of capital accumulation predicts that countries with lower population growth introduce automation technologies earlier. We test the theoretical prediction on panel data for 60 countries over the time span 1993-2013.
+Regression estimates support the theoretical prediction, suggesting that a 1% increase in population growth is associated with an approximately 2% reduction in the growth rate of robot density.
+Our results are robust to the inclusion of standard control variables, different estimation methods, dynamic specifications, and changes to the measurement of the stock of robots.

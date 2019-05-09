@@ -18,5 +18,5 @@ def transformer(model_path:str):
 		    
 
 if __name__ == "__main__":
-	model_path = "model_Future_of_Government_Work_2019-03-29_17_05_40.pkl"
+	model_path = "model_Future_of_Government_Work_2019-05-09_11_04_44.pkl"
 	transformer(model_path)

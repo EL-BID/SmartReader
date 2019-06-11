@@ -87,6 +87,14 @@ Clona el repositorio usando el comando: `git clone https://github.com/EL-BID/Sma
 8.	Chequea todas las pantallas en ejecución usando: `screen -ls`.
 9.	El servidor estará funcionando. Para acceder a la aplicación, utilizando tu navegador de preferencia, navega a localhost:8080. Para acceso remoto, deberás especificar una IP pública como por ejemplo: http://127.0.0.1:8080
 
+### Cómo funciona
+---
+1.	Ir a la pestaña "Model Definition" y crear un nombre aleatorio para el modelo.
+2.	Pensar en una lista de tópicos y subtópicos que describan la pregunta de investigación sobre la que quieres trabajar. Por ejemplo con la pregunta: "How will technology impact the economy of the future?", se podría decir que dos ejemplos de sub-tópicos podrían ser 1)"Technology" y 2)"Economics". Asismismo las palabras claves que corresponden a estos subtópicos serían 1)"artificial intelligence, machine learning, natural language processing" y 2)"behavioral economics" respectivamente. Toma en cuenta que las palabras clave deben estar separadas por coma. Una vez creado el modelo, hacer click submit.
+3.  Luego en la pestaña de "Model Status" podrás chequear el estado de la creación del modelo.
+4.  En la pestaña de "Model Aplication" selecciona el modelo que acabaste de crear. Seguidamente carga una carpeta comprimida zip que contiene el corpus de tus documentos en formato .txt (hemos adjuntado una muestra). Finalmente, envía el formulario.
+5.  En la pestaña "Results" es donde podrás descargarte los resúmenes y formato json y visualizar los resultados.
+
 ### Cómo contribuir
 ---
 
@@ -132,5 +140,3 @@ El BID no será responsable, bajo circunstancia alguna, de daño ni indemnizaci�
 i. Bajo cualquier teoría de responsabilidad, ya sea por contrato, infracción de derechos de propiedad intelectual, negligencia o bajo cualquier otra teoría; y/o
 
 ii. A raíz del uso de la Herramienta Digital, incluyendo, pero sin limitación de potenciales defectos en la Herramienta Digital, o la pérdida o inexactitud de los datos de cualquier tipo. Lo anterior incluye los gastos o daños asociados a fallas de comunicación y/o fallas de funcionamiento de computadoras, vinculados con la utilización de la Herramienta Digital.
-
-

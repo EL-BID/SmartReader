@@ -86,6 +86,14 @@ Clone the repository using the command `git clone https://github.com/EL-BID/Smar
 8.	Check for all the running screen using `screen -ls`.
 9.	The server is up and running now. To access the application in the server, browse “localhost:8080”. For remote access specify the public IP address along with the port.
 
+### How does it work
+---
+1.	Navigate to the tab "Model Definition" and insert a name for the model.
+2.	Think about a list of sub-topics and keywords that describe your research question: e.g. "How will technology impact the economy of the future?". In this context some examples for sub-topics could be "Technology", "Economics" and their corresponding keywords: "artificial intelligence, machine learning, natural language processing" and "behavioral economics". Keep in mind that keywords need to be separated by commas. Submit the form.
+3.  Navigate to "Model Status" to check the status of the model creation process.
+4.  In the "Model Aplication" tab, select from the drop-down list, the model you just created and upload a zipped folder with the files in .txt format that you want to analyze. Submit the form.
+5.  To download the summaries in json format as well as visualize the results, click on the "Results" tab.
+
 ### How to Contribute
 ---
 

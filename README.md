@@ -2,6 +2,8 @@
 
 *Versión en inglés [aquí](https://github.com/EL-BID/SmartReader/blob/master/README-EN.md)*
 
+[![Analytics](https://gabeacon.irvinlim.com/UA-4677001-16/SmartReader/readme?useReferer)](https://github.com/EL-BID/SmartReader)
+
 ## *SmartReader*
 
 ### Descripción y contexto

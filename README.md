@@ -3,6 +3,7 @@
 *Versión en inglés [aquí](https://github.com/EL-BID/SmartReader/blob/master/README-EN.md)*
 
 [![Analytics](https://gabeacon.irvinlim.com/UA-4677001-16/SmartReader/readme?useReferer)](https://github.com/EL-BID/SmartReader)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=EL-BID_SmartReader&metric=alert_status)](https://sonarcloud.io/dashboard?id=EL-BID_SmartReader)
 
 ## *SmartReader*
 

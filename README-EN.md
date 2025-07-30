@@ -1,5 +1,5 @@
 *Visit the [Publication Guide](el-bid.github.io/guia-de-publicacion/) (currently available in Spanish) for more information about how to publish digital tools.
-To learn more about the Code for Development initiative, visit: [code.iadb.org](https://code.iadb.org/es)*
+To learn more about the Code for Development initiative, visit: [https://knowledge.iadb.org/es/codigo-para-el-desarrollo](https://knowledge.iadb.org/es/codigo-para-el-desarrollo)*
 
 ## *SmartReader*
 
@@ -12,11 +12,7 @@ To learn more about the Code for Development initiative, visit: [code.iadb.org](
 The Knowledge Innovation and Communication Department of the **Inter-American Development Bank** created this tool after acknowledging this need and the latency of technologies such as Artificial Intelligence and Natural language Processing, to assist the Knowledge creation process.  
 
 
-The tool comprises four interfaces: 1) *Model Definition*, 2) *Model Status*, 3) *Model Application*, and 4) *Results interfaces*. The following flow chart explain the mechanics of the tool.  
-
-![flujograma_en](https://code.iadb.org/sites/default/files/inline-images/flujograma.jpg "Flow Chart SmartReader English Version")
-<img   src="https://code.iadb.org/sites/default/files/inline-images/keys_en.png" 
-alt="keys!" width="50%" style="float:right;"/>
+The tool comprises four interfaces: 1) *Model Definition*, 2) *Model Status*, 3) *Model Application*, and 4) *Results interfaces*. 
 
 As depicted in the chart, from left to right and from top to bottom, the process starts with the user creating a model by entering a set of topic and subtopics that match a determined research question. Afterwards, the model will generate query strings used to retrieve the most relevant data available online, this means querying Google. Afterwards, by applying the *sklearn.TfidfVectorizer*, a model with weighted terms will be created. In the Model Application interface, a model is applied to the corpus of documents that the user uploads in a zipped file of *.txt* files. The application process occurs by first scoring the paragraphs from each document, extracting their corresponding entities and locations and ordering these paragraphs in descending order. After picking the top paragraphs (a random number of 50 paragraphs was selected), the tool will proceed to select the most relevant sentences. The calculations will result in a *json* file and visualization of the most relevant keywords, entities, locations and sentences of our corpus of documents. For more information about how to contribute to this project please refer to the following [blog post](https://blogs.iadb.org/abierto-al-publico/2018/09/07/smartreader-open-source-text-analytics-tool/?lang=en) in Abierto al Público.
  	

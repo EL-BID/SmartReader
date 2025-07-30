@@ -1,4 +1,4 @@
-*Esta herramienta digital forma parte del catálogo de herramientas del **Banco Interamericano de Desarrollo**. Puedes conocer más sobre la iniciativa del BID en: [https://knowledge.iadb.org/es/codigo-para-el-desarrollo]([https://code.iadb.org/es](https://knowledge.iadb.org/es/codigo-para-el-desarrollo))*
+*Esta herramienta digital forma parte del catálogo de herramientas del **Banco Interamericano de Desarrollo**. Puedes conocer más sobre la iniciativa del BID en: [https://knowledge.iadb.org/es/codigo-para-el-desarrollo]([https://code.iadb.org/es](https://knowledge.iadb.org/es/codigo-para-el-desarrollo)*
 
 *Versión en inglés [aquí](https://github.com/EL-BID/SmartReader/blob/master/README-EN.md)*
 

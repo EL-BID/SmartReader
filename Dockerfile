@@ -44,11 +44,10 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 
-
-
 # cria usuário não privilegiado
 RUN useradd -m appuser
 RUN mkdir -p /data/db && chown -R appuser:appuser /data/db
+RUN touch /app/log_SM.txt && chmod 666 /app/log_SM.txt
 USER appuser
 
 # Copy the source code into the container.

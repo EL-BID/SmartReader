@@ -46,42 +46,23 @@ def get_text_from_url(response):
         print("Erro em get_text_from_url:", e, type(response))
         return ""
 
-'''def google_search_query(query):
-    subtopic_text = ""
-    for url in search(query, stop=20):
-        try:
-            response = urlopen(url)
-            content_type = response.getheader('Content-Type')
-            reg_exp = ';.*'
-            mime_type = re.sub(reg_exp, '', content_type)
-
-            if 'application/pdf' != mime_type:
-                subtopic_text = subtopic_text + get_text_from_url(response).strip()
-                subtopic_text = re.sub('[^A-Za-z0-9]+', ' ', subtopic_text)
-        except Exception as e:
-            pass
-    return subtopic_text
-'''
-
 def google_search_query(query):
     subtopic_text = ""
-    for url in search(query, stop=20):
+    for url in search(query, num_results=20, lang="pt"):
         try:
             response = urlopen(url)
             content_type = response.getheader("Content-Type") or ""
-            mime_type = re.sub(r";.*", "", content_type)
+            mime_type = content_type.split(";")[0]
 
             if mime_type != "application/pdf":
                 page_text = get_text_from_url(response).strip()
                 if page_text:
                     subtopic_text += " " + page_text
-                    subtopic_text = re.sub(r"[^A-Za-z0-9]+", " ", subtopic_text)
         except Exception as e:
-            # enquanto você está debugando, é bom ver qual URL quebra
             print("Erro ao processar URL:", url, "->", e)
-    return subtopic_text
+            continue
 
-
+    return re.sub(r"[^A-Za-z0-9]+", " ", subtopic_text)
 
 #def generate_search_query(topic_names, keywords):
 #    query = "("
@@ -118,7 +99,7 @@ def generate_search_query(topic_names, keywords):
     return query
 
 
-def get_data(topics):
+'''def get_data(topics):
     #storing a list of topics in current job
     topic_names = topics["topic_name"]
     #storing a list of subtopics in current job
@@ -137,4 +118,14 @@ def get_data(topics):
             subtopic_text = google_search_query(search_query)
         topic_text[subtopic_name.lower()] = subtopic_text
 
+    return topic_text'''
+
+def get_data(topics):
+    topic_names = topics["topic_name"]
+    subtopics = topics["subtopics"]
+    topic_text = {}
+    for i in range(len(subtopics)):
+        subtopic_name = subtopics[i]["subtopic_name"]
+        subtopic_text = "texto de teste " * 1000  # <-- só para testar
+        topic_text[subtopic_name.lower()] = subtopic_text
     return topic_text

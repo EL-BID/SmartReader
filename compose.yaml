@@ -9,6 +9,11 @@ services:
       - 8080:8080
     environment:
       - MONGO_URL=mongodb://mongo:27017/meu_banco
+    volumes:
+      - ./models:/app/models
+      - ./Data:/app/Data
+      - ./Summaries:/app/Summaries
+
   mongo:
     image: mongo:6
     restart: always
@@ -25,6 +30,10 @@ services:
       - server
     environment:
       - MONGO_URL=mongodb://mongo:27017/meu_banco
+    volumes:
+      - ./models:/app/models
+      - ./Data:/app/Data
+      - ./Summaries:/app/Summaries
 
   summary-processor:
     build:
@@ -37,3 +46,7 @@ services:
       - processor
     environment:
       - MONGO_URL=mongodb://mongo:27017/meu_banco
+    volumes:
+      - ./models:/app/models
+      - ./Data:/app/Data
+      - ./Summaries:/app/Summaries

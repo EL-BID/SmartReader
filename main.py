@@ -276,7 +276,7 @@ def upload_file():
         upload_input_files(filename, file_path)
 
         timestamp = datetime.now()
-        summary_collection.insert({
+        result = summary_collection.insert_one({
             "file_path": file_path,
             "summary_filename": summary_filename,
             "model_name": model_name,
@@ -284,6 +284,7 @@ def upload_file():
             "status": "Queued",
             "timestamp": timestamp
         })
+        print("Job de summary criado, _id:", result.inserted_id)
 
         return Response(json.dumps({'success': True}), 200, {'contentType': 'application/json'})
 

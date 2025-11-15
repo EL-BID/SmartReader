@@ -323,7 +323,7 @@ def download():
         headers={"Content-disposition":
                  "attachment; filename=" + summary_filename})
 
-
+'''
 def upload_input_files(filename, file_path):
 
     try:
@@ -343,3 +343,55 @@ def upload_input_files(filename, file_path):
         for name in dirs:
             os.rmdir(os.path.join(root, name))
         os.remove(filename)
+'''
+def upload_input_files(zip_filename, dest_dir):
+    """
+    zip_filename: nome do arquivo .zip (no cwd) ou caminho completo.
+    dest_dir: pasta destino onde os arquivos serão extraídos.
+    """
+
+    # Garante que a pasta de destino existe
+    os.makedirs(dest_dir, exist_ok=True)
+
+    # Se zip_filename não for caminho absoluto, considera que está no cwd
+    if not os.path.isabs(zip_filename):
+        zip_path = os.path.join(os.getcwd(), zip_filename)
+    else:
+        zip_path = zip_filename
+
+    try:
+        # 1) Extrair o ZIP
+        with zipfile.ZipFile(zip_path, "r") as zip_ref:
+            zip_ref.extractall(dest_dir)
+
+        # 2) "Achatar": mover arquivos de subpastas para dest_dir
+        for root, dirs, files in os.walk(dest_dir, topdown=False):
+            if root != dest_dir:
+                for name in files:
+                    src = os.path.join(root, name)
+                    dst = os.path.join(dest_dir, name)
+
+                    # Se já existir arquivo com o mesmo nome, você pode:
+                    # - renomear
+                    # - pular
+                    # - sobrescrever
+                    # Aqui vou sobrescrever
+                    if os.path.exists(dst):
+                        os.remove(dst)
+                    os.rename(src, dst)
+
+                # Remover diretórios vazios
+                for d in dirs:
+                    dir_path = os.path.join(root, d)
+                    if not os.listdir(dir_path):
+                        os.rmdir(dir_path)
+
+    except Exception as e:
+        print("Erro em upload_input_files:", e)
+    finally:
+        # Se quiser sempre apagar o zip depois de extrair:
+        try:
+            if os.path.exists(zip_path):
+                os.remove(zip_path)
+        except Exception as e:
+            print("Erro ao remover zip:", e)

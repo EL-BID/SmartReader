@@ -13,6 +13,7 @@ services:
       - ./models:/app/models
       - ./Data:/app/Data
       - ./Summaries:/app/Summaries
+      - ./static/documents:/app/static/documents
 
   mongo:
     image: mongo:6
@@ -50,3 +51,4 @@ services:
       - ./models:/app/models
       - ./Data:/app/Data
       - ./Summaries:/app/Summaries
+      - ./static/documents:/app/static/documents

@@ -1,11 +1,12 @@
-from _google_ import search
+#from _google_ import search
+from googlesearch import search
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import re
 import logging
 
 
-def get_text_from_url(response):
+'''def get_text_from_url(response):
     try:
         soup = BeautifulSoup(response, "html.parser")
         text = " "
@@ -14,46 +15,91 @@ def get_text_from_url(response):
             text = ''.join(p.text.strip() for p in all_paras)
     except Exception as e:
         pass
-    return text
+    return text'''
 
+def get_text_from_url(response):
+    try:
+        # Se por algum motivo vier None, já evita erro
+        if response is None:
+            return ""
+
+        # Lê o conteúdo da resposta
+        html = response.read()
+        if not html:
+            return ""
+
+        # Garante que estamos passando string/bytes para o BS
+        soup = BeautifulSoup(html, "html.parser")
+        if soup is None:  # extra segurança
+            return ""
+
+        paragraphs = soup.find_all("p")
+        if not paragraphs:
+            return ""
+
+        text = " ".join(p.get_text(strip=True) for p in paragraphs)
+        # normaliza espaços
+        text = re.sub(r"\s+", " ", text)
+        return text
+    except Exception as e:
+        # por enquanto loga o erro pra debug
+        print("Erro em get_text_from_url:", e, type(response))
+        return ""
 
 def google_search_query(query):
     subtopic_text = ""
-    for url in search(query, stop=20):
+    for url in search(query, num_results=20, lang="pt"):
         try:
             response = urlopen(url)
-            content_type = response.getheader('Content-Type')
-            reg_exp = ';.*'
-            mime_type = re.sub(reg_exp, '', content_type)
+            content_type = response.getheader("Content-Type") or ""
+            mime_type = content_type.split(";")[0]
 
-            if 'application/pdf' != mime_type:
-                subtopic_text = subtopic_text + get_text_from_url(response).strip()
-                subtopic_text = re.sub('[^A-Za-z0-9]+', ' ', subtopic_text)
+            if mime_type != "application/pdf":
+                page_text = get_text_from_url(response).strip()
+                if page_text:
+                    subtopic_text += " " + page_text
         except Exception as e:
-            pass
-    return subtopic_text
+            print("Erro ao processar URL:", url, "->", e)
+            continue
 
+    return re.sub(r"[^A-Za-z0-9]+", " ", subtopic_text)
+
+#def generate_search_query(topic_names, keywords):
+#    query = "("
+#    for i in range(len(keywords)-1):
+#        #concatenating the keywords with 'or'
+#        query = query + keywords[i].lower() + " or "
+#    query = query + keywords[len(keywords)-1].lower() + ") and ("
+#    '''Starts new code'''
+#    logging.debug("Query:")
+#    logging.debug(query)
+#    '''Ends new code'''
+#
+#    for i in range(len(topic_names)-1):
+#        query = query + topic_names[i].lower() + " or "
+#
+#    query = query + topic_names[len(topic_names)-1].lower() + ")"
+#    print("Query: ", query)
+#    return query#concatenating the keywords with the topic, e.g.: keywords = [racing, homing]; topic = [birds] i.e. query = '(racing or homing) and (birds)'
 
 def generate_search_query(topic_names, keywords):
-    query = "("
-    for i in range(len(keywords)-1):
-        #concatenating the keywords with 'or'
-        query = query + keywords[i].lower() + " or "
-    query = query + keywords[len(keywords)-1].lower() + ") and ("
-    '''Starts new code'''
+    if not keywords:
+        # fallback simples: usa só os topics
+        base = " or ".join(t.lower() for t in topic_names)
+        query = f"({base})"
+        print("Query (sem keywords):", query)
+        return query
+
+    query = "(" + " or ".join(k.lower() for k in keywords) + ") and ("
     logging.debug("Query:")
     logging.debug(query)
-    '''Ends new code'''
 
-    for i in range(len(topic_names)-1):
-        query = query + topic_names[i].lower() + " or "
-
-    query = query + topic_names[len(topic_names)-1].lower() + ")"
+    query += " or ".join(t.lower() for t in topic_names) + ")"
     print("Query: ", query)
-    return query#concatenating the keywords with the topic, e.g.: keywords = [racing, homing]; topic = [birds] i.e. query = '(racing or homing) and (birds)'
+    return query
 
 
-def get_data(topics):
+'''def get_data(topics):
     #storing a list of topics in current job
     topic_names = topics["topic_name"]
     #storing a list of subtopics in current job
@@ -72,4 +118,14 @@ def get_data(topics):
             subtopic_text = google_search_query(search_query)
         topic_text[subtopic_name.lower()] = subtopic_text
 
+    return topic_text'''
+
+def get_data(topics):
+    topic_names = topics["topic_name"]
+    subtopics = topics["subtopics"]
+    topic_text = {}
+    for i in range(len(subtopics)):
+        subtopic_name = subtopics[i]["subtopic_name"]
+        subtopic_text = "texto de teste " * 1000  # <-- só para testar
+        topic_text[subtopic_name.lower()] = subtopic_text
     return topic_text

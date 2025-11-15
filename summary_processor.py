@@ -8,19 +8,13 @@ from src.convert_dataset import *
 
 
 def getJob():
-
     result = summary_collection.find( { 'status': "Queued" } ).limit( 1 )
     return result
 
 def updateJobStatus(jobid, status):
-
-    summary_collection.update(
+    summary_collection.update_one(
         {"_id": jobid},
-        {
-            "$set": {
-                "status": status
-            }
-        }
+        {"$set": {"status": status}}
     )
 
 def run_job(job):
@@ -34,31 +28,36 @@ def run_job(job):
     'status': 'Queued', 'timestamp': datetime.datetime(2019, 3, 27, 10, 9, 50, 24000)}
     '''
     for document in job:
+        jobid = document["_id"]
         try:
-            jobid = document["_id"]
             updateJobStatus(jobid, "Processing")
             output_json = create_summary(document["file_path"], document["model_file_name"])
             convert_txt_html(output_json)
-            if not os.path.isdir('Summaries'):
-                os.mkdir('Summaries')
-            json.dump(output_json, open("Summaries/" + document["summary_filename"], "w"))
+
+            os.makedirs("Summaries", exist_ok=True)
+
+            with open(os.path.join("Summaries", document["summary_filename"]), "w") as f:
+                json.dump(output_json, f)
+
             updateJobStatus(jobid, "Done")
 
         except Exception as e:
-            print (e)
+            print("Erro ao processar job", jobid, "->", e)
             updateJobStatus(jobid, "Error")
-
 
 def processNextJob():
     print('fetching job')
-    job = getJob()
-    jobs_len = job.count()
+    #job = getJob() #job is a group of jobs that have the 'Queued' status in the database
+    job_cursor = getJob()          # ainda é um Cursor
+    jobs = list(job_cursor)        # transforma em lista
+    #jobs_len = job.count()
+    jobs_len = len(jobs)
 
     if jobs_len == 0:
         print('no more jobs to process')
         return jobs_len
     else:
-        run_job(job)
+        run_job(jobs)
         return jobs_len
 
 while(True):

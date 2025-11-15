@@ -16,8 +16,7 @@ def getJob():
     return result
 
 def updateJobStatus(jobid, status):
-
-    collection.update(
+    collection.update_one(
         {"_id": jobid},
         {
             "$set": {

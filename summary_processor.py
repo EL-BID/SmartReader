@@ -12,8 +12,7 @@ def getJob():
     return result
 
 def updateJobStatus(jobid, status):
-
-    summary_collection.update(
+    summary_collection.update_one(
         {"_id": jobid},
         {
             "$set": {

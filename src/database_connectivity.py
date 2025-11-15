@@ -8,7 +8,8 @@ try:
     if os.system("grep mongod") != 256:
         pass
     else:
-        os.system("service mongod start")
+       # os.system("service mongod start")
+       print("Falha no acesso ao mongo DB")
     client = MongoClient(MONGO_URL)
     db = client.classifier_database
     collection = db.model_jobs

@@ -12,9 +12,10 @@ from src import dataset_reader
 from src import spell_check
 from src.sumytest import *
 
-geolocator = Nominatim()
+#geolocator = Nominatim()
+geolocator = Nominatim(user_agent="summary-processor")
 
-nlp = spacy.load('en')
+nlp = spacy.load('en_core_web_sm')
 a, b = None, None
 entity_types_non_loc = ['PERSON', "ORG", "PRODUCT", "EVENT", "WORK_OF_ART", "LANGUAGE", "NORP"]
 entity_types_loc = ["LOC", "GPE"]

@@ -51,14 +51,17 @@ def run_job(job):
 
 def processNextJob():
     print('fetching job')
-    job = getJob()#job is a group of jobs that have the 'Queued' status in the database
-    jobs_len = job.count()
+    #job = getJob() #job is a group of jobs that have the 'Queued' status in the database
+    job_cursor = getJob()          # ainda é um Cursor
+    jobs = list(job_cursor)        # transforma em lista
+    #jobs_len = job.count()
+    jobs_len = len(jobs)
 
     if jobs_len == 0:#excecuted once there are no more 'Queued' jobs in the database
         print('no more jobs to process')
         return jobs_len
     else:
-        run_job(job)
+        run_job(jobs)
         return jobs_len
 
 

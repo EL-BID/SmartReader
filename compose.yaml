@@ -20,6 +20,7 @@ services:
     command: ["python", "processor.py"]
     depends_on:
       - mongo
+      - server
     environment:
       - MONGO_URL=mongodb://mongo:27017/meu_banco
 
@@ -29,5 +30,7 @@ services:
     command: ["python", "summary_processor.py"]
     depends_on:
       - mongo
+      - server
+      - processor
     environment:
       - MONGO_URL=mongodb://mongo:27017/meu_banco

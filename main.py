@@ -2,7 +2,8 @@ import glob
 import json
 import os
 import re
-import pprint
+#import pprint
+import traceback
 import zipfile
 from collections import defaultdict
 from src.database_connectivity import *
@@ -81,35 +82,85 @@ def get_data():
 
     print ("get_data is being called")
     try:
+        form = request.form.to_dict()
+        print("DEBUG form recebido:", form)
+        print("CWD:", os.getcwd())
+
         json_obj = {}
 
-        json_obj['model_name'] = request.form['model']
-        json_obj["topic_name"] = [request.form['topic']]
-        json_obj["subtopics"] = []
-        if request.form['topic2']:
-            json_obj["topic_name"].append(request.form['topic2'])
-        if request.form['topic3']:
-            json_obj["topic_name"].append(request.form['topic3'])
+        # Campos obrigatórios
+        model_name = form.get('model')
+        topic1 = form.get('topic')
 
-        num_subtopics = int(request.form['youcantseeme'])
+        if not model_name:
+            return jsonify({"error": True, "message": "Campo 'model' é obrigatório"}), 400
+        if not topic1:
+            return jsonify({"error": True, "message": "Campo 'topic' é obrigatório"}), 400
+
+        json_obj['model_name'] = model_name
+        json_obj["topic_name"] = [topic1]
+        json_obj["subtopics"] = []
+
+        # Campos opcionais: topic2 e topic3
+        topic2 = form.get('topic2')
+        if topic2:
+            json_obj["topic_name"].append(topic2)
+
+        topic3 = form.get('topic3')
+        if topic3:
+            json_obj["topic_name"].append(topic3)
+
+        # Quantidade de subtopics
+        raw_num = form.get('youcantseeme', '0')
+        try:
+            num_subtopics = int(raw_num)
+        except ValueError:
+            return jsonify({"error": True, "message": "Campo 'youcantseeme' deve ser um inteiro"}), 400
+
+        # Monta lista de subtopics
         for i in range(num_subtopics):
-            subtopic_i = {}
-            if request.form["subtopic"+str(i)]:
-                subtopic_i["subtopic_name"] = request.form["subtopic"+str(i)]
-                subtopic_i["keywords"] = [re.sub('[^A-Za-z0-9 ]+', '', x.strip()) for x in request.form["keywords"+str(i)].split(',')]
+            sub_name = form.get(f"subtopic{i}")
+            keywords_raw = form.get(f"keywords{i}")
+
+            if sub_name and keywords_raw:
+                subtopic_i = {
+                    "subtopic_name": sub_name,
+                    "keywords": [
+                        re.sub(r'[^A-Za-z0-9 ]+', '', x.strip())
+                        for x in keywords_raw.split(',')
+                        if x.strip()
+                    ]
+                }
                 json_obj["subtopics"].append(subtopic_i)
 
-        print (os.getcwd())
-        model_name = json_obj["model_name"]
-        output_model_file_name = "model_"+json_obj["topic_name"][0].replace(" ","_")+"_"+datetime.now().strftime('%Y-%m-%d_%H_%M_%S')+".pkl"
+        print("JSON de entrada montado:", json_obj)
+
+        # Gera nome do arquivo do modelo
+        output_model_file_name = "model_" + json_obj["topic_name"][0].replace(" ", "_") + \
+            "_" + datetime.now().strftime('%Y-%m-%d_%H_%M_%S') + ".pkl"
         timestamp = datetime.now()
-        collection.insert({"input": json_obj, "model_name": model_name, "output_model_file":  output_model_file_name , "timestamp" : timestamp, "status": "Queued"})
 
-        print ("all working done")
+        # IMPORTANTE: garantir que 'collection' está definido antes
+        # Exemplo:
+        # from pymongo import MongoClient
+        # client = MongoClient("mongodb://mongo:27017/")
+        # db = client["seu_banco"]
+        # collection = db["sua_colecao"]
 
-        return Response(json.dumps({'success':True}),200,{'contentType' : 'application/json'})
+        result = collection.insert_one({
+            "input": json_obj,
+            "model_name": model_name,
+            "output_model_file": output_model_file_name,
+            "timestamp": timestamp,
+            "status": "Queued"
+        })
+
+        print("all working done, inserted id:", result.inserted_id)
+
+        return Response(json.dumps({'success': True}), 200, {'contentType': 'application/json'})
 
     except:
+        traceback.print_exc()
         return json.dumps({'error': False}), 500, {'contentType': 'application/json'}
 
 
@@ -128,42 +179,103 @@ def get_models():
     models = []
     cursor = collection.find({"status": "Done"})
     for document in cursor:
-        models.append([document["model_name"], document["output_model_file"], document['timestamp'].strftime('%Y-%m-%d %H:%M:%S')])
+        ts = document.get('timestamp')
+        ts_str = ts.strftime('%Y-%m-%d %H:%M:%S') if ts else None
 
-    model_json = json.dumps(models)
-    return model_json
+        models.append({
+            "label": document["model_name"],
+            # É ISSO que o /create_summary vai receber em request.form['model']
+            "value": f'{document["model_name"]}, {document["output_model_file"]}',
+            "file": document["output_model_file"],
+            "timestamp": ts_str
+        })
 
 @app.route('/create_summary',methods = ['POST'])
 def upload_file():
     try:
-        try:
-            model = request.form.get('model')
-            model_name = " ".join(model.split(",")[:-1]).strip()
-            model_file_name = model.split(",")[-1].strip()#storing the model name with the model's creation date
-            file = request.files['file']#storing the zipped files
-            filename = secure_filename(file.filename)#storing the name of the zipped folder
+        # --------- MODEL ----------
+        raw_model = request.form.get('model', '').strip()
+        if not raw_model:
+            print('Campo "model" veio vazio ou não foi enviado')
+            return Response(
+                json.dumps({'error': True, 'message': 'Campo "model" é obrigatório.'}),
+                400,
+                {'contentType': 'application/json'}
+            )
 
-        except Exception as e:
-            print (e)
-        if filename.endswith('.zip'):
-            if not os.path.isdir('Data'):
-                os.mkdir('Data')
-            summary_filename = "summary_json_"+ datetime.now().strftime("%Y-%m-%d_%H-%M-%S") +".json"
-            folder_name = "text_files_"+datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-            file_path = os.path.join(os.getcwd(),"Data",folder_name)
-            os.mkdir(file_path)
-            file.save(filename)
-            upload_input_files(filename, file_path)
-            timestamp = datetime.now()
-            summary_collection.insert({"file_path": file_path, "summary_filename": summary_filename, "model_name": model_name, "model_file_name": model_file_name , "status": "Queued", "timestamp": timestamp})
+        parts = [p.strip() for p in raw_model.split(',') if p.strip()]
+        if len(parts) < 2:
+            print('Formato de "model" inválido:', raw_model)
+            return Response(
+                json.dumps({'error': True, 'message': 'Formato de "model" inválido. Use: "nome do modelo, arquivo.pkl".'}),
+                400,
+                {'contentType': 'application/json'}
+            )
 
-            return Response(json.dumps({'success': True}), 200, {'contentType': 'application/json'})
-        else:
-            return Response(json.dumps({'error': False}),400 , {'contentType': 'application/json'})
-    except:
+        model_name = " ".join(parts[:-1])
+        model_file_name = parts[-1]
 
-        return Response(json.dumps({'error': False}), 500, {'contentType': 'application/json'})
+        # --------- ARQUIVO ----------
+        if 'file' not in request.files:
+            print('Nenhum arquivo "file" enviado no form')
+            return Response(
+                json.dumps({'error': True, 'message': 'Nenhum arquivo enviado.'}),
+                400,
+                {'contentType': 'application/json'}
+            )
 
+        file = request.files['file']
+        filename = secure_filename(file.filename or '')
+
+        if not filename:
+            print('Filename vazio')
+            return Response(
+                json.dumps({'error': True, 'message': 'Nome de arquivo inválido.'}),
+                400,
+                {'contentType': 'application/json'}
+            )
+
+        if not filename.endswith('.zip'):
+            print('Arquivo não é zip:', filename)
+            return Response(
+                json.dumps({'error': True, 'message': 'Apenas arquivos .zip são aceitos.'}),
+                400,
+                {'contentType': 'application/json'}
+            )
+
+        # --------- PROCESSA ZIP ----------
+        if not os.path.isdir('Data'):
+            os.mkdir('Data')
+
+        summary_filename = "summary_json_" + datetime.now().strftime("%Y-%m-%d_%H-%M-%S") + ".json"
+        folder_name = "text_files_" + datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+        file_path = os.path.join(os.getcwd(), "Data", folder_name)
+        os.mkdir(file_path)
+
+        file.save(filename)
+        upload_input_files(filename, file_path)
+
+        timestamp = datetime.now()
+        summary_collection.insert({
+            "file_path": file_path,
+            "summary_filename": summary_filename,
+            "model_name": model_name,
+            "model_file_name": model_file_name,
+            "status": "Queued",
+            "timestamp": timestamp
+        })
+
+        return Response(json.dumps({'success': True}), 200, {'contentType': 'application/json'})
+
+    except Exception as e:
+        import traceback
+        print('Erro em /create_summary:', e)
+        traceback.print_exc()
+        return Response(
+            json.dumps({'error': True, 'message': str(e)}),
+            500,
+            {'contentType': 'application/json'}
+        )
 
 @app.route('/summary_status')
 def get_summary_status():
@@ -210,7 +322,3 @@ def upload_input_files(filename, file_path):
         for name in dirs:
             os.rmdir(os.path.join(root, name))
         os.remove(filename)
-
-
-# if __name__ == '__main__':
-#     app.run(debug=True, port=8080, host='0.0.0.0', use_reloader=False)

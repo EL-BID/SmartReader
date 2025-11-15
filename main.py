@@ -175,20 +175,40 @@ def get_status():
 
 
 @app.route('/get_models')
-def get_models():
-    models = []
-    cursor = collection.find({"status": "Done"})
-    for document in cursor:
-        ts = document.get('timestamp')
-        ts_str = ts.strftime('%Y-%m-%d %H:%M:%S') if ts else None
+#def get_models():
+#    models = []
+#    cursor = collection.find({"status": "Done"})
+#    for document in cursor:
+#        ts = document.get('timestamp')
+#        ts_str = ts.strftime('%Y-%m-%d %H:%M:%S') if ts else None
+#
+#        models.append({
+#            "label": document["model_name"],
+#            # É ISSO que o /create_summary vai receber em request.form['model']
+#            "value": f'{document["model_name"]}, {document["output_model_file"]}',
+#            "file": document["output_model_file"],
+#            "timestamp": ts_str
+#        })
 
-        models.append({
-            "label": document["model_name"],
-            # É ISSO que o /create_summary vai receber em request.form['model']
-            "value": f'{document["model_name"]}, {document["output_model_file"]}',
-            "file": document["output_model_file"],
-            "timestamp": ts_str
-        })
+def get_models():
+    try:
+        models = []
+        cursor = collection.find({"status": "Done"}).sort("timestamp", -1)
+
+        for document in cursor:
+            models.append([
+                document.get("model_name", ""),
+                document.get("output_model_file", ""),
+                document.get("timestamp", datetime.utcnow()).strftime('%Y-%m-%d %H:%M:%S')
+            ])
+
+        # SEMPRE retorna alguma coisa (nem que seja lista vazia)
+        return jsonify(models)
+    except Exception as e:
+        # loga pra você ver no container
+        print("Erro em /get_models:", e)
+        # ainda assim devolve JSON válido
+        return jsonify([]), 500
 
 @app.route('/create_summary',methods = ['POST'])
 def upload_file():

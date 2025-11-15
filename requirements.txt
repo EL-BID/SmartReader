@@ -13,3 +13,4 @@ unidecode
 sumy
 lxml
 lxml_html_clean
+googlesearch-python

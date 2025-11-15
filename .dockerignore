@@ -7,6 +7,7 @@
 **/.DS_Store
 **/__pycache__
 **/.venv
+**/env
 **/.classpath
 **/.dockerignore
 **/.env
@@ -32,3 +33,10 @@
 **/values.dev.yaml
 LICENSE
 README.md
+txt.zip
+README-EN.md
+README.Docker.md
+LICENSE.md
+CONTRIBUTING-EN.md
+CONTRIBUTING.md
+CODE-OF-CONDUCT.md

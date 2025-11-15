@@ -101,5 +101,8 @@ ENV/
 # mypy
 .mypy_cache/
 
-#Models
+# Models
 *.pkl
+
+# Outros
+Summaries/

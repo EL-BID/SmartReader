@@ -38,7 +38,7 @@ def create_and_save_model(subtopics, output_file):
 	X = vec.fit_transform(all_texts)
 	global gX
 	gX = X
-	features = vec.get_feature_names()
+	features = vec.get_feature_names_out()
 	for i in range(len(subtopic_names)):
 		if subtopic_names[i] not in no_data_subtopic_names:
 			Xi = X[i, :]

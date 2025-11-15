@@ -2,6 +2,7 @@ services:
   server:
     build:
       context: .
+    user: "0:0"
     depends_on:
       - mongo
     ports:
@@ -17,6 +18,7 @@ services:
   processor:
     build:
       context: .
+    user: "0:0"
     command: ["python", "processor.py"]
     depends_on:
       - mongo
@@ -27,6 +29,7 @@ services:
   summary-processor:
     build:
       context: .
+    user: "0:0"
     command: ["python", "summary_processor.py"]
     depends_on:
       - mongo

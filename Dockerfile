@@ -47,7 +47,12 @@ RUN apt-get update && \
 # cria usuário não privilegiado
 RUN useradd -m appuser
 RUN mkdir -p /data/db && chown -R appuser:appuser /data/db
-RUN touch /app/log_SM.txt && chmod 666 /app/log_SM.txt
+RUN touch ./log_SM.txt && chmod 666 ./log_SM.txt
+
+RUN mkdir -p ./models ./Summaries ./Data \
+    && touch ./log_SM.txt \
+    && chmod -R 777 /app
+
 USER appuser
 
 # Copy the source code into the container.

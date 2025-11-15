@@ -1,5 +1,5 @@
 flask 
-sklearn
+scikit-learn
 pymongo
 numpy
 scipy

@@ -8,7 +8,8 @@ from collections import defaultdict
 from src.database_connectivity import *
 from datetime import datetime
 from flask import Flask, render_template, request, send_from_directory, Response, send_file, jsonify
-from werkzeug import secure_filename
+#from werkzeug import secure_filename
+from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 

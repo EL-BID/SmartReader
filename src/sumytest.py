@@ -8,7 +8,7 @@ import requests
 import unicodedata
 import spacy
 from spacy.lang.en import English
-nlp = spacy.load('en')
+nlp = spacy.load('en_core_web_sm')
 import nltk
 from nltk import word_tokenize
 from nltk import sent_tokenize

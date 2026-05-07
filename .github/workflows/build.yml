@@ -1,0 +1,38 @@
+name: SonarQube
+
+on:
+  push:
+    branches:
+      - main
+      - master
+      - develop
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  sonarqube:
+    name: SonarQube Scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install & test (best effort)
+        continue-on-error: true
+        run: |
+          if [ -f package-lock.json ]; then npm ci || npm install; fi
+          if [ -f yarn.lock ]; then yarn install --frozen-lockfile || yarn install; fi
+          if [ -f pnpm-lock.yaml ]; then npm i -g pnpm && pnpm install; fi
+          npm test --if-present -- --coverage || true
+
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v5
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}

@@ -1,5 +1,5 @@
 flask 
-sklearn
+scikit-learn
 pymongo
 numpy
 scipy
@@ -11,3 +11,6 @@ BeautifulSoup4
 gensim
 unidecode
 sumy
+lxml
+lxml_html_clean
+googlesearch-python

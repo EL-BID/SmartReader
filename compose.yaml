@@ -1,0 +1,54 @@
+services:
+  server:
+    build:
+      context: .
+    user: "0:0"
+    depends_on:
+      - mongo
+    ports:
+      - 8080:8080
+    environment:
+      - MONGO_URL=mongodb://mongo:27017/meu_banco
+    volumes:
+      - ./models:/app/models
+      - ./Data:/app/Data
+      - ./Summaries:/app/Summaries
+      - ./static/documents:/app/static/documents
+
+  mongo:
+    image: mongo:6
+    restart: always
+    ports:
+      - "27017:27017"
+
+  processor:
+    build:
+      context: .
+    user: "0:0"
+    command: ["python", "processor.py"]
+    depends_on:
+      - mongo
+      - server
+    environment:
+      - MONGO_URL=mongodb://mongo:27017/meu_banco
+    volumes:
+      - ./models:/app/models
+      - ./Data:/app/Data
+      - ./Summaries:/app/Summaries
+
+  summary-processor:
+    build:
+      context: .
+    user: "0:0"
+    command: ["python", "summary_processor.py"]
+    depends_on:
+      - mongo
+      - server
+      - processor
+    environment:
+      - MONGO_URL=mongodb://mongo:27017/meu_banco
+    volumes:
+      - ./models:/app/models
+      - ./Data:/app/Data
+      - ./Summaries:/app/Summaries
+      - ./static/documents:/app/static/documents

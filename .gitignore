@@ -10,6 +10,7 @@ __pycache__/
 .Python
 env/
 build/
+Data/
 develop-eggs/
 dist/
 downloads/
@@ -99,3 +100,9 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# Models
+*.pkl
+
+# Outros
+Summaries/
